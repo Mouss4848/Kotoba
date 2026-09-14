@@ -1,0 +1,820 @@
+{
+ "id": "S02",
+ "cours": "kanji",
+ "titre": "Séance 02 — Personnes, calendrier",
+ "date": "2026-09-10",
+ "range": [
+  15,
+  34
+ ],
+ "kanji": [
+  {
+   "n": 15,
+   "k": "人",
+   "fr": "la personne",
+   "on": [
+    "ジン",
+    "ニン"
+   ],
+   "kun": [
+    "ひと"
+   ],
+   "strokes": 2,
+   "vocab": [
+    {
+     "w": "一人",
+     "r": "ひとり",
+     "fr": "1 personne",
+     "star": true
+    },
+    {
+     "w": "二人",
+     "r": "ふたり",
+     "fr": "2 personnes",
+     "star": true
+    },
+    {
+     "w": "三人",
+     "r": "さんにん",
+     "fr": "3 personnes",
+     "star": true
+    },
+    {
+     "w": "四人",
+     "r": "よにん",
+     "fr": "4 personnes",
+     "star": true
+    },
+    {
+     "w": "フランス人",
+     "r": "フランスじん",
+     "fr": "le Français",
+     "star": true
+    },
+    {
+     "w": "人々",
+     "r": "ひとびと",
+     "fr": "les gens",
+     "star": true
+    }
+   ],
+   "src": "cours"
+  },
+  {
+   "n": 16,
+   "k": "女",
+   "fr": "la femme",
+   "on": [
+    "ジョ",
+    "ニョ"
+   ],
+   "kun": [
+    "おんな",
+    "め"
+   ],
+   "strokes": 3,
+   "vocab": [
+    {
+     "w": "女",
+     "r": "おんな",
+     "fr": "la femme",
+     "star": true
+    },
+    {
+     "w": "女の人",
+     "r": "おんなのひと",
+     "fr": "la femme, a personne de sexe féminin",
+     "star": true
+    }
+   ],
+   "src": "cours"
+  },
+  {
+   "n": 17,
+   "k": "男",
+   "fr": "lʼhomme",
+   "on": [
+    "ダン",
+    "ナン"
+   ],
+   "kun": [
+    "おとこ"
+   ],
+   "strokes": 7,
+   "vocab": [
+    {
+     "w": "男",
+     "r": "おとこ",
+     "fr": "lʼhomme",
+     "star": true
+    },
+    {
+     "w": "男の人",
+     "r": "おとこのひと",
+     "fr": "lʼhomme, la personne de sexe masculin",
+     "star": true
+    }
+   ],
+   "src": "cours"
+  },
+  {
+   "n": 18,
+   "k": "子",
+   "fr": "lʼenfant, le petit",
+   "on": [
+    "シ",
+    "ス"
+   ],
+   "kun": [
+    "こ"
+   ],
+   "strokes": 3,
+   "vocab": [
+    {
+     "w": "子",
+     "r": "こ",
+     "fr": "lʼenfant, le petit",
+     "star": true
+    },
+    {
+     "w": "子ども",
+     "r": "こども",
+     "fr": "lʼenfant",
+     "star": true
+    },
+    {
+     "w": "女の子",
+     "r": "おんなのこ",
+     "fr": "la fille",
+     "star": true
+    },
+    {
+     "w": "男の子",
+     "r": "おとこのこ",
+     "fr": "le garçon",
+     "star": true
+    }
+   ],
+   "src": "cours"
+  },
+  {
+   "n": 19,
+   "k": "本",
+   "fr": "le livre, la racine",
+   "on": [
+    "ホン"
+   ],
+   "kun": [
+    "もと"
+   ],
+   "strokes": 5,
+   "vocab": [
+    {
+     "w": "本",
+     "r": "ほん",
+     "fr": "le livre",
+     "star": true
+    }
+   ],
+   "src": "cours"
+  },
+  {
+   "n": 20,
+   "k": "日",
+   "fr": "le soleil, le jour",
+   "on": [
+    "ニチ",
+    "ジツ"
+   ],
+   "kun": [
+    "ひ",
+    "-び",
+    "-か"
+   ],
+   "strokes": 4,
+   "vocab": [
+    {
+     "w": "日",
+     "r": "ひ",
+     "fr": "le jour",
+     "star": true
+    },
+    {
+     "w": "一日",
+     "r": "いちにち",
+     "fr": "un jour, toute une journée",
+     "star": true
+    },
+    {
+     "w": "日本",
+     "r": "にほん",
+     "fr": "le Japon",
+     "star": true
+    },
+    {
+     "w": "日本",
+     "r": "にほんじん",
+     "fr": "le Japonais",
+     "star": true
+    },
+    {
+     "w": "一日",
+     "r": "ついたち",
+     "fr": "le 1er jour du mois",
+     "star": true
+    },
+    {
+     "w": "二日",
+     "r": "ふつか",
+     "fr": "le 2e",
+     "star": true
+    },
+    {
+     "w": "三日",
+     "r": "みっか",
+     "fr": "le 3e",
+     "star": true
+    },
+    {
+     "w": "四日",
+     "r": "よっか",
+     "fr": "le 4e",
+     "star": true
+    },
+    {
+     "w": "五日",
+     "r": "いつか",
+     "fr": "le 5e",
+     "star": true
+    },
+    {
+     "w": "六日",
+     "r": "むいか",
+     "fr": "le 6e",
+     "star": true
+    },
+    {
+     "w": "七日",
+     "r": "なのか",
+     "fr": "le 7e",
+     "star": true
+    },
+    {
+     "w": "八日",
+     "r": "ようか",
+     "fr": "le 8e",
+     "star": true
+    },
+    {
+     "w": "九日",
+     "r": "ここのか",
+     "fr": "le 9e",
+     "star": true
+    },
+    {
+     "w": "十日",
+     "r": "とおか",
+     "fr": "le 10e",
+     "star": true
+    },
+    {
+     "w": "十一日",
+     "r": "じゅういちにち",
+     "fr": "le 11e",
+     "star": true
+    },
+    {
+     "w": "十二日",
+     "r": "じゅうににち",
+     "fr": "le 12e",
+     "star": true
+    }
+   ],
+   "src": "cours"
+  },
+  {
+   "n": 21,
+   "k": "月",
+   "fr": "la lune, le mois",
+   "on": [
+    "ゲツ",
+    "ガツ"
+   ],
+   "kun": [
+    "つき"
+   ],
+   "strokes": 4,
+   "vocab": [
+    {
+     "w": "月",
+     "r": "つき",
+     "fr": "la lune, le mois",
+     "star": true
+    },
+    {
+     "w": "一月",
+     "r": "いちがつ",
+     "fr": "janvier",
+     "star": true
+    },
+    {
+     "w": "二月",
+     "r": "にがつ",
+     "fr": "février",
+     "star": true
+    },
+    {
+     "w": "三月",
+     "r": "さんがつ",
+     "fr": "mars",
+     "star": true
+    },
+    {
+     "w": "四月",
+     "r": "しがつ",
+     "fr": "avril",
+     "star": true
+    },
+    {
+     "w": "五月",
+     "r": "ごがつ",
+     "fr": "mai",
+     "star": true
+    },
+    {
+     "w": "六月",
+     "r": "ろくがつ",
+     "fr": "juin",
+     "star": true
+    },
+    {
+     "w": "七月",
+     "r": "しちがつ",
+     "fr": "juillet",
+     "star": true
+    },
+    {
+     "w": "八月",
+     "r": "はちがつ",
+     "fr": "août",
+     "star": true
+    },
+    {
+     "w": "九月",
+     "r": "くがつ",
+     "fr": "septembre",
+     "star": true
+    },
+    {
+     "w": "十月",
+     "r": "じゅうがつ",
+     "fr": "octobre",
+     "star": true
+    },
+    {
+     "w": "十一月",
+     "r": "じゅういちがつ",
+     "fr": "novembre",
+     "star": true
+    },
+    {
+     "w": "十二月",
+     "r": "じゅうにがつ",
+     "fr": "décembre",
+     "star": true
+    },
+    {
+     "w": "一か月",
+     "r": "いっかげつ",
+     "fr": "1 mois (durée)",
+     "star": true
+    },
+    {
+     "w": "二か月",
+     "r": "にかげつ",
+     "fr": "2 mois (durée)",
+     "star": true
+    },
+    {
+     "w": "三か月",
+     "r": "さんかげつ",
+     "fr": "3 mois (durée)",
+     "star": true
+    }
+   ],
+   "src": "cours"
+  },
+  {
+   "n": 22,
+   "k": "年",
+   "fr": "lʼannée",
+   "on": [
+    "ネン"
+   ],
+   "kun": [
+    "とし"
+   ],
+   "strokes": 6,
+   "vocab": [
+    {
+     "w": "年",
+     "r": "とし",
+     "fr": "lʼannée",
+     "star": true
+    }
+   ],
+   "src": "cours"
+  },
+  {
+   "n": 23,
+   "k": "山",
+   "fr": "la montagne",
+   "on": [
+    "サン"
+   ],
+   "kun": [
+    "やま"
+   ],
+   "strokes": 3,
+   "vocab": [
+    {
+     "w": "山",
+     "r": "やま",
+     "fr": "la montagne",
+     "star": true
+    }
+   ],
+   "src": "cours"
+  },
+  {
+   "n": 24,
+   "k": "川",
+   "fr": "la rivière",
+   "on": [
+    "セン"
+   ],
+   "kun": [
+    "かわ"
+   ],
+   "strokes": 3,
+   "vocab": [
+    {
+     "w": "川",
+     "r": "かわ",
+     "fr": "la rivière",
+     "star": true
+    }
+   ],
+   "src": "cours"
+  },
+  {
+   "n": 25,
+   "k": "火",
+   "fr": "le feu",
+   "on": [
+    "カ"
+   ],
+   "kun": [
+    "ひ"
+   ],
+   "strokes": 4,
+   "vocab": [
+    {
+     "w": "火",
+     "r": "ひ",
+     "fr": "le feu",
+     "star": true
+    },
+    {
+     "w": "火山",
+     "r": "かざん",
+     "fr": "le volcan",
+     "star": true
+    }
+   ],
+   "src": "cours"
+  },
+  {
+   "n": 26,
+   "k": "水",
+   "fr": "lʼeau",
+   "on": [
+    "スイ"
+   ],
+   "kun": [
+    "みず"
+   ],
+   "strokes": 4,
+   "vocab": [
+    {
+     "w": "お水",
+     "r": "おみず",
+     "fr": "lʼeau",
+     "star": true
+    }
+   ],
+   "src": "cours"
+  },
+  {
+   "n": 27,
+   "k": "木",
+   "fr": "lʼarbre, le bois",
+   "on": [
+    "モク",
+    "ボク"
+   ],
+   "kun": [
+    "き"
+   ],
+   "strokes": 4,
+   "vocab": [
+    {
+     "w": "木",
+     "r": "き",
+     "fr": "lʼarbre",
+     "star": true
+    }
+   ],
+   "src": "cours"
+  },
+  {
+   "n": 28,
+   "k": "金",
+   "fr": "lʼor",
+   "on": [
+    "キン",
+    "コン"
+   ],
+   "kun": [
+    "かね"
+   ],
+   "strokes": 8,
+   "vocab": [
+    {
+     "w": "お金",
+     "r": "おかね",
+     "fr": "lʼargent, la monnaie",
+     "star": true
+    }
+   ],
+   "src": "cours"
+  },
+  {
+   "n": 29,
+   "k": "土",
+   "fr": "le sol, la terre",
+   "on": [
+    "ド",
+    "ト"
+   ],
+   "kun": [
+    "つち"
+   ],
+   "strokes": 3,
+   "vocab": [
+    {
+     "w": "土",
+     "r": "つち",
+     "fr": "le sol",
+     "star": true
+    },
+    {
+     "w": "土木",
+     "r": "どぼく",
+     "fr": "les travaux publics",
+     "star": true
+    }
+   ],
+   "src": "cours"
+  },
+  {
+   "n": 30,
+   "k": "曜",
+   "fr": "le jour de la semaine",
+   "on": [
+    "ヨウ"
+   ],
+   "kun": [],
+   "strokes": 18,
+   "vocab": [
+    {
+     "w": "曜日",
+     "r": "ようび",
+     "fr": "le jour de la semaine",
+     "star": true
+    },
+    {
+     "w": "日曜日",
+     "r": "にちようび",
+     "fr": "dimanche",
+     "star": true
+    },
+    {
+     "w": "月曜日",
+     "r": "げつようび",
+     "fr": "lundi",
+     "star": true
+    },
+    {
+     "w": "火曜日",
+     "r": "かようび",
+     "fr": "mardi",
+     "star": true
+    },
+    {
+     "w": "水曜日",
+     "r": "すいようび",
+     "fr": "mercredi",
+     "star": true
+    },
+    {
+     "w": "木曜日",
+     "r": "もくようび",
+     "fr": "jeudi",
+     "star": true
+    },
+    {
+     "w": "金曜日",
+     "r": "きんようび",
+     "fr": "vendredi",
+     "star": true
+    },
+    {
+     "w": "土曜日",
+     "r": "どようび",
+     "fr": "samedi",
+     "star": true
+    }
+   ],
+   "src": "cours"
+  },
+  {
+   "n": 31,
+   "k": "中",
+   "fr": "dedans",
+   "on": [
+    "チュウ"
+   ],
+   "kun": [
+    "なか"
+   ],
+   "strokes": 4,
+   "vocab": [
+    {
+     "w": "中",
+     "r": "なか",
+     "fr": "dedans, à lʼintérieur",
+     "star": true
+    },
+    {
+     "w": "一日中",
+     "r": "いちにちじゅう",
+     "fr": "toute la journée",
+     "star": true
+    },
+    {
+     "w": "日本中",
+     "r": "にほんじゅう",
+     "fr": "dans tout le Japon",
+     "star": true
+    },
+    {
+     "w": "ダウンロード中",
+     "r": "ダウンロードちゅう",
+     "fr": "téléchargement en cours",
+     "star": false
+    },
+    {
+     "w": "インストール中",
+     "r": "インストールちゅう",
+     "fr": "installation en cours",
+     "star": false
+    },
+    {
+     "w": "アップデート中",
+     "r": "アップデートちゅう",
+     "fr": "mise à jour en cours",
+     "star": false
+    }
+   ],
+   "src": "cours"
+  },
+  {
+   "n": 32,
+   "k": "間",
+   "fr": "lʼintervalle",
+   "on": [
+    "カン",
+    "ケン"
+   ],
+   "kun": [
+    "あいだ",
+    "ま"
+   ],
+   "strokes": 12,
+   "vocab": [
+    {
+     "w": "間",
+     "r": "あいだ",
+     "fr": "lʼespace, lʼintervalle",
+     "star": false
+    },
+    {
+     "w": "年間",
+     "r": "ねんかん",
+     "fr": "lʼannée (durée)",
+     "star": true
+    },
+    {
+     "w": "中間",
+     "r": "ちゅうかん",
+     "fr": "à mi-chemin, intermédiaire",
+     "star": false
+    },
+    {
+     "w": "人間",
+     "r": "にんげん",
+     "fr": "le mortel, lʼhumain ▲",
+     "star": false
+    }
+   ],
+   "src": "cours"
+  },
+  {
+   "n": 33,
+   "k": "週",
+   "fr": "la semaine",
+   "on": [
+    "シュウ"
+   ],
+   "kun": [],
+   "strokes": 11,
+   "vocab": [
+    {
+     "w": "一周間",
+     "r": "いっしゅうかん",
+     "fr": "une semaine (durée)",
+     "star": true
+    },
+    {
+     "w": "二周間",
+     "r": "にしゅうかん",
+     "fr": "deux semaines (durée)",
+     "star": true
+    }
+   ],
+   "src": "cours"
+  },
+  {
+   "n": 34,
+   "k": "星",
+   "fr": "lʼastre",
+   "on": [
+    "セイ"
+   ],
+   "kun": [
+    "ほし"
+   ],
+   "strokes": 9,
+   "vocab": [
+    {
+     "w": "星",
+     "r": "ほし",
+     "fr": "lʼétoile, lʼastre",
+     "star": true
+    },
+    {
+     "w": "水星",
+     "r": "すいせい",
+     "fr": "la planète Mercure",
+     "star": false
+    },
+    {
+     "w": "金星",
+     "r": "きんせい",
+     "fr": "la planète Vénus",
+     "star": false
+    },
+    {
+     "w": "火星",
+     "r": "かせい",
+     "fr": "la planète Mars",
+     "star": false
+    },
+    {
+     "w": "木星",
+     "r": "もくせい",
+     "fr": "la planète Jupiter",
+     "star": false
+    },
+    {
+     "w": "土星",
+     "r": "どせい",
+     "fr": "la planète Saturne",
+     "star": false
+    }
+   ],
+   "src": "cours"
+  }
+ ]
+}

@@ -1,0 +1,334 @@
+{
+ "id": "L01",
+ "titre": "Leçon 1 — Se présenter",
+ "date": "2026-09-10",
+ "points": [
+  {
+   "t": "N1 は N2 です",
+   "fr": "は marque le thème ; です équivaut à « être » (poli).",
+   "ex": [
+    {
+     "jp": "わたしは マイク・ミラーです。",
+     "fr": "Je suis Mike Miller.",
+     "tok": [
+      "わたしは",
+      "マイク・ミラー",
+      "です"
+     ]
+    },
+    {
+     "jp": "ミラーさんは アメリカ人です。",
+     "fr": "M. Miller est américain.",
+     "tok": [
+      "ミラーさんは",
+      "アメリカ人",
+      "です"
+     ]
+    },
+    {
+     "jp": "ミラーさんは 会社員です。",
+     "fr": "M. Miller est employé d'entreprise.",
+     "tok": [
+      "ミラーさんは",
+      "会社員",
+      "です"
+     ]
+    }
+   ]
+  },
+  {
+   "t": "N1 は N2 ではありません",
+   "fr": "Forme négative de です. じゃありません à l'oral.",
+   "ex": [
+    {
+     "jp": "ミラーさんは 銀行員では ありません。",
+     "fr": "M. Miller n'est pas employé de banque.",
+     "tok": [
+      "ミラーさんは",
+      "銀行員",
+      "では",
+      "ありません"
+     ]
+    }
+   ]
+  },
+  {
+   "t": "〜か ? (question)",
+   "fr": "か en fin de phrase transforme l'énoncé en question. On répond はい / いいえ.",
+   "ex": [
+    {
+     "jp": "ミラーさんは アメリカ人ですか。",
+     "fr": "M. Miller est-il américain ?",
+     "tok": [
+      "ミラーさんは",
+      "アメリカ人",
+      "ですか"
+     ]
+    },
+    {
+     "jp": "はい、アメリカ人です。",
+     "fr": "Oui, il est américain.",
+     "tok": [
+      "はい",
+      "アメリカ人",
+      "です"
+     ]
+    },
+    {
+     "jp": "いいえ、医者では ありません。会社員です。",
+     "fr": "Non, il n'est pas médecin. Il est employé.",
+     "tok": [
+      "いいえ",
+      "医者",
+      "では",
+      "ありません",
+      "会社員",
+      "です"
+     ]
+    }
+   ]
+  },
+  {
+   "t": "だれ / どなた",
+   "fr": "« qui » — どなた est la forme polie.",
+   "ex": [
+    {
+     "jp": "あの人は だれですか。",
+     "fr": "Qui est cette personne ?",
+     "tok": [
+      "あの人は",
+      "だれ",
+      "ですか"
+     ]
+    },
+    {
+     "jp": "あの方は どなたですか。",
+     "fr": "Qui est cette personne ? (poli)",
+     "tok": [
+      "あの方は",
+      "どなた",
+      "ですか"
+     ]
+    },
+    {
+     "jp": "ミラーさんです。IMCの 社員です。",
+     "fr": "C'est M. Miller. Il est employé d'IMC.",
+     "tok": [
+      "ミラーさん",
+      "です",
+      "IMCの",
+      "社員",
+      "です"
+     ]
+    }
+   ]
+  },
+  {
+   "t": "N も",
+   "fr": "も remplace は et signifie « aussi ».",
+   "ex": [
+    {
+     "jp": "サントスさんは ブラジル人です。マリアさんも ブラジル人です。",
+     "fr": "M. Santos est brésilien. Maria aussi est brésilienne.",
+     "tok": [
+      "サントスさんは",
+      "ブラジル人",
+      "です",
+      "マリアさんも",
+      "ブラジル人",
+      "です"
+     ]
+    }
+   ]
+  },
+  {
+   "t": "〜歳 / 何歳 / おいくつ",
+   "fr": "L'âge se donne avec 歳. おいくつですか est la question polie.",
+   "ex": [
+    {
+     "jp": "グプタさんは 42歳です。",
+     "fr": "M. Gupta a 42 ans.",
+     "tok": [
+      "グプタさんは",
+      "42歳",
+      "です"
+     ]
+    },
+    {
+     "jp": "グプタさんは 何歳ですか。",
+     "fr": "Quel âge a M. Gupta ?",
+     "tok": [
+      "グプタさんは",
+      "何歳",
+      "ですか"
+     ]
+    },
+    {
+     "jp": "グプタさんは おいくつですか。",
+     "fr": "Quel âge a M. Gupta ? (poli)",
+     "tok": [
+      "グプタさんは",
+      "おいくつ",
+      "ですか"
+     ]
+    }
+   ]
+  },
+  {
+   "t": "何番 (numéro)",
+   "fr": "Les numéros de téléphone se lisent chiffre par chiffre, séparés par の.",
+   "ex": [
+    {
+     "jp": "ミラーさんの 電話番号は 何番ですか。",
+     "fr": "Quel est le numéro de téléphone de M. Miller ?",
+     "tok": [
+      "ミラーさんの",
+      "電話番号は",
+      "何番",
+      "ですか"
+     ]
+    },
+    {
+     "jp": "020の 3897の 4561です。",
+     "fr": "C'est le 020-3897-4561.",
+     "tok": [
+      "020の",
+      "3897の",
+      "4561",
+      "です"
+     ]
+    }
+   ]
+  }
+ ],
+ "vocab": [
+  [
+   "わたし",
+   "je"
+  ],
+  [
+   "あなた",
+   "tu, vous"
+  ],
+  [
+   "あの人",
+   "cette personne-là"
+  ],
+  [
+   "あの方",
+   "cette personne-là (poli)"
+  ],
+  [
+   "みなさん",
+   "tout le monde"
+  ],
+  [
+   "〜さん",
+   "M., Mme (suffixe)"
+  ],
+  [
+   "先生",
+   "professeur"
+  ],
+  [
+   "教師",
+   "enseignant"
+  ],
+  [
+   "学生",
+   "étudiant"
+  ],
+  [
+   "会社員",
+   "employé d'entreprise"
+  ],
+  [
+   "社員",
+   "employé (de telle société)"
+  ],
+  [
+   "銀行員",
+   "employé de banque"
+  ],
+  [
+   "医者",
+   "médecin"
+  ],
+  [
+   "研究者",
+   "chercheur"
+  ],
+  [
+   "大学",
+   "université"
+  ],
+  [
+   "病院",
+   "hôpital"
+  ],
+  [
+   "だれ",
+   "qui"
+  ],
+  [
+   "どなた",
+   "qui (poli)"
+  ],
+  [
+   "〜歳",
+   "ans (âge)"
+  ],
+  [
+   "何歳",
+   "quel âge"
+  ],
+  [
+   "おいくつ",
+   "quel âge (poli)"
+  ],
+  [
+   "はい",
+   "oui"
+  ],
+  [
+   "いいえ",
+   "non"
+  ],
+  [
+   "電話番号",
+   "numéro de téléphone"
+  ],
+  [
+   "何番",
+   "quel numéro"
+  ],
+  [
+   "アメリカ",
+   "États-Unis"
+  ],
+  [
+   "ブラジル",
+   "Brésil"
+  ],
+  [
+   "日本",
+   "Japon"
+  ],
+  [
+   "フランス",
+   "France"
+  ],
+  [
+   "中国",
+   "Chine"
+  ],
+  [
+   "はじめまして",
+   "enchanté"
+  ],
+  [
+   "どうぞよろしく",
+   "ravi de faire votre connaissance"
+  ]
+ ]
+}

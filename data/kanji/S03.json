@@ -1,0 +1,771 @@
+{
+ "id": "S03",
+ "cours": "kanji",
+ "titre": "Séance 03 — L'heure, le tourisme",
+ "date": "2026-09-17",
+ "range": [
+  35,
+  51
+ ],
+ "kanji": [
+  {
+   "n": 35,
+   "k": "時",
+   "fr": "le temps, l'heure",
+   "on": [
+    "ジ"
+   ],
+   "kun": [
+    "とき"
+   ],
+   "strokes": 10,
+   "vocab": [
+    {
+     "w": "時",
+     "r": "とき",
+     "fr": "le temps / l'heure (じ)",
+     "star": true
+    },
+    {
+     "w": "時",
+     "r": "じ",
+     "fr": "le temps / l'heure (じ)",
+     "star": true
+    },
+    {
+     "w": "一時",
+     "r": "いちじ",
+     "fr": "une heure (1h)",
+     "star": false
+    },
+    {
+     "w": "時間",
+     "r": "じかん",
+     "fr": "le temps, la durée ; l'heure (durée)",
+     "star": true
+    },
+    {
+     "w": "一時間",
+     "r": "いちじかん",
+     "fr": "une heure (durée)",
+     "star": true
+    },
+    {
+     "w": "時々",
+     "r": "ときどき",
+     "fr": "parfois",
+     "star": true
+    },
+    {
+     "w": "日時",
+     "r": "にちじ",
+     "fr": "la date et l'heure",
+     "star": false
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 36,
+   "k": "半",
+   "fr": "la moitié",
+   "on": [
+    "ハン"
+   ],
+   "kun": [
+    "なか-ば"
+   ],
+   "strokes": 5,
+   "vocab": [
+    {
+     "w": "半",
+     "r": "はん",
+     "fr": "la moitié, et demie",
+     "star": true
+    },
+    {
+     "w": "半ば",
+     "r": "なかば",
+     "fr": "le milieu, à moitié",
+     "star": false
+    },
+    {
+     "w": "時半",
+     "r": "じはん",
+     "fr": "…heure et demie",
+     "star": true
+    },
+    {
+     "w": "三時半",
+     "r": "さんじはん",
+     "fr": "trois heures et demie",
+     "star": true
+    },
+    {
+     "w": "半年",
+     "r": "はんとし",
+     "fr": "six mois, un semestre",
+     "star": true
+    },
+    {
+     "w": "半々",
+     "r": "はんはん",
+     "fr": "moitié-moitié",
+     "star": false
+    },
+    {
+     "w": "半日",
+     "r": "はんにち",
+     "fr": "une demi-journée",
+     "star": true
+    },
+    {
+     "w": "半月",
+     "r": "はんげつ",
+     "fr": "un demi-mois, la demi-lune",
+     "star": false
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 37,
+   "k": "分",
+   "fr": "la minute, la partie ; comprendre",
+   "on": [
+    "ブン",
+    "フン",
+    "ブ"
+   ],
+   "kun": [
+    "わ-ける",
+    "わ-かる"
+   ],
+   "strokes": 4,
+   "vocab": [
+    {
+     "w": "時分",
+     "r": "じぶん",
+     "fr": "le moment, l'époque",
+     "star": false
+    },
+    {
+     "w": "半分",
+     "r": "はんぶん",
+     "fr": "la moitié",
+     "star": true
+    },
+    {
+     "w": "分",
+     "r": "ぶん",
+     "fr": "la partie (ぶん) / la minute (ふん)",
+     "star": false
+    },
+    {
+     "w": "分",
+     "r": "ふん",
+     "fr": "la partie (ぶん) / la minute (ふん)",
+     "star": true
+    },
+    {
+     "w": "分かる",
+     "r": "わかる",
+     "fr": "comprendre",
+     "star": true
+    },
+    {
+     "w": "一分",
+     "r": "いっぷん",
+     "fr": "une minute",
+     "star": false
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 38,
+   "k": "今",
+   "fr": "maintenant",
+   "on": [
+    "コン",
+    "キン"
+   ],
+   "kun": [
+    "いま"
+   ],
+   "strokes": 4,
+   "vocab": [
+    {
+     "w": "今",
+     "r": "いま",
+     "fr": "maintenant",
+     "star": true
+    },
+    {
+     "w": "今日",
+     "r": "きょう",
+     "fr": "aujourd'hui",
+     "star": true
+    },
+    {
+     "w": "今週",
+     "r": "こんしゅう",
+     "fr": "cette semaine",
+     "star": true
+    },
+    {
+     "w": "今月",
+     "r": "こんげつ",
+     "fr": "ce mois-ci",
+     "star": true
+    },
+    {
+     "w": "今年",
+     "r": "ことし",
+     "fr": "cette année",
+     "star": true
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 39,
+   "k": "前",
+   "fr": "avant, devant",
+   "on": [
+    "ゼン"
+   ],
+   "kun": [
+    "まえ"
+   ],
+   "strokes": 9,
+   "vocab": [
+    {
+     "w": "前",
+     "r": "まえ",
+     "fr": "avant, devant",
+     "star": true
+    },
+    {
+     "w": "前日",
+     "r": "ぜんじつ",
+     "fr": "la veille",
+     "star": true
+    },
+    {
+     "w": "前年",
+     "r": "ぜんねん",
+     "fr": "l'année précédente",
+     "star": true
+    },
+    {
+     "w": "前半",
+     "r": "ぜんはん",
+     "fr": "la première moitié",
+     "star": false
+    },
+    {
+     "w": "人前で",
+     "r": "ひとまえで",
+     "fr": "en public",
+     "star": true
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 40,
+   "k": "後",
+   "fr": "après, derrière",
+   "on": [
+    "ゴ",
+    "コウ"
+   ],
+   "kun": [
+    "あと",
+    "うし-ろ",
+    "のち"
+   ],
+   "strokes": 9,
+   "vocab": [
+    {
+     "w": "後",
+     "r": "あと",
+     "fr": "après",
+     "star": true
+    },
+    {
+     "w": "後ろ",
+     "r": "うしろ",
+     "fr": "derrière",
+     "star": true
+    },
+    {
+     "w": "今後",
+     "r": "こんご",
+     "fr": "désormais, à l'avenir",
+     "star": true
+    },
+    {
+     "w": "前後",
+     "r": "ぜんご",
+     "fr": "avant et après, environ",
+     "star": false
+    },
+    {
+     "w": "その後",
+     "r": "そのあと",
+     "fr": "ensuite, après cela",
+     "star": true
+    },
+    {
+     "w": "後半",
+     "r": "こうはん",
+     "fr": "la seconde moitié",
+     "star": false
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 41,
+   "k": "先",
+   "fr": "avant, la pointe",
+   "on": [
+    "セン"
+   ],
+   "kun": [
+    "さき",
+    "ま-ず"
+   ],
+   "strokes": 6,
+   "vocab": [
+    {
+     "w": "先",
+     "r": "さき",
+     "fr": "la pointe, l'avant, avant",
+     "star": true
+    },
+    {
+     "w": "先ず",
+     "r": "まず",
+     "fr": "d'abord",
+     "star": false
+    },
+    {
+     "w": "先週",
+     "r": "せんしゅう",
+     "fr": "la semaine dernière",
+     "star": true
+    },
+    {
+     "w": "先月",
+     "r": "せんげつ",
+     "fr": "le mois dernier",
+     "star": true
+    },
+    {
+     "w": "先日",
+     "r": "せんじつ",
+     "fr": "l'autre jour",
+     "star": true
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 42,
+   "k": "毎",
+   "fr": "chaque",
+   "on": [
+    "マイ"
+   ],
+   "kun": [],
+   "strokes": 6,
+   "vocab": [
+    {
+     "w": "毎分",
+     "r": "まいふん",
+     "fr": "chaque minute",
+     "star": true
+    },
+    {
+     "w": "毎時",
+     "r": "まいじ",
+     "fr": "chaque heure",
+     "star": true
+    },
+    {
+     "w": "毎日",
+     "r": "まいにち",
+     "fr": "chaque jour",
+     "star": true
+    },
+    {
+     "w": "毎週",
+     "r": "まいしゅう",
+     "fr": "chaque semaine",
+     "star": true
+    },
+    {
+     "w": "毎月",
+     "r": "まいつき",
+     "fr": "chaque mois",
+     "star": true
+    },
+    {
+     "w": "毎年",
+     "r": "まいとし",
+     "fr": "chaque année",
+     "star": true
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 43,
+   "k": "名",
+   "fr": "le nom",
+   "on": [
+    "メイ",
+    "ミョウ"
+   ],
+   "kun": [
+    "な"
+   ],
+   "strokes": 6,
+   "vocab": [
+    {
+     "w": "名",
+     "r": "な",
+     "fr": "le nom (な) / compteur de personnes (めい)",
+     "star": true
+    },
+    {
+     "w": "名",
+     "r": "めい",
+     "fr": "le nom (な) / compteur de personnes (めい)",
+     "star": false
+    },
+    {
+     "w": "名前",
+     "r": "なまえ",
+     "fr": "le nom, le prénom",
+     "star": true
+    },
+    {
+     "w": "人名",
+     "r": "じんめい",
+     "fr": "le nom de personne",
+     "star": false
+    },
+    {
+     "w": "名人",
+     "r": "めいじん",
+     "fr": "le maître, l'expert",
+     "star": false
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 44,
+   "k": "電",
+   "fr": "l'électricité",
+   "on": [
+    "デン"
+   ],
+   "kun": [],
+   "strokes": 13,
+   "vocab": [
+    {
+     "w": "電子",
+     "r": "でんし",
+     "fr": "l'électron, électronique",
+     "star": true
+    },
+    {
+     "w": "電子レンジ",
+     "r": "でんしレンジ",
+     "fr": "le four à micro-ondes",
+     "star": true
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 45,
+   "k": "車",
+   "fr": "la voiture, le véhicule",
+   "on": [
+    "シャ"
+   ],
+   "kun": [
+    "くるま"
+   ],
+   "strokes": 7,
+   "vocab": [
+    {
+     "w": "車",
+     "r": "くるま",
+     "fr": "la voiture",
+     "star": true
+    },
+    {
+     "w": "電車",
+     "r": "でんしゃ",
+     "fr": "le train (électrique)",
+     "star": true
+    },
+    {
+     "w": "車中",
+     "r": "しゃちゅう",
+     "fr": "dans la voiture, dans le train",
+     "star": true
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 46,
+   "k": "円",
+   "fr": "le yen, le cercle",
+   "on": [
+    "エン"
+   ],
+   "kun": [
+    "まる-い"
+   ],
+   "strokes": 4,
+   "vocab": [
+    {
+     "w": "円",
+     "r": "えん",
+     "fr": "le yen",
+     "star": true
+    },
+    {
+     "w": "円い",
+     "r": "まるい",
+     "fr": "rond",
+     "star": true
+    },
+    {
+     "w": "百円",
+     "r": "ひゃくえん",
+     "fr": "cent yens",
+     "star": true
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 47,
+   "k": "国",
+   "fr": "le pays",
+   "on": [
+    "コク"
+   ],
+   "kun": [
+    "くに"
+   ],
+   "strokes": 8,
+   "vocab": [
+    {
+     "w": "国",
+     "r": "くに",
+     "fr": "le pays",
+     "star": true
+    },
+    {
+     "w": "国々",
+     "r": "くにぐに",
+     "fr": "les pays",
+     "star": true
+    },
+    {
+     "w": "中国",
+     "r": "ちゅうごく",
+     "fr": "la Chine",
+     "star": true
+    },
+    {
+     "w": "国土",
+     "r": "こくど",
+     "fr": "le territoire national",
+     "star": false
+    },
+    {
+     "w": "国名",
+     "r": "こくめい",
+     "fr": "le nom du pays",
+     "star": true
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 48,
+   "k": "駅",
+   "fr": "la gare",
+   "on": [
+    "エキ"
+   ],
+   "kun": [],
+   "strokes": 14,
+   "vocab": [
+    {
+     "w": "駅",
+     "r": "えき",
+     "fr": "la gare",
+     "star": true
+    },
+    {
+     "w": "駅前",
+     "r": "えきまえ",
+     "fr": "devant la gare",
+     "star": false
+    },
+    {
+     "w": "駅名",
+     "r": "えきめい",
+     "fr": "le nom de la gare",
+     "star": true
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 49,
+   "k": "外",
+   "fr": "l'extérieur",
+   "on": [
+    "ガイ",
+    "ゲ"
+   ],
+   "kun": [
+    "そと",
+    "ほか",
+    "はず-す"
+   ],
+   "strokes": 5,
+   "vocab": [
+    {
+     "w": "外",
+     "r": "そと",
+     "fr": "dehors, l'extérieur",
+     "star": true
+    },
+    {
+     "w": "国外",
+     "r": "こくがい",
+     "fr": "l'étranger, hors du pays",
+     "star": false
+    },
+    {
+     "w": "外国",
+     "r": "がいこく",
+     "fr": "le pays étranger",
+     "star": true
+    },
+    {
+     "w": "外国人",
+     "r": "がいこくじん",
+     "fr": "l'étranger (personne)",
+     "star": true
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 50,
+   "k": "元",
+   "fr": "l'origine",
+   "on": [
+    "ゲン",
+    "ガン"
+   ],
+   "kun": [
+    "もと"
+   ],
+   "strokes": 4,
+   "vocab": [
+    {
+     "w": "元",
+     "r": "もと",
+     "fr": "l'origine, autrefois",
+     "star": true
+    },
+    {
+     "w": "元々",
+     "r": "もともと",
+     "fr": "à l'origine",
+     "star": false
+    },
+    {
+     "w": "国元",
+     "r": "こくもと",
+     "fr": "le pays natal",
+     "star": true
+    },
+    {
+     "w": "元日",
+     "r": "がんじつ",
+     "fr": "le jour de l'an (1er janvier)",
+     "star": true
+    },
+    {
+     "w": "元金",
+     "r": "がんきん",
+     "fr": "le capital (argent)",
+     "star": true
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 51,
+   "k": "気",
+   "fr": "l'esprit, l'énergie",
+   "on": [
+    "キ",
+    "ケ"
+   ],
+   "kun": [],
+   "strokes": 6,
+   "vocab": [
+    {
+     "w": "お元気",
+     "r": "おげんき",
+     "fr": "en bonne santé, en forme",
+     "star": true
+    },
+    {
+     "w": "人気",
+     "r": "にんき",
+     "fr": "la popularité",
+     "star": true
+    },
+    {
+     "w": "気分",
+     "r": "きぶん",
+     "fr": "l'humeur, l'état d'esprit",
+     "star": true
+    },
+    {
+     "w": "気前",
+     "r": "きまえ",
+     "fr": "la générosité",
+     "star": false
+    },
+    {
+     "w": "電気",
+     "r": "でんき",
+     "fr": "l'électricité, la lumière",
+     "star": true
+    }
+   ],
+   "src": "liste"
+  }
+ ]
+}

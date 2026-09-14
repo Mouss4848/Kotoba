@@ -1,0 +1,796 @@
+{
+ "id": "S08",
+ "cours": "kanji",
+ "titre": "Séance 08 — Eau, taille, contraires",
+ "date": "2026-10-22",
+ "range": [
+  118,
+  134
+ ],
+ "kanji": [
+  {
+   "n": 118,
+   "k": "池",
+   "fr": "l'étang",
+   "on": [
+    "チ"
+   ],
+   "kun": [
+    "いけ"
+   ],
+   "strokes": 6,
+   "vocab": [
+    {
+     "w": "池",
+     "r": "いけ",
+     "fr": "l'étang",
+     "star": null
+    },
+    {
+     "w": "池水",
+     "r": "いけみず",
+     "fr": "l'eau de l'étang",
+     "star": null
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 119,
+   "k": "海",
+   "fr": "la mer",
+   "on": [
+    "カイ"
+   ],
+   "kun": [
+    "うみ"
+   ],
+   "strokes": 9,
+   "vocab": [
+    {
+     "w": "海",
+     "r": "うみ",
+     "fr": "la mer",
+     "star": null
+    },
+    {
+     "w": "海外",
+     "r": "かいがい",
+     "fr": "l'étranger, outre-mer",
+     "star": null
+    },
+    {
+     "w": "海水",
+     "r": "かいすい",
+     "fr": "l'eau de mer",
+     "star": null
+    },
+    {
+     "w": "海上",
+     "r": "かいじょう",
+     "fr": "en mer",
+     "star": null
+    },
+    {
+     "w": "海中",
+     "r": "かいちゅう",
+     "fr": "sous la mer",
+     "star": null
+    },
+    {
+     "w": "海事",
+     "r": "かいじ",
+     "fr": "les affaires maritimes",
+     "star": null
+    },
+    {
+     "w": "海星",
+     "r": "ひとで",
+     "fr": "l'étoile de mer",
+     "star": null
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 120,
+   "k": "洋",
+   "fr": "l'océan, occidental",
+   "on": [
+    "ヨウ"
+   ],
+   "kun": [],
+   "strokes": 9,
+   "vocab": [
+    {
+     "w": "西洋",
+     "r": "せいよう",
+     "fr": "l'Occident",
+     "star": null
+    },
+    {
+     "w": "東洋",
+     "r": "とうよう",
+     "fr": "l'Orient",
+     "star": null
+    },
+    {
+     "w": "洋上",
+     "r": "ようじょう",
+     "fr": "en haute mer",
+     "star": null
+    },
+    {
+     "w": "洋食",
+     "r": "ようしょく",
+     "fr": "la cuisine occidentale",
+     "star": null
+    },
+    {
+     "w": "洋書",
+     "r": "ようしょ",
+     "fr": "le livre occidental",
+     "star": null
+    },
+    {
+     "w": "洋行",
+     "r": "ようこう",
+     "fr": "le voyage en Occident",
+     "star": null
+    },
+    {
+     "w": "洋風",
+     "r": "ようふう",
+     "fr": "à l'occidentale",
+     "star": null
+    },
+    {
+     "w": "洋間",
+     "r": "ようま",
+     "fr": "la pièce à l'occidentale",
+     "star": null
+    },
+    {
+     "w": "洋室",
+     "r": "ようしつ",
+     "fr": "la pièce à l'occidentale",
+     "star": null
+    },
+    {
+     "w": "洋物",
+     "r": "ようもの",
+     "fr": "l'article occidental",
+     "star": null
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 121,
+   "k": "道",
+   "fr": "le chemin, la voie",
+   "on": [
+    "ドウ"
+   ],
+   "kun": [
+    "みち"
+   ],
+   "strokes": 12,
+   "vocab": [
+    {
+     "w": "道",
+     "r": "みち",
+     "fr": "le chemin, la rue",
+     "star": null
+    },
+    {
+     "w": "海道",
+     "r": "かいどう",
+     "fr": "la route côtière",
+     "star": null
+    },
+    {
+     "w": "北海道",
+     "r": "ほっかいどう",
+     "fr": "Hokkaidō",
+     "star": null
+    },
+    {
+     "w": "道中",
+     "r": "どうちゅう",
+     "fr": "en chemin, pendant le voyage",
+     "star": null
+    },
+    {
+     "w": "車道",
+     "r": "しゃどう",
+     "fr": "la chaussée",
+     "star": null
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 122,
+   "k": "太",
+   "fr": "gros, épais",
+   "on": [
+    "タイ",
+    "タ"
+   ],
+   "kun": [
+    "ふと-い",
+    "ふと-る"
+   ],
+   "strokes": 4,
+   "vocab": [
+    {
+     "w": "太い",
+     "r": "ふとい",
+     "fr": "gros, épais",
+     "star": null
+    },
+    {
+     "w": "太る",
+     "r": "ふとる",
+     "fr": "grossir",
+     "star": null
+    },
+    {
+     "w": "大西洋",
+     "r": "たいせいよう",
+     "fr": "l'océan Atlantique",
+     "star": null
+    },
+    {
+     "w": "太子",
+     "r": "たいし",
+     "fr": "le prince héritier",
+     "star": null
+    },
+    {
+     "w": "太白星",
+     "r": "たいはくせい",
+     "fr": "Vénus (étoile)",
+     "star": null
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 123,
+   "k": "細",
+   "fr": "fin, mince",
+   "on": [
+    "サイ"
+   ],
+   "kun": [
+    "ほそ-い",
+    "こま-かい"
+   ],
+   "strokes": 11,
+   "vocab": [
+    {
+     "w": "細い",
+     "r": "ほそい",
+     "fr": "fin, mince",
+     "star": null
+    },
+    {
+     "w": "細る",
+     "r": "ほそる",
+     "fr": "s'amincir",
+     "star": null
+    },
+    {
+     "w": "細かい",
+     "r": "こまかい",
+     "fr": "minutieux, fin",
+     "star": null
+    },
+    {
+     "w": "細かい人",
+     "r": "こまかいひと",
+     "fr": "une personne pointilleuse",
+     "star": null
+    },
+    {
+     "w": "細かいお金",
+     "r": "こまかいおかね",
+     "fr": "la petite monnaie",
+     "star": null
+    },
+    {
+     "w": "細道",
+     "r": "ほそみち",
+     "fr": "le sentier étroit",
+     "star": null
+    },
+    {
+     "w": "細雨",
+     "r": "さいう",
+     "fr": "la bruine",
+     "star": null
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 124,
+   "k": "広",
+   "fr": "large, vaste",
+   "on": [
+    "コウ"
+   ],
+   "kun": [
+    "ひろ-い",
+    "ひろ-がる"
+   ],
+   "strokes": 5,
+   "vocab": [
+    {
+     "w": "広い",
+     "r": "ひろい",
+     "fr": "large, spacieux",
+     "star": null
+    },
+    {
+     "w": "広まる",
+     "r": "ひろまる",
+     "fr": "se répandre",
+     "star": null
+    },
+    {
+     "w": "広がる",
+     "r": "ひろがる",
+     "fr": "s'étendre",
+     "star": null
+    },
+    {
+     "w": "広大",
+     "r": "こうだい",
+     "fr": "vaste",
+     "star": null
+    },
+    {
+     "w": "広間",
+     "r": "ひろま",
+     "fr": "la grande salle",
+     "star": null
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 125,
+   "k": "狭",
+   "fr": "étroit",
+   "on": [
+    "キョウ"
+   ],
+   "kun": [
+    "せま-い"
+   ],
+   "strokes": 9,
+   "vocab": [
+    {
+     "w": "狭い",
+     "r": "せまい",
+     "fr": "étroit",
+     "star": null
+    },
+    {
+     "w": "狭まる",
+     "r": "せばまる",
+     "fr": "se rétrécir",
+     "star": null
+    },
+    {
+     "w": "狭間",
+     "r": "はざま",
+     "fr": "l'interstice, l'intervalle",
+     "star": null
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 126,
+   "k": "古",
+   "fr": "ancien, vieux",
+   "on": [
+    "コ"
+   ],
+   "kun": [
+    "ふる-い"
+   ],
+   "strokes": 5,
+   "vocab": [
+    {
+     "w": "古い",
+     "r": "ふるい",
+     "fr": "vieux, ancien",
+     "star": null
+    },
+    {
+     "w": "古来",
+     "r": "こらい",
+     "fr": "depuis les temps anciens",
+     "star": null
+    },
+    {
+     "w": "古書",
+     "r": "こしょ",
+     "fr": "le livre ancien",
+     "star": null
+    },
+    {
+     "w": "古風",
+     "r": "こふう",
+     "fr": "à l'ancienne",
+     "star": null
+    },
+    {
+     "w": "古本",
+     "r": "ふるほん",
+     "fr": "le livre d'occasion",
+     "star": null
+    },
+    {
+     "w": "古語",
+     "r": "こご",
+     "fr": "le mot ancien",
+     "star": null
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 127,
+   "k": "若",
+   "fr": "jeune",
+   "on": [
+    "ジャク"
+   ],
+   "kun": [
+    "わか-い"
+   ],
+   "strokes": 8,
+   "vocab": [
+    {
+     "w": "若い",
+     "r": "わかい",
+     "fr": "jeune",
+     "star": null
+    },
+    {
+     "w": "若書き",
+     "r": "わかがき",
+     "fr": "l'œuvre de jeunesse",
+     "star": null
+    },
+    {
+     "w": "若手",
+     "r": "わかて",
+     "fr": "le jeune (dans un métier)",
+     "star": null
+    },
+    {
+     "w": "若木",
+     "r": "わかぎ",
+     "fr": "le jeune arbre",
+     "star": null
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 128,
+   "k": "新",
+   "fr": "nouveau",
+   "on": [
+    "シン"
+   ],
+   "kun": [
+    "あたら-しい",
+    "あら-た"
+   ],
+   "strokes": 13,
+   "vocab": [
+    {
+     "w": "新しい",
+     "r": "あたらしい",
+     "fr": "nouveau",
+     "star": null
+    },
+    {
+     "w": "新た",
+     "r": "あらた",
+     "fr": "nouveau (forme littéraire)",
+     "star": null
+    },
+    {
+     "w": "新聞",
+     "r": "しんぶん",
+     "fr": "le journal",
+     "star": null
+    },
+    {
+     "w": "新聞社",
+     "r": "しんぶんしゃ",
+     "fr": "la société de presse",
+     "star": null
+    },
+    {
+     "w": "新人",
+     "r": "しんじん",
+     "fr": "le nouveau, le débutant",
+     "star": null
+    },
+    {
+     "w": "新年",
+     "r": "しんねん",
+     "fr": "le nouvel an",
+     "star": null
+    },
+    {
+     "w": "新年会",
+     "r": "しんねんかい",
+     "fr": "la fête du nouvel an",
+     "star": null
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 129,
+   "k": "強",
+   "fr": "fort",
+   "on": [
+    "キョウ",
+    "ゴウ"
+   ],
+   "kun": [
+    "つよ-い"
+   ],
+   "strokes": 11,
+   "vocab": [
+    {
+     "w": "強い",
+     "r": "つよい",
+     "fr": "fort",
+     "star": null
+    },
+    {
+     "w": "強気",
+     "r": "つよき",
+     "fr": "confiant, offensif",
+     "star": null
+    },
+    {
+     "w": "強風",
+     "r": "きょうふう",
+     "fr": "le vent fort",
+     "star": null
+    },
+    {
+     "w": "強大",
+     "r": "きょうだい",
+     "fr": "puissant",
+     "star": null
+    },
+    {
+     "w": "強国",
+     "r": "きょうこく",
+     "fr": "la grande puissance",
+     "star": null
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 130,
+   "k": "弱",
+   "fr": "faible",
+   "on": [
+    "ジャク"
+   ],
+   "kun": [
+    "よわ-い"
+   ],
+   "strokes": 10,
+   "vocab": [
+    {
+     "w": "弱い",
+     "r": "よわい",
+     "fr": "faible",
+     "star": null
+    },
+    {
+     "w": "弱気",
+     "r": "よわき",
+     "fr": "timide, découragé",
+     "star": null
+    },
+    {
+     "w": "百人弱",
+     "r": "ひゃくにんじゃく",
+     "fr": "un peu moins de cent personnes",
+     "star": null
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 131,
+   "k": "少",
+   "fr": "peu",
+   "on": [
+    "ショウ"
+   ],
+   "kun": [
+    "すく-ない",
+    "すこ-し"
+   ],
+   "strokes": 4,
+   "vocab": [
+    {
+     "w": "少し",
+     "r": "すこし",
+     "fr": "un peu",
+     "star": null
+    },
+    {
+     "w": "少ない",
+     "r": "すくない",
+     "fr": "peu nombreux",
+     "star": null
+    },
+    {
+     "w": "少年",
+     "r": "しょうねん",
+     "fr": "le jeune garçon",
+     "star": null
+    },
+    {
+     "w": "少女",
+     "r": "しょうじょ",
+     "fr": "la jeune fille",
+     "star": null
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 132,
+   "k": "多",
+   "fr": "beaucoup",
+   "on": [
+    "タ"
+   ],
+   "kun": [
+    "おお-い"
+   ],
+   "strokes": 6,
+   "vocab": [
+    {
+     "w": "多い",
+     "r": "おおい",
+     "fr": "nombreux",
+     "star": null
+    },
+    {
+     "w": "多分",
+     "r": "たぶん",
+     "fr": "probablement",
+     "star": null
+    },
+    {
+     "w": "多雨",
+     "r": "たう",
+     "fr": "les fortes pluies",
+     "star": null
+    },
+    {
+     "w": "多色",
+     "r": "たしょく",
+     "fr": "multicolore",
+     "star": null
+    },
+    {
+     "w": "多国間",
+     "r": "たこくかん",
+     "fr": "multilatéral",
+     "star": null
+    },
+    {
+     "w": "多元",
+     "r": "たげん",
+     "fr": "pluriel, multiple",
+     "star": null
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 133,
+   "k": "重",
+   "fr": "lourd, empiler",
+   "on": [
+    "ジュウ",
+    "チョウ"
+   ],
+   "kun": [
+    "おも-い",
+    "かさ-ねる"
+   ],
+   "strokes": 9,
+   "vocab": [
+    {
+     "w": "重い",
+     "r": "おもい",
+     "fr": "lourd",
+     "star": null
+    },
+    {
+     "w": "重ねる",
+     "r": "かさねる",
+     "fr": "empiler",
+     "star": null
+    },
+    {
+     "w": "重大",
+     "r": "じゅうだい",
+     "fr": "grave, important",
+     "star": null
+    },
+    {
+     "w": "多重",
+     "r": "たじゅう",
+     "fr": "multiple",
+     "star": null
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 134,
+   "k": "軽",
+   "fr": "léger",
+   "on": [
+    "ケイ"
+   ],
+   "kun": [
+    "かる-い"
+   ],
+   "strokes": 12,
+   "vocab": [
+    {
+     "w": "軽い",
+     "r": "かるい",
+     "fr": "léger",
+     "star": null
+    },
+    {
+     "w": "軽食",
+     "r": "けいしょく",
+     "fr": "le repas léger",
+     "star": null
+    },
+    {
+     "w": "気軽",
+     "r": "きがる",
+     "fr": "détendu, sans façon",
+     "star": null
+    },
+    {
+     "w": "手軽",
+     "r": "てがる",
+     "fr": "facile, simple",
+     "star": null
+    }
+   ],
+   "src": "liste"
+  }
+ ]
+}

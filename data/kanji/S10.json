@@ -1,0 +1,735 @@
+{
+ "id": "S10",
+ "cours": "kanji",
+ "titre": "Séance 10 — Famille, lieux, musique",
+ "date": "2026-11-12",
+ "range": [
+  151,
+  166
+ ],
+ "kanji": [
+  {
+   "n": 151,
+   "k": "力",
+   "fr": "la force",
+   "on": [
+    "リョク",
+    "リキ"
+   ],
+   "kun": [
+    "ちから"
+   ],
+   "strokes": 2,
+   "vocab": [
+    {
+     "w": "力",
+     "r": "ちから",
+     "fr": "la force",
+     "star": null
+    },
+    {
+     "w": "強力",
+     "r": "きょうりょく",
+     "fr": "puissant",
+     "star": null
+    },
+    {
+     "w": "手力",
+     "r": "てぢから",
+     "fr": "la force des bras",
+     "star": null
+    },
+    {
+     "w": "気力",
+     "r": "きりょく",
+     "fr": "l'énergie, la volonté",
+     "star": null
+    },
+    {
+     "w": "力作",
+     "r": "りきさく",
+     "fr": "le chef-d'œuvre laborieux",
+     "star": null
+    },
+    {
+     "w": "水力",
+     "r": "すいりょく",
+     "fr": "l'énergie hydraulique",
+     "star": null
+    },
+    {
+     "w": "風力",
+     "r": "ふうりょく",
+     "fr": "l'énergie éolienne",
+     "star": null
+    },
+    {
+     "w": "重力",
+     "r": "じゅうりょく",
+     "fr": "la gravité",
+     "star": null
+    },
+    {
+     "w": "電力",
+     "r": "でんりょく",
+     "fr": "l'énergie électrique",
+     "star": null
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 152,
+   "k": "園",
+   "fr": "le jardin, le parc",
+   "on": [
+    "エン"
+   ],
+   "kun": [],
+   "strokes": 13,
+   "vocab": [
+    {
+     "w": "公園",
+     "r": "こうえん",
+     "fr": "le parc",
+     "star": null
+    },
+    {
+     "w": "動物園",
+     "r": "どうぶつえん",
+     "fr": "le zoo",
+     "star": null
+    },
+    {
+     "w": "学園",
+     "r": "がくえん",
+     "fr": "l'établissement scolaire, le campus",
+     "star": null
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 153,
+   "k": "英",
+   "fr": "l'Angleterre, brillant",
+   "on": [
+    "エイ"
+   ],
+   "kun": [],
+   "strokes": 8,
+   "vocab": [
+    {
+     "w": "英語",
+     "r": "えいご",
+     "fr": "l'anglais (langue)",
+     "star": null
+    },
+    {
+     "w": "英国",
+     "r": "えいこく",
+     "fr": "le Royaume-Uni",
+     "star": null
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 154,
+   "k": "屋",
+   "fr": "le magasin, le toit",
+   "on": [
+    "オク"
+   ],
+   "kun": [
+    "や"
+   ],
+   "strokes": 9,
+   "vocab": [
+    {
+     "w": "屋上",
+     "r": "おくじょう",
+     "fr": "le toit-terrasse",
+     "star": null
+    },
+    {
+     "w": "本屋",
+     "r": "ほんや",
+     "fr": "la librairie",
+     "star": null
+    },
+    {
+     "w": "八百屋",
+     "r": "やおや",
+     "fr": "le marchand de légumes",
+     "star": null
+    },
+    {
+     "w": "パン屋",
+     "r": "パンや",
+     "fr": "la boulangerie",
+     "star": null
+    },
+    {
+     "w": "電気屋",
+     "r": "でんきや",
+     "fr": "le magasin d'électroménager",
+     "star": null
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 155,
+   "k": "室",
+   "fr": "la pièce, la salle",
+   "on": [
+    "シツ"
+   ],
+   "kun": [],
+   "strokes": 9,
+   "vocab": [
+    {
+     "w": "洋室",
+     "r": "ようしつ",
+     "fr": "la pièce à l'occidentale",
+     "star": null
+    },
+    {
+     "w": "室内",
+     "r": "しつない",
+     "fr": "à l'intérieur (d'une pièce)",
+     "star": null
+    },
+    {
+     "w": "室外",
+     "r": "しつがい",
+     "fr": "à l'extérieur",
+     "star": null
+    },
+    {
+     "w": "地下室",
+     "r": "ちかしつ",
+     "fr": "le sous-sol",
+     "star": null
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 156,
+   "k": "話",
+   "fr": "parler, la conversation",
+   "on": [
+    "ワ"
+   ],
+   "kun": [
+    "はな-す",
+    "はなし"
+   ],
+   "strokes": 13,
+   "vocab": [
+    {
+     "w": "話",
+     "r": "はなし",
+     "fr": "l'histoire, la conversation",
+     "star": null
+    },
+    {
+     "w": "話す",
+     "r": "はなす",
+     "fr": "parler",
+     "star": null
+    },
+    {
+     "w": "話中",
+     "r": "はなしちゅう",
+     "fr": "en ligne (téléphone occupé)",
+     "star": null
+    },
+    {
+     "w": "電話",
+     "r": "でんわ",
+     "fr": "le téléphone",
+     "star": null
+    },
+    {
+     "w": "会話",
+     "r": "かいわ",
+     "fr": "la conversation",
+     "star": null
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 157,
+   "k": "父",
+   "fr": "le père",
+   "on": [
+    "フ"
+   ],
+   "kun": [
+    "ちち"
+   ],
+   "strokes": 4,
+   "vocab": [
+    {
+     "w": "父",
+     "r": "ちち",
+     "fr": "mon père",
+     "star": null
+    },
+    {
+     "w": "お父さん",
+     "r": "おとうさん",
+     "fr": "le père (de qqn), papa",
+     "star": null
+    },
+    {
+     "w": "父上",
+     "r": "ちちうえ",
+     "fr": "père (très respectueux)",
+     "star": null
+    },
+    {
+     "w": "父の日",
+     "r": "ちちのひ",
+     "fr": "la fête des pères",
+     "star": null
+    },
+    {
+     "w": "父子",
+     "r": "ふし",
+     "fr": "le père et l'enfant",
+     "star": null
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 158,
+   "k": "母",
+   "fr": "la mère",
+   "on": [
+    "ボ"
+   ],
+   "kun": [
+    "はは"
+   ],
+   "strokes": 5,
+   "vocab": [
+    {
+     "w": "母",
+     "r": "はは",
+     "fr": "ma mère",
+     "star": null
+    },
+    {
+     "w": "お母さん",
+     "r": "おかあさん",
+     "fr": "la mère (de qqn), maman",
+     "star": null
+    },
+    {
+     "w": "父母",
+     "r": "ふぼ",
+     "fr": "les parents",
+     "star": null
+    },
+    {
+     "w": "母の日",
+     "r": "ははのひ",
+     "fr": "la fête des mères",
+     "star": null
+    },
+    {
+     "w": "母国",
+     "r": "ぼこく",
+     "fr": "la mère patrie",
+     "star": null
+    },
+    {
+     "w": "母子",
+     "r": "ぼし",
+     "fr": "la mère et l'enfant",
+     "star": null
+    },
+    {
+     "w": "母語",
+     "r": "ぼご",
+     "fr": "la langue maternelle",
+     "star": null
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 159,
+   "k": "兄",
+   "fr": "le grand frère",
+   "on": [
+    "ケイ",
+    "キョウ"
+   ],
+   "kun": [
+    "あに"
+   ],
+   "strokes": 5,
+   "vocab": [
+    {
+     "w": "兄",
+     "r": "あに",
+     "fr": "mon grand frère",
+     "star": null
+    },
+    {
+     "w": "お兄さん",
+     "r": "おにいさん",
+     "fr": "le grand frère (de qqn)",
+     "star": null
+    },
+    {
+     "w": "父兄",
+     "r": "ふけい",
+     "fr": "les parents (d'élèves)",
+     "star": null
+    },
+    {
+     "w": "長兄",
+     "r": "ちょうけい",
+     "fr": "le frère aîné",
+     "star": null
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 160,
+   "k": "弟",
+   "fr": "le petit frère",
+   "on": [
+    "テイ",
+    "ダイ"
+   ],
+   "kun": [
+    "おとうと"
+   ],
+   "strokes": 7,
+   "vocab": [
+    {
+     "w": "弟",
+     "r": "おとうと",
+     "fr": "le petit frère",
+     "star": null
+    },
+    {
+     "w": "兄弟",
+     "r": "きょうだい",
+     "fr": "les frères, la fratrie",
+     "star": null
+    },
+    {
+     "w": "弟子",
+     "r": "でし",
+     "fr": "le disciple",
+     "star": null
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 161,
+   "k": "姉",
+   "fr": "la grande sœur",
+   "on": [
+    "シ"
+   ],
+   "kun": [
+    "あね"
+   ],
+   "strokes": 8,
+   "vocab": [
+    {
+     "w": "姉",
+     "r": "あね",
+     "fr": "ma grande sœur",
+     "star": null
+    },
+    {
+     "w": "お姉さん",
+     "r": "おねえさん",
+     "fr": "la grande sœur (de qqn)",
+     "star": null
+    },
+    {
+     "w": "長姉",
+     "r": "ちょうし",
+     "fr": "la sœur aînée",
+     "star": null
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 162,
+   "k": "妹",
+   "fr": "la petite sœur",
+   "on": [
+    "マイ"
+   ],
+   "kun": [
+    "いもうと"
+   ],
+   "strokes": 8,
+   "vocab": [
+    {
+     "w": "妹",
+     "r": "いもうと",
+     "fr": "la petite sœur",
+     "star": null
+    },
+    {
+     "w": "姉妹",
+     "r": "しまい",
+     "fr": "les sœurs",
+     "star": null
+    },
+    {
+     "w": "姉妹会社",
+     "r": "しまいがいしゃ",
+     "fr": "la société sœur",
+     "star": null
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 163,
+   "k": "私",
+   "fr": "je, privé",
+   "on": [
+    "シ"
+   ],
+   "kun": [
+    "わたし",
+    "わたくし"
+   ],
+   "strokes": 7,
+   "vocab": [
+    {
+     "w": "私",
+     "r": "わたし",
+     "fr": "je, moi",
+     "star": null
+    },
+    {
+     "w": "私",
+     "r": "わたくし",
+     "fr": "je (très poli)",
+     "star": null
+    },
+    {
+     "w": "私",
+     "r": "あたし",
+     "fr": "je (féminin, familier)",
+     "star": null
+    },
+    {
+     "w": "私たち",
+     "r": "わたしたち",
+     "fr": "nous",
+     "star": null
+    },
+    {
+     "w": "私語",
+     "r": "しご",
+     "fr": "le bavardage",
+     "star": null
+    },
+    {
+     "w": "私見",
+     "r": "しけん",
+     "fr": "l'opinion personnelle",
+     "star": null
+    },
+    {
+     "w": "私事",
+     "r": "しじ",
+     "fr": "les affaires privées",
+     "star": null
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 164,
+   "k": "公",
+   "fr": "public",
+   "on": [
+    "コウ"
+   ],
+   "kun": [
+    "おおやけ"
+   ],
+   "strokes": 4,
+   "vocab": [
+    {
+     "w": "公",
+     "r": "おおやけ",
+     "fr": "public",
+     "star": null
+    },
+    {
+     "w": "公の人物",
+     "r": "おおやけのじんぶつ",
+     "fr": "le personnage public",
+     "star": null
+    },
+    {
+     "w": "公園",
+     "r": "こうえん",
+     "fr": "le parc",
+     "star": null
+    },
+    {
+     "w": "公私",
+     "r": "こうし",
+     "fr": "public et privé",
+     "star": null
+    },
+    {
+     "w": "公金",
+     "r": "こうきん",
+     "fr": "les fonds publics",
+     "star": null
+    },
+    {
+     "w": "公言",
+     "r": "こうげん",
+     "fr": "la déclaration publique",
+     "star": null
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 165,
+   "k": "音",
+   "fr": "le son",
+   "on": [
+    "オン",
+    "イン"
+   ],
+   "kun": [
+    "おと",
+    "ね"
+   ],
+   "strokes": 9,
+   "vocab": [
+    {
+     "w": "音",
+     "r": "おと",
+     "fr": "le son, le bruit",
+     "star": null
+    },
+    {
+     "w": "音",
+     "r": "ね",
+     "fr": "le son (musical)",
+     "star": null
+    },
+    {
+     "w": "高音",
+     "r": "こうおん",
+     "fr": "le son aigu",
+     "star": null
+    },
+    {
+     "w": "低音",
+     "r": "ていおん",
+     "fr": "le son grave",
+     "star": null
+    },
+    {
+     "w": "音色",
+     "r": "ねいろ",
+     "fr": "le timbre",
+     "star": null
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 166,
+   "k": "楽",
+   "fr": "le plaisir, la musique",
+   "on": [
+    "ガク",
+    "ラク"
+   ],
+   "kun": [
+    "たの-しい",
+    "たの-しむ"
+   ],
+   "strokes": 13,
+   "vocab": [
+    {
+     "w": "楽しい",
+     "r": "たのしい",
+     "fr": "amusant, agréable",
+     "star": null
+    },
+    {
+     "w": "楽しむ",
+     "r": "たのしむ",
+     "fr": "s'amuser, profiter",
+     "star": null
+    },
+    {
+     "w": "お楽しみ",
+     "r": "おたのしみ",
+     "fr": "le plaisir (à venir)",
+     "star": null
+    },
+    {
+     "w": "楽園",
+     "r": "らくえん",
+     "fr": "le paradis",
+     "star": null
+    },
+    {
+     "w": "洋楽",
+     "r": "ようがく",
+     "fr": "la musique occidentale",
+     "star": null
+    },
+    {
+     "w": "音楽",
+     "r": "おんがく",
+     "fr": "la musique",
+     "star": null
+    },
+    {
+     "w": "音楽家",
+     "r": "おんがくか",
+     "fr": "le musicien",
+     "star": null
+    },
+    {
+     "w": "音楽会",
+     "r": "おんがくかい",
+     "fr": "le concert",
+     "star": null
+    },
+    {
+     "w": "音楽大学",
+     "r": "おんがくだいがく",
+     "fr": "l'université de musique",
+     "star": null
+    }
+   ],
+   "src": "liste"
+  }
+ ]
+}

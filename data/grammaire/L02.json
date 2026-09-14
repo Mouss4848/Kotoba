@@ -1,0 +1,345 @@
+{
+ "id": "L02",
+ "titre": "Leçon 2 — Les objets (これ・それ・あれ)",
+ "date": "2026-09-17",
+ "points": [
+  {
+   "t": "これ / それ / あれ",
+   "fr": "Démonstratifs : près de moi / près de toi / loin de nous deux.",
+   "ex": [
+    {
+     "jp": "これは かぎです。",
+     "fr": "C'est une clé.",
+     "tok": [
+      "これは",
+      "かぎ",
+      "です"
+     ]
+    },
+    {
+     "jp": "それは かばんです。",
+     "fr": "C'est un sac.",
+     "tok": [
+      "それは",
+      "かばん",
+      "です"
+     ]
+    },
+    {
+     "jp": "あれは テレビです。",
+     "fr": "C'est une télévision (là-bas).",
+     "tok": [
+      "あれは",
+      "テレビ",
+      "です"
+     ]
+    }
+   ]
+  },
+  {
+   "t": "そうです / 違います",
+   "fr": "Répondre à une question fermée sur un objet.",
+   "ex": [
+    {
+     "jp": "これは 本ですか。",
+     "fr": "Est-ce un livre ?",
+     "tok": [
+      "これは",
+      "本",
+      "ですか"
+     ]
+    },
+    {
+     "jp": "はい、そうです。",
+     "fr": "Oui, c'est ça.",
+     "tok": [
+      "はい",
+      "そう",
+      "です"
+     ]
+    },
+    {
+     "jp": "いいえ、違います。",
+     "fr": "Non, ce n'est pas ça.",
+     "tok": [
+      "いいえ",
+      "違います"
+     ]
+    },
+    {
+     "jp": "いいえ、手帳です。",
+     "fr": "Non, c'est un agenda.",
+     "tok": [
+      "いいえ",
+      "手帳",
+      "です"
+     ]
+    }
+   ]
+  },
+  {
+   "t": "何ですか",
+   "fr": "« Qu'est-ce que c'est ? »",
+   "ex": [
+    {
+     "jp": "これは 何ですか。",
+     "fr": "Qu'est-ce que c'est ?",
+     "tok": [
+      "これは",
+      "何",
+      "ですか"
+     ]
+    },
+    {
+     "jp": "それは いすです。",
+     "fr": "C'est une chaise.",
+     "tok": [
+      "それは",
+      "いす",
+      "です"
+     ]
+    }
+   ]
+  },
+  {
+   "t": "N1 の N2 (contenu / possession)",
+   "fr": "の relie deux noms : 車のかぎ (la clé de la voiture), カリナさんのノート (le cahier de Karina).",
+   "ex": [
+    {
+     "jp": "これは 車の かぎです。",
+     "fr": "C'est la clé de la voiture.",
+     "tok": [
+      "これは",
+      "車の",
+      "かぎ",
+      "です"
+     ]
+    },
+    {
+     "jp": "これは 何の かぎですか。",
+     "fr": "De quoi est-ce la clé ?",
+     "tok": [
+      "これは",
+      "何の",
+      "かぎ",
+      "ですか"
+     ]
+    },
+    {
+     "jp": "これは カリナさんの ノートです。",
+     "fr": "C'est le cahier de Karina.",
+     "tok": [
+      "これは",
+      "カリナさんの",
+      "ノート",
+      "です"
+     ]
+    },
+    {
+     "jp": "これは だれの ノートですか。",
+     "fr": "À qui est ce cahier ?",
+     "tok": [
+      "これは",
+      "だれの",
+      "ノート",
+      "ですか"
+     ]
+    }
+   ]
+  },
+  {
+   "t": "〜の (pronom)",
+   "fr": "の seul remplace le nom : ワンさんの = celui de Wang.",
+   "ex": [
+    {
+     "jp": "これは ワンさんのですか。",
+     "fr": "Est-ce celui de Wang ?",
+     "tok": [
+      "これは",
+      "ワンさんの",
+      "ですか"
+     ]
+    },
+    {
+     "jp": "いいえ、わたしのでは ありません。",
+     "fr": "Non, ce n'est pas le mien.",
+     "tok": [
+      "いいえ",
+      "わたしの",
+      "では",
+      "ありません"
+     ]
+    }
+   ]
+  },
+  {
+   "t": "この / その / あの + N",
+   "fr": "Forme adjective des démonstratifs, suivie d'un nom.",
+   "ex": [
+    {
+     "jp": "このカメラは だれのですか。",
+     "fr": "À qui est cet appareil photo ?",
+     "tok": [
+      "このカメラは",
+      "だれの",
+      "ですか"
+     ]
+    },
+    {
+     "jp": "わたしのです。",
+     "fr": "C'est le mien.",
+     "tok": [
+      "わたしの",
+      "です"
+     ]
+    }
+   ]
+  }
+ ],
+ "vocab": [
+  [
+   "これ",
+   "ceci"
+  ],
+  [
+   "それ",
+   "cela"
+  ],
+  [
+   "あれ",
+   "cela (là-bas)"
+  ],
+  [
+   "この〜",
+   "ce … (près de moi)"
+  ],
+  [
+   "その〜",
+   "ce … (près de toi)"
+  ],
+  [
+   "あの〜",
+   "ce … (là-bas)"
+  ],
+  [
+   "本",
+   "livre"
+  ],
+  [
+   "辞書",
+   "dictionnaire"
+  ],
+  [
+   "雑誌",
+   "magazine"
+  ],
+  [
+   "新聞",
+   "journal"
+  ],
+  [
+   "ノート",
+   "cahier"
+  ],
+  [
+   "手帳",
+   "agenda"
+  ],
+  [
+   "名刺",
+   "carte de visite"
+  ],
+  [
+   "カード",
+   "carte"
+  ],
+  [
+   "鉛筆",
+   "crayon"
+  ],
+  [
+   "ボールペン",
+   "stylo-bille"
+  ],
+  [
+   "シャープペンシル",
+   "portemine"
+  ],
+  [
+   "かぎ",
+   "clé"
+  ],
+  [
+   "時計",
+   "montre, horloge"
+  ],
+  [
+   "傘",
+   "parapluie"
+  ],
+  [
+   "かばん",
+   "sac"
+  ],
+  [
+   "テレビ",
+   "télévision"
+  ],
+  [
+   "ラジオ",
+   "radio"
+  ],
+  [
+   "カメラ",
+   "appareil photo"
+  ],
+  [
+   "コンピューター",
+   "ordinateur"
+  ],
+  [
+   "車",
+   "voiture"
+  ],
+  [
+   "机",
+   "bureau (meuble)"
+  ],
+  [
+   "いす",
+   "chaise"
+  ],
+  [
+   "チョコレート",
+   "chocolat"
+  ],
+  [
+   "コーヒー",
+   "café"
+  ],
+  [
+   "お土産",
+   "souvenir (cadeau)"
+  ],
+  [
+   "何",
+   "quoi"
+  ],
+  [
+   "そう",
+   "ainsi, c'est ça"
+  ],
+  [
+   "違います",
+   "ce n'est pas ça"
+  ],
+  [
+   "どうぞ",
+   "je vous en prie"
+  ],
+  [
+   "ありがとう",
+   "merci"
+  ]
+ ]
+}

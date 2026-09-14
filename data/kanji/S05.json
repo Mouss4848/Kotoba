@@ -1,0 +1,802 @@
+{
+ "id": "S05",
+ "cours": "kanji",
+ "titre": "Séance 05 — Position, verbes courants",
+ "date": "2026-10-01",
+ "range": [
+  69,
+  84
+ ],
+ "kanji": [
+  {
+   "n": 69,
+   "k": "上",
+   "fr": "dessus, monter",
+   "on": [
+    "ジョウ"
+   ],
+   "kun": [
+    "うえ",
+    "あ-げる",
+    "あ-がる",
+    "のぼ-る"
+   ],
+   "strokes": 3,
+   "vocab": [
+    {
+     "w": "上",
+     "r": "うえ",
+     "fr": "dessus, en haut",
+     "star": null
+    },
+    {
+     "w": "上げる",
+     "r": "あげる",
+     "fr": "lever, donner",
+     "star": null
+    },
+    {
+     "w": "上がる",
+     "r": "あがる",
+     "fr": "monter, s'élever",
+     "star": null
+    },
+    {
+     "w": "上る",
+     "r": "のぼる",
+     "fr": "monter, gravir",
+     "star": null
+    },
+    {
+     "w": "上京する",
+     "r": "じょうきょうする",
+     "fr": "monter à la capitale (Tokyo)",
+     "star": null
+    },
+    {
+     "w": "上空",
+     "r": "じょうくう",
+     "fr": "le ciel, en altitude",
+     "star": null
+    },
+    {
+     "w": "上天気",
+     "r": "じょうてんき",
+     "fr": "le beau temps",
+     "star": null
+    },
+    {
+     "w": "上半",
+     "r": "じょうはん",
+     "fr": "la moitié supérieure",
+     "star": null
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 70,
+   "k": "下",
+   "fr": "dessous, descendre",
+   "on": [
+    "カ",
+    "ゲ"
+   ],
+   "kun": [
+    "した",
+    "さ-げる",
+    "さ-がる",
+    "くだ-る",
+    "お-りる"
+   ],
+   "strokes": 3,
+   "vocab": [
+    {
+     "w": "下",
+     "r": "した",
+     "fr": "dessous, en bas",
+     "star": null
+    },
+    {
+     "w": "下がる",
+     "r": "さがる",
+     "fr": "descendre, baisser",
+     "star": null
+    },
+    {
+     "w": "下さる",
+     "r": "くださる",
+     "fr": "donner (honorifique)",
+     "star": null
+    },
+    {
+     "w": "上下",
+     "r": "じょうげ",
+     "fr": "haut et bas",
+     "star": null
+    },
+    {
+     "w": "下車",
+     "r": "げしゃ",
+     "fr": "descendre du véhicule",
+     "star": null
+    },
+    {
+     "w": "下半",
+     "r": "かはん",
+     "fr": "la moitié inférieure",
+     "star": null
+    },
+    {
+     "w": "下校",
+     "r": "げこう",
+     "fr": "rentrer de l'école",
+     "star": null
+    },
+    {
+     "w": "下らない",
+     "r": "くだらない",
+     "fr": "sans intérêt, stupide",
+     "star": null
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 71,
+   "k": "右",
+   "fr": "la droite",
+   "on": [
+    "ウ",
+    "ユウ"
+   ],
+   "kun": [
+    "みぎ"
+   ],
+   "strokes": 5,
+   "vocab": [
+    {
+     "w": "右",
+     "r": "みぎ",
+     "fr": "la droite",
+     "star": null
+    },
+    {
+     "w": "右上",
+     "r": "みぎうえ",
+     "fr": "en haut à droite",
+     "star": null
+    },
+    {
+     "w": "右後ろ",
+     "r": "みぎうしろ",
+     "fr": "à l'arrière droit",
+     "star": null
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 72,
+   "k": "左",
+   "fr": "la gauche",
+   "on": [
+    "サ"
+   ],
+   "kun": [
+    "ひだり"
+   ],
+   "strokes": 5,
+   "vocab": [
+    {
+     "w": "左",
+     "r": "ひだり",
+     "fr": "la gauche",
+     "star": null
+    },
+    {
+     "w": "左下",
+     "r": "ひだりした",
+     "fr": "en bas à gauche",
+     "star": null
+    },
+    {
+     "w": "左前",
+     "r": "ひだりまえ",
+     "fr": "avant gauche ; en difficulté",
+     "star": null
+    },
+    {
+     "w": "左右",
+     "r": "さゆう",
+     "fr": "gauche et droite",
+     "star": null
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 73,
+   "k": "物",
+   "fr": "la chose (objet)",
+   "on": [
+    "ブツ",
+    "モツ"
+   ],
+   "kun": [
+    "もの"
+   ],
+   "strokes": 8,
+   "vocab": [
+    {
+     "w": "物",
+     "r": "もの",
+     "fr": "la chose, l'objet",
+     "star": null
+    },
+    {
+     "w": "物名",
+     "r": "ぶつめい",
+     "fr": "le nom de l'objet",
+     "star": null
+    },
+    {
+     "w": "物分り",
+     "r": "ものわかり",
+     "fr": "la compréhension",
+     "star": null
+    },
+    {
+     "w": "生物",
+     "r": "せいぶつ",
+     "fr": "l'être vivant",
+     "star": null
+    },
+    {
+     "w": "生物学",
+     "r": "せいぶつがく",
+     "fr": "la biologie",
+     "star": null
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 74,
+   "k": "事",
+   "fr": "la chose (fait, affaire)",
+   "on": [
+    "ジ"
+   ],
+   "kun": [
+    "こと"
+   ],
+   "strokes": 8,
+   "vocab": [
+    {
+     "w": "事",
+     "r": "こと",
+     "fr": "la chose, le fait",
+     "star": null
+    },
+    {
+     "w": "一事",
+     "r": "いちじ",
+     "fr": "une chose, un fait",
+     "star": null
+    },
+    {
+     "w": "人事",
+     "r": "じんじ",
+     "fr": "les ressources humaines, les affaires humaines",
+     "star": null
+    },
+    {
+     "w": "時事",
+     "r": "じじ",
+     "fr": "l'actualité",
+     "star": null
+    },
+    {
+     "w": "空事",
+     "r": "そらごと",
+     "fr": "la chose vaine, le mensonge",
+     "star": null
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 75,
+   "k": "行",
+   "fr": "aller",
+   "on": [
+    "コウ",
+    "ギョウ"
+   ],
+   "kun": [
+    "い-く",
+    "おこな-う"
+   ],
+   "strokes": 6,
+   "vocab": [
+    {
+     "w": "行く",
+     "r": "いく",
+     "fr": "aller",
+     "star": null
+    },
+    {
+     "w": "行う",
+     "r": "おこなう",
+     "fr": "effectuer, réaliser",
+     "star": null
+    },
+    {
+     "w": "行き先",
+     "r": "いきさき",
+     "fr": "la destination",
+     "star": null
+    },
+    {
+     "w": "行ってきます",
+     "r": "いってきます",
+     "fr": "j'y vais (et je reviens)",
+     "star": null
+    },
+    {
+     "w": "行ってらっしゃい",
+     "r": "いってらっしゃい",
+     "fr": "bonne journée, à tout à l'heure",
+     "star": null
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 76,
+   "k": "来",
+   "fr": "venir",
+   "on": [
+    "ライ"
+   ],
+   "kun": [
+    "く-る"
+   ],
+   "strokes": 7,
+   "vocab": [
+    {
+     "w": "来る",
+     "r": "くる",
+     "fr": "venir",
+     "star": null
+    },
+    {
+     "w": "来年",
+     "r": "らいねん",
+     "fr": "l'année prochaine",
+     "star": null
+    },
+    {
+     "w": "来月",
+     "r": "らいげつ",
+     "fr": "le mois prochain",
+     "star": null
+    },
+    {
+     "w": "来週",
+     "r": "らいしゅう",
+     "fr": "la semaine prochaine",
+     "star": null
+    },
+    {
+     "w": "来日",
+     "r": "らいにち",
+     "fr": "la venue au Japon",
+     "star": null
+    },
+    {
+     "w": "来々週",
+     "r": "らいらいしゅう",
+     "fr": "dans deux semaines",
+     "star": null
+    },
+    {
+     "w": "来日する",
+     "r": "らいにちする",
+     "fr": "venir au Japon",
+     "star": null
+    },
+    {
+     "w": "来京する",
+     "r": "らいきょうする",
+     "fr": "venir à la capitale",
+     "star": null
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 77,
+   "k": "食",
+   "fr": "manger",
+   "on": [
+    "ショク"
+   ],
+   "kun": [
+    "た-べる",
+    "く-う"
+   ],
+   "strokes": 9,
+   "vocab": [
+    {
+     "w": "食べる",
+     "r": "たべる",
+     "fr": "manger",
+     "star": null
+    },
+    {
+     "w": "食う",
+     "r": "くう",
+     "fr": "manger (familier)",
+     "star": null
+    },
+    {
+     "w": "食後",
+     "r": "しょくご",
+     "fr": "après le repas",
+     "star": null
+    },
+    {
+     "w": "食前",
+     "r": "しょくぜん",
+     "fr": "avant le repas",
+     "star": null
+    },
+    {
+     "w": "食べ物",
+     "r": "たべもの",
+     "fr": "la nourriture",
+     "star": null
+    },
+    {
+     "w": "食事",
+     "r": "しょくじ",
+     "fr": "le repas",
+     "star": null
+    },
+    {
+     "w": "朝食",
+     "r": "ちょうしょく",
+     "fr": "le petit-déjeuner",
+     "star": null
+    },
+    {
+     "w": "晩食",
+     "r": "ばんしょく",
+     "fr": "le dîner",
+     "star": null
+    },
+    {
+     "w": "外食する",
+     "r": "がいしょくする",
+     "fr": "manger dehors, au restaurant",
+     "star": null
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 78,
+   "k": "飲",
+   "fr": "boire",
+   "on": [
+    "イン"
+   ],
+   "kun": [
+    "の-む"
+   ],
+   "strokes": 12,
+   "vocab": [
+    {
+     "w": "飲む",
+     "r": "のむ",
+     "fr": "boire",
+     "star": null
+    },
+    {
+     "w": "飲食",
+     "r": "いんしょく",
+     "fr": "le boire et le manger",
+     "star": null
+    },
+    {
+     "w": "飲み水",
+     "r": "のみみず",
+     "fr": "l'eau potable",
+     "star": null
+    },
+    {
+     "w": "飲み物",
+     "r": "のみもの",
+     "fr": "la boisson",
+     "star": null
+    },
+    {
+     "w": "飲み明かす",
+     "r": "のみあかす",
+     "fr": "boire toute la nuit",
+     "star": null
+    },
+    {
+     "w": "飲み友だち",
+     "r": "のみともだち",
+     "fr": "le compagnon de beuverie",
+     "star": null
+    },
+    {
+     "w": "飲み下す",
+     "r": "のみくだす",
+     "fr": "avaler",
+     "star": null
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 79,
+   "k": "買",
+   "fr": "acheter",
+   "on": [
+    "バイ"
+   ],
+   "kun": [
+    "か-う"
+   ],
+   "strokes": 12,
+   "vocab": [
+    {
+     "w": "買う",
+     "r": "かう",
+     "fr": "acheter",
+     "star": null
+    },
+    {
+     "w": "買い物",
+     "r": "かいもの",
+     "fr": "les courses, les achats",
+     "star": null
+    },
+    {
+     "w": "買い時",
+     "r": "かいどき",
+     "fr": "le bon moment pour acheter",
+     "star": null
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 80,
+   "k": "売",
+   "fr": "vendre",
+   "on": [
+    "バイ"
+   ],
+   "kun": [
+    "う-る",
+    "う-れる"
+   ],
+   "strokes": 7,
+   "vocab": [
+    {
+     "w": "売る",
+     "r": "うる",
+     "fr": "vendre",
+     "star": null
+    },
+    {
+     "w": "売れる",
+     "r": "うれる",
+     "fr": "se vendre",
+     "star": null
+    },
+    {
+     "w": "売買",
+     "r": "ばいばい",
+     "fr": "l'achat et la vente",
+     "star": null
+    },
+    {
+     "w": "売り物",
+     "r": "うりもの",
+     "fr": "l'article à vendre",
+     "star": null
+    },
+    {
+     "w": "物売り",
+     "r": "ものうり",
+     "fr": "le vendeur ambulant",
+     "star": null
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 81,
+   "k": "言",
+   "fr": "dire, la parole",
+   "on": [
+    "ゲン",
+    "ゴン"
+   ],
+   "kun": [
+    "い-う",
+    "こと"
+   ],
+   "strokes": 7,
+   "vocab": [
+    {
+     "w": "言",
+     "r": "げん",
+     "fr": "la parole, le mot",
+     "star": null
+    },
+    {
+     "w": "言う",
+     "r": "いう",
+     "fr": "dire",
+     "star": null
+    },
+    {
+     "w": "言外",
+     "r": "げんがい",
+     "fr": "sous-entendu, implicite",
+     "star": null
+    },
+    {
+     "w": "言明",
+     "r": "げんめい",
+     "fr": "la déclaration",
+     "star": null
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 82,
+   "k": "読",
+   "fr": "lire",
+   "on": [
+    "ドク"
+   ],
+   "kun": [
+    "よ-む"
+   ],
+   "strokes": 14,
+   "vocab": [
+    {
+     "w": "読む",
+     "r": "よむ",
+     "fr": "lire",
+     "star": null
+    },
+    {
+     "w": "読み上げる",
+     "r": "よみあげる",
+     "fr": "lire à voix haute",
+     "star": null
+    },
+    {
+     "w": "読み物",
+     "r": "よみもの",
+     "fr": "la lecture (ce qu'on lit)",
+     "star": null
+    },
+    {
+     "w": "読本",
+     "r": "どくほん",
+     "fr": "le manuel de lecture",
+     "star": null
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 83,
+   "k": "語",
+   "fr": "la langue, parler",
+   "on": [
+    "ゴ"
+   ],
+   "kun": [
+    "かた-る"
+   ],
+   "strokes": 14,
+   "vocab": [
+    {
+     "w": "語る",
+     "r": "かたる",
+     "fr": "raconter, parler",
+     "star": null
+    },
+    {
+     "w": "日本語",
+     "r": "にほんご",
+     "fr": "le japonais (langue)",
+     "star": null
+    },
+    {
+     "w": "中国語",
+     "r": "ちゅうごくご",
+     "fr": "le chinois (langue)",
+     "star": null
+    },
+    {
+     "w": "外国語",
+     "r": "がいこくご",
+     "fr": "la langue étrangère",
+     "star": null
+    },
+    {
+     "w": "言語",
+     "r": "げんご",
+     "fr": "le langage, la langue",
+     "star": null
+    },
+    {
+     "w": "言語学",
+     "r": "げんごがく",
+     "fr": "la linguistique",
+     "star": null
+    },
+    {
+     "w": "物語",
+     "r": "ものがたり",
+     "fr": "le récit, le conte",
+     "star": null
+    },
+    {
+     "w": "語り明かす",
+     "r": "かたりあかす",
+     "fr": "parler toute la nuit",
+     "star": null
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 84,
+   "k": "書",
+   "fr": "écrire",
+   "on": [
+    "ショ"
+   ],
+   "kun": [
+    "か-く"
+   ],
+   "strokes": 10,
+   "vocab": [
+    {
+     "w": "書く",
+     "r": "かく",
+     "fr": "écrire",
+     "star": null
+    },
+    {
+     "w": "読書",
+     "r": "どくしょ",
+     "fr": "la lecture",
+     "star": null
+    },
+    {
+     "w": "書き物",
+     "r": "かきもの",
+     "fr": "l'écrit, la rédaction",
+     "star": null
+    }
+   ],
+   "src": "liste"
+  }
+ ]
+}

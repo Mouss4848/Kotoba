@@ -1,0 +1,88 @@
+{
+ "id": "L00",
+ "titre": "Introduction — écritures et sons",
+ "date": "2026-09-03",
+ "points": [
+  {
+   "t": "Les trois écritures",
+   "fr": "Le japonais mélange kanji, hiragana et katakana dans une même phrase.",
+   "ex": [
+    {
+     "jp": "漢字 ・ ひらがな ・ カタカナ",
+     "fr": "kanji · hiragana · katakana",
+     "tok": [
+      "漢字 ・ ひらがな ・ カタカナ"
+     ]
+    }
+   ]
+  },
+  {
+   "t": "Les voyelles longues",
+   "fr": "Une voyelle longue change le sens : おばさん (tante) / おばあさん (grand-mère).",
+   "ex": [
+    {
+     "jp": "おばさん",
+     "fr": "la tante",
+     "tok": [
+      "おばさん"
+     ]
+    },
+    {
+     "jp": "おばあさん",
+     "fr": "la grand-mère",
+     "tok": [
+      "おばあさん"
+     ]
+    },
+    {
+     "jp": "おじさん",
+     "fr": "l'oncle",
+     "tok": [
+      "おじさん"
+     ]
+    },
+    {
+     "jp": "おじいさん",
+     "fr": "le grand-père",
+     "tok": [
+      "おじいさん"
+     ]
+    }
+   ]
+  },
+  {
+   "t": "Le petit っ",
+   "fr": "Le petit tsu double la consonne suivante : ぶか / ぶっか.",
+   "ex": [
+    {
+     "jp": "にっき",
+     "fr": "le journal intime",
+     "tok": [
+      "にっき"
+     ]
+    },
+    {
+     "jp": "きって",
+     "fr": "le timbre",
+     "tok": [
+      "きって"
+     ]
+    },
+    {
+     "jp": "コップ",
+     "fr": "le verre",
+     "tok": [
+      "コップ"
+     ]
+    },
+    {
+     "jp": "ベッド",
+     "fr": "le lit",
+     "tok": [
+      "ベッド"
+     ]
+    }
+   ]
+  }
+ ]
+}
