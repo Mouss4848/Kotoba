@@ -1,0 +1,663 @@
+{
+ "id": "S09",
+ "cours": "kanji",
+ "titre": "Séance 09 — Mouvement, actions",
+ "date": "2026-11-05",
+ "range": [
+  135,
+  150
+ ],
+ "kanji": [
+  {
+   "n": 135,
+   "k": "遅",
+   "fr": "lent, en retard",
+   "on": [
+    "チ"
+   ],
+   "kun": [
+    "おそ-い",
+    "おく-れる"
+   ],
+   "strokes": 12,
+   "vocab": [
+    {
+     "w": "遅い",
+     "r": "おそい",
+     "fr": "lent, tard",
+     "star": null
+    },
+    {
+     "w": "遅れる",
+     "r": "おくれる",
+     "fr": "être en retard",
+     "star": null
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 136,
+   "k": "早",
+   "fr": "tôt",
+   "on": [
+    "ソウ"
+   ],
+   "kun": [
+    "はや-い"
+   ],
+   "strokes": 6,
+   "vocab": [
+    {
+     "w": "早い",
+     "r": "はやい",
+     "fr": "tôt",
+     "star": null
+    },
+    {
+     "w": "早口",
+     "r": "はやくち",
+     "fr": "le débit rapide",
+     "star": null
+    },
+    {
+     "w": "早朝",
+     "r": "そうちょう",
+     "fr": "le petit matin",
+     "star": null
+    },
+    {
+     "w": "早道",
+     "r": "はやみち",
+     "fr": "le raccourci",
+     "star": null
+    },
+    {
+     "w": "早天",
+     "r": "そうてん",
+     "fr": "le petit matin",
+     "star": null
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 137,
+   "k": "速",
+   "fr": "rapide",
+   "on": [
+    "ソク"
+   ],
+   "kun": [
+    "はや-い"
+   ],
+   "strokes": 10,
+   "vocab": [
+    {
+     "w": "速い",
+     "r": "はやい",
+     "fr": "rapide",
+     "star": null
+    },
+    {
+     "w": "早速",
+     "r": "さっそく",
+     "fr": "immédiatement",
+     "star": null
+    },
+    {
+     "w": "高速",
+     "r": "こうそく",
+     "fr": "grande vitesse, l'autoroute",
+     "star": null
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 138,
+   "k": "遠",
+   "fr": "loin",
+   "on": [
+    "エン"
+   ],
+   "kun": [
+    "とお-い"
+   ],
+   "strokes": 13,
+   "vocab": [
+    {
+     "w": "遠い",
+     "r": "とおい",
+     "fr": "loin",
+     "star": null
+    },
+    {
+     "w": "遠海",
+     "r": "えんかい",
+     "fr": "la haute mer",
+     "star": null
+    },
+    {
+     "w": "遠洋",
+     "r": "えんよう",
+     "fr": "le grand large",
+     "star": null
+    },
+    {
+     "w": "遠出",
+     "r": "とおで",
+     "fr": "l'excursion",
+     "star": null
+    },
+    {
+     "w": "遠山",
+     "r": "えんざん",
+     "fr": "la montagne lointaine",
+     "star": null
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 139,
+   "k": "近",
+   "fr": "proche",
+   "on": [
+    "キン"
+   ],
+   "kun": [
+    "ちか-い"
+   ],
+   "strokes": 7,
+   "vocab": [
+    {
+     "w": "近い",
+     "r": "ちかい",
+     "fr": "proche",
+     "star": null
+    },
+    {
+     "w": "近東",
+     "r": "きんとう",
+     "fr": "le Proche-Orient",
+     "star": null
+    },
+    {
+     "w": "近海",
+     "r": "きんかい",
+     "fr": "les eaux côtières",
+     "star": null
+    },
+    {
+     "w": "近日",
+     "r": "きんじつ",
+     "fr": "prochainement",
+     "star": null
+    },
+    {
+     "w": "近年",
+     "r": "きんねん",
+     "fr": "ces dernières années",
+     "star": null
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 140,
+   "k": "歩",
+   "fr": "marcher",
+   "on": [
+    "ホ",
+    "ブ"
+   ],
+   "kun": [
+    "ある-く"
+   ],
+   "strokes": 8,
+   "vocab": [
+    {
+     "w": "歩く",
+     "r": "あるく",
+     "fr": "marcher",
+     "star": null
+    },
+    {
+     "w": "一歩",
+     "r": "いっぽ",
+     "fr": "un pas",
+     "star": null
+    },
+    {
+     "w": "歩いて",
+     "r": "あるいて",
+     "fr": "à pied",
+     "star": null
+    },
+    {
+     "w": "歩道",
+     "r": "ほどう",
+     "fr": "le trottoir",
+     "star": null
+    },
+    {
+     "w": "歩行",
+     "r": "ほこう",
+     "fr": "la marche",
+     "star": null
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 141,
+   "k": "走",
+   "fr": "courir",
+   "on": [
+    "ソウ"
+   ],
+   "kun": [
+    "はし-る"
+   ],
+   "strokes": 7,
+   "vocab": [
+    {
+     "w": "走る",
+     "r": "はしる",
+     "fr": "courir",
+     "star": null
+    },
+    {
+     "w": "走行",
+     "r": "そうこう",
+     "fr": "la circulation, le roulage",
+     "star": null
+    },
+    {
+     "w": "走り書き",
+     "r": "はしりがき",
+     "fr": "le griffonnage",
+     "star": null
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 142,
+   "k": "乗",
+   "fr": "monter (dans un véhicule)",
+   "on": [
+    "ジョウ"
+   ],
+   "kun": [
+    "の-る"
+   ],
+   "strokes": 9,
+   "vocab": [
+    {
+     "w": "乗る",
+     "r": "のる",
+     "fr": "monter (dans un véhicule)",
+     "star": null
+    },
+    {
+     "w": "乗り物",
+     "r": "のりもの",
+     "fr": "le véhicule, le moyen de transport",
+     "star": null
+    },
+    {
+     "w": "乗車する",
+     "r": "じょうしゃする",
+     "fr": "monter à bord",
+     "star": null
+    },
+    {
+     "w": "乗車口",
+     "r": "じょうしゃぐち",
+     "fr": "la porte d'embarquement",
+     "star": null
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 143,
+   "k": "動",
+   "fr": "bouger",
+   "on": [
+    "ドウ"
+   ],
+   "kun": [
+    "うご-く"
+   ],
+   "strokes": 11,
+   "vocab": [
+    {
+     "w": "動く",
+     "r": "うごく",
+     "fr": "bouger",
+     "star": null
+    },
+    {
+     "w": "動物",
+     "r": "どうぶつ",
+     "fr": "l'animal",
+     "star": null
+    },
+    {
+     "w": "動物学",
+     "r": "どうぶつがく",
+     "fr": "la zoologie",
+     "star": null
+    },
+    {
+     "w": "行動",
+     "r": "こうどう",
+     "fr": "l'action, le comportement",
+     "star": null
+    },
+    {
+     "w": "手動",
+     "r": "しゅどう",
+     "fr": "manuel (non automatique)",
+     "star": null
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 144,
+   "k": "飛",
+   "fr": "voler",
+   "on": [
+    "ヒ"
+   ],
+   "kun": [
+    "と-ぶ"
+   ],
+   "strokes": 9,
+   "vocab": [
+    {
+     "w": "飛ぶ",
+     "r": "とぶ",
+     "fr": "voler",
+     "star": null
+    },
+    {
+     "w": "飛行",
+     "r": "ひこう",
+     "fr": "le vol (aviation)",
+     "star": null
+    },
+    {
+     "w": "飛び上がる",
+     "r": "とびあがる",
+     "fr": "sauter, bondir",
+     "star": null
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 145,
+   "k": "働",
+   "fr": "travailler",
+   "on": [
+    "ドウ"
+   ],
+   "kun": [
+    "はたら-く"
+   ],
+   "strokes": 13,
+   "vocab": [
+    {
+     "w": "働く",
+     "r": "はたらく",
+     "fr": "travailler",
+     "star": null
+    },
+    {
+     "w": "働き人",
+     "r": "はたらきびと",
+     "fr": "le travailleur",
+     "star": null
+    },
+    {
+     "w": "働き手",
+     "r": "はたらきて",
+     "fr": "la main-d'œuvre, le soutien de famille",
+     "star": null
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 146,
+   "k": "使",
+   "fr": "utiliser",
+   "on": [
+    "シ"
+   ],
+   "kun": [
+    "つか-う"
+   ],
+   "strokes": 8,
+   "vocab": [
+    {
+     "w": "使う",
+     "r": "つかう",
+     "fr": "utiliser",
+     "star": null
+    },
+    {
+     "w": "使い道",
+     "r": "つかいみち",
+     "fr": "l'usage, l'utilité",
+     "star": null
+    },
+    {
+     "w": "使い物",
+     "r": "つかいもの",
+     "fr": "la chose utilisable",
+     "star": null
+    },
+    {
+     "w": "使い手",
+     "r": "つかいて",
+     "fr": "l'utilisateur",
+     "star": null
+    },
+    {
+     "w": "大使",
+     "r": "たいし",
+     "fr": "l'ambassadeur",
+     "star": null
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 147,
+   "k": "作",
+   "fr": "fabriquer",
+   "on": [
+    "サク",
+    "サ"
+   ],
+   "kun": [
+    "つく-る"
+   ],
+   "strokes": 7,
+   "vocab": [
+    {
+     "w": "作る",
+     "r": "つくる",
+     "fr": "fabriquer, faire",
+     "star": null
+    },
+    {
+     "w": "作家",
+     "r": "さっか",
+     "fr": "l'écrivain",
+     "star": null
+    },
+    {
+     "w": "作物",
+     "r": "さくもつ",
+     "fr": "la culture (agricole)",
+     "star": null
+    },
+    {
+     "w": "作動",
+     "r": "さどう",
+     "fr": "le fonctionnement",
+     "star": null
+    },
+    {
+     "w": "作風",
+     "r": "さくふう",
+     "fr": "le style (d'un auteur)",
+     "star": null
+    },
+    {
+     "w": "作り手",
+     "r": "つくりて",
+     "fr": "le fabricant, l'auteur",
+     "star": null
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 148,
+   "k": "帰",
+   "fr": "rentrer",
+   "on": [
+    "キ"
+   ],
+   "kun": [
+    "かえ-る"
+   ],
+   "strokes": 10,
+   "vocab": [
+    {
+     "w": "帰る",
+     "r": "かえる",
+     "fr": "rentrer",
+     "star": null
+    },
+    {
+     "w": "帰国",
+     "r": "きこく",
+     "fr": "le retour au pays",
+     "star": null
+    },
+    {
+     "w": "帰り道",
+     "r": "かえりみち",
+     "fr": "le chemin du retour",
+     "star": null
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 149,
+   "k": "歌",
+   "fr": "la chanson, chanter",
+   "on": [
+    "カ"
+   ],
+   "kun": [
+    "うた",
+    "うた-う"
+   ],
+   "strokes": 14,
+   "vocab": [
+    {
+     "w": "歌",
+     "r": "うた",
+     "fr": "la chanson",
+     "star": null
+    },
+    {
+     "w": "歌う",
+     "r": "うたう",
+     "fr": "chanter",
+     "star": null
+    },
+    {
+     "w": "歌手",
+     "r": "かしゅ",
+     "fr": "le chanteur",
+     "star": null
+    },
+    {
+     "w": "歌人",
+     "r": "かじん",
+     "fr": "le poète (waka)",
+     "star": null
+    },
+    {
+     "w": "短歌",
+     "r": "たんか",
+     "fr": "le tanka",
+     "star": null
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 150,
+   "k": "泣",
+   "fr": "pleurer",
+   "on": [
+    "キュウ"
+   ],
+   "kun": [
+    "な-く"
+   ],
+   "strokes": 8,
+   "vocab": [
+    {
+     "w": "泣く",
+     "r": "なく",
+     "fr": "pleurer",
+     "star": null
+    },
+    {
+     "w": "泣き言",
+     "r": "なきごと",
+     "fr": "les jérémiades",
+     "star": null
+    },
+    {
+     "w": "大泣き",
+     "r": "おおなき",
+     "fr": "les gros sanglots",
+     "star": null
+    }
+   ],
+   "src": "liste"
+  }
+ ],
+ "blocs": [
+  {
+   "nom": "Vitesse et distance",
+   "from": 135,
+   "to": 139
+  },
+  {
+   "nom": "Se déplacer",
+   "from": 140,
+   "to": 144
+  },
+  {
+   "nom": "Agir",
+   "from": 145,
+   "to": 150
+  }
+ ]
+}

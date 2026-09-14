@@ -1,0 +1,815 @@
+{
+ "id": "S04",
+ "cours": "kanji",
+ "titre": "Séance 04 — Moments, nature, école",
+ "date": "2026-09-24",
+ "range": [
+  52,
+  68
+ ],
+ "kanji": [
+  {
+   "n": 52,
+   "k": "朝",
+   "fr": "le matin",
+   "on": [
+    "チョウ"
+   ],
+   "kun": [
+    "あさ"
+   ],
+   "strokes": 12,
+   "vocab": [
+    {
+     "w": "朝",
+     "r": "あさ",
+     "fr": "le matin",
+     "star": true
+    },
+    {
+     "w": "朝日",
+     "r": "あさひ",
+     "fr": "le soleil du matin",
+     "star": false
+    },
+    {
+     "w": "朝一",
+     "r": "あさいち",
+     "fr": "dès le matin, tôt le matin",
+     "star": false
+    },
+    {
+     "w": "毎朝",
+     "r": "まいあさ",
+     "fr": "chaque matin",
+     "star": true
+    },
+    {
+     "w": "今朝",
+     "r": "けさ",
+     "fr": "ce matin",
+     "star": true
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 53,
+   "k": "午",
+   "fr": "midi",
+   "on": [
+    "ゴ"
+   ],
+   "kun": [],
+   "strokes": 4,
+   "vocab": [
+    {
+     "w": "午後",
+     "r": "ごご",
+     "fr": "l'après-midi",
+     "star": true
+    },
+    {
+     "w": "午後中",
+     "r": "ごごじゅう",
+     "fr": "tout l'après-midi",
+     "star": true
+    },
+    {
+     "w": "午前",
+     "r": "ごぜん",
+     "fr": "le matin (avant midi)",
+     "star": true
+    },
+    {
+     "w": "午前中",
+     "r": "ごぜんちゅう",
+     "fr": "toute la matinée",
+     "star": true
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 54,
+   "k": "晩",
+   "fr": "le soir",
+   "on": [
+    "バン"
+   ],
+   "kun": [],
+   "strokes": 12,
+   "vocab": [
+    {
+     "w": "朝晩",
+     "r": "あさばん",
+     "fr": "matin et soir",
+     "star": true
+    },
+    {
+     "w": "晩年",
+     "r": "ばんねん",
+     "fr": "les dernières années de la vie",
+     "star": false
+    },
+    {
+     "w": "今晩",
+     "r": "こんばん",
+     "fr": "ce soir",
+     "star": true
+    },
+    {
+     "w": "毎晩",
+     "r": "まいばん",
+     "fr": "chaque soir",
+     "star": true
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 55,
+   "k": "夜",
+   "fr": "la nuit",
+   "on": [
+    "ヤ"
+   ],
+   "kun": [
+    "よる",
+    "よ"
+   ],
+   "strokes": 8,
+   "vocab": [
+    {
+     "w": "夜",
+     "r": "よる",
+     "fr": "la nuit, le soir",
+     "star": true
+    },
+    {
+     "w": "夜中",
+     "r": "よなか",
+     "fr": "au milieu de la nuit",
+     "star": true
+    },
+    {
+     "w": "夜間",
+     "r": "やかん",
+     "fr": "la nuit (période nocturne)",
+     "star": false
+    },
+    {
+     "w": "夜半",
+     "r": "やはん",
+     "fr": "minuit",
+     "star": false
+    },
+    {
+     "w": "月夜",
+     "r": "つきよ",
+     "fr": "la nuit de lune",
+     "star": false
+    },
+    {
+     "w": "今夜",
+     "r": "こんや",
+     "fr": "cette nuit, ce soir",
+     "star": true
+    },
+    {
+     "w": "毎夜",
+     "r": "まいよ",
+     "fr": "chaque nuit",
+     "star": true
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 56,
+   "k": "雨",
+   "fr": "la pluie",
+   "on": [
+    "ウ"
+   ],
+   "kun": [
+    "あめ",
+    "あま-"
+   ],
+   "strokes": 8,
+   "vocab": [
+    {
+     "w": "雨",
+     "r": "あめ",
+     "fr": "la pluie",
+     "star": true
+    },
+    {
+     "w": "雨水",
+     "r": "あまみず",
+     "fr": "l'eau de pluie",
+     "star": false
+    },
+    {
+     "w": "雨中",
+     "r": "うちゅう",
+     "fr": "sous la pluie",
+     "star": true
+    },
+    {
+     "w": "時雨",
+     "r": "じう",
+     "fr": "l'averse d'automne",
+     "star": false
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 57,
+   "k": "風",
+   "fr": "le vent",
+   "on": [
+    "フウ",
+    "フ"
+   ],
+   "kun": [
+    "かぜ",
+    "かざ-"
+   ],
+   "strokes": 9,
+   "vocab": [
+    {
+     "w": "風",
+     "r": "かぜ",
+     "fr": "le vent",
+     "star": true
+    },
+    {
+     "w": "朝風",
+     "r": "あさかぜ",
+     "fr": "la brise du matin",
+     "star": true
+    },
+    {
+     "w": "朝風",
+     "r": "ちょうふう",
+     "fr": "la brise du matin",
+     "star": false
+    },
+    {
+     "w": "雨風",
+     "r": "あめかぜ",
+     "fr": "la pluie et le vent",
+     "star": false
+    },
+    {
+     "w": "風土",
+     "r": "ふうど",
+     "fr": "le climat, le terroir",
+     "star": false
+    },
+    {
+     "w": "風気",
+     "r": "ふうき",
+     "fr": "le rhume (ancien) / l'ambiance",
+     "star": true
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 58,
+   "k": "石",
+   "fr": "la pierre",
+   "on": [
+    "セキ",
+    "シャク",
+    "コク"
+   ],
+   "kun": [
+    "いし"
+   ],
+   "strokes": 5,
+   "vocab": [
+    {
+     "w": "石",
+     "r": "いし",
+     "fr": "la pierre",
+     "star": true
+    },
+    {
+     "w": "石山",
+     "r": "いしやま",
+     "fr": "la montagne rocheuse",
+     "star": false
+    },
+    {
+     "w": "土石",
+     "r": "どせき",
+     "fr": "terre et pierres",
+     "star": true
+    },
+    {
+     "w": "金石",
+     "r": "きんせき",
+     "fr": "les métaux et les pierres",
+     "star": false
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 59,
+   "k": "地",
+   "fr": "la terre, le sol",
+   "on": [
+    "チ",
+    "ジ"
+   ],
+   "kun": [],
+   "strokes": 6,
+   "vocab": [
+    {
+     "w": "地名",
+     "r": "ちめい",
+     "fr": "le nom de lieu",
+     "star": true
+    },
+    {
+     "w": "地元",
+     "r": "じもと",
+     "fr": "la région natale, le coin",
+     "star": true
+    },
+    {
+     "w": "地金",
+     "r": "じがね",
+     "fr": "le métal brut",
+     "star": false
+    },
+    {
+     "w": "地中",
+     "r": "ちちゅう",
+     "fr": "sous terre",
+     "star": false
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 60,
+   "k": "竹",
+   "fr": "le bambou",
+   "on": [
+    "チク"
+   ],
+   "kun": [
+    "たけ"
+   ],
+   "strokes": 6,
+   "vocab": [
+    {
+     "w": "竹",
+     "r": "たけ",
+     "fr": "le bambou",
+     "star": true
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 61,
+   "k": "明",
+   "fr": "clair, lumineux",
+   "on": [
+    "メイ",
+    "ミョウ"
+   ],
+   "kun": [
+    "あか-るい",
+    "あ-ける",
+    "あき-らか"
+   ],
+   "strokes": 8,
+   "vocab": [
+    {
+     "w": "明く",
+     "r": "あく",
+     "fr": "s'ouvrir, s'éclaircir",
+     "star": false
+    },
+    {
+     "w": "明るい",
+     "r": "あかるい",
+     "fr": "clair, lumineux",
+     "star": true
+    },
+    {
+     "w": "明らか",
+     "r": "あきらか",
+     "fr": "évident, clair",
+     "star": true
+    },
+    {
+     "w": "明日",
+     "r": "あした",
+     "fr": "demain",
+     "star": true
+    },
+    {
+     "w": "明朝",
+     "r": "みょうちょう",
+     "fr": "demain matin",
+     "star": false
+    },
+    {
+     "w": "明晩",
+     "r": "みょうばん",
+     "fr": "demain soir",
+     "star": false
+    },
+    {
+     "w": "夜明け",
+     "r": "よあけ",
+     "fr": "l'aube",
+     "star": false
+    },
+    {
+     "w": "明後日",
+     "r": "あさって",
+     "fr": "après-demain",
+     "star": true
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 62,
+   "k": "空",
+   "fr": "le ciel, le vide",
+   "on": [
+    "クウ"
+   ],
+   "kun": [
+    "そら",
+    "から",
+    "あ-く",
+    "す-く"
+   ],
+   "strokes": 8,
+   "vocab": [
+    {
+     "w": "空",
+     "r": "そら",
+     "fr": "le ciel (そら) / vide (から)",
+     "star": true
+    },
+    {
+     "w": "空",
+     "r": "から",
+     "fr": "le ciel (そら) / vide (から)",
+     "star": true
+    },
+    {
+     "w": "空く",
+     "r": "あく",
+     "fr": "se vider, se libérer (あく) ; être peu rempli (すく)",
+     "star": false
+    },
+    {
+     "w": "空く",
+     "r": "すく",
+     "fr": "se vider, se libérer (あく) ; être peu rempli (すく)",
+     "star": true
+    },
+    {
+     "w": "朝空",
+     "r": "あさぞら",
+     "fr": "le ciel du matin",
+     "star": false
+    },
+    {
+     "w": "夜空",
+     "r": "よぞら",
+     "fr": "le ciel nocturne",
+     "star": false
+    },
+    {
+     "w": "空気",
+     "r": "くうき",
+     "fr": "l'air",
+     "star": true
+    },
+    {
+     "w": "空中",
+     "r": "くうちゅう",
+     "fr": "dans les airs",
+     "star": false
+    },
+    {
+     "w": "空間",
+     "r": "くうかん",
+     "fr": "l'espace",
+     "star": true
+    },
+    {
+     "w": "空前",
+     "r": "くうぜん",
+     "fr": "sans précédent",
+     "star": false
+    },
+    {
+     "w": "空車",
+     "r": "くうしゃ",
+     "fr": "le taxi libre, le véhicule vide",
+     "star": false
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 63,
+   "k": "天",
+   "fr": "le ciel, céleste",
+   "on": [
+    "テン"
+   ],
+   "kun": [
+    "あめ"
+   ],
+   "strokes": 4,
+   "vocab": [
+    {
+     "w": "雨天",
+     "r": "うてん",
+     "fr": "le temps pluvieux",
+     "star": false
+    },
+    {
+     "w": "天気",
+     "r": "てんき",
+     "fr": "le temps (météo)",
+     "star": true
+    },
+    {
+     "w": "天国",
+     "r": "てんごく",
+     "fr": "le paradis",
+     "star": false
+    },
+    {
+     "w": "天日",
+     "r": "てんぴ",
+     "fr": "le soleil, au soleil",
+     "star": false
+    },
+    {
+     "w": "天ぷら",
+     "r": "てんぶら",
+     "fr": "le tempura",
+     "star": true
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 64,
+   "k": "京",
+   "fr": "la capitale",
+   "on": [
+    "キョウ",
+    "ケイ"
+   ],
+   "kun": [
+    "みやこ"
+   ],
+   "strokes": 8,
+   "vocab": [
+    {
+     "w": "京",
+     "r": "みやこ",
+     "fr": "la capitale",
+     "star": true
+    },
+    {
+     "w": "京女",
+     "r": "きょうおんな",
+     "fr": "la femme de Kyoto",
+     "star": false
+    },
+    {
+     "w": "京男",
+     "r": "きょうおとこ",
+     "fr": "l'homme de Kyoto",
+     "star": false
+    },
+    {
+     "w": "京人",
+     "r": "けいじん",
+     "fr": "l'habitant de Kyoto",
+     "star": false
+    },
+    {
+     "w": "京風",
+     "r": "きょうふう",
+     "fr": "à la mode de Kyoto",
+     "star": false
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 65,
+   "k": "友",
+   "fr": "l'ami",
+   "on": [
+    "ユウ"
+   ],
+   "kun": [
+    "とも"
+   ],
+   "strokes": 4,
+   "vocab": [
+    {
+     "w": "友だち",
+     "r": "ともだち",
+     "fr": "l'ami",
+     "star": true
+    },
+    {
+     "w": "友人",
+     "r": "ゆうじん",
+     "fr": "l'ami (formel)",
+     "star": false
+    },
+    {
+     "w": "友人間",
+     "r": "ゆうじんかん",
+     "fr": "entre amis",
+     "star": false
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 66,
+   "k": "学",
+   "fr": "l'étude",
+   "on": [
+    "ガク"
+   ],
+   "kun": [
+    "まな-ぶ"
+   ],
+   "strokes": 8,
+   "vocab": [
+    {
+     "w": "学ぶ",
+     "r": "まなぶ",
+     "fr": "apprendre, étudier",
+     "star": true
+    },
+    {
+     "w": "夜学",
+     "r": "やがく",
+     "fr": "les cours du soir",
+     "star": false
+    },
+    {
+     "w": "学友",
+     "r": "がくゆう",
+     "fr": "le camarade d'études",
+     "star": true
+    },
+    {
+     "w": "学年",
+     "r": "がくねん",
+     "fr": "l'année scolaire",
+     "star": true
+    },
+    {
+     "w": "学外",
+     "r": "がくがい",
+     "fr": "hors de l'école",
+     "star": false
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 67,
+   "k": "校",
+   "fr": "l'école",
+   "on": [
+    "コウ"
+   ],
+   "kun": [],
+   "strokes": 10,
+   "vocab": [
+    {
+     "w": "学校",
+     "r": "がっこう",
+     "fr": "l'école",
+     "star": true
+    },
+    {
+     "w": "校友",
+     "r": "こうゆう",
+     "fr": "le camarade d'école, l'ancien élève",
+     "star": true
+    },
+    {
+     "w": "校外",
+     "r": "こうがい",
+     "fr": "hors de l'école",
+     "star": false
+    },
+    {
+     "w": "中学校",
+     "r": "ちゅうがっこう",
+     "fr": "le collège",
+     "star": true
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 68,
+   "k": "生",
+   "fr": "la vie, naître, l'étudiant",
+   "on": [
+    "セイ",
+    "ショウ"
+   ],
+   "kun": [
+    "い-きる",
+    "う-まれる",
+    "なま"
+   ],
+   "strokes": 5,
+   "vocab": [
+    {
+     "w": "生",
+     "r": "なま",
+     "fr": "cru, frais",
+     "star": false
+    },
+    {
+     "w": "生きる",
+     "r": "いきる",
+     "fr": "vivre",
+     "star": true
+    },
+    {
+     "w": "生む",
+     "r": "うむ",
+     "fr": "donner naissance, produire",
+     "star": false
+    },
+    {
+     "w": "生まれる",
+     "r": "うまれる",
+     "fr": "naître",
+     "star": true
+    },
+    {
+     "w": "学生",
+     "r": "がくせい",
+     "fr": "l'étudiant",
+     "star": true
+    },
+    {
+     "w": "先生",
+     "r": "せんせい",
+     "fr": "le professeur",
+     "star": true
+    },
+    {
+     "w": "人生",
+     "r": "じんせい",
+     "fr": "la vie (humaine)",
+     "star": true
+    }
+   ],
+   "src": "liste"
+  }
+ ],
+ "blocs": [
+  {
+   "nom": "Moments de la journée",
+   "from": 52,
+   "to": 55
+  },
+  {
+   "nom": "Nature et météo",
+   "from": 56,
+   "to": 63
+  },
+  {
+   "nom": "Ville et école",
+   "from": 64,
+   "to": 68
+  }
+ ]
+}

@@ -7,7 +7,10 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <meta name="apple-mobile-web-app-title" content="言葉">
-<link rel="apple-touch-icon" href="icon.png">
+<link rel="apple-touch-icon" href="icon.png?v=1">
+<link rel="apple-touch-icon" sizes="180x180" href="icon.png?v=1">
+<link rel="icon" type="image/png" href="icon.png?v=1">
+<link rel="manifest" href="manifest.webmanifest">
 <title>言葉 — Kanji &amp; grammaire</title>
 <style>
 :root{
@@ -204,6 +207,46 @@ input,textarea{font:inherit;color:inherit}
 .cal{display:flex;gap:6px;justify-content:center;margin:6px 0 2px}
 .cal i{width:12px;height:12px;border-radius:4px;border:1px solid var(--line2)}
 .cal i.on{background:var(--seal);border-color:var(--seal)}
+
+/* v2 */
+.bloc{margin:18px 0 8px;display:flex;align-items:baseline;gap:10px}
+.bloc h4{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3);font-weight:600}
+.bloc span{flex:1;height:1px;background:var(--line)}
+.bloc b{font-size:12px;color:var(--ink3);font-weight:500}
+.step{display:flex;gap:5px;justify-content:center;margin:2px 0 8px}
+.step i{width:22px;height:3px;border-radius:2px;background:var(--line2)}
+.step i.on{background:var(--ink)}
+.step i.done{background:var(--seal)}
+.blob{text-align:center;padding:26px 16px}
+.blob .lab{font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink3)}
+.blob h2{font-size:26px;font-weight:600;margin:8px 0 6px;letter-spacing:-.02em}
+.blob p{color:var(--ink2);font-size:14px;line-height:1.5}
+.blob .ks{font-size:30px;letter-spacing:.14em;margin:16px 0 4px;line-height:1.5}
+.comp{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:10px 0}
+.comp .cp{padding:8px 12px;border-radius:12px;background:var(--paper2);border:1px solid var(--line);font-size:22px;line-height:1.2;text-align:center}
+.comp .cp small{display:block;font-size:10px;color:var(--ink3);font-family:-apple-system,system-ui;margin-top:2px}
+.comp .cp.rad{border-color:var(--seal);color:var(--seal)}
+.cloze{font-size:34px;letter-spacing:.06em;line-height:1.5}
+.cloze .hole{display:inline-block;min-width:44px;border-bottom:3px solid var(--seal);color:var(--seal)}
+.kbd{width:100%;max-width:400px;margin-top:14px}
+.kbd input{width:100%;padding:16px;border-radius:16px;border:1.5px solid var(--line2);background:var(--paper2);font-size:22px;text-align:center}
+.kbd input.ok{border-color:var(--ok)}.kbd input.ko{border-color:var(--ko)}
+.exam{padding:2px 0}
+.exam .q{font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3);text-align:center;margin-bottom:4px}
+.res{display:flex;align-items:center;gap:12px;padding:12px 4px;border-bottom:1px solid var(--line)}
+.res .bar{flex:1;height:7px;border-radius:4px;background:var(--line);overflow:hidden}
+.res .bar i{display:block;height:100%;border-radius:4px}
+.res .lb{font-size:13.5px;min-width:120px}
+.res .pc{font-size:13px;color:var(--ink2);min-width:52px;text-align:right}
+.chips{display:flex;flex-wrap:wrap;gap:7px;margin:8px 0}
+.chip{padding:8px 13px;border-radius:999px;border:1px solid var(--line2);font-size:13px;background:var(--paper2)}
+.chip.on{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.timer{font-variant-numeric:tabular-nums;font-weight:600}
+.timer.warn{color:var(--ko)}
+.wk{display:flex;align-items:center;gap:10px;padding:10px 4px;border-bottom:1px solid var(--line)}
+.wk .k{font-size:26px;min-width:40px}
+.wk .m{flex:1;font-size:13.5px}
+.wk .m small{display:block;color:var(--ink2);font-size:12px}
 @media (prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;transition-duration:.01ms!important}}
 </style>
 </head>
@@ -226,8 +269,8 @@ input,textarea{font:inherit;color:inherit}
 /* ═══════ ÉTAT & STOCKAGE ═══════ */
 const $=id=>document.getElementById(id);
 const KEY='kotoba-v1';
-let D={manifest:null,kanji:{},gram:{},strokes:{}};
-let S={srs:{},opt:{theme:'jour',furi:false,newPerDay:8,modes:{reco:true,rappel:true,lecture:true,phrase:true}},perso:[],log:{},about:false};
+let D={manifest:null,kanji:{},gram:{},strokes:{},comp:{},cloze:[],read:[]};
+let S={srs:{},opt:{theme:'jour',furi:false,newPerDay:8,modes:{reco:true,rappel:true,lecture:true,phrase:true,trou:true,clavier:false}},perso:[],log:{},about:false};
 let nav=[],cur={};
 function load(){ try{ const v=localStorage.getItem(KEY); if(v){ const d=JSON.parse(v); S.srs=d.srs||{}; S.opt=Object.assign(S.opt,d.opt||{}); S.perso=d.perso||[]; S.log=d.log||{}; } }catch(e){} }
 let sT; function save(){ clearTimeout(sT); sT=setTimeout(()=>{ try{ localStorage.setItem(KEY,JSON.stringify({srs:S.srs,opt:S.opt,perso:S.perso,log:S.log})); }catch(e){} },200); }
@@ -245,6 +288,9 @@ async function loadData(){
   m.cours.kanji.seances.forEach(s=>jobs.push(fetch('data/kanji/'+s.id+'.json').then(r=>r.json()).then(j=>D.kanji[s.id]=j).catch(()=>{})));
   m.cours.grammaire.lecons.forEach(l=>jobs.push(fetch('data/grammaire/'+l.id+'.json').then(r=>r.json()).then(j=>D.gram[l.id]=j).catch(()=>{})));
   jobs.push(fetch('data/strokes.json').then(r=>r.json()).then(j=>D.strokes=j).catch(()=>{}));
+  jobs.push(fetch('data/components.json').then(r=>r.json()).then(j=>D.comp=j).catch(()=>{D.comp={}}));
+  jobs.push(fetch('data/cloze.json').then(r=>r.json()).then(j=>D.cloze=j).catch(()=>{D.cloze=[]}));
+  jobs.push(fetch('data/readings.json').then(r=>r.json()).then(j=>D.read=j).catch(()=>{D.read=[]}));
   await Promise.all(jobs);
   index();
 }
@@ -260,7 +306,9 @@ function index(){
     g.points.forEach((p,pi)=>p.ex.forEach((e,ei)=>{ if(e.tok&&e.tok.length>1) SENT.push({...e,id:'s:'+g.id+':'+pi+':'+ei,lecon:g.id,point:p.t}); }));
   });
   S.perso.forEach(p=>VOCAB.push({w:p.w,r:p.r,fr:p.fr,star:false,seance:'perso',id:'v:perso:'+p.w,src:'perso'}));
+  CLOZE=(D.cloze||[]).filter(c=>D.kanji[c.seance]); READS=(D.read||[]).filter(r=>D.kanji[r.seance]);
 }
+let CLOZE=[],READS=[];
 const kanjiSeen=k=>{const x=BYK[k];return x?x.date<=today():true;};
 
 /* ═══════ SRS ═══════ */
@@ -282,6 +330,8 @@ function poolItems(){
   KANJI.forEach(k=>{ if(kanjiSeen(k.k)) items.push({id:'k:'+k.k,type:'kanji',k,flow:'exam'}); });
   VOCAB.forEach(v=>{ if(v.seance==='perso'||!D.kanji[v.seance]||D.kanji[v.seance].date<=today()||D.gram[v.seance]) items.push({id:v.id,type:'vocab',v,flow:flowOf(v)}); });
   SENT.forEach(s=>items.push({id:s.id,type:'sent',s,flow:'exam'}));
+  if(S.opt.modes.trou) CLOZE.forEach(c=>{ if(D.kanji[c.seance].date<=today()) items.push({id:c.id,type:'cloze',c,flow:c.star===false?'enrich':'exam'}); });
+  if(S.opt.modes.lecture) READS.forEach(r=>{ if(D.kanji[r.seance].date<=today()) items.push({id:r.id,type:'read',r,flow:r.star===false?'enrich':'exam'}); });
   return items;
 }
 function dueLists(){
@@ -312,6 +362,7 @@ function home(){
       <div class="enso ${p>=1?'full':''}">${ensoSVG(p)}<div class="t"><b>${mast}</b><small>/ ${seen.length} kanji solides</small></div></div>
       <div class="cal">${days.map(d=>`<i class="${S.log[d]?'on':''}" title="${d}"></i>`).join('')}</div>
       ${s?`<div class="pd jp">${s.jp}</div><div class="pdf">${s.fr}</div>`:''}
+      ${(()=>{const dd=Math.ceil((new Date(D.manifest.cours.kanji.examen+'T12:00:00')-Date.now())/DAY);return dd>0?`<div class="pdf" style="margin-top:10px;color:var(--seal)">examen de kanji dans ${dd} jour${dd>1?'s':''}</div>`:'';})()}
     </div>
     <button class="pri" id="rev"><span class="n">${n}</span><span class="t"><b>Réviser</b><small>${n?'à revoir maintenant':'rien en attente — reviens plus tard'}</small></span><span>›</span></button>
     <div class="row">
@@ -321,6 +372,9 @@ function home(){
     <div class="sec">Cours</div>
     <button class="card" id="ck"><span class="g jp">字</span><span class="b"><b>Version et kanji</b><small>${D.manifest.cours.kanji.seances.length} séances · examen le ${fdate(D.manifest.cours.kanji.examen)}</small></span><span class="arrow">›</span></button>
     <button class="card" id="cg"><span class="g jp">文</span><span class="b"><b>Grammaire et thème</b><small>${D.manifest.cours.grammaire.lecons.length} leçons · phrases-modèles</small></span><span class="arrow">›</span></button>
+    <div class="sec">S'évaluer</div>
+    <button class="card" id="ex"><span class="g">⏱</span><span class="b"><b>Examen blanc</b><small>chronométré · correction par type de question</small></span><span class="arrow">›</span></button>
+    <button class="card" id="rs"><span class="g jp">氵</span><span class="b"><b>Réseau de kanji</b><small>clés et composants partagés</small></span><span class="arrow">›</span></button>
     <div class="sec">Outils</div>
     <button class="card" id="cp"><span class="g">✎</span><span class="b"><b>Mes ajouts</b><small>${S.perso.length} mot${S.perso.length>1?'s':''} perso</small></span><span class="arrow">›</span></button>
     <button class="card" id="ca"><span class="g">ⓘ</span><span class="b"><b>À propos</b><small>Moussa M. · crédits · contact</small></span><span class="arrow">›</span></button>
@@ -329,6 +383,7 @@ function home(){
   $('rev').onclick=()=>{ if(!n){toast('Rien à réviser. Lance des nouveaux.');return;} go(session,{items:sh(L.due),label:'Révision'}); };
   $('new').onclick=()=>{ if(!L.freshExam.length){toast('Tout a déjà été vu.');return;} go(session,{items:pickNew(L.freshExam,S.opt.newPerDay),label:'Nouveaux'}); };
   $('enr').onclick=()=>{ const it=L.dueEnrich.concat(pickNew(L.freshEnrich,5)); if(!it.length){toast('Rien dans ce flux pour l\'instant.');return;} go(session,{items:it,label:'Enrichissement'}); };
+  $('ex').onclick=()=>go(examSetup); $('rs').onclick=()=>go(reseau);
   $('ck').onclick=()=>go(kanjiCourse); $('cg').onclick=()=>go(gramCourse); $('cp').onclick=()=>go(perso); $('ca').onclick=()=>go(about);
 }
 function pickNew(list,n){ // ordre : kanji d'abord (par n), puis vocab ★ des séances les plus anciennes
@@ -363,10 +418,17 @@ function seance(id){
   const m=d.kanji.filter(k=>kanjiLevel(k.k)>=3).length; info(`<b>${m}</b> / ${d.kanji.length} solides`,d.date>today()?'séance à venir':''); setBar(m/d.kanji.length);
   $('view').innerHTML=`<div class="scroll"><div class="kgrid" id="g" style="margin-top:6px"></div>
     <div class="sec">Travailler cette séance</div>
+    <button class="card" id="dec"><span class="g">📖</span><span class="b"><b>Découvrir la séance</b><small>parcours guidé par bloc, avec contrôles</small></span><span class="arrow">›</span></button>
     <button class="card" id="q"><span class="g">⚡︎</span><span class="b"><b>Réviser la séance</b><small>kanji + vocabulaire ★, quel que soit l'échéancier</small></span><span class="arrow">›</span></button>
     <button class="card" id="w"><span class="g">✍︎</span><span class="b"><b>Tracer la séance</b><small>tous les kanji, dans l'ordre des traits</small></span><span class="arrow">›</span></button>
     </div>`;
-  const g=$('g'); d.kanji.forEach(k=>{ const b=document.createElement('button'); b.className='kc jp l'+kanjiLevel(k.k); b.innerHTML=`${k.k}<em>${k.n}</em><small>${k.strokes}t</small>`; b.onclick=()=>go(fiche,k.k); g.appendChild(b); });
+  const host=$('g').parentNode; $('g').remove();
+  (d.blocs||[{nom:'',from:d.range[0],to:d.range[1]}]).forEach(bl=>{
+    const h=document.createElement('div'); h.className='bloc'; h.innerHTML=`<h4>${bl.nom}</h4><span></span><b>n°${bl.from}–${bl.to}</b>`; host.insertBefore(h,host.firstChild.nextSibling);
+    const g=document.createElement('div'); g.className='kgrid'; host.insertBefore(g,h.nextSibling);
+    d.kanji.filter(k=>k.n>=bl.from&&k.n<=bl.to).forEach(k=>{ const b=document.createElement('button'); b.className='kc jp l'+kanjiLevel(k.k); b.innerHTML=`${k.k}<em>${k.n}</em><small>${k.strokes}t</small>`; b.onclick=()=>go(fiche,k.k); g.appendChild(b); });
+  });
+  $('dec').onclick=()=>go(decouvrir,id);
   $('q').onclick=()=>{ const items=[]; d.kanji.forEach(k=>{ items.push({id:'k:'+k.k,type:'kanji',k,flow:'exam'}); k.vocab.filter(v=>v.star!==false).forEach(v=>items.push({id:'v:'+v.w+'/'+v.r,type:'vocab',v:{...v,seance:id,kanji:k.k},flow:'exam'})); }); go(session,{items:sh(items),label:d.titre.replace('Séance ','S').split(' — ')[0]}); };
   $('w').onclick=()=>go(traceRun,d.kanji.map(k=>k.k));
 }
@@ -444,7 +506,7 @@ function fiche(k){
     <div class="vlist" id="vl"></div>
     ${related.length?`<div class="sec" style="align-self:flex-start">Ce kanji ailleurs</div><div class="vlist" id="rl"></div>`:''}
     <div class="sec" style="align-self:flex-start">Composants</div>
-    <p class="hint" style="text-align:left;padding:0 4px">${x.strokes} traits. Les composants seront ajoutés séance par séance.</p>
+    ${(()=>{const c=(D.comp||{})[k]||{};return (c.parts&&c.parts.length)?`<div class="comp">${c.parts.map(p=>`<span class="cp jp ${p===c.rad?'rad':''}">${p}${p===c.rad&&c.radfr?`<small>${c.radfr}</small>`:''}</span>`).join('')}</div><p class="hint">${c.rad?`Clé : ${c.rad}${c.radfr?' — '+c.radfr:''}. `:''}${x.strokes} traits.</p>`:`<p class="hint">${x.strokes} traits.</p>`;})()}
   </div></div>`;
   const sw=$('sw'), kb=$('kb'); let mode='view', eng=null, nums=false;
   const show=()=>{ kb.querySelectorAll('canvas').forEach(c=>c.remove()); drawKanji(sw,k,{numbers:nums}); };
@@ -492,6 +554,55 @@ function traceRun(list){
   step();
 }
 
+/* ═══════ DÉCOUVRIR LA SÉANCE ═══════ */
+function decouvrir(id){
+  const d=D.kanji[id]; const blocs=d.blocs||[{nom:d.titre.split('— ')[1]||'',from:d.range[0],to:d.range[1]}];
+  let bi=0, ki=0, phase='intro';
+  head('Découvrir',d.titre.replace('Séance ','S').split(' — ')[0]);
+  const kanjiOf=b=>d.kanji.filter(k=>k.n>=b.from&&k.n<=b.to);
+  const steps=()=>`<div class="step">${blocs.map((b,i)=>`<i class="${i<bi?'done':i===bi?'on':''}"></i>`).join('')}</div>`;
+  function intro(){ const b=blocs[bi], ks=kanjiOf(b);
+    info(`bloc <b>${bi+1}</b> / ${blocs.length}`,''); setBar(bi/blocs.length);
+    $('view').innerHTML=`<div class="scroll">${steps()}<div class="blob"><div class="lab">${d.titre.split('— ')[0]}</div><h2>${b.nom}</h2>
+      <p>${ks.length} kanji · n°${b.from} à ${b.to}</p><div class="ks jp">${ks.map(k=>k.k).join('')}</div>
+      <p>${ks.reduce((a,k)=>a+k.vocab.length,0)} mots, dont ${ks.reduce((a,k)=>a+k.vocab.filter(v=>v.star===true).length,0)} ★</p></div>
+      <button class="btn" id="go">Commencer</button><button class="btn o" id="skip">Passer ce bloc</button></div>`;
+    $('go').onclick=()=>{ ki=0; phase='kanji'; kanjiStep(); };
+    $('skip').onclick=()=>{ bi++; bi<blocs.length?intro():fin(); };
+  }
+  function kanjiStep(){
+    const b=blocs[bi], ks=kanjiOf(b), k=ks[ki]; if(!k){ check(); return; }
+    const c=(D.comp||{})[k.k]||{}; const stars=k.vocab.filter(v=>v.star===true), others=k.vocab.filter(v=>v.star!==true);
+    info(`${b.nom} · <b>${ki+1}</b> / ${ks.length}`,`n°${k.n} · ${k.strokes} traits`); setBar((bi+ki/ks.length)/blocs.length);
+    $('view').innerHTML=`<div class="scroll"><div class="fiche">
+      <div class="kbox jp" id="kb"><div class="svgwrap" id="sw"></div></div>
+      <div class="kmeta"><div class="fr">${k.fr}</div></div>
+      <div class="readings">${k.on.length?`<div class="rd"><b>ON</b><span class="jps">${k.on.join('・')}</span></div>`:''}${k.kun.length?`<div class="rd"><b>kun</b><span class="jps">${k.kun.join('・')}</span></div>`:''}</div>
+      ${c.parts&&c.parts.length?`<div class="comp">${c.parts.map(p=>`<span class="cp jp ${p===c.rad?'rad':''}">${p}${p===c.rad&&c.radfr?`<small>${c.radfr}</small>`:''}</span>`).join('')}</div>`:''}
+      <div class="vlist">${stars.concat(others).slice(0,14).map(v=>`<div class="vi"><span class="w jp">${rubyW(markUnseen(v.w),v.r)}</span>${!S.opt.furi&&v.r?`<span class="r jps">${v.r}</span>`:''}<span class="f">${v.fr||''}</span>${v.star===true?'<span class="st">★</span>':''}</div>`).join('')}</div>
+      </div></div>
+      <div class="nav" style="padding:8px 18px 14px"><button class="btn o" id="pv" style="flex:0 0 68px">‹</button><button class="btn" id="nx">${ki+1<ks.length?'Suivant':'Vérifier ce bloc'}</button></div>`;
+    drawKanji($('sw'),k.k,{animate:true});
+    $('nx').onclick=()=>{ grade('k:'+k.k,1); ki++; ki<ks.length?kanjiStep():check(); };
+    $('pv').onclick=()=>{ if(ki>0){ki--;kanjiStep();} else intro(); };
+  }
+  function check(){
+    const b=blocs[bi], ks=kanjiOf(b); const items=[];
+    ks.forEach(k=>{ items.push({id:'k:'+k.k,type:'kanji',k,flow:'exam'});
+      k.vocab.filter(v=>v.star===true).slice(0,2).forEach(v=>items.push({id:'v:'+v.w+'/'+v.r,type:'vocab',v:{...v,seance:id,kanji:k.k},flow:'exam'})); });
+    const pick=sh(items).slice(0,Math.min(6,items.length));
+    go(session,{items:pick,label:'Contrôle · '+b.nom,onEnd:()=>{ nav.pop(); bi++; if(bi<blocs.length){ intro(); } else { fin(); } }});
+  }
+  function fin(){ setBar(1); info('','');
+    const ks=d.kanji, m=ks.filter(k=>kanjiLevel(k.k)>=2).length;
+    $('view').innerHTML=`<div class="end"><div class="big jp">了</div><p>${d.titre.split('— ')[1]} parcourue.<br>${ks.length} kanji découverts · ${m} déjà en cours d'acquisition<br>Ils entrent maintenant dans ton échéancier de révision.</p>
+      <button class="btn" id="rev">Réviser cette séance</button><button class="btn o" id="bk">Terminer</button></div>`;
+    $('rev').onclick=()=>{ const items=[]; d.kanji.forEach(k=>{ items.push({id:'k:'+k.k,type:'kanji',k,flow:'exam'}); k.vocab.filter(v=>v.star===true).forEach(v=>items.push({id:'v:'+v.w+'/'+v.r,type:'vocab',v:{...v,seance:id,kanji:k.k},flow:'exam'})); }); go(session,{items:sh(items),label:d.titre.split(' — ')[0]}); };
+    $('bk').onclick=()=>{ nav=[[home]]; render(); };
+  }
+  intro();
+}
+
 /* ═══════ GRAMMAIRE ═══════ */
 function gramCourse(){
   head('Grammaire et thème',D.manifest.cours.grammaire.prof);
@@ -515,13 +626,14 @@ function lecon(id){
 }
 
 /* ═══════ SESSION DE RÉVISION ═══════ */
-function session({items,label,force}){
+function session({items,label,force,onEnd}){
   let q=items.slice(), i=0, total=q.length, ok=0, ko=0; const again=[];
   head(label||'Révision','');
   const next=()=>{
     if(!q.length){ if(again.length){ q=sh(again.splice(0)); } else { fin(); return; } }
     const it=q.shift(); info(`<b>${i}</b> / ${total}`,`${ko?'raté '+ko:''}`); setBar(i/Math.max(total,1));
-    if(it.type==='kanji') cardKanji(it); else if(it.type==='vocab') cardVocab(it); else cardSent(it);
+    if(it.type==='kanji') cardKanji(it); else if(it.type==='vocab') cardVocab(it);
+    else if(it.type==='cloze') cardCloze(it); else if(it.type==='read') cardRead(it); else cardSent(it);
   };
   const done=(it,g)=>{ grade(it.id,g); i++; if(g===0){ ko++; again.push(it); } else ok++; setTimeout(next,g===0?900:520); };
   const stamp=(el,good)=>{ const s=document.createElement('div'); s.className=good?'seal':'ink'; s.textContent=good?'正':''; el.appendChild(s); requestAnimationFrame(()=>s.classList.add('on')); if(!good) el.classList.add('ko'); vib(good?12:[30,30,30]); };
@@ -552,8 +664,162 @@ function session({items,label,force}){
       if(!good){ setTimeout(()=>{ slot.innerHTML=s.tok.map(t=>`<span class="tk jp">${t}</span>`).join(''); slot.className='slot ok'; },600); }
       done(it,good?2:0); };
     $('check').onclick=check; $('showb').onclick=()=>{ slot.innerHTML=s.tok.map(t=>`<span class="tk jp">${t}</span>`).join(''); slot.className='slot ok'; stamp(document.querySelector('.rcard'),false); done(it,0); }; }
-  const fin=()=>{ setBar(1); info('',''); $('view').innerHTML=`<div class="end"><div class="big jp">${ko===0?'完':'了'}</div><p>${total} carte${total>1?'s':''} · ${ok} réussie${ok>1?'s':''} · ${ko} à revoir<br>${ko===0?'Sans faute.':'Les ratés reviennent dans dix minutes.'}</p><button class="btn" id="bk">Terminer</button></div>`; $('bk').onclick=()=>{ nav=[[home]]; render(); }; };
+  function cardCloze(it){ const c=it.c; const masked=[...c.w].map((ch,j)=>j===c.i?'<span class="hole">?</span>':ch).join('');
+    const opts=sh([c.k,...c.d.slice(0,3)]);
+    $('view').innerHTML=`<div class="rv"><div class="rcard"><div class="kind">quel kanji manque ?${c.star===true?' ★':''}</div>
+      <div class="cloze jp">${masked}</div><div class="sub">${c.fr}</div>${S.opt.furi?`<div class="sub jps">${c.r}</div>`:''}</div>
+      <div class="opts" id="opts"></div></div>`;
+    const box=$('opts'); opts.forEach(o=>{ const b=document.createElement('button'); b.className='opt jp'; b.textContent=o; b.dataset.k=o;
+      b.onclick=()=>{ const good=o===c.k; [...box.children].forEach(x=>{ if(x.dataset.k===c.k) x.classList.add('ok'); else x.classList.add('dim'); }); if(!good) b.classList.add('ko');
+        document.querySelector('.cloze').innerHTML=[...c.w].map((ch,j)=>j===c.i?`<span class="hole">${c.k}</span>`:ch).join('');
+        stamp(document.querySelector('.rcard'),good); done(it,good?2:0); }; box.appendChild(b); }); }
+
+  function cardRead(it){ const r=it.r, kb=S.opt.modes.clavier&&st(it.id)&&Math.random()<.45;
+    if(kb){ $('view').innerHTML=`<div class="rv"><div class="rcard"><div class="kind">écris la lecture${r.star===true?' ★':''}</div><div class="mid jp">${r.w}</div><div class="sub">${r.fr}</div></div>
+      <div class="kbd"><input id="in" class="jps" placeholder="ひらがな" autocomplete="off" autocapitalize="off" spellcheck="false"></div><div class="grade" style="grid-template-columns:1fr"><button id="val">Valider</button></div></div>`;
+      const inp=$('in'); inp.focus();
+      const val=()=>{ const v=inp.value.trim(); const good=v===r.r; inp.className='jps '+(good?'ok':'ko');
+        if(!good) inp.value=r.r; stamp(document.querySelector('.rcard'),good); done(it,good?2:0); };
+      $('val').onclick=val; inp.onkeydown=e=>{ if(e.key==='Enter') val(); }; return; }
+    const opts=sh([r.r,...r.d.slice(0,3)]);
+    $('view').innerHTML=`<div class="rv"><div class="rcard"><div class="kind">quelle lecture ?${r.star===true?' ★':''}</div><div class="mid jp">${r.w}</div><div class="sub">${r.fr}</div></div><div class="opts" id="opts"></div></div>`;
+    const box=$('opts'); opts.forEach(o=>{ const b=document.createElement('button'); b.className='opt jps'; b.style.fontSize='19px'; b.textContent=o; b.dataset.r=o;
+      b.onclick=()=>{ const good=o===r.r; [...box.children].forEach(x=>{ if(x.dataset.r===r.r) x.classList.add('ok'); else x.classList.add('dim'); }); if(!good) b.classList.add('ko');
+        stamp(document.querySelector('.rcard'),good); done(it,good?2:0); }; box.appendChild(b); }); }
+
+  const fin=()=>{ setBar(1); info('',''); $('view').innerHTML=`<div class="end"><div class="big jp">${ko===0?'完':'了'}</div><p>${total} carte${total>1?'s':''} · ${ok} réussie${ok>1?'s':''} · ${ko} à revoir<br>${ko===0?'Sans faute.':'Les ratés reviennent dans dix minutes.'}</p><button class="btn" id="bk">Terminer</button></div>`; $('bk').onclick=()=>{ if(onEnd) onEnd(); else { nav=[[home]]; render(); } }; };
   next();
+}
+
+/* ═══════ EXAMEN BLANC ═══════ */
+function examSetup(){
+  head('Examen blanc','épreuve chronométrée');
+  const se=D.manifest.cours.kanji.seances.filter(x=>D.kanji[x.id]&&D.kanji[x.id].date<=today());
+  let sel=new Set(se.map(x=>x.id)), nq=30, dur=15;
+  const draw=()=>{ $('view').innerHTML=`<div class="scroll" style="padding-top:8px">
+    <p class="hint" style="text-align:left;padding:0 2px 8px">Épreuve mélangeant lectures, sens, kanji manquants, ordre des traits et thème. Correction détaillée par type de question à la fin.</p>
+    <div class="sec">Séances</div><div class="chips" id="ch"></div>
+    <div class="sec">Nombre de questions</div><div class="chips" id="nq">${[15,30,50,80].map(n=>`<button class="chip ${n===nq?'on':''}" data-v="${n}">${n}</button>`).join('')}</div>
+    <div class="sec">Durée</div><div class="chips" id="du">${[10,15,25,40].map(n=>`<button class="chip ${n===dur?'on':''}" data-v="${n}">${n} min</button>`).join('')}</div>
+    <div class="sec">Prêt</div><p class="hint" style="text-align:left;padding:0 2px 10px">${countPool(sel)} éléments disponibles dans ta sélection.</p>
+    <button class="btn s" id="go">Lancer l'épreuve</button></div>`;
+    const ch=$('ch'); se.forEach(x=>{ const b=document.createElement('button'); b.className='chip'+(sel.has(x.id)?' on':''); b.textContent=x.id;
+      b.onclick=()=>{ sel.has(x.id)?sel.delete(x.id):sel.add(x.id); draw(); }; ch.appendChild(b); });
+    const all=document.createElement('button'); all.className='chip'+(sel.size===se.length?' on':''); all.textContent='Tout'; all.onclick=()=>{ sel=new Set(se.map(x=>x.id)); draw(); }; ch.appendChild(all);
+    $('nq').querySelectorAll('.chip').forEach(b=>b.onclick=()=>{nq=+b.dataset.v;draw();});
+    $('du').querySelectorAll('.chip').forEach(b=>b.onclick=()=>{dur=+b.dataset.v;draw();});
+    $('go').onclick=()=>{ if(!sel.size){toast('Choisis au moins une séance');return;} go(exam,{sel:[...sel],nq,dur}); };
+  }; draw();
+}
+function countPool(sel){ let n=0; sel.forEach(id=>{ const d=D.kanji[id]; if(d){ n+=d.kanji.length; d.kanji.forEach(k=>n+=k.vocab.length); } }); return n; }
+function buildExam(sel,nq){
+  const S_=new Set(sel), Q=[];
+  const ks=KANJI.filter(k=>S_.has(k.seance));
+  const vs=VOCAB.filter(v=>S_.has(v.seance)&&v.fr);
+  const cl=CLOZE.filter(c=>S_.has(c.seance)), rd=READS.filter(r=>S_.has(r.seance));
+  const star=x=>x.star===true?2:x.star===false?.6:1;
+  // 1. lecture d'un mot (30%)
+  sh(rd).slice(0,Math.ceil(nq*.3)).forEach(r=>Q.push({t:'lecture',lab:'Lecture',id:r.id,q:r.w,sub:r.fr,a:r.r,opts:sh([r.r,...r.d.slice(0,3)]),jp:true,k:r.w}));
+  // 2. sens d'un mot (20%)
+  sh(vs).slice(0,Math.ceil(nq*.2)).forEach(v=>{ const o=sh(vs.filter(x=>x.fr!==v.fr)).slice(0,3).map(x=>x.fr); if(o.length<3)return;
+    Q.push({t:'sens',lab:'Sens',id:v.id,q:v.w,sub:S.opt.furi?v.r:'',a:v.fr,opts:sh([v.fr,...o]),k:v.w}); });
+  // 3. kanji manquant (20%)
+  sh(cl).slice(0,Math.ceil(nq*.2)).forEach(c=>Q.push({t:'trou',lab:'Kanji manquant',id:c.id,cloze:c,a:c.k,opts:sh([c.k,...c.d.slice(0,3)]),jp:true}));
+  // 4. ordre des traits (15%)
+  sh(ks).slice(0,Math.ceil(nq*.15)).forEach(k=>{ const n=(D.strokes[k.k]||[]).length; if(n<3)return;
+    const t=1+Math.floor(Math.random()*n);
+    Q.push({t:'trait',lab:'Ordre des traits',id:'k:'+k.k,stroke:{k:k.k,n:t},a:String(t),opts:sh([String(t),...sh([...Array(n).keys()].map(i=>String(i+1)).filter(x=>x!==String(t))).slice(0,3)]),ask:'stroke'}); });
+  // 5. nombre de traits (5%)
+  sh(ks).slice(0,Math.ceil(nq*.05)).forEach(k=>{ const n=(D.strokes[k.k]||[]).length; const o=sh([n-2,n-1,n+1,n+2,n+3].filter(x=>x>0&&x!==n)).slice(0,3).map(String);
+    Q.push({t:'compte',lab:'Nombre de traits',id:'k:'+k.k,q:k.k,sub:k.fr,a:String(n),opts:sh([String(n),...o]),jp:true}); });
+  // 6. thème : phrase à construire (10%)
+  sh(SENT).slice(0,Math.ceil(nq*.1)).forEach(s=>Q.push({t:'theme',lab:'Thème',id:s.id,sent:s}));
+  return sh(Q).slice(0,nq);
+}
+function exam({sel,nq,dur}){
+  const Q=buildExam(sel,nq); let i=0,ans=[],t0=Date.now(),end=t0+dur*60000,locked=false;
+  head('Épreuve','ne ferme pas l\'appli');
+  cur.stop=()=>clearInterval(cur.tick);
+  cur.tick=setInterval(()=>{ const left=Math.max(0,end-Date.now());
+    $('subR').innerHTML=`<span class="timer${left<60000?' warn':''}">${String(Math.floor(left/60000)).padStart(2,'0')}:${String(Math.floor(left/1000)%60).padStart(2,'0')}</span>`;
+    if(left<=0){ clearInterval(cur.tick); results(); } },250);
+  function show(){
+    if(i>=Q.length){ clearInterval(cur.tick); results(); return; }
+    const q=Q[i]; locked=false; info(`<b>${i+1}</b> / ${Q.length}`,''); setBar(i/Q.length);
+    if(q.t==='theme'){ const toks=sh(q.sent.tok.map((t,j)=>({t,j}))); let placed=[];
+      $('view').innerHTML=`<div class="rv"><div class="exam" style="width:100%"><div class="q">${q.lab}</div></div>
+        <div class="rcard" style="min-height:110px"><div class="fr">${q.sent.fr}</div></div>
+        <div class="builder"><div class="slot" id="slot"></div><div class="tokens" id="tk"></div>
+        <div class="tools" style="margin-top:12px"><button class="tb" id="undo">↶</button><button class="tb" id="ok">Valider</button></div></div></div>`;
+      const slot=$('slot'),tk=$('tk');
+      const rd=()=>{ slot.innerHTML=placed.map(p=>`<span class="tk jp">${p.t}</span>`).join(''); [...tk.children].forEach(b=>b.classList.toggle('used',placed.some(p=>p.j===+b.dataset.j))); };
+      toks.forEach(o=>{ const b=document.createElement('button'); b.className='tk jp'; b.textContent=o.t; b.dataset.j=o.j; b.onclick=()=>{ if(b.classList.contains('used'))return; placed.push(o); rd(); }; tk.appendChild(b); });
+      $('undo').onclick=()=>{placed.pop();rd();};
+      $('ok').onclick=()=>{ if(locked)return; locked=true; const good=placed.length===q.sent.tok.length&&placed.every((p,j)=>p.j===j);
+        ans.push({q,good}); grade(q.id,good?2:0); i++; setTimeout(show,180); };
+      return; }
+    let body='';
+    if(q.t==='trou'){ const c=q.cloze; body=`<div class="cloze jp">${[...c.w].map((ch,j)=>j===c.i?'<span class="hole">?</span>':ch).join('')}</div><div class="sub">${c.fr}</div>`; }
+    else if(q.t==='trait'){ body=`<div id="sw" style="width:min(56vw,200px)"></div><div class="sub">Quel est le trait n°${q.stroke.n} ?</div>`; }
+    else body=`<div class="${q.jp?'mid jp':'fr'}">${q.q}</div>${q.sub?`<div class="sub">${q.sub}</div>`:''}`;
+    $('view').innerHTML=`<div class="rv"><div class="exam" style="width:100%"><div class="q">${q.lab}</div></div>
+      <div class="rcard">${body}</div><div class="opts" id="opts"></div></div>`;
+    if(q.t==='trait'){ const box=document.createElement('div'); box.className='kbox jp'; box.style.width='min(56vw,200px)'; box.innerHTML='<div class="svgwrap" id="sw2"></div>';
+      $('sw').replaceWith(box); drawKanji($('sw2'),q.stroke.k,{numbers:false,ghost:true,upto:0}); }
+    const box=$('opts');
+    q.opts.forEach(o=>{ const b=document.createElement('button'); b.className='opt'+(q.jp&&q.t!=='trou'?' jp':'')+(q.t==='lecture'?' jps':'');
+      if(q.t==='lecture') b.style.fontSize='19px';
+      b.textContent=q.t==='trait'?'trait n°'+o:o; b.dataset.v=o;
+      b.onclick=()=>{ if(locked)return; locked=true; const good=o===q.a; ans.push({q,good,given:o}); grade(q.id,good?2:0);
+        b.classList.add(good?'ok':'ko'); i++; setTimeout(show,180); };
+      box.appendChild(b); });
+  }
+  function results(){
+    const sec=Math.round((Date.now()-t0)/1000), ok=ans.filter(a=>a.good).length, n=ans.length||1;
+    const byType={}; ans.forEach(a=>{ const t=byType[a.q.lab]=byType[a.q.lab]||{ok:0,n:0}; t.n++; if(a.good) t.ok++; });
+    const wrong=ans.filter(a=>!a.good);
+    const note=Math.round(ok/n*20*10)/10;
+    info('',''); setBar(1);
+    $('view').innerHTML=`<div class="scroll"><div class="end" style="padding-bottom:10px"><div class="big">${note}<span style="font-size:24px;color:var(--ink2)">/20</span></div>
+      <p>${ok} / ${n} · ${Math.floor(sec/60)} min ${sec%60}s${ans.length<Q.length?'<br>temps écoulé avant la fin':''}</p></div>
+      <div class="sec">Par type de question</div><div id="rt"></div>
+      ${wrong.length?`<div class="sec">À revoir (${wrong.length})</div><div id="rw"></div>`:'<p class="hint">Sans faute.</p>'}
+      <button class="btn" id="again" style="margin-top:16px">Nouvelle épreuve</button>
+      <button class="btn o" id="rev">Réviser mes erreurs</button>
+      <button class="btn o" id="bk">Terminer</button></div>`;
+    const rt=$('rt'); Object.entries(byType).forEach(([lab,v])=>{ const p=v.ok/v.n; const d=document.createElement('div'); d.className='res';
+      d.innerHTML=`<span class="lb">${lab}</span><span class="bar"><i style="width:${p*100}%;background:${p>=.8?'var(--ok)':p>=.5?'var(--gold)':'var(--ko)'}"></i></span><span class="pc">${v.ok}/${v.n}</span>`; rt.appendChild(d); });
+    if(wrong.length){ const rw=$('rw'); wrong.slice(0,30).forEach(a=>{ const d=document.createElement('div'); d.className='wk';
+      const q=a.q; const label=q.t==='trou'?q.cloze.w:q.t==='trait'?q.stroke.k:q.t==='theme'?'':q.q;
+      d.innerHTML=`<span class="k jp">${label||'文'}</span><span class="m">${q.lab}<small>réponse : ${q.t==='theme'?q.sent.jp:q.a}${a.given?' · tu as mis '+a.given:''}</small></span>`; rw.appendChild(d); }); }
+    $('again').onclick=()=>{ nav.pop(); go(exam,{sel,nq,dur}); };
+    $('rev').onclick=()=>{ const items=[]; wrong.forEach(a=>{ const id=a.q.id;
+      if(id.startsWith('k:')){ const k=BYK[id.slice(2)]; if(k) items.push({id,type:'kanji',k,flow:'exam'}); }
+      else if(id.startsWith('c:')){ const c=CLOZE.find(x=>x.id===id); if(c) items.push({id,type:'cloze',c,flow:'exam'}); }
+      else if(id.startsWith('r:')){ const r=READS.find(x=>x.id===id); if(r) items.push({id,type:'read',r,flow:'exam'}); }
+      else if(id.startsWith('s:')){ const s=SENT.find(x=>x.id===id); if(s) items.push({id,type:'sent',s,flow:'exam'}); }
+      else { const v=VOCAB.find(x=>x.id===id); if(v) items.push({id,type:'vocab',v,flow:'exam'}); } });
+      if(!items.length){toast('Rien à réviser');return;} go(session,{items:sh(items),label:'Mes erreurs'}); };
+    $('bk').onclick=()=>{ nav=[[home]]; render(); };
+  }
+  show();
+}
+
+/* ═══════ RÉSEAU DE KANJI ═══════ */
+function reseau(){
+  head('Réseau de kanji','clés et composants partagés');
+  const groups={};
+  KANJI.forEach(k=>{ const c=(D.comp||{})[k.k]; if(!c||!c.rad) return; (groups[c.rad]=groups[c.rad]||{fr:c.radfr,ks:[]}).ks.push(k); });
+  const list=Object.entries(groups).filter(([r,g])=>g.ks.length>1&&(g.fr||[...r].length>1||g.ks.length>=4))
+    .sort((a,b)=>(b[1].fr?1:0)-(a[1].fr?1:0)||b[1].ks.length-a[1].ks.length);
+  info(`<b>${list.length}</b> clés partagées`,`${KANJI.length} kanji`);
+  $('view').innerHTML=`<div class="scroll" style="padding-top:8px"><p class="hint" style="text-align:left;padding:0 2px 10px">Les kanji qui partagent une clé partagent souvent un domaine de sens. Repérer la clé, c'est deviner la moitié du sens.</p><div id="l"></div></div>`;
+  const L=$('l');
+  list.forEach(([rad,g])=>{ const d=document.createElement('div'); d.style.marginBottom='16px';
+    d.innerHTML=`<div class="bloc"><h4><span class="jp" style="font-size:20px">${rad}</span> ${g.fr||''}</h4><span></span><b>${g.ks.length}</b></div>
+      <div class="kgrid">${g.ks.map(k=>`<button class="kc jp l${kanjiLevel(k.k)}" data-k="${k.k}">${k.k}<em>${k.n}</em><small>${k.fr.slice(0,6)}</small></button>`).join('')}</div>`;
+    L.appendChild(d); });
+  L.querySelectorAll('[data-k]').forEach(b=>b.onclick=()=>go(fiche,b.dataset.k));
 }
 
 /* ═══════ MES AJOUTS ═══════ */
@@ -582,6 +848,7 @@ function about(){
   <h3>Mises à jour</h3><p>J'ajoute le contenu au fil des séances, en général dans la semaine. Je fais au mieux, mais je suis étudiant comme toi : il peut y avoir du retard. Les séances marquées « traductions provisoires » seront complétées quand le cours sera publié.</p>
   <h3>Me contacter</h3><p>Discord <a>Mouss_</a> · Instagram <a href="https://instagram.com/Froshhhh" target="_blank">@Froshhhh</a></p>
   <h3>Crédits</h3><p>Ordre des traits : <a href="http://kanjivg.tagaini.net" target="_blank">KanjiVG</a>, par Ulrich Apel, licence CC BY-SA 3.0.<br>Contenu pédagogique : cours de L1 LEA japonais, Université Jean Moulin Lyon 3.</p>
+  <h3>Ce qu'il y a dans cette version</h3><p>Découverte guidée des séances par bloc thématique · révision espacée · lectures, sens, kanji manquants, construction de phrases, écriture au clavier · tracé vérifié trait par trait · quiz sur l'ordre des traits · réseau des clés et composants · examen blanc chronométré avec correction détaillée.</p>
   </div>`;
 }
 
@@ -592,7 +859,7 @@ function settings(){
   $('view').innerHTML=`<div class="scroll" style="padding-top:8px">
     ${T('tf','Lectures affichées','Furigana au-dessus des kanji dans les listes',S.opt.furi)}
     <div class="sec">Modes de révision</div>
-    ${T('m1','Japonais → français','reconnaissance, 4 choix',S.opt.modes.reco)}${T('m2','Français → japonais','rappel, 4 choix',S.opt.modes.rappel)}${T('m4','Construction de phrase','grammaire',S.opt.modes.phrase)}
+    ${T('m1','Japonais → français','reconnaissance, 4 choix',S.opt.modes.reco)}${T('m2','Français → japonais','rappel, 4 choix',S.opt.modes.rappel)}${T('m3','Lectures','quelle lecture pour ce mot',S.opt.modes.lecture)}${T('m5','Kanji manquant','texte à trous',S.opt.modes.trou)}${T('m4','Construction de phrase','grammaire',S.opt.modes.phrase)}${T('m6','Écrire au clavier','taper la lecture au lieu de choisir · plus dur',S.opt.modes.clavier)}
     <div class="sec">Nouveaux par jour</div>
     <div class="tools" style="justify-content:flex-start">${[4,8,12,20].map(n=>`<button class="tb ${S.opt.newPerDay===n?'on':''}" data-n="${n}">${n}</button>`).join('')}</div>
     <div class="sec">Données</div>
@@ -600,7 +867,8 @@ function settings(){
     <button class="btn o" id="rst" style="color:var(--ko)">Tout effacer</button>
   </div>`;
   const tg=(id,fn)=>$(id).onclick=()=>{ fn(); save(); $(id).classList.toggle('on'); };
-  tg('tf',()=>S.opt.furi=!S.opt.furi); tg('m1',()=>S.opt.modes.reco=!S.opt.modes.reco); tg('m2',()=>S.opt.modes.rappel=!S.opt.modes.rappel); tg('m4',()=>S.opt.modes.phrase=!S.opt.modes.phrase);
+  tg('tf',()=>S.opt.furi=!S.opt.furi); tg('m1',()=>S.opt.modes.reco=!S.opt.modes.reco); tg('m2',()=>S.opt.modes.rappel=!S.opt.modes.rappel); tg('m3',()=>S.opt.modes.lecture=!S.opt.modes.lecture); tg('m4',()=>S.opt.modes.phrase=!S.opt.modes.phrase);
+  tg('m5',()=>S.opt.modes.trou=!S.opt.modes.trou); tg('m6',()=>S.opt.modes.clavier=!S.opt.modes.clavier);
   document.querySelectorAll('[data-n]').forEach(b=>b.onclick=()=>{ S.opt.newPerDay=+b.dataset.n; save(); document.querySelectorAll('[data-n]').forEach(x=>x.classList.toggle('on',x===b)); });
   $('exp').onclick=()=>{ const t=JSON.stringify({srs:S.srs,opt:S.opt,perso:S.perso,log:S.log}); (navigator.clipboard?navigator.clipboard.writeText(t).then(()=>toast('Copié dans le presse-papiers'),()=>prompt('Copie :',t)):prompt('Copie :',t)); };
   $('imp').onclick=()=>{ const t=prompt('Colle ta sauvegarde :'); if(!t)return; try{ const d=JSON.parse(t); S.srs=d.srs||{};S.opt=Object.assign(S.opt,d.opt||{});S.perso=d.perso||[];S.log=d.log||{}; save(); index(); toast('Restauré'); }catch(e){ toast('Texte invalide'); } };

@@ -1,0 +1,452 @@
+{
+ "id": "S01",
+ "cours": "kanji",
+ "titre": "Séance 01 — Les chiffres",
+ "date": "2026-09-03",
+ "range": [
+  1,
+  14
+ ],
+ "kanji": [
+  {
+   "n": 1,
+   "k": "一",
+   "fr": "un",
+   "on": [
+    "イチ",
+    "イツ"
+   ],
+   "kun": [
+    "ひと-"
+   ],
+   "strokes": 1,
+   "vocab": [
+    {
+     "w": "一つ",
+     "r": "ひとつ",
+     "fr": "un (chose - générique)",
+     "star": true
+    }
+   ],
+   "src": "cours"
+  },
+  {
+   "n": 2,
+   "k": "二",
+   "fr": "deux",
+   "on": [
+    "ニ"
+   ],
+   "kun": [
+    "ふた-"
+   ],
+   "strokes": 2,
+   "vocab": [
+    {
+     "w": "二つ",
+     "r": "ふたつ",
+     "fr": "deux (choses - générique)",
+     "star": true
+    }
+   ],
+   "src": "cours"
+  },
+  {
+   "n": 3,
+   "k": "三",
+   "fr": "trois",
+   "on": [
+    "サン"
+   ],
+   "kun": [
+    "み-"
+   ],
+   "strokes": 3,
+   "vocab": [
+    {
+     "w": "三つ",
+     "r": "みつ",
+     "fr": "trois (choses - générique)",
+     "star": true
+    }
+   ],
+   "src": "cours"
+  },
+  {
+   "n": 4,
+   "k": "四",
+   "fr": "quatre",
+   "on": [
+    "シ"
+   ],
+   "kun": [
+    "よん",
+    "よ-"
+   ],
+   "strokes": 5,
+   "vocab": [
+    {
+     "w": "四つ",
+     "r": "よつ",
+     "fr": "quatre (choses - générique)",
+     "star": true
+    }
+   ],
+   "src": "cours"
+  },
+  {
+   "n": 5,
+   "k": "五",
+   "fr": "cinq",
+   "on": [
+    "ゴ"
+   ],
+   "kun": [
+    "いつ-"
+   ],
+   "strokes": 4,
+   "vocab": [
+    {
+     "w": "五つ",
+     "r": "いつつ",
+     "fr": "cinq (choses - générique)",
+     "star": true
+    }
+   ],
+   "src": "cours"
+  },
+  {
+   "n": 6,
+   "k": "六",
+   "fr": "six",
+   "on": [
+    "ロク"
+   ],
+   "kun": [
+    "むっむ-"
+   ],
+   "strokes": 4,
+   "vocab": [
+    {
+     "w": "六つ",
+     "r": "むつ",
+     "fr": "six (choses - générique)",
+     "star": true
+    }
+   ],
+   "src": "cours"
+  },
+  {
+   "n": 7,
+   "k": "七",
+   "fr": "sept",
+   "on": [
+    "シチ"
+   ],
+   "kun": [
+    "なな",
+    "なな-"
+   ],
+   "strokes": 2,
+   "vocab": [
+    {
+     "w": "七つ",
+     "r": "ななつ",
+     "fr": "sept (choses - générique)",
+     "star": true
+    }
+   ],
+   "src": "cours"
+  },
+  {
+   "n": 8,
+   "k": "八",
+   "fr": "huit",
+   "on": [
+    "ハチ"
+   ],
+   "kun": [
+    "やっ-"
+   ],
+   "strokes": 2,
+   "vocab": [
+    {
+     "w": "八つ",
+     "r": "やっつ",
+     "fr": "huit (choses - générique)",
+     "star": true
+    }
+   ],
+   "src": "cours"
+  },
+  {
+   "n": 9,
+   "k": "九",
+   "fr": "neuf",
+   "on": [
+    "キュウ",
+    "ク"
+   ],
+   "kun": [
+    "ここの-"
+   ],
+   "strokes": 2,
+   "vocab": [
+    {
+     "w": "九つ",
+     "r": "ここのつ",
+     "fr": "neuf (choses - générique)",
+     "star": true
+    }
+   ],
+   "src": "cours"
+  },
+  {
+   "n": 10,
+   "k": "十",
+   "fr": "dix",
+   "on": [
+    "ジュウ",
+    "ジッ"
+   ],
+   "kun": [
+    "とお"
+   ],
+   "strokes": 2,
+   "vocab": [
+    {
+     "w": "十",
+     "r": "とお",
+     "fr": "dix (choses - générique)",
+     "star": true
+    },
+    {
+     "w": "十七",
+     "r": "じゅうしち",
+     "fr": "dix-sept",
+     "star": false
+    },
+    {
+     "w": "十八",
+     "r": "じゅうはち",
+     "fr": "dix-huit",
+     "star": false
+    },
+    {
+     "w": "二十",
+     "r": "にじゅう",
+     "fr": "vingt",
+     "star": false
+    },
+    {
+     "w": "六十",
+     "r": "ろくじゅう",
+     "fr": "soixante",
+     "star": false
+    },
+    {
+     "w": "三十九",
+     "r": "さんじゅうきゅう",
+     "fr": "trente-neuf",
+     "star": false
+    },
+    {
+     "w": "四十一",
+     "r": "よんじゅういち",
+     "fr": "quarante-et-un",
+     "star": false
+    }
+   ],
+   "src": "cours"
+  },
+  {
+   "n": 11,
+   "k": "百",
+   "fr": "cent",
+   "on": [
+    "ヒャク",
+    "ビャク"
+   ],
+   "kun": [],
+   "strokes": 6,
+   "vocab": [
+    {
+     "w": "百五",
+     "r": "ひゃくご",
+     "fr": "cent cinq",
+     "star": false
+    },
+    {
+     "w": "百三十九",
+     "r": "ひゃくさんじゅうきゅう",
+     "fr": "cent trente-neuf",
+     "star": false
+    },
+    {
+     "w": "三百",
+     "r": "さんびゃく",
+     "fr": "trois cent",
+     "star": false
+    },
+    {
+     "w": "六百七",
+     "r": "ろっぴゃくしち",
+     "fr": "six cent sept",
+     "star": false
+    },
+    {
+     "w": "八百五十四",
+     "r": "はっぴゃくごじゅうよん",
+     "fr": "huit cent cinquante-quatre",
+     "star": false
+    },
+    {
+     "w": "百パーセント",
+     "r": "ひゃくパーセント",
+     "fr": "100%",
+     "star": true
+    }
+   ],
+   "src": "cours"
+  },
+  {
+   "n": 12,
+   "k": "千",
+   "fr": "mille",
+   "on": [
+    "セン"
+   ],
+   "kun": [
+    "ち"
+   ],
+   "strokes": 3,
+   "vocab": [
+    {
+     "w": "三千六百九十五",
+     "r": "さんぜんろっぴゃくき ゅうじゅうご",
+     "fr": "trois mille six cent quatre-vingt-quinze",
+     "star": false
+    }
+   ],
+   "src": "cours"
+  },
+  {
+   "n": 13,
+   "k": "歳",
+   "fr": "fin dʼannée (âge)",
+   "on": [
+    "サイ"
+   ],
+   "kun": [],
+   "strokes": 13,
+   "vocab": [
+    {
+     "w": "一歳",
+     "r": "いっさい",
+     "fr": "1 an",
+     "star": false
+    },
+    {
+     "w": "二歳",
+     "r": "にさい",
+     "fr": "2 ans",
+     "star": false
+    },
+    {
+     "w": "三歳",
+     "r": "さんさい",
+     "fr": "3 ans",
+     "star": false
+    },
+    {
+     "w": "四歳",
+     "r": "よんさい",
+     "fr": "4 ans",
+     "star": false
+    },
+    {
+     "w": "五歳",
+     "r": "ごさい",
+     "fr": "5 ans",
+     "star": false
+    },
+    {
+     "w": "六歳",
+     "r": "ろくさい",
+     "fr": "6 ans",
+     "star": false
+    },
+    {
+     "w": "七歳",
+     "r": "ななさい",
+     "fr": "7 ans",
+     "star": false
+    },
+    {
+     "w": "八歳",
+     "r": "はっさい",
+     "fr": "8 ans",
+     "star": false
+    },
+    {
+     "w": "九歳",
+     "r": "きゅうさい",
+     "fr": "9 ans",
+     "star": false
+    },
+    {
+     "w": "十歳",
+     "r": "じっさい",
+     "fr": "10 ans",
+     "star": false
+    },
+    {
+     "w": "二十歳",
+     "r": "はたち",
+     "fr": "20 ans",
+     "star": false
+    }
+   ],
+   "src": "cours"
+  },
+  {
+   "n": 14,
+   "k": "万",
+   "fr": "dix mille",
+   "on": [
+    "マン",
+    "バン"
+   ],
+   "kun": [],
+   "strokes": 3,
+   "vocab": [
+    {
+     "w": "三万三千",
+     "r": "さんまんさんぜん",
+     "fr": "trente-trois mille",
+     "star": false
+    },
+    {
+     "w": "百万",
+     "r": "ひゃくまん",
+     "fr": "un million",
+     "star": false
+    },
+    {
+     "w": "万歳",
+     "r": "ばんざい",
+     "fr": "Que vive lʼempereur !",
+     "star": true
+    }
+   ],
+   "src": "cours"
+  }
+ ],
+ "blocs": [
+  {
+   "nom": "Les chiffres",
+   "from": 1,
+   "to": 14
+  }
+ ]
+}

@@ -1,0 +1,110 @@
+{
+ "version": "2.0",
+ "maj": "2026-09-14",
+ "cours": {
+  "kanji": {
+   "nom": "Version et kanji",
+   "prof": "G. Couteau",
+   "seances": [
+    {
+     "id": "S01",
+     "titre": "Séance 01 — Les chiffres",
+     "date": "2026-09-03",
+     "n": 14,
+     "src": "cours"
+    },
+    {
+     "id": "S02",
+     "titre": "Séance 02 — Personnes, calendrier",
+     "date": "2026-09-10",
+     "n": 20,
+     "src": "cours"
+    },
+    {
+     "id": "S03",
+     "titre": "Séance 03 — L'heure, le tourisme",
+     "date": "2026-09-17",
+     "n": 17,
+     "src": "liste"
+    },
+    {
+     "id": "S04",
+     "titre": "Séance 04 — Moments, nature, école",
+     "date": "2026-09-24",
+     "n": 17,
+     "src": "liste"
+    },
+    {
+     "id": "S05",
+     "titre": "Séance 05 — Position, verbes courants",
+     "date": "2026-10-01",
+     "n": 16,
+     "src": "liste"
+    },
+    {
+     "id": "S06",
+     "titre": "Séance 06 — Couleurs, société",
+     "date": "2026-10-08",
+     "n": 17,
+     "src": "liste"
+    },
+    {
+     "id": "S07",
+     "titre": "Séance 07 — Directions, corps, adjectifs",
+     "date": "2026-10-15",
+     "n": 16,
+     "src": "liste"
+    },
+    {
+     "id": "S08",
+     "titre": "Séance 08 — Eau, taille, contraires",
+     "date": "2026-10-22",
+     "n": 17,
+     "src": "liste"
+    },
+    {
+     "id": "S09",
+     "titre": "Séance 09 — Mouvement, actions",
+     "date": "2026-11-05",
+     "n": 16,
+     "src": "liste"
+    },
+    {
+     "id": "S10",
+     "titre": "Séance 10 — Famille, lieux, musique",
+     "date": "2026-11-12",
+     "n": 16,
+     "src": "liste"
+    }
+   ],
+   "examen": "2026-11-19"
+  },
+  "grammaire": {
+   "nom": "Grammaire et thème",
+   "prof": "H. Noda",
+   "lecons": [
+    {
+     "id": "L00",
+     "titre": "Introduction — écritures et sons",
+     "date": "2026-09-03"
+    },
+    {
+     "id": "L01",
+     "titre": "Leçon 1 — Se présenter",
+     "date": "2026-09-10"
+    },
+    {
+     "id": "L02",
+     "titre": "Leçon 2 — Les objets (これ・それ・あれ)",
+     "date": "2026-09-17"
+    }
+   ]
+  }
+ },
+ "fichiers": [
+  "strokes.json",
+  "components.json",
+  "cloze.json",
+  "readings.json"
+ ]
+}

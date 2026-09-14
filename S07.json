@@ -1,0 +1,786 @@
+{
+ "id": "S07",
+ "cours": "kanji",
+ "titre": "Séance 07 — Directions, corps, adjectifs",
+ "date": "2026-10-15",
+ "range": [
+  102,
+  117
+ ],
+ "kanji": [
+  {
+   "n": 102,
+   "k": "西",
+   "fr": "l'ouest",
+   "on": [
+    "セイ",
+    "サイ"
+   ],
+   "kun": [
+    "にし"
+   ],
+   "strokes": 6,
+   "vocab": [
+    {
+     "w": "西",
+     "r": "にし",
+     "fr": "l'ouest",
+     "star": null
+    },
+    {
+     "w": "西日",
+     "r": "にしび",
+     "fr": "le soleil couchant",
+     "star": null
+    },
+    {
+     "w": "西日本",
+     "r": "にしにほん",
+     "fr": "le Japon de l'ouest",
+     "star": null
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 103,
+   "k": "南",
+   "fr": "le sud",
+   "on": [
+    "ナン"
+   ],
+   "kun": [
+    "みなみ"
+   ],
+   "strokes": 9,
+   "vocab": [
+    {
+     "w": "南",
+     "r": "みなみ",
+     "fr": "le sud",
+     "star": null
+    },
+    {
+     "w": "西南",
+     "r": "せいなん",
+     "fr": "le sud-ouest",
+     "star": null
+    },
+    {
+     "w": "西南西",
+     "r": "せいなんせい",
+     "fr": "l'ouest-sud-ouest",
+     "star": null
+    },
+    {
+     "w": "南南西",
+     "r": "なんなんせい",
+     "fr": "le sud-sud-ouest",
+     "star": null
+    },
+    {
+     "w": "南天",
+     "r": "なんてん",
+     "fr": "le ciel austral",
+     "star": null
+    },
+    {
+     "w": "南下する",
+     "r": "なんかする",
+     "fr": "descendre vers le sud",
+     "star": null
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 104,
+   "k": "北",
+   "fr": "le nord",
+   "on": [
+    "ホク"
+   ],
+   "kun": [
+    "きた"
+   ],
+   "strokes": 5,
+   "vocab": [
+    {
+     "w": "北",
+     "r": "きた",
+     "fr": "le nord",
+     "star": null
+    },
+    {
+     "w": "西北",
+     "r": "せいほく",
+     "fr": "le nord-ouest",
+     "star": null
+    },
+    {
+     "w": "南北朝",
+     "r": "なんぼくちょう",
+     "fr": "les cours du Nord et du Sud",
+     "star": null
+    },
+    {
+     "w": "北風",
+     "r": "きたかぜ",
+     "fr": "le vent du nord",
+     "star": null
+    },
+    {
+     "w": "北上する",
+     "r": "ほくじょうする",
+     "fr": "monter vers le nord",
+     "star": null
+    },
+    {
+     "w": "北京",
+     "r": "ペキン",
+     "fr": "Pékin",
+     "star": null
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 105,
+   "k": "東",
+   "fr": "l'est",
+   "on": [
+    "トウ"
+   ],
+   "kun": [
+    "ひがし"
+   ],
+   "strokes": 8,
+   "vocab": [
+    {
+     "w": "東",
+     "r": "ひがし",
+     "fr": "l'est",
+     "star": null
+    },
+    {
+     "w": "北東",
+     "r": "ほくとう",
+     "fr": "le nord-est",
+     "star": null
+    },
+    {
+     "w": "南東",
+     "r": "なんとう",
+     "fr": "le sud-est",
+     "star": null
+    },
+    {
+     "w": "東京",
+     "r": "とうきょう",
+     "fr": "Tokyo",
+     "star": null
+    },
+    {
+     "w": "東国",
+     "r": "とうごく",
+     "fr": "les provinces de l'est",
+     "star": null
+    },
+    {
+     "w": "中東",
+     "r": "ちゅうとう",
+     "fr": "le Moyen-Orient",
+     "star": null
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 106,
+   "k": "耳",
+   "fr": "l'oreille",
+   "on": [
+    "ジ"
+   ],
+   "kun": [
+    "みみ"
+   ],
+   "strokes": 6,
+   "vocab": [
+    {
+     "w": "耳",
+     "r": "みみ",
+     "fr": "l'oreille",
+     "star": null
+    },
+    {
+     "w": "耳元",
+     "r": "みみもと",
+     "fr": "près de l'oreille",
+     "star": null
+    },
+    {
+     "w": "耳語",
+     "r": "じご",
+     "fr": "le chuchotement",
+     "star": null
+    },
+    {
+     "w": "左耳",
+     "r": "ひだりみみ",
+     "fr": "l'oreille gauche",
+     "star": null
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 107,
+   "k": "口",
+   "fr": "la bouche",
+   "on": [
+    "コウ",
+    "ク"
+   ],
+   "kun": [
+    "くち"
+   ],
+   "strokes": 3,
+   "vocab": [
+    {
+     "w": "口",
+     "r": "くち",
+     "fr": "la bouche",
+     "star": null
+    },
+    {
+     "w": "口語",
+     "r": "こうご",
+     "fr": "la langue parlée",
+     "star": null
+    },
+    {
+     "w": "口外",
+     "r": "こうがい",
+     "fr": "la divulgation",
+     "star": null
+    },
+    {
+     "w": "口元",
+     "r": "くちもと",
+     "fr": "le coin de la bouche",
+     "star": null
+    },
+    {
+     "w": "出口",
+     "r": "でぐち",
+     "fr": "la sortie",
+     "star": null
+    },
+    {
+     "w": "入り口",
+     "r": "いりぐち",
+     "fr": "l'entrée",
+     "star": null
+    },
+    {
+     "w": "出入り口",
+     "r": "でいりぐち",
+     "fr": "l'entrée et la sortie",
+     "star": null
+    },
+    {
+     "w": "南口",
+     "r": "みなみぐち",
+     "fr": "la sortie sud",
+     "star": null
+    },
+    {
+     "w": "東口",
+     "r": "ひがしぐち",
+     "fr": "la sortie est",
+     "star": null
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 108,
+   "k": "手",
+   "fr": "la main",
+   "on": [
+    "シュ"
+   ],
+   "kun": [
+    "て"
+   ],
+   "strokes": 4,
+   "vocab": [
+    {
+     "w": "手",
+     "r": "て",
+     "fr": "la main",
+     "star": null
+    },
+    {
+     "w": "手前",
+     "r": "てまえ",
+     "fr": "devant soi, de ce côté",
+     "star": null
+    },
+    {
+     "w": "手本",
+     "r": "てほん",
+     "fr": "le modèle, l'exemple",
+     "star": null
+    },
+    {
+     "w": "左手",
+     "r": "ひだりて",
+     "fr": "la main gauche",
+     "star": null
+    },
+    {
+     "w": "右手",
+     "r": "みぎて",
+     "fr": "la main droite",
+     "star": null
+    },
+    {
+     "w": "上手",
+     "r": "じょうず",
+     "fr": "doué, habile",
+     "star": null
+    },
+    {
+     "w": "下手",
+     "r": "へた",
+     "fr": "maladroit, mauvais",
+     "star": null
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 109,
+   "k": "目",
+   "fr": "l'œil",
+   "on": [
+    "モク",
+    "ボク"
+   ],
+   "kun": [
+    "め"
+   ],
+   "strokes": 5,
+   "vocab": [
+    {
+     "w": "目",
+     "r": "め",
+     "fr": "l'œil",
+     "star": null
+    },
+    {
+     "w": "一目",
+     "r": "ひとめ",
+     "fr": "un coup d'œil",
+     "star": null
+    },
+    {
+     "w": "一つ目",
+     "r": "ひとつめ",
+     "fr": "le premier",
+     "star": null
+    },
+    {
+     "w": "目上",
+     "r": "めうえ",
+     "fr": "le supérieur",
+     "star": null
+    },
+    {
+     "w": "目下",
+     "r": "めした",
+     "fr": "le subordonné",
+     "star": null
+    },
+    {
+     "w": "目前",
+     "r": "もくぜん",
+     "fr": "sous les yeux, imminent",
+     "star": null
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 110,
+   "k": "大",
+   "fr": "grand",
+   "on": [
+    "ダイ",
+    "タイ"
+   ],
+   "kun": [
+    "おお-きい"
+   ],
+   "strokes": 3,
+   "vocab": [
+    {
+     "w": "大きい",
+     "r": "おおきい",
+     "fr": "grand",
+     "star": null
+    },
+    {
+     "w": "大学",
+     "r": "だいがく",
+     "fr": "l'université",
+     "star": null
+    },
+    {
+     "w": "大学生",
+     "r": "だいがくせい",
+     "fr": "l'étudiant d'université",
+     "star": null
+    },
+    {
+     "w": "大人",
+     "r": "おとな",
+     "fr": "l'adulte",
+     "star": null
+    },
+    {
+     "w": "大事",
+     "r": "だいじ",
+     "fr": "important",
+     "star": null
+    },
+    {
+     "w": "大半",
+     "r": "たいはん",
+     "fr": "la majeure partie",
+     "star": null
+    },
+    {
+     "w": "大分",
+     "r": "だいぶ",
+     "fr": "considérablement",
+     "star": null
+    },
+    {
+     "w": "大会",
+     "r": "たいかい",
+     "fr": "le tournoi, le grand rassemblement",
+     "star": null
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 111,
+   "k": "小",
+   "fr": "petit",
+   "on": [
+    "ショウ"
+   ],
+   "kun": [
+    "ちい-さい",
+    "こ-",
+    "お-"
+   ],
+   "strokes": 3,
+   "vocab": [
+    {
+     "w": "小さい",
+     "r": "ちいさい",
+     "fr": "petit",
+     "star": null
+    },
+    {
+     "w": "小学校",
+     "r": "しょうがっこう",
+     "fr": "l'école primaire",
+     "star": null
+    },
+    {
+     "w": "小川",
+     "r": "おがわ",
+     "fr": "le ruisseau",
+     "star": null
+    },
+    {
+     "w": "小山",
+     "r": "こやま",
+     "fr": "la colline",
+     "star": null
+    },
+    {
+     "w": "小雨",
+     "r": "こさめ",
+     "fr": "la petite pluie",
+     "star": null
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 112,
+   "k": "長",
+   "fr": "long, le chef",
+   "on": [
+    "チョウ"
+   ],
+   "kun": [
+    "なが-い"
+   ],
+   "strokes": 8,
+   "vocab": [
+    {
+     "w": "長い",
+     "r": "ながい",
+     "fr": "long",
+     "star": null
+    },
+    {
+     "w": "長男",
+     "r": "ちょうなん",
+     "fr": "le fils aîné",
+     "star": null
+    },
+    {
+     "w": "長女",
+     "r": "ちょうじょ",
+     "fr": "la fille aînée",
+     "star": null
+    },
+    {
+     "w": "町長",
+     "r": "ちょうちょう",
+     "fr": "le maire (de bourg)",
+     "star": null
+    },
+    {
+     "w": "社長",
+     "r": "しゃちょう",
+     "fr": "le PDG, le directeur",
+     "star": null
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 113,
+   "k": "短",
+   "fr": "court",
+   "on": [
+    "タン"
+   ],
+   "kun": [
+    "みじか-い"
+   ],
+   "strokes": 12,
+   "vocab": [
+    {
+     "w": "短い",
+     "r": "みじかい",
+     "fr": "court",
+     "star": null
+    },
+    {
+     "w": "短気",
+     "r": "たんき",
+     "fr": "impatient, colérique",
+     "star": null
+    },
+    {
+     "w": "短時間",
+     "r": "たんじかん",
+     "fr": "une courte durée",
+     "star": null
+    },
+    {
+     "w": "短夜",
+     "r": "みじかよ",
+     "fr": "la courte nuit d'été",
+     "star": null
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 114,
+   "k": "高",
+   "fr": "haut, cher",
+   "on": [
+    "コウ"
+   ],
+   "kun": [
+    "たか-い"
+   ],
+   "strokes": 10,
+   "vocab": [
+    {
+     "w": "高い",
+     "r": "たかい",
+     "fr": "haut, cher",
+     "star": null
+    },
+    {
+     "w": "高校",
+     "r": "こうこう",
+     "fr": "le lycée",
+     "star": null
+    },
+    {
+     "w": "高校生",
+     "r": "こうこうせい",
+     "fr": "le lycéen",
+     "star": null
+    },
+    {
+     "w": "高山",
+     "r": "こうざん",
+     "fr": "la haute montagne",
+     "star": null
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 115,
+   "k": "低",
+   "fr": "bas",
+   "on": [
+    "テイ"
+   ],
+   "kun": [
+    "ひく-い"
+   ],
+   "strokes": 7,
+   "vocab": [
+    {
+     "w": "低い",
+     "r": "ひくい",
+     "fr": "bas",
+     "star": null
+    },
+    {
+     "w": "低下",
+     "r": "ていか",
+     "fr": "la baisse",
+     "star": null
+    },
+    {
+     "w": "低木",
+     "r": "ていぼく",
+     "fr": "l'arbuste",
+     "star": null
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 116,
+   "k": "良",
+   "fr": "bon",
+   "on": [
+    "リョウ"
+   ],
+   "kun": [
+    "よ-い",
+    "い-い"
+   ],
+   "strokes": 7,
+   "vocab": [
+    {
+     "w": "良い",
+     "r": "いい",
+     "fr": "bon",
+     "star": null
+    },
+    {
+     "w": "良い",
+     "r": "よい",
+     "fr": "bon (forme écrite)",
+     "star": null
+    },
+    {
+     "w": "良家",
+     "r": "りょうけ",
+     "fr": "la bonne famille",
+     "star": null
+    },
+    {
+     "w": "良友",
+     "r": "りょうゆう",
+     "fr": "le bon ami",
+     "star": null
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 117,
+   "k": "悪",
+   "fr": "mauvais",
+   "on": [
+    "アク"
+   ],
+   "kun": [
+    "わる-い"
+   ],
+   "strokes": 11,
+   "vocab": [
+    {
+     "w": "悪い",
+     "r": "わるい",
+     "fr": "mauvais",
+     "star": null
+    },
+    {
+     "w": "悪口",
+     "r": "わるぐち",
+     "fr": "la médisance",
+     "star": null
+    },
+    {
+     "w": "悪人",
+     "r": "あくにん",
+     "fr": "le méchant",
+     "star": null
+    },
+    {
+     "w": "悪事",
+     "r": "あくじ",
+     "fr": "le méfait",
+     "star": null
+    },
+    {
+     "w": "悪気",
+     "r": "わるぎ",
+     "fr": "la mauvaise intention",
+     "star": null
+    }
+   ],
+   "src": "liste"
+  }
+ ],
+ "blocs": [
+  {
+   "nom": "Directions",
+   "from": 102,
+   "to": 105
+  },
+  {
+   "nom": "Le corps",
+   "from": 106,
+   "to": 109
+  },
+  {
+   "nom": "Adjectifs opposés",
+   "from": 110,
+   "to": 117
+  }
+ ]
+}

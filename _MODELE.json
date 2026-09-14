@@ -1,0 +1,19 @@
+{
+ "id": "L03",
+ "titre": "Leçon 3 — Titre court de la leçon",
+ "date": "2026-09-24",
+ "points": [
+  {
+   "t": "Nom du point de grammaire (ex. N は N です)",
+   "fr": "Une phrase d'explication en français. Facultatif mais utile.",
+   "ex": [
+    {"jp": "ここは 教室です。", "fr": "Ici, c'est la salle de classe.", "tok": ["ここは", "教室", "です"]},
+    {"jp": "トイレは どこですか。", "fr": "Où sont les toilettes ?", "tok": ["トイレは", "どこ", "ですか"]}
+   ]
+  }
+ ],
+ "vocab": [
+  ["ここ", "ici"],
+  ["教室", "la salle de classe"]
+ ]
+}

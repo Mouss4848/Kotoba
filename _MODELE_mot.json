@@ -1,0 +1,8 @@
+{
+ "_commentaire": "Pour ajouter ou corriger un mot à la main dans une séance : copie une entrée de ce type dans le tableau 'vocab' du kanji concerné, dans data/kanji/SXX.json.",
+ "w": "日本語",
+ "r": "にほんご",
+ "fr": "le japonais (langue)",
+ "star": true,
+ "_star": "true = mot ★ (examen), false = enrichissement, null = pas encore connu"
+}

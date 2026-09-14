@@ -1,0 +1,797 @@
+{
+ "id": "S06",
+ "cours": "kanji",
+ "titre": "Séance 06 — Couleurs, société",
+ "date": "2026-10-08",
+ "range": [
+  85,
+  101
+ ],
+ "kanji": [
+  {
+   "n": 85,
+   "k": "色",
+   "fr": "la couleur",
+   "on": [
+    "ショク",
+    "シキ"
+   ],
+   "kun": [
+    "いろ"
+   ],
+   "strokes": 6,
+   "vocab": [
+    {
+     "w": "色",
+     "r": "いろ",
+     "fr": "la couleur",
+     "star": null
+    },
+    {
+     "w": "色々",
+     "r": "いろいろ",
+     "fr": "divers, toutes sortes",
+     "star": null
+    },
+    {
+     "w": "色気",
+     "r": "いろけ",
+     "fr": "le charme, la sensualité",
+     "star": null
+    },
+    {
+     "w": "色分け",
+     "r": "いろわけ",
+     "fr": "le classement par couleur",
+     "star": null
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 86,
+   "k": "白",
+   "fr": "blanc",
+   "on": [
+    "ハク",
+    "ビャク"
+   ],
+   "kun": [
+    "しろ",
+    "しろ-い"
+   ],
+   "strokes": 5,
+   "vocab": [
+    {
+     "w": "白い",
+     "r": "しろい",
+     "fr": "blanc",
+     "star": null
+    },
+    {
+     "w": "白色",
+     "r": "はくしょく",
+     "fr": "la couleur blanche",
+     "star": null
+    },
+    {
+     "w": "白人",
+     "r": "はくじん",
+     "fr": "la personne blanche",
+     "star": null
+    },
+    {
+     "w": "白星",
+     "r": "しろぼし",
+     "fr": "la victoire (sumo), l'étoile blanche",
+     "star": null
+    },
+    {
+     "w": "白木",
+     "r": "しらき",
+     "fr": "le bois brut",
+     "star": null
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 87,
+   "k": "黒",
+   "fr": "noir",
+   "on": [
+    "コク"
+   ],
+   "kun": [
+    "くろ",
+    "くろ-い"
+   ],
+   "strokes": 11,
+   "vocab": [
+    {
+     "w": "黒い",
+     "r": "くろい",
+     "fr": "noir",
+     "star": null
+    },
+    {
+     "w": "黒色",
+     "r": "こくしょく",
+     "fr": "la couleur noire",
+     "star": null
+    },
+    {
+     "w": "黒人",
+     "r": "こくじん",
+     "fr": "la personne noire",
+     "star": null
+    },
+    {
+     "w": "黒白",
+     "r": "こくびゃく",
+     "fr": "noir et blanc, le bien et le mal",
+     "star": null
+    },
+    {
+     "w": "黒山",
+     "r": "くろやま",
+     "fr": "la foule (montagne noire)",
+     "star": null
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 88,
+   "k": "赤",
+   "fr": "rouge",
+   "on": [
+    "セキ",
+    "シャク"
+   ],
+   "kun": [
+    "あか",
+    "あか-い"
+   ],
+   "strokes": 7,
+   "vocab": [
+    {
+     "w": "赤い",
+     "r": "あかい",
+     "fr": "rouge",
+     "star": null
+    },
+    {
+     "w": "赤色",
+     "r": "あかいろ",
+     "fr": "la couleur rouge",
+     "star": null
+    },
+    {
+     "w": "赤ちゃん",
+     "r": "あかちゃん",
+     "fr": "le bébé",
+     "star": null
+    },
+    {
+     "w": "赤ワイン",
+     "r": "あかワイン",
+     "fr": "le vin rouge",
+     "star": null
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 89,
+   "k": "青",
+   "fr": "bleu",
+   "on": [
+    "セイ",
+    "ショウ"
+   ],
+   "kun": [
+    "あお",
+    "あお-い"
+   ],
+   "strokes": 8,
+   "vocab": [
+    {
+     "w": "青い",
+     "r": "あおい",
+     "fr": "bleu",
+     "star": null
+    },
+    {
+     "w": "青色",
+     "r": "あおいろ",
+     "fr": "la couleur bleue",
+     "star": null
+    },
+    {
+     "w": "青年",
+     "r": "せいねん",
+     "fr": "le jeune homme",
+     "star": null
+    },
+    {
+     "w": "青空",
+     "r": "あおぞら",
+     "fr": "le ciel bleu",
+     "star": null
+    },
+    {
+     "w": "青天",
+     "r": "せいてん",
+     "fr": "le ciel dégagé",
+     "star": null
+    },
+    {
+     "w": "青天白日",
+     "r": "せいてんはくじつ",
+     "fr": "l'innocence prouvée, un ciel sans nuage",
+     "star": null
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 90,
+   "k": "緑",
+   "fr": "vert",
+   "on": [
+    "リョク",
+    "ロク"
+   ],
+   "kun": [
+    "みどり"
+   ],
+   "strokes": 14,
+   "vocab": [
+    {
+     "w": "緑",
+     "r": "みどり",
+     "fr": "le vert",
+     "star": null
+    },
+    {
+     "w": "緑色",
+     "r": "みどりいろ",
+     "fr": "la couleur verte",
+     "star": null
+    },
+    {
+     "w": "緑風",
+     "r": "りょくふう",
+     "fr": "la brise verte (début d'été)",
+     "star": null
+    },
+    {
+     "w": "緑土",
+     "r": "りょくど",
+     "fr": "la terre verdoyante",
+     "star": null
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 91,
+   "k": "紫",
+   "fr": "violet",
+   "on": [
+    "シ"
+   ],
+   "kun": [
+    "むらさき"
+   ],
+   "strokes": 12,
+   "vocab": [
+    {
+     "w": "紫",
+     "r": "むらさき",
+     "fr": "le violet",
+     "star": null
+    },
+    {
+     "w": "紫色",
+     "r": "むらさきいろ",
+     "fr": "la couleur violette",
+     "star": null
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 92,
+   "k": "黄",
+   "fr": "jaune",
+   "on": [
+    "オウ",
+    "コウ"
+   ],
+   "kun": [
+    "き"
+   ],
+   "strokes": 11,
+   "vocab": [
+    {
+     "w": "黄色い",
+     "r": "きいろい",
+     "fr": "jaune",
+     "star": null
+    },
+    {
+     "w": "黄色",
+     "r": "きいろ",
+     "fr": "la couleur jaune",
+     "star": null
+    },
+    {
+     "w": "黄金",
+     "r": "おうごん",
+     "fr": "l'or",
+     "star": null
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 93,
+   "k": "町",
+   "fr": "la ville, le quartier",
+   "on": [
+    "チョウ"
+   ],
+   "kun": [
+    "まち"
+   ],
+   "strokes": 7,
+   "vocab": [
+    {
+     "w": "町",
+     "r": "まち",
+     "fr": "la ville, le quartier",
+     "star": null
+    },
+    {
+     "w": "町中",
+     "r": "まちなか",
+     "fr": "en ville, dans la ville",
+     "star": null
+    },
+    {
+     "w": "町人",
+     "r": "ちょうにん",
+     "fr": "le citadin (époque Edo)",
+     "star": null
+    },
+    {
+     "w": "町名",
+     "r": "ちょうめい",
+     "fr": "le nom du quartier",
+     "star": null
+    },
+    {
+     "w": "下町",
+     "r": "したまち",
+     "fr": "les quartiers populaires",
+     "star": null
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 94,
+   "k": "家",
+   "fr": "la maison",
+   "on": [
+    "カ",
+    "ケ"
+   ],
+   "kun": [
+    "いえ",
+    "うち"
+   ],
+   "strokes": 10,
+   "vocab": [
+    {
+     "w": "家",
+     "r": "いえ",
+     "fr": "la maison",
+     "star": null
+    },
+    {
+     "w": "家",
+     "r": "うち",
+     "fr": "chez soi, la maison",
+     "star": null
+    },
+    {
+     "w": "町家",
+     "r": "まちや",
+     "fr": "la maison de ville traditionnelle",
+     "star": null
+    },
+    {
+     "w": "家名",
+     "r": "かめい",
+     "fr": "le nom de famille",
+     "star": null
+    },
+    {
+     "w": "家内",
+     "r": "かない",
+     "fr": "mon épouse",
+     "star": null
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 95,
+   "k": "内",
+   "fr": "l'intérieur",
+   "on": [
+    "ナイ",
+    "ダイ"
+   ],
+   "kun": [
+    "うち"
+   ],
+   "strokes": 4,
+   "vocab": [
+    {
+     "w": "内",
+     "r": "うち",
+     "fr": "l'intérieur",
+     "star": null
+    },
+    {
+     "w": "町内",
+     "r": "ちょうない",
+     "fr": "le quartier",
+     "star": null
+    },
+    {
+     "w": "内気",
+     "r": "うちき",
+     "fr": "timide",
+     "star": null
+    },
+    {
+     "w": "内金",
+     "r": "うちきん",
+     "fr": "l'acompte",
+     "star": null
+    },
+    {
+     "w": "内国",
+     "r": "ないこく",
+     "fr": "l'intérieur du pays",
+     "star": null
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 96,
+   "k": "会",
+   "fr": "rencontrer, la réunion",
+   "on": [
+    "カイ",
+    "エ"
+   ],
+   "kun": [
+    "あ-う"
+   ],
+   "strokes": 6,
+   "vocab": [
+    {
+     "w": "会う",
+     "r": "あう",
+     "fr": "rencontrer",
+     "star": null
+    },
+    {
+     "w": "町会",
+     "r": "ちょうかい",
+     "fr": "l'association de quartier",
+     "star": null
+    },
+    {
+     "w": "町内会",
+     "r": "ちょうないかい",
+     "fr": "l'association de quartier",
+     "star": null
+    },
+    {
+     "w": "飲み会",
+     "r": "のみかい",
+     "fr": "la soirée à boire",
+     "star": null
+    },
+    {
+     "w": "学会",
+     "r": "がっかい",
+     "fr": "la société savante, le congrès",
+     "star": null
+    },
+    {
+     "w": "国会",
+     "r": "こっかい",
+     "fr": "la Diète, le parlement",
+     "star": null
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 97,
+   "k": "社",
+   "fr": "la société, le sanctuaire",
+   "on": [
+    "シャ"
+   ],
+   "kun": [
+    "やしろ"
+   ],
+   "strokes": 7,
+   "vocab": [
+    {
+     "w": "社",
+     "r": "やしろ",
+     "fr": "le sanctuaire",
+     "star": null
+    },
+    {
+     "w": "会社",
+     "r": "かいしゃ",
+     "fr": "l'entreprise",
+     "star": null
+    },
+    {
+     "w": "会社名",
+     "r": "かいしゃめい",
+     "fr": "le nom de l'entreprise",
+     "star": null
+    },
+    {
+     "w": "社会",
+     "r": "しゃかい",
+     "fr": "la société",
+     "star": null
+    },
+    {
+     "w": "社会学",
+     "r": "しゃかいがく",
+     "fr": "la sociologie",
+     "star": null
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 98,
+   "k": "見",
+   "fr": "entrer",
+   "on": [
+    "ニュウ"
+   ],
+   "kun": [
+    "はい-る",
+    "い-れる"
+   ],
+   "strokes": 7,
+   "vocab": [
+    {
+     "w": "入れる",
+     "r": "いれる",
+     "fr": "mettre dedans",
+     "star": null
+    },
+    {
+     "w": "入る",
+     "r": "はいる",
+     "fr": "entrer",
+     "star": null
+    },
+    {
+     "w": "入学",
+     "r": "にゅうがく",
+     "fr": "l'entrée à l'école",
+     "star": null
+    },
+    {
+     "w": "入社",
+     "r": "にゅうしゃ",
+     "fr": "l'entrée dans l'entreprise",
+     "star": null
+    },
+    {
+     "w": "入れ物",
+     "r": "いれもの",
+     "fr": "le récipient",
+     "star": null
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 99,
+   "k": "聞",
+   "fr": "sortir",
+   "on": [
+    "シュツ"
+   ],
+   "kun": [
+    "で-る",
+    "だ-す"
+   ],
+   "strokes": 14,
+   "vocab": [
+    {
+     "w": "出る",
+     "r": "でる",
+     "fr": "sortir",
+     "star": null
+    },
+    {
+     "w": "出す",
+     "r": "だす",
+     "fr": "sortir (qqch), envoyer",
+     "star": null
+    },
+    {
+     "w": "出かける",
+     "r": "でかける",
+     "fr": "sortir (de chez soi)",
+     "star": null
+    },
+    {
+     "w": "出来る",
+     "r": "できる",
+     "fr": "pouvoir, être capable",
+     "star": null
+    },
+    {
+     "w": "出会う",
+     "r": "であう",
+     "fr": "rencontrer (par hasard)",
+     "star": null
+    },
+    {
+     "w": "出生",
+     "r": "しゅっしょう",
+     "fr": "la naissance",
+     "star": null
+    },
+    {
+     "w": "出社する",
+     "r": "しゅっしゃする",
+     "fr": "aller au bureau",
+     "star": null
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 100,
+   "k": "入",
+   "fr": "voir",
+   "on": [
+    "ケン"
+   ],
+   "kun": [
+    "み-る",
+    "み-える",
+    "み-せる"
+   ],
+   "strokes": 2,
+   "vocab": [
+    {
+     "w": "見る",
+     "r": "みる",
+     "fr": "voir, regarder",
+     "star": null
+    },
+    {
+     "w": "見える",
+     "r": "みえる",
+     "fr": "être visible",
+     "star": null
+    },
+    {
+     "w": "見せる",
+     "r": "みせる",
+     "fr": "montrer",
+     "star": null
+    },
+    {
+     "w": "見事",
+     "r": "みごと",
+     "fr": "admirable, splendide",
+     "star": null
+    },
+    {
+     "w": "会見",
+     "r": "かいけん",
+     "fr": "l'entrevue, la conférence de presse",
+     "star": null
+    },
+    {
+     "w": "見物",
+     "r": "けんぶつ",
+     "fr": "la visite (touristique)",
+     "star": null
+    },
+    {
+     "w": "見本",
+     "r": "みほん",
+     "fr": "l'échantillon",
+     "star": null
+    }
+   ],
+   "src": "liste"
+  },
+  {
+   "n": 101,
+   "k": "出",
+   "fr": "entendre, écouter",
+   "on": [
+    "ブン",
+    "モン"
+   ],
+   "kun": [
+    "き-く",
+    "き-こえる"
+   ],
+   "strokes": 5,
+   "vocab": [
+    {
+     "w": "聞く",
+     "r": "きく",
+     "fr": "écouter, demander",
+     "star": null
+    },
+    {
+     "w": "聞こえる",
+     "r": "きこえる",
+     "fr": "être audible",
+     "star": null
+    },
+    {
+     "w": "聞き入る",
+     "r": "ききいる",
+     "fr": "écouter attentivement",
+     "star": null
+    },
+    {
+     "w": "聞き出す",
+     "r": "ききだす",
+     "fr": "soutirer une information",
+     "star": null
+    },
+    {
+     "w": "聞き分け",
+     "r": "ききわけ",
+     "fr": "la docilité, la compréhension",
+     "star": null
+    }
+   ],
+   "src": "liste"
+  }
+ ],
+ "blocs": [
+  {
+   "nom": "Couleurs",
+   "from": 85,
+   "to": 92
+  },
+  {
+   "nom": "Ville et société",
+   "from": 93,
+   "to": 101
+  }
+ ]
+}
