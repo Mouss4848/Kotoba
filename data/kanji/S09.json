@@ -642,5 +642,22 @@
    ],
    "src": "liste"
   }
+ ],
+ "blocs": [
+  {
+   "nom": "Vitesse et distance",
+   "from": 135,
+   "to": 139
+  },
+  {
+   "nom": "Se déplacer",
+   "from": 140,
+   "to": 144
+  },
+  {
+   "nom": "Agir",
+   "from": 145,
+   "to": 150
+  }
  ]
 }

@@ -1,0 +1,502 @@
+{
+ "id": "L16",
+ "titre": "Leçon 16 — Enchaîner les actions",
+ "date": null,
+ "points": [
+  {
+   "t": "V-て、V-て、V",
+   "ex": [
+    {
+     "jp": "日曜日、10 時ごろ起きて、散歩して、食事します。",
+     "fr": "Le dimanche, je me lève vers 10h, je me promène et je mange.",
+     "tok": [
+      "日曜日",
+      "10",
+      "時ごろ起きて",
+      "散歩して",
+      "食事し",
+      "ます"
+     ]
+    },
+    {
+     "jp": "明日、神戸へ行って、映画を見て、買い物します。",
+     "fr": "Demain, j'irai à Kobe, je verrai un film et je ferai des courses.",
+     "tok": [
+      "明日",
+      "神戸へ行って",
+      "映画を見て",
+      "買い物し",
+      "ます"
+     ]
+    },
+    {
+     "jp": "昨日の晩、本を読んで、音楽を聞いて、寝ました。",
+     "fr": "Hier soir, j'ai lu, écouté de la musique et je me suis couché.",
+     "tok": [
+      "昨日の晩",
+      "本を読んで",
+      "音楽を聞いて",
+      "寝",
+      "ました"
+     ]
+    }
+   ]
+  },
+  {
+   "t": "V-てから",
+   "ex": [
+    {
+     "jp": "うちへ帰ってから、晩ごはんを食べます。",
+     "fr": "Après être rentré, je dîne.",
+     "tok": [
+      "うちへ帰ってから",
+      "晩ごはんを食べ",
+      "ます"
+     ]
+    }
+   ]
+  },
+  {
+   "t": "N1 は N2 が adj",
+   "ex": [
+    {
+     "jp": "カリナさんは、目が大きいです。",
+     "fr": "Karina a de grands yeux.",
+     "tok": [
+      "カリナさんは",
+      "目が大きい",
+      "です"
+     ]
+    },
+    {
+     "jp": "カリナさんは、髪が短いです。",
+     "fr": "Karina a les cheveux courts.",
+     "tok": [
+      "カリナさんは",
+      "髪が短い",
+      "です"
+     ]
+    },
+    {
+     "jp": "カリナさんは、背が高いです。",
+     "fr": "Karina est grande.",
+     "tok": [
+      "カリナさんは",
+      "背が高い",
+      "です"
+     ]
+    },
+    {
+     "jp": "カリナさんは、頭がいいです。",
+     "fr": "Karina est intelligente.",
+     "tok": [
+      "カリナさんは",
+      "頭がいい",
+      "です"
+     ]
+    },
+    {
+     "jp": "大阪は、食べ物がおいしいです。",
+     "fr": "À Osaka, la nourriture est délicieuse.",
+     "tok": [
+      "大阪は",
+      "食べ物がおいしい",
+      "です"
+     ]
+    },
+    {
+     "jp": "ミラーさんは、若くて、元気です。",
+     "fr": "M. Miller est jeune et énergique.",
+     "tok": [
+      "ミラーさんは",
+      "若くて",
+      "元気",
+      "です"
+     ]
+    },
+    {
+     "jp": "ミラーさんは、親切で、元気です。",
+     "fr": "M. Miller est gentil et énergique.",
+     "tok": [
+      "ミラーさんは",
+      "親切で",
+      "元気",
+      "です"
+     ]
+    },
+    {
+     "jp": "ミラーさんは、28 歳で、独身です。",
+     "fr": "M. Miller a 28 ans et il est célibataire.",
+     "tok": [
+      "ミラーさんは",
+      "28",
+      "歳で",
+      "独身",
+      "です"
+     ]
+    }
+   ]
+  },
+  {
+   "t": "adj-くて / adj-で / N で",
+   "ex": []
+  }
+ ],
+ "vocab": [
+  [
+   "電話する",
+   "appeler, téléphoner",
+   "でんわ",
+   ""
+  ],
+  [
+   "押す",
+   "appuyer, pousser",
+   "おす",
+   ""
+  ],
+  [
+   "口",
+   "bouche",
+   "くち",
+   ""
+  ],
+  [
+   "ボタン",
+   "bouton",
+   "ボタン",
+   ""
+  ],
+  [
+   "キャッシュカード",
+   "carte de paiement",
+   "キャッシュカード",
+   ""
+  ],
+  [
+   "乗り換える",
+   "changer (de train, etc.)",
+   "のりかえる",
+   ""
+  ],
+  [
+   "髪",
+   "cheveu",
+   "かみ",
+   ""
+  ],
+  [
+   "明るい",
+   "clair, lumineux",
+   "あかるい",
+   ""
+  ],
+  [
+   "暗証番号",
+   "code secret",
+   "あんしょうばんごう",
+   ""
+  ],
+  [
+   "始める",
+   "commencer",
+   "はじめる",
+   ""
+  ],
+  [
+   "確認",
+   "confirmation",
+   "かくにん",
+   ""
+  ],
+  [
+   "体",
+   "corps",
+   "からだ",
+   ""
+  ],
+  [
+   "短い",
+   "court",
+   "みじかい",
+   ""
+  ],
+  [
+   "歯",
+   "dent",
+   "は",
+   ""
+  ],
+  [
+   "（～を）降りる",
+   "descendre (d'un train, etc.)",
+   "おりる",
+   ""
+  ],
+  [
+   "シャワー",
+   "douche",
+   "シャワー",
+   ""
+  ],
+  [
+   "若い",
+   "jeune",
+   "わかい",
+   ""
+  ],
+  [
+   "ジョギング",
+   "jogging",
+   "ジョギング",
+   ""
+  ],
+  [
+   "長い",
+   "long",
+   "ながい",
+   ""
+  ],
+  [
+   "入れる",
+   "mettre dans, insérer",
+   "いれる",
+   ""
+  ],
+  [
+   "金額",
+   "montant, somme d'argent",
+   "きんがく",
+   ""
+  ],
+  [
+   "鼻",
+   "nez",
+   "はな",
+   ""
+  ],
+  [
+   "目",
+   "œil",
+   "め",
+   ""
+  ],
+  [
+   "耳",
+   "oreille",
+   "みみ",
+   ""
+  ],
+  [
+   "足",
+   "pied, jambe",
+   "あし",
+   ""
+  ],
+  [
+   "（～に）乗る",
+   "prendre (un train…)",
+   "のる",
+   ""
+  ],
+  [
+   "シャワーを浴びる",
+   "prendre une douche",
+   "あびる",
+   ""
+  ],
+  [
+   "出す",
+   "remettre, présenter",
+   "だす",
+   ""
+  ],
+  [
+   "お金を下ろす",
+   "retirer de l'argent",
+   "おかねをおろす",
+   ""
+  ],
+  [
+   "サービス",
+   "service",
+   "サービス",
+   ""
+  ],
+  [
+   "暗い",
+   "sombre",
+   "くらい",
+   ""
+  ],
+  [
+   "出す",
+   "sortir (qqch de qqch), remettre",
+   "だす",
+   ""
+  ],
+  [
+   "背",
+   "taille, dos",
+   "せ",
+   ""
+  ],
+  [
+   "（お）寺",
+   "temple bouddhiste",
+   "てら",
+   ""
+  ],
+  [
+   "神社",
+   "temple shinto",
+   "じんじゃ",
+   ""
+  ],
+  [
+   "頭",
+   "tête",
+   "あたま",
+   ""
+  ],
+  [
+   "おなか",
+   "ventre",
+   "おなか",
+   ""
+  ],
+  [
+   "緑                   みどり                n.",
+   "vert, verdure",
+   "緑                   みどり                n.",
+   ""
+  ],
+  [
+   "顔",
+   "visage",
+   "かお",
+   ""
+  ],
+  [
+   "見学する",
+   "visiter (pour ses études)",
+   "けんがくする",
+   ""
+  ]
+ ],
+ "verbes": [
+  {
+   "w": "入れる",
+   "te": "入れて",
+   "r": "いれる",
+   "fr": "mettre dans, insérer",
+   "les": 16
+  },
+  {
+   "w": "出す",
+   "te": "出して",
+   "r": "だす",
+   "fr": "sortir (quelque chose de), remettre",
+   "les": 16
+  },
+  {
+   "w": "乗る",
+   "te": "乗って",
+   "r": "のる",
+   "fr": "prendre (un train…)",
+   "les": 16
+  },
+  {
+   "w": "降りる",
+   "te": "降りて",
+   "r": "おりる",
+   "fr": "descendre (d'un train…)",
+   "les": 16
+  },
+  {
+   "w": "乗り換える",
+   "te": "乗り換えて",
+   "r": "のりかえる",
+   "fr": "changer (de train…)",
+   "les": 16
+  },
+  {
+   "w": "押す",
+   "te": "押して",
+   "r": "おす",
+   "fr": "appuyer, pousser",
+   "les": 16
+  },
+  {
+   "w": "始める",
+   "te": "始めて",
+   "r": "はじめる",
+   "fr": "commencer",
+   "les": 16
+  },
+  {
+   "w": "シャワーを浴びる",
+   "te": "浴びて",
+   "r": "あびる",
+   "fr": "prendre une douche",
+   "les": 16
+  },
+  {
+   "w": "お金を下ろす",
+   "te": "下ろして",
+   "r": "おかねをおろす",
+   "fr": "retirer de l'argent",
+   "les": 16
+  }
+ ],
+ "adjectifs": [
+  {
+   "w": "明るい",
+   "r": "あかるい",
+   "fr": "clair, lumineux",
+   "les": 16,
+   "type": "i",
+   "opp": [
+    "暗い"
+   ]
+  },
+  {
+   "w": "暗い",
+   "r": "くらい",
+   "fr": "sombre",
+   "les": 16,
+   "type": "i",
+   "opp": [
+    "明るい"
+   ]
+  },
+  {
+   "w": "長い",
+   "r": "ながい",
+   "fr": "long",
+   "les": 16,
+   "type": "i",
+   "opp": [
+    "短い"
+   ]
+  },
+  {
+   "w": "短い",
+   "r": "みじかい",
+   "fr": "court",
+   "les": 16,
+   "type": "i",
+   "opp": [
+    "長い"
+   ]
+  },
+  {
+   "w": "若い",
+   "r": "わかい",
+   "fr": "jeune",
+   "les": 16,
+   "type": "i",
+   "opp": []
+  }
+ ]
+}

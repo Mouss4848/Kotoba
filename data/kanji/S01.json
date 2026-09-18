@@ -441,5 +441,12 @@
    ],
    "src": "cours"
   }
+ ],
+ "blocs": [
+  {
+   "nom": "Les chiffres",
+   "from": 1,
+   "to": 14
+  }
  ]
 }

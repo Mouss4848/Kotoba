@@ -1,0 +1,273 @@
+{
+ "id": "L13",
+ "titre": "Leçon 13 — Vouloir",
+ "date": null,
+ "points": [
+  {
+   "t": "N が欲しいです",
+   "ex": [
+    {
+     "jp": "車が欲しいです。",
+     "fr": "Je veux une voiture.",
+     "tok": [
+      "車が欲しい",
+      "です"
+     ]
+    }
+   ]
+  },
+  {
+   "t": "V-たいです / V-たくないです",
+   "ex": [
+    {
+     "jp": "カメラを買いたいです。",
+     "fr": "Je veux acheter un appareil photo.",
+     "tok": [
+      "カメラを買いたい",
+      "です"
+     ]
+    },
+    {
+     "jp": "カメラを買いたくないです。",
+     "fr": "Je ne veux pas acheter d'appareil photo.",
+     "tok": [
+      "カメラを買いたくない",
+      "です"
+     ]
+    }
+   ]
+  },
+  {
+   "t": "lieu へ V-masu に行きます",
+   "ex": [
+    {
+     "jp": "何をしたいですか?",
+     "fr": "Que veux-tu faire ?",
+     "tok": [
+      "何をしたい",
+      "ですか"
+     ]
+    },
+    {
+     "jp": "何もしたくないです。",
+     "fr": "Je ne veux rien faire.",
+     "tok": [
+      "何もしたくない",
+      "です"
+     ]
+    },
+    {
+     "jp": "京都へ遊びに行きます。",
+     "fr": "Je vais à Kyoto pour m'amuser.",
+     "tok": [
+      "京都へ遊びに行き",
+      "ます"
+     ]
+    },
+    {
+     "jp": "京都へ日本料理を食べに行きます。",
+     "fr": "Je vais à Kyoto pour manger de la cuisine japonaise.",
+     "tok": [
+      "京都へ日本料理を食べに行き",
+      "ます"
+     ]
+    },
+    {
+     "jp": "京都へ買い物に行きます。",
+     "fr": "Je vais à Kyoto faire des courses.",
+     "tok": [
+      "京都へ買い物に行き",
+      "ます"
+     ]
+    },
+    {
+     "jp": "京都へ何をしに行きますか?",
+     "fr": "Que vas-tu faire à Kyoto ?",
+     "tok": [
+      "京都へ何をしに行き",
+      "ますか"
+     ]
+    }
+   ]
+  }
+ ],
+ "vocab": [
+  [
+   "迎える",
+   "accueillir, recevoir (quelqu'un)",
+   "むかえる",
+   ""
+  ],
+  [
+   "（お）正月",
+   "an : le nouvel an",
+   "（お）しょうがつ",
+   ""
+  ],
+  [
+   "美術",
+   "beaux-arts",
+   "びじゅつ",
+   ""
+  ],
+  [
+   "買い物（する）",
+   "courses",
+   "かいもの",
+   ""
+  ],
+  [
+   "大変",
+   "dur, pénible, difficile",
+   "たいへん",
+   ""
+  ],
+  [
+   "狭い",
+   "étroit, exigu",
+   "せまい",
+   ""
+  ],
+  [
+   "遊ぶ",
+   "jouer, s'amuser",
+   "あそぶ",
+   ""
+  ],
+  [
+   "結婚",
+   "mariage",
+   "けっこん",
+   ""
+  ],
+  [
+   "泳ぐ",
+   "nager",
+   "およぐ",
+   ""
+  ],
+  [
+   "釣り",
+   "pêche",
+   "つり",
+   ""
+  ],
+  [
+   "プール",
+   "piscine",
+   "プール",
+   ""
+  ],
+  [
+   "食事する",
+   "prendre un repas",
+   "しょくじする",
+   ""
+  ],
+  [
+   "散歩",
+   "promenade",
+   "さんぽ",
+   ""
+  ],
+  [
+   "食事",
+   "repas",
+   "しょくじ",
+   ""
+  ],
+  [
+   "川",
+   "rivière",
+   "かわ",
+   ""
+  ],
+  [
+   "遊ぶ",
+   "s'amuser, jouer",
+   "あそぶ",
+   ""
+  ],
+  [
+   "疲れる",
+   "se fatiguer",
+   "つかれる",
+   ""
+  ],
+  [
+   "結婚する",
+   "se marier",
+   "けっこんする",
+   ""
+  ],
+  [
+   "（～を）散歩する",
+   "se promener (dans…)",
+   "さんぽする",
+   ""
+  ],
+  [
+   "スキー",
+   "ski",
+   "スキー",
+   ""
+  ],
+  [
+   "広い",
+   "spacieux, large",
+   "ひろい",
+   ""
+  ],
+  [
+   "（～が）欲しい",
+   "vouloir (quelque chose)",
+   "ほしい",
+   "adj-i"
+  ],
+  [
+   "週末",
+   "week-end",
+   "しゅうまつ",
+   ""
+  ]
+ ],
+ "verbes": [],
+ "adjectifs": [
+  {
+   "w": "広い",
+   "r": "ひろい",
+   "fr": "spacieux, large",
+   "les": 13,
+   "type": "i",
+   "opp": [
+    "狭い"
+   ]
+  },
+  {
+   "w": "狭い",
+   "r": "せまい",
+   "fr": "exigu, étroit",
+   "les": 13,
+   "type": "i",
+   "opp": [
+    "広い"
+   ]
+  },
+  {
+   "w": "欲しい",
+   "r": "ほしい",
+   "fr": "vouloir (qqch)",
+   "les": 13,
+   "type": "i",
+   "opp": []
+  },
+  {
+   "w": "大変",
+   "r": "たいへん",
+   "fr": "dur, pénible",
+   "les": 13,
+   "type": "na",
+   "opp": []
+  }
+ ]
+}

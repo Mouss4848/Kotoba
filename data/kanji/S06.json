@@ -781,5 +781,17 @@
    ],
    "src": "liste"
   }
+ ],
+ "blocs": [
+  {
+   "nom": "Couleurs",
+   "from": 85,
+   "to": 92
+  },
+  {
+   "nom": "Ville et société",
+   "from": 93,
+   "to": 101
+  }
  ]
 }

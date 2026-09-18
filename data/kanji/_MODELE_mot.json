@@ -1,8 +1,10 @@
 {
- "_commentaire": "Pour ajouter ou corriger un mot à la main dans une séance : copie une entrée de ce type dans le tableau 'vocab' du kanji concerné, dans data/kanji/SXX.json.",
+ "_commentaire": "Entrée de vocabulaire, à copier dans le tableau 'vocab' d'un kanji dans data/kanji/SXX.json.",
  "w": "日本語",
  "r": "にほんご",
  "fr": "le japonais (langue)",
  "star": true,
- "_star": "true = mot ★ (examen), false = enrichissement, null = pas encore connu"
+ "kana": false,
+ "_star": "true = mot ★ garanti à l'examen · false = enrichissement · null = pas encore connu",
+ "_kana": "true = mot à connaître en kana seulement (triangle du prof) : l'appli ne demandera jamais d'écrire le kanji"
 }

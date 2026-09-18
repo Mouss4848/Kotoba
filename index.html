@@ -7,880 +7,815 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <meta name="apple-mobile-web-app-title" content="言葉">
-<link rel="apple-touch-icon" href="icon.png?v=1">
-<link rel="apple-touch-icon" sizes="180x180" href="icon.png?v=1">
-<link rel="icon" type="image/png" href="icon.png?v=1">
+<link rel="apple-touch-icon" href="icon.png?v=3">
+<link rel="apple-touch-icon" sizes="180x180" href="icon.png?v=3">
+<link rel="icon" type="image/png" href="icon.png?v=3">
 <link rel="manifest" href="manifest.webmanifest">
 <title>言葉 — Kanji &amp; grammaire</title>
 <style>
-:root{
-  --paper:#F6F1E7;--paper2:#FFFCF5;--ink:#1F1B17;--ink2:#6B645B;--ink3:#A39B8E;--line:#E6DECF;--line2:#D3C9B6;
-  --seal:#C8322B;--seal2:#E8635C;--gold:#B8892E;--ok:#2E7D5B;--ko:#B23A3A;--sel:#E9E1D2;
-  --r:18px;--sh:0 1px 0 rgba(0,0,0,.02),0 8px 24px -18px rgba(60,40,20,.35);
-}
-html[data-theme="nuit"]{
-  --paper:#171410;--paper2:#1F1B16;--ink:#EDE6D8;--ink2:#A69D8E;--ink3:#6E665B;--line:#2C2620;--line2:#3A332B;
-  --seal:#D9453C;--seal2:#F0736B;--gold:#D2A44A;--ok:#5FBF93;--ko:#E06A6A;--sel:#2A241D;
-  --sh:0 10px 30px -18px rgba(0,0,0,.8);
-}
+:root{--paper:#F6F1E7;--paper2:#FFFCF5;--ink:#1F1B17;--ink2:#6B645B;--ink3:#A39B8E;--line:#E6DECF;--line2:#D3C9B6;--seal:#C8322B;--seal2:#E8635C;--gold:#B8892E;--ok:#2E7D5B;--ko:#B23A3A;--sel:#E9E1D2;--r:18px;--sh:0 1px 0 rgba(0,0,0,.02),0 8px 24px -18px rgba(60,40,20,.35)}
+html[data-theme="nuit"]{--paper:#171410;--paper2:#1F1B16;--ink:#EDE6D8;--ink2:#A69D8E;--ink3:#6E665B;--line:#2C2620;--line2:#3A332B;--seal:#D9453C;--seal2:#F0736B;--gold:#D2A44A;--ok:#5FBF93;--ko:#E06A6A;--sel:#2A241D;--sh:0 10px 30px -18px rgba(0,0,0,.8)}
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
-html,body{height:100%;background:var(--paper);color:var(--ink);overflow:hidden;
-  font-family:-apple-system,"SF Pro Text",Inter,system-ui,sans-serif;-webkit-text-size-adjust:100%;overscroll-behavior:none}
+html,body{height:100%;background:var(--paper);color:var(--ink);overflow:hidden;font-family:-apple-system,"SF Pro Text",Inter,system-ui,sans-serif;-webkit-text-size-adjust:100%;overscroll-behavior:none}
 .jp{font-family:"Hiragino Mincho ProN","Hiragino Mincho Pro","Yu Mincho","Noto Serif JP","MS Mincho",serif}
 .jps{font-family:"Hiragino Sans","Hiragino Kaku Gothic ProN","Noto Sans JP","Yu Gothic",sans-serif}
 button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;text-align:left}
 button:focus-visible{outline:2px solid var(--seal);outline-offset:2px}
-input,textarea{font:inherit;color:inherit}
+input{font:inherit;color:inherit}
 .hidden{display:none!important}
 #app{height:100%;display:flex;flex-direction:column;padding:env(safe-area-inset-top) 0 env(safe-area-inset-bottom)}
-
-/* header */
 .hd{display:flex;align-items:center;gap:8px;padding:12px 18px 6px;min-height:58px}
-.hd h1{font-size:19px;font-weight:600;flex:1;letter-spacing:-.01em;line-height:1.15}
-.hd h1 small{display:block;font-size:12.5px;color:var(--ink2);font-weight:400;margin-top:3px}
+.hd h1{font-size:19px;font-weight:600;flex:1;letter-spacing:-.01em;line-height:1.15;min-width:0}
+.hd h1 small{display:block;font-size:12.5px;color:var(--ink2);font-weight:400;margin-top:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .ib{width:38px;height:38px;flex:none;border-radius:12px;display:grid;place-items:center;font-size:20px;color:var(--ink2);transition:background .15s}
 .ib:active{background:var(--sel)}
-.view{flex:1;min-height:0;display:flex;flex-direction:column;animation:fade .25s ease}
+.view{flex:1;min-height:0;display:flex;flex-direction:column;animation:fade .22s ease}
 @keyframes fade{from{opacity:0;transform:translateX(8px)}to{opacity:1;transform:none}}
 .scroll{flex:1;overflow-y:auto;-webkit-overflow-scrolling:touch;padding:4px 18px 28px}
-
-/* enso */
-.enso{position:relative;width:132px;height:132px;margin:8px auto 4px}
-.enso svg{width:100%;height:100%;transform:rotate(-90deg)}
-.enso .c{fill:none;stroke:var(--line2);stroke-width:5}
-.enso .p{fill:none;stroke:var(--ink);stroke-width:5;stroke-linecap:round;transition:stroke-dashoffset .8s cubic-bezier(.2,.8,.3,1)}
-.enso.full .p{stroke:var(--seal)}
-.enso .t{position:absolute;inset:0;display:grid;place-items:center;text-align:center}
-.enso .t b{font-size:30px;font-weight:600;letter-spacing:-.02em;line-height:1}
-.enso .t small{font-size:11px;color:var(--ink2);margin-top:3px}
-.hero{text-align:center;padding:6px 0 10px}
-.hero .date{font-size:12.5px;color:var(--ink2);letter-spacing:.06em;text-transform:uppercase}
-.hero .pd{font-size:22px;margin-top:10px;line-height:1.5}
-.hero .pdf{font-size:13px;color:var(--ink2);margin-top:2px}
-
-/* buttons/cards */
+.enso{position:relative;width:132px;height:132px;margin:8px auto 4px}.enso svg{width:100%;height:100%;transform:rotate(-90deg)}
+.enso .c{fill:none;stroke:var(--line2);stroke-width:5}.enso .p{fill:none;stroke:var(--ink);stroke-width:5;stroke-linecap:round;transition:stroke-dashoffset .8s cubic-bezier(.2,.8,.3,1)}
+.enso.full .p{stroke:var(--seal)}.enso .t{position:absolute;inset:0;display:grid;place-items:center;text-align:center}
+.enso .t b{font-size:30px;font-weight:600;letter-spacing:-.02em;line-height:1}.enso .t small{font-size:11px;color:var(--ink2);margin-top:3px}
+.hero{text-align:center;padding:6px 0 10px}.hero .date{font-size:12.5px;color:var(--ink2);letter-spacing:.06em;text-transform:uppercase}
+.hero .pd{font-size:22px;margin-top:10px;line-height:1.5}.hero .pdf{font-size:13px;color:var(--ink2);margin-top:2px}
 .pri{display:flex;align-items:center;gap:14px;width:100%;padding:16px 18px;border-radius:var(--r);background:var(--ink);color:var(--paper);box-shadow:var(--sh);transition:transform .12s;margin-bottom:10px}
-.pri:active{transform:scale(.985)}
-.pri .n{font-size:30px;font-weight:600;line-height:1;min-width:44px}
-.pri .t{flex:1}
-.pri .t b{display:block;font-size:15.5px;font-weight:600}
-.pri .t small{opacity:.7;font-size:12.5px}
-.pri.alt{background:var(--paper2);color:var(--ink);border:1px solid var(--line)}
-.pri.alt .t small{color:var(--ink2);opacity:1}
-.row{display:flex;gap:10px;margin-bottom:10px}
-.row .pri{margin:0}
+.pri:active{transform:scale(.985)}.pri .n{font-size:30px;font-weight:600;line-height:1;min-width:44px}.pri .t{flex:1;min-width:0}
+.pri .t b{display:block;font-size:15.5px;font-weight:600}.pri .t small{opacity:.7;font-size:12.5px}
+.pri.alt{background:var(--paper2);color:var(--ink);border:1px solid var(--line)}.pri.alt .t small{color:var(--ink2);opacity:1}
+.row{display:flex;gap:10px;margin-bottom:10px}.row .pri{margin:0;padding:14px}
 .sec{font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink3);margin:22px 2px 10px}
-.card{display:flex;align-items:center;gap:14px;width:100%;padding:15px 16px;border-radius:var(--r);background:var(--paper2);border:1px solid var(--line);margin-bottom:9px;transition:transform .12s,border-color .15s;position:relative}
-.card:active{transform:scale(.985)}
-.card .g{width:46px;height:46px;flex:none;border-radius:14px;display:grid;place-items:center;font-size:24px;background:var(--sel)}
-.card .b{flex:1;min-width:0}
-.card .b b{display:block;font-size:15px;font-weight:600}
-.card .b small{display:block;color:var(--ink2);font-size:12.5px;margin-top:2px;line-height:1.35}
-.card .arrow{color:var(--ink3);font-size:18px}
-.card.dim{opacity:.55}
-.mini-enso{width:34px;height:34px;flex:none}
-.mini-enso svg{width:100%;height:100%;transform:rotate(-90deg)}
-.mini-enso .c{fill:none;stroke:var(--line2);stroke-width:4}
-.mini-enso .p{fill:none;stroke:var(--ink);stroke-width:4;stroke-linecap:round}
-.mini-enso.full .p{stroke:var(--seal)}
+.card{display:flex;align-items:center;gap:14px;width:100%;padding:15px 16px;border-radius:var(--r);background:var(--paper2);border:1px solid var(--line);margin-bottom:9px;transition:transform .12s;position:relative}
+.card:active{transform:scale(.985)}.card .g{width:46px;height:46px;flex:none;border-radius:14px;display:grid;place-items:center;font-size:24px;background:var(--sel)}
+.card .b{flex:1;min-width:0}.card .b b{display:block;font-size:15px;font-weight:600}.card .b small{display:block;color:var(--ink2);font-size:12.5px;margin-top:2px;line-height:1.35}
+.card .arrow{color:var(--ink3);font-size:18px}.card.dim{opacity:.55}
+.mini-enso{width:34px;height:34px;flex:none}.mini-enso svg{width:100%;height:100%;transform:rotate(-90deg)}.mini-enso .c{fill:none;stroke:var(--line2);stroke-width:4}.mini-enso .p{fill:none;stroke:var(--ink);stroke-width:4;stroke-linecap:round}.mini-enso.full .p{stroke:var(--seal)}
 .tag{display:inline-block;padding:2px 8px;border-radius:999px;font-size:10.5px;letter-spacing:.04em;border:1px solid var(--line2);color:var(--ink2);margin-left:6px;vertical-align:middle}
-.tag.seal{border-color:var(--seal);color:var(--seal)}
-.tag.gold{border-color:var(--gold);color:var(--gold)}
-
-/* kanji grid */
+.tag.seal{border-color:var(--seal);color:var(--seal)}.tag.gold{border-color:var(--gold);color:var(--gold)}.tag.ok{border-color:var(--ok);color:var(--ok)}
 .kgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
 .kc{aspect-ratio:1;border-radius:16px;background:var(--paper2);border:1px solid var(--line);display:grid;place-items:center;font-size:36px;position:relative;transition:transform .12s}
-.kc:active{transform:scale(.94)}
-.kc small{position:absolute;bottom:5px;right:8px;font-size:9.5px;color:var(--ink3);font-family:-apple-system,system-ui}
+.kc:active{transform:scale(.94)}.kc small{position:absolute;bottom:5px;right:8px;font-size:9.5px;color:var(--ink3);font-family:-apple-system,system-ui}
 .kc em{position:absolute;top:5px;left:8px;font-size:9.5px;color:var(--ink3);font-style:normal;font-family:-apple-system,system-ui}
-.kc.l1{border-color:var(--ko)}.kc.l1 small{color:var(--ko)}
-.kc.l2{border-color:var(--gold)}.kc.l2 small{color:var(--gold)}
-.kc.l3{border-color:var(--ok)}.kc.l3 small{color:var(--ok)}
-.kc.l4{border-color:var(--seal);background:var(--sel)}.kc.l4 small{color:var(--seal)}
-.kc.l4::after{content:"";position:absolute;top:7px;right:7px;width:9px;height:9px;border-radius:50%;background:var(--seal)}
+.kc.l1{border-color:var(--ko)}.kc.l1 small{color:var(--ko)}.kc.l2{border-color:var(--gold)}.kc.l2 small{color:var(--gold)}.kc.l3{border-color:var(--ok)}.kc.l3 small{color:var(--ok)}
+.kc.l4{border-color:var(--seal);background:var(--sel)}.kc.l4 small{color:var(--seal)}.kc.l4::after{content:"";position:absolute;top:7px;right:7px;width:9px;height:9px;border-radius:50%;background:var(--seal)}
 .kc.future{opacity:.4}
-.legend{display:flex;flex-wrap:wrap;gap:8px 14px;font-size:11.5px;color:var(--ink2);padding:12px 2px}
-.legend i{display:inline-block;width:9px;height:9px;border-radius:3px;margin-right:5px;vertical-align:middle;border:1px solid var(--line2)}
-
-/* kanji fiche */
+.legend{display:flex;flex-wrap:wrap;gap:8px 14px;font-size:11.5px;color:var(--ink2);padding:12px 2px}.legend i{display:inline-block;width:9px;height:9px;border-radius:3px;margin-right:5px;vertical-align:middle;border:1px solid var(--line2)}
 .fiche{display:flex;flex-direction:column;align-items:center;padding-top:6px}
 .kbox{width:min(62vw,240px);aspect-ratio:1;border-radius:26px;background:var(--paper2);border:1px solid var(--line);position:relative;box-shadow:var(--sh)}
-.kbox svg{width:100%;height:100%;display:block}
-.kbox .gl{fill:none;stroke:var(--line2);stroke-width:5;stroke-linecap:round;stroke-linejoin:round}
-.kbox .st{fill:none;stroke:var(--ink);stroke-width:5.5;stroke-linecap:round;stroke-linejoin:round}
-.kbox .st.hi{stroke:var(--seal)}
-.kbox .st.ok{stroke:var(--ok)}
+.kbox svg{width:100%;height:100%;display:block}.kbox .gl{fill:none;stroke:var(--line2);stroke-width:5;stroke-linecap:round;stroke-linejoin:round}
+.kbox .st{fill:none;stroke:var(--ink);stroke-width:5.5;stroke-linecap:round;stroke-linejoin:round}.kbox .st.hi{stroke:var(--seal)}.kbox .st.ok{stroke:var(--ok)}
 .kbox .num{font-size:7px;fill:var(--seal);font-family:-apple-system,system-ui;font-weight:700}
-.kbox canvas{position:absolute;inset:0;width:100%;height:100%;touch-action:none;border-radius:26px}
-.kbox .grid-l{stroke:var(--line);stroke-width:.6;stroke-dasharray:3 3}
-.kmeta{text-align:center;margin-top:12px}
-.kmeta .fr{font-size:20px;font-weight:600;letter-spacing:-.01em}
-.kmeta .n{font-size:12px;color:var(--ink3);margin-top:2px;letter-spacing:.06em}
+.kbox canvas{position:absolute;inset:0;width:100%;height:100%;touch-action:none;border-radius:26px}.kbox .grid-l{stroke:var(--line);stroke-width:.6;stroke-dasharray:3 3}
+.kmeta{text-align:center;margin-top:12px}.kmeta .fr{font-size:20px;font-weight:600}.kmeta .n{font-size:12px;color:var(--ink3);margin-top:2px;letter-spacing:.06em}
 .readings{display:flex;gap:10px;justify-content:center;margin:14px 0 6px;flex-wrap:wrap}
-.rd{padding:8px 14px;border-radius:12px;background:var(--paper2);border:1px solid var(--line);font-size:15px}
-.rd b{font-size:10px;letter-spacing:.1em;color:var(--ink3);display:block;margin-bottom:2px;font-weight:600}
+.rd{padding:8px 14px;border-radius:12px;background:var(--paper2);border:1px solid var(--line);font-size:15px}.rd b{font-size:10px;letter-spacing:.1em;color:var(--ink3);display:block;margin-bottom:2px;font-weight:600}
 .tools{display:flex;gap:8px;justify-content:center;margin:12px 0 4px;flex-wrap:wrap}
-.tb{padding:9px 14px;border-radius:999px;border:1px solid var(--line2);font-size:13.5px;color:var(--ink);background:var(--paper2)}
-.tb.on{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.tb{padding:9px 14px;border-radius:999px;border:1px solid var(--line2);font-size:13.5px;color:var(--ink);background:var(--paper2)}.tb.on{background:var(--ink);color:var(--paper);border-color:var(--ink)}
 .vlist{width:100%;margin-top:6px}
-.vi{display:flex;align-items:baseline;gap:12px;padding:12px 4px;border-bottom:1px solid var(--line)}
-.vi .w{font-size:20px;min-width:96px;line-height:1.4}
-.vi .w rt{font-size:9px;color:var(--ink2)}
-.vi .r{font-size:12px;color:var(--ink2)}
-.vi .f{flex:1;font-size:14px;color:var(--ink);line-height:1.35}
-.vi .f.empty{color:var(--ink3);font-style:italic}
-.vi .st{color:var(--seal);font-size:14px}
-.vi .unk{color:var(--ink3);font-size:11px}
+.vi{display:flex;align-items:baseline;gap:10px;padding:12px 4px;border-bottom:1px solid var(--line)}
+.vi .w{font-size:20px;min-width:88px;line-height:1.4}.vi .w rt{font-size:9px;color:var(--ink2)}.vi .r{font-size:12px;color:var(--ink2)}
+.vi .f{flex:1;font-size:14px;color:var(--ink);line-height:1.35}.vi .f.empty{color:var(--ink3);font-style:italic}.vi .st{color:var(--seal);font-size:14px}.vi .unk{color:var(--ink3);font-size:11px}
+.vi .te{font-size:12px;color:var(--gold)}.vi .te b{font-size:9px;letter-spacing:.1em;color:var(--ink3);font-weight:600}
 .notseen{color:var(--seal2);text-decoration:underline dotted;text-underline-offset:3px}
 .hint{color:var(--ink2);font-size:13px;text-align:center;margin-top:10px;line-height:1.45;padding:0 12px;min-height:18px}
-
-/* review */
+.spk{display:inline-grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--sel);color:var(--ink2);font-size:13px;vertical-align:middle;flex:none;transition:transform .1s,background .12s}
+.spk:active{transform:scale(.9);background:var(--line2)}.spk.big{width:58px;height:58px;font-size:24px;background:var(--ink);color:var(--paper)}
 .rv{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:6px 18px}
-.rcard{width:100%;max-width:400px;min-height:230px;border-radius:24px;background:var(--paper2);border:1px solid var(--line);box-shadow:var(--sh);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:26px 20px;position:relative;text-align:center;transition:transform .12s}
-.rcard.ko{animation:shake .32s}
-@keyframes shake{20%{transform:translateX(-7px)}60%{transform:translateX(7px)}}
+.rcard{width:100%;max-width:400px;min-height:210px;border-radius:24px;background:var(--paper2);border:1px solid var(--line);box-shadow:var(--sh);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:26px 20px;position:relative;text-align:center;transition:transform .12s}
+.rcard.ko{animation:shake .32s}@keyframes shake{20%{transform:translateX(-7px)}60%{transform:translateX(7px)}}
 .rcard .kind{position:absolute;top:12px;left:0;right:0;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink3)}
-.rcard .big{font-size:clamp(64px,22vw,96px);line-height:1.1}
-.rcard .mid{font-size:34px;line-height:1.3}
-.rcard .fr{font-size:22px;font-weight:600;line-height:1.3}
-.rcard .sub{color:var(--ink2);font-size:15px;margin-top:8px;line-height:1.45}
-.rcard .ans{margin-top:16px;padding-top:14px;border-top:1px dashed var(--line2);width:100%}
+.rcard .big{font-size:clamp(64px,22vw,96px);line-height:1.1}.rcard .mid{font-size:34px;line-height:1.3}.rcard .fr{font-size:22px;font-weight:600;line-height:1.3}
+.rcard .sub{color:var(--ink2);font-size:15px;margin-top:8px;line-height:1.45}.rcard .ans{margin-top:16px;padding-top:14px;border-top:1px dashed var(--line2);width:100%}
 .seal{position:absolute;right:14px;bottom:12px;width:52px;height:52px;border-radius:50%;border:3px solid var(--seal);color:var(--seal);display:grid;place-items:center;font-size:20px;font-weight:700;transform:scale(0) rotate(-12deg);opacity:0;pointer-events:none}
-.seal.on{animation:stamp .45s cubic-bezier(.2,1.4,.4,1) forwards}
-@keyframes stamp{0%{transform:scale(1.6) rotate(-12deg);opacity:0}60%{transform:scale(.92) rotate(-8deg);opacity:1}100%{transform:scale(1) rotate(-8deg);opacity:.95}}
+.seal.on{animation:stamp .45s cubic-bezier(.2,1.4,.4,1) forwards}@keyframes stamp{0%{transform:scale(1.6) rotate(-12deg);opacity:0}60%{transform:scale(.92) rotate(-8deg);opacity:1}100%{transform:scale(1) rotate(-8deg);opacity:.95}}
 .ink{position:absolute;left:50%;top:50%;width:60px;height:60px;border-radius:50%;background:var(--ko);opacity:0;transform:translate(-50%,-50%) scale(0);pointer-events:none;filter:blur(6px)}
-.ink.on{animation:blot .7s ease-out forwards}
-@keyframes blot{0%{transform:translate(-50%,-50%) scale(0);opacity:.55}100%{transform:translate(-50%,-50%) scale(4);opacity:0}}
+.ink.on{animation:blot .7s ease-out forwards}@keyframes blot{0%{transform:translate(-50%,-50%) scale(0);opacity:.55}100%{transform:translate(-50%,-50%) scale(4);opacity:0}}
 .opts{display:grid;grid-template-columns:1fr 1fr;gap:10px;width:100%;max-width:400px;margin-top:14px}
-.opt{padding:16px 10px;border-radius:16px;background:var(--paper2);border:1px solid var(--line);font-size:15px;text-align:center;line-height:1.3;transition:transform .1s,background .12s}
-.opt.jp{font-size:22px}
-.opt:active{transform:scale(.97)}
-.opt.ok{background:var(--ok);color:#fff;border-color:var(--ok)}
-.opt.ko{background:var(--ko);color:#fff;border-color:var(--ko)}
-.opt.dim{opacity:.35}
+.opt{padding:16px 10px;border-radius:16px;background:var(--paper2);border:1px solid var(--line);font-size:15px;text-align:center;line-height:1.3;transition:transform .1s,background .12s;display:flex;align-items:center;justify-content:center;min-height:60px}
+.opt.jp{font-size:22px}.opt:active{transform:scale(.97)}.opt.ok{background:var(--ok);color:#fff;border-color:var(--ok)}.opt.ko{background:var(--ko);color:#fff;border-color:var(--ko)}.opt.dim{opacity:.35}
+.opt svg{width:76px;height:76px}.opt .gl{fill:none;stroke:var(--line2);stroke-width:6;stroke-linecap:round;stroke-linejoin:round}.opt .st{fill:none;stroke:var(--seal);stroke-width:8;stroke-linecap:round;stroke-linejoin:round}
+.opt.ok .gl,.opt.ko .gl{stroke:rgba(255,255,255,.5)}.opt.ok .st,.opt.ko .st{stroke:#fff}
 .grade{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;width:100%;max-width:400px;margin-top:14px}
-.grade button{padding:15px 6px;border-radius:16px;border:1px solid var(--line);background:var(--paper2);font-size:14px;font-weight:600;text-align:center}
-.grade .g0{color:var(--ko)}.grade .g1{color:var(--gold)}.grade .g2{color:var(--ok)}
+.grade button{padding:15px 6px;border-radius:16px;border:1px solid var(--line);background:var(--paper2);font-size:14px;font-weight:600;text-align:center}.grade .g0{color:var(--ko)}.grade .g1{color:var(--gold)}.grade .g2{color:var(--ok)}
 .reveal{width:100%;max-width:400px;margin-top:14px;padding:16px;border-radius:16px;background:var(--ink);color:var(--paper);font-size:15px;font-weight:600;text-align:center}
 .builder{width:100%;max-width:400px;margin-top:14px}
-.slot{min-height:64px;border-radius:16px;border:1.5px dashed var(--line2);padding:10px;display:flex;flex-wrap:wrap;gap:8px;align-items:center;background:var(--paper2)}
-.slot.ok{border-color:var(--ok)}.slot.ko{border-color:var(--ko)}
+.slot{min-height:64px;border-radius:16px;border:1.5px dashed var(--line2);padding:10px;display:flex;flex-wrap:wrap;gap:8px;align-items:center;background:var(--paper2)}.slot.ok{border-color:var(--ok)}.slot.ko{border-color:var(--ko)}
 .tokens{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;justify-content:center}
-.tk{padding:10px 14px;border-radius:12px;background:var(--paper2);border:1px solid var(--line2);font-size:19px;transition:transform .1s;line-height:1.2}
-.tk:active{transform:scale(.95)}
-.tk.used{opacity:.25;pointer-events:none}
-.slot .tk{background:var(--sel)}
-.prog{height:3px;background:var(--line);margin:0 18px;border-radius:2px;overflow:hidden}
-.prog i{display:block;height:100%;width:0;background:var(--ink);transition:width .35s}
-.sub{display:flex;justify-content:space-between;padding:8px 20px;font-size:12.5px;color:var(--ink2)}
-.sub b{color:var(--ink);font-weight:600}
-.end{text-align:center;padding:30px 20px}
-.end .big{font-size:56px;font-weight:600}
-.end p{color:var(--ink2);margin:10px 0 22px;line-height:1.55}
-
-/* lesson */
-.pt{padding:16px;border-radius:var(--r);background:var(--paper2);border:1px solid var(--line);margin-bottom:12px}
-.pt h3{font-size:16px;font-weight:600;margin-bottom:6px}
-.pt .why{color:var(--ink2);font-size:13.5px;line-height:1.5;margin-bottom:10px}
-.ex{padding:9px 0;border-top:1px dashed var(--line)}
-.ex .j{font-size:19px;line-height:1.55}
-.ex .f{font-size:13px;color:var(--ink2);margin-top:2px}
-
-/* forms & settings */
-.field{margin-bottom:10px}
-.field label{display:block;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink3);margin-bottom:5px}
-.field input,.field textarea{width:100%;padding:13px 14px;border-radius:14px;border:1px solid var(--line2);background:var(--paper2);font-size:16px}
-.btn{display:block;width:100%;padding:15px;border-radius:16px;background:var(--ink);color:var(--paper);font-size:15.5px;font-weight:600;text-align:center;margin-top:8px}
-.btn.o{background:transparent;color:var(--ink);border:1px solid var(--line2)}
-.btn.s{background:var(--seal);color:#fff}
-.tog{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 16px;border-radius:14px;background:var(--paper2);border:1px solid var(--line);margin-bottom:8px;width:100%;font-size:15px}
-.tog small{display:block;color:var(--ink2);font-size:12px;margin-top:2px}
-.sw{width:44px;height:26px;flex:none;border-radius:13px;background:var(--line2);position:relative;transition:background .15s}
-.sw::after{content:"";position:absolute;top:3px;left:3px;width:20px;height:20px;border-radius:50%;background:#fff;transition:left .15s;box-shadow:0 1px 3px rgba(0,0,0,.25)}
+.tk{padding:10px 14px;border-radius:12px;background:var(--paper2);border:1px solid var(--line2);font-size:19px;transition:transform .1s;line-height:1.2}.tk:active{transform:scale(.95)}.tk.used{opacity:.25;pointer-events:none}.slot .tk{background:var(--sel)}
+.kbd{width:100%;max-width:400px;margin-top:14px}.kbd input{width:100%;padding:16px;border-radius:16px;border:1.5px solid var(--line2);background:var(--paper2);font-size:22px;text-align:center}.kbd input.ok{border-color:var(--ok)}.kbd input.ko{border-color:var(--ko)}
+.prog{height:3px;background:var(--line);margin:0 18px;border-radius:2px;overflow:hidden}.prog i{display:block;height:100%;width:0;background:var(--ink);transition:width .35s}
+.sub{display:flex;justify-content:space-between;padding:8px 20px;font-size:12.5px;color:var(--ink2);min-height:32px}.sub b{color:var(--ink);font-weight:600}
+.end{text-align:center;padding:30px 20px}.end .big{font-size:56px;font-weight:600}.end p{color:var(--ink2);margin:10px 0 22px;line-height:1.55}
+.pt{padding:16px;border-radius:var(--r);background:var(--paper2);border:1px solid var(--line);margin-bottom:12px}.pt h3{font-size:16px;font-weight:600;margin-bottom:6px}
+.pt .why{color:var(--ink2);font-size:13.5px;line-height:1.5;margin-bottom:10px}.ex{padding:9px 0;border-top:1px dashed var(--line);display:flex;gap:10px;align-items:flex-start}
+.ex .j{font-size:19px;line-height:1.55;flex:1}.ex .f{font-size:13px;color:var(--ink2);margin-top:2px}
+.field{margin-bottom:10px}.field label{display:block;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink3);margin-bottom:5px}
+.field input{width:100%;padding:13px 14px;border-radius:14px;border:1px solid var(--line2);background:var(--paper2);font-size:16px}
+.btn{display:block;width:100%;padding:15px;border-radius:16px;background:var(--ink);color:var(--paper);font-size:15.5px;font-weight:600;text-align:center;margin-top:8px}.btn.o{background:transparent;color:var(--ink);border:1px solid var(--line2)}.btn.s{background:var(--seal);color:#fff}
+.tog{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 16px;border-radius:14px;background:var(--paper2);border:1px solid var(--line);margin-bottom:8px;width:100%;font-size:15px}.tog small{display:block;color:var(--ink2);font-size:12px;margin-top:2px}
+.sw{width:44px;height:26px;flex:none;border-radius:13px;background:var(--line2);position:relative;transition:background .15s}.sw::after{content:"";position:absolute;top:3px;left:3px;width:20px;height:20px;border-radius:50%;background:#fff;transition:left .15s;box-shadow:0 1px 3px rgba(0,0,0,.25)}
 .tog.on .sw{background:var(--seal)}.tog.on .sw::after{left:21px}
-.about p{font-size:15px;line-height:1.6;margin-bottom:12px;color:var(--ink)}
-.about h3{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3);margin:20px 0 6px}
-.about a{color:var(--seal);text-decoration:none;font-weight:600}
-.toast{position:fixed;left:18px;right:18px;top:calc(10px + env(safe-area-inset-top));background:var(--ink);color:var(--paper);border-radius:14px;padding:12px 16px;z-index:30;transform:translateY(-140%);transition:transform .32s cubic-bezier(.2,.9,.3,1);text-align:center;font-size:14px}
-.toast.on{transform:none}
-.loading{flex:1;display:grid;place-items:center;color:var(--ink2);font-size:14px}
-.cal{display:flex;gap:6px;justify-content:center;margin:6px 0 2px}
-.cal i{width:12px;height:12px;border-radius:4px;border:1px solid var(--line2)}
-.cal i.on{background:var(--seal);border-color:var(--seal)}
-
-/* v2 */
-.bloc{margin:18px 0 8px;display:flex;align-items:baseline;gap:10px}
-.bloc h4{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3);font-weight:600}
-.bloc span{flex:1;height:1px;background:var(--line)}
-.bloc b{font-size:12px;color:var(--ink3);font-weight:500}
-.step{display:flex;gap:5px;justify-content:center;margin:2px 0 8px}
-.step i{width:22px;height:3px;border-radius:2px;background:var(--line2)}
-.step i.on{background:var(--ink)}
-.step i.done{background:var(--seal)}
-.blob{text-align:center;padding:26px 16px}
-.blob .lab{font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink3)}
-.blob h2{font-size:26px;font-weight:600;margin:8px 0 6px;letter-spacing:-.02em}
-.blob p{color:var(--ink2);font-size:14px;line-height:1.5}
-.blob .ks{font-size:30px;letter-spacing:.14em;margin:16px 0 4px;line-height:1.5}
-.comp{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:10px 0}
-.comp .cp{padding:8px 12px;border-radius:12px;background:var(--paper2);border:1px solid var(--line);font-size:22px;line-height:1.2;text-align:center}
-.comp .cp small{display:block;font-size:10px;color:var(--ink3);font-family:-apple-system,system-ui;margin-top:2px}
-.comp .cp.rad{border-color:var(--seal);color:var(--seal)}
-.cloze{font-size:34px;letter-spacing:.06em;line-height:1.5}
-.cloze .hole{display:inline-block;min-width:44px;border-bottom:3px solid var(--seal);color:var(--seal)}
-.kbd{width:100%;max-width:400px;margin-top:14px}
-.kbd input{width:100%;padding:16px;border-radius:16px;border:1.5px solid var(--line2);background:var(--paper2);font-size:22px;text-align:center}
-.kbd input.ok{border-color:var(--ok)}.kbd input.ko{border-color:var(--ko)}
-.exam{padding:2px 0}
-.exam .q{font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3);text-align:center;margin-bottom:4px}
-.res{display:flex;align-items:center;gap:12px;padding:12px 4px;border-bottom:1px solid var(--line)}
-.res .bar{flex:1;height:7px;border-radius:4px;background:var(--line);overflow:hidden}
-.res .bar i{display:block;height:100%;border-radius:4px}
-.res .lb{font-size:13.5px;min-width:120px}
-.res .pc{font-size:13px;color:var(--ink2);min-width:52px;text-align:right}
-.chips{display:flex;flex-wrap:wrap;gap:7px;margin:8px 0}
-.chip{padding:8px 13px;border-radius:999px;border:1px solid var(--line2);font-size:13px;background:var(--paper2)}
-.chip.on{background:var(--ink);color:var(--paper);border-color:var(--ink)}
-.timer{font-variant-numeric:tabular-nums;font-weight:600}
-.timer.warn{color:var(--ko)}
-.wk{display:flex;align-items:center;gap:10px;padding:10px 4px;border-bottom:1px solid var(--line)}
-.wk .k{font-size:26px;min-width:40px}
-.wk .m{flex:1;font-size:13.5px}
-.wk .m small{display:block;color:var(--ink2);font-size:12px}
+.about p{font-size:15px;line-height:1.6;margin-bottom:12px}.about h3{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3);margin:20px 0 6px}.about a{color:var(--seal);text-decoration:none;font-weight:600}
+.toast{position:fixed;left:18px;right:18px;top:calc(10px + env(safe-area-inset-top));background:var(--ink);color:var(--paper);border-radius:14px;padding:12px 16px;z-index:30;transform:translateY(-140%);transition:transform .32s cubic-bezier(.2,.9,.3,1);text-align:center;font-size:14px}.toast.on{transform:none}
+.loading{flex:1;display:grid;place-items:center;color:var(--ink2);font-size:14px;text-align:center;padding:20px;line-height:1.5}
+.cal{display:flex;gap:6px;justify-content:center;margin:6px 0 2px}.cal i{width:12px;height:12px;border-radius:4px;border:1px solid var(--line2)}.cal i.on{background:var(--seal);border-color:var(--seal)}
+.bloc{margin:18px 0 8px;display:flex;align-items:baseline;gap:10px}.bloc h4{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3);font-weight:600}.bloc span{flex:1;height:1px;background:var(--line)}.bloc b{font-size:12px;color:var(--ink3);font-weight:500}
+.step{display:flex;gap:5px;justify-content:center;margin:2px 0 8px}.step i{width:22px;height:3px;border-radius:2px;background:var(--line2)}.step i.on{background:var(--ink)}.step i.done{background:var(--seal)}
+.blob{text-align:center;padding:26px 16px}.blob .lab{font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink3)}.blob h2{font-size:26px;font-weight:600;margin:8px 0 6px}.blob p{color:var(--ink2);font-size:14px;line-height:1.5}.blob .ks{font-size:30px;letter-spacing:.14em;margin:16px 0 4px;line-height:1.5}
+.comp{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:10px 0}.comp .cp{padding:8px 12px;border-radius:12px;background:var(--paper2);border:1px solid var(--line);font-size:22px;line-height:1.2;text-align:center}.comp .cp small{display:block;font-size:10px;color:var(--ink3);font-family:-apple-system,system-ui;margin-top:2px}.comp .cp.rad{border-color:var(--seal);color:var(--seal)}
+.cloze{font-size:34px;letter-spacing:.06em;line-height:1.5}.cloze .hole{display:inline-block;min-width:44px;border-bottom:3px solid var(--seal);color:var(--seal)}
+.exam{padding:2px 0}.exam .q{font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3);text-align:center;margin-bottom:4px}
+.res{display:flex;align-items:center;gap:12px;padding:12px 4px;border-bottom:1px solid var(--line)}.res .bar{flex:1;height:7px;border-radius:4px;background:var(--line);overflow:hidden}.res .bar i{display:block;height:100%;border-radius:4px}.res .lb{font-size:13.5px;min-width:120px}.res .pc{font-size:13px;color:var(--ink2);min-width:52px;text-align:right}
+.chips{display:flex;flex-wrap:wrap;gap:7px;margin:8px 0}.chip{padding:8px 13px;border-radius:999px;border:1px solid var(--line2);font-size:13px;background:var(--paper2)}.chip.on{background:var(--ink);color:var(--paper);border-color:var(--ink)}.chip.dim{opacity:.4}
+.timer{font-variant-numeric:tabular-nums;font-weight:600}.timer.warn{color:var(--ko)}
+.wk{display:flex;align-items:center;gap:10px;padding:10px 4px;border-bottom:1px solid var(--line)}.wk .k{font-size:26px;min-width:40px}.wk .m{flex:1;font-size:13.5px}.wk .m small{display:block;color:var(--ink2);font-size:12px}
+.lives{display:flex;gap:6px;justify-content:center}.lives i{width:12px;height:12px;border-radius:50%;background:var(--seal)}.lives i.off{background:var(--line2)}
+.duel{display:grid;grid-template-columns:1fr auto 1fr;gap:10px;align-items:center;width:100%;max-width:400px;margin:6px 0}.duel .side{text-align:center;padding:12px;border-radius:14px;background:var(--paper2);border:1px solid var(--line)}.duel .side b{font-size:26px;display:block}.duel .side small{color:var(--ink2);font-size:12px}.duel .vs{color:var(--ink3);font-size:12px;letter-spacing:.1em}
+.rt{display:grid;grid-template-columns:34px 44px 1fr 1fr;gap:8px;padding:9px 4px;border-bottom:1px solid var(--line);font-size:13px;align-items:center}.rt .c{font-size:24px}.rt small{color:var(--ink2)}
+.srch{width:100%;padding:12px 14px;border-radius:14px;border:1px solid var(--line2);background:var(--paper2);font-size:15px;margin-bottom:10px}
+.pos7{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:10px 0}.pos7 div{text-align:center;font-size:11px;color:var(--ink2)}.pos7 svg{width:100%;aspect-ratio:1;display:block;margin-bottom:4px}.pos7 rect{fill:var(--line);stroke:var(--line2)}.pos7 rect.k{fill:var(--seal2)}
 @media (prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;transition-duration:.01ms!important}}
 </style>
 </head>
 <body>
 <div id="app">
-  <div class="hd">
-    <button class="ib hidden" id="back">‹</button>
-    <h1 id="title">言葉</h1>
-    <button class="ib" id="themeBtn" aria-label="Thème">◐</button>
-    <button class="ib" id="setBtn" aria-label="Réglages">⚙︎</button>
-  </div>
+  <div class="hd"><button class="ib hidden" id="back">‹</button><h1 id="title">言葉</h1><button class="ib" id="themeBtn" aria-label="Thème">◐</button><button class="ib" id="setBtn" aria-label="Réglages">⚙︎</button></div>
   <div class="prog"><i id="bar"></i></div>
   <div class="sub"><span id="subL"></span><span id="subR"></span></div>
   <div class="view" id="view"><div class="loading">Chargement…</div></div>
 </div>
 <div class="toast" id="toast"></div>
-
 <script>
 "use strict";
-/* ═══════ ÉTAT & STOCKAGE ═══════ */
+/* ═══════ ÉTAT ═══════ */
 const $=id=>document.getElementById(id);
-const KEY='kotoba-v1';
-let D={manifest:null,kanji:{},gram:{},strokes:{},comp:{},cloze:[],read:[]};
-let S={srs:{},opt:{theme:'jour',furi:false,newPerDay:8,modes:{reco:true,rappel:true,lecture:true,phrase:true,trou:true,clavier:false}},perso:[],log:{},about:false};
+const KEY='kotoba-v1', DAY=864e5;
+let D={manifest:null,kanji:{},gram:{},strokes:{},comp:{},cloze:[],read:[],cles:[],coursCles:null,lex:{verbs:[],adjs:[]}};
+let S={srs:{},opt:{theme:'jour',furi:false,newPerDay:8,audio:true,autoSpeak:false,games:true,modes:{reco:true,rappel:true,lecture:true,phrase:true,trou:true,clavier:false,ecoute:true,te:true,contraire:true,cle:true}},perso:[],log:{},unlocked:{},best:{}};
 let nav=[],cur={};
-function load(){ try{ const v=localStorage.getItem(KEY); if(v){ const d=JSON.parse(v); S.srs=d.srs||{}; S.opt=Object.assign(S.opt,d.opt||{}); S.perso=d.perso||[]; S.log=d.log||{}; } }catch(e){} }
-let sT; function save(){ clearTimeout(sT); sT=setTimeout(()=>{ try{ localStorage.setItem(KEY,JSON.stringify({srs:S.srs,opt:S.opt,perso:S.perso,log:S.log})); }catch(e){} },200); }
+function load(){ try{ const v=localStorage.getItem(KEY); if(v){ const d=JSON.parse(v); S.srs=d.srs||{}; S.opt=Object.assign(S.opt,d.opt||{}); S.opt.modes=Object.assign({reco:true,rappel:true,lecture:true,phrase:true,trou:true,clavier:false,ecoute:true,te:true,contraire:true,cle:true},d.opt&&d.opt.modes||{}); S.perso=d.perso||[]; S.log=d.log||{}; S.unlocked=d.unlocked||{}; S.best=d.best||{}; } }catch(e){} }
+let sT; function save(){ clearTimeout(sT); sT=setTimeout(()=>{ try{ localStorage.setItem(KEY,JSON.stringify({srs:S.srs,opt:S.opt,perso:S.perso,log:S.log,unlocked:S.unlocked,best:S.best})); }catch(e){} },200); }
 const sh=a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.random()*(i+1)|0;[a[i],a[j]]=[a[j],a[i]]}return a};
+const pick=(a,n)=>sh(a).slice(0,n);
 const today=()=>{const d=new Date();return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0')};
-const DAY=864e5;
 function toast(t){ $('toast').textContent=t; $('toast').classList.add('on'); clearTimeout(toast.t); toast.t=setTimeout(()=>$('toast').classList.remove('on'),2600); }
 function vib(p){ try{navigator.vibrate&&navigator.vibrate(p)}catch(e){} }
-function fdate(s){ const d=new Date(s+'T12:00:00'); return d.toLocaleDateString('fr-FR',{day:'numeric',month:'short'}); }
+function fdate(s){ if(!s) return ''; const d=new Date(s+'T12:00:00'); return d.toLocaleDateString('fr-FR',{day:'numeric',month:'short'}); }
+const esc=s=>String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;');
+
+/* ═══════ AUDIO ═══════ */
+const TTS={voice:null,ok:false,tried:false,
+  init(){ if(!('speechSynthesis' in window)) return; const pick=()=>{ const vs=speechSynthesis.getVoices()||[]; TTS.voice=vs.find(v=>/^ja/i.test(v.lang)&&/Kyoko|Google|O-Ren|Hattori|Otoya/i.test(v.name))||vs.find(v=>/^ja/i.test(v.lang))||null; TTS.ok=!!TTS.voice; TTS.tried=true; };
+    pick(); try{ speechSynthesis.onvoiceschanged=pick; }catch(e){} setTimeout(pick,800); },
+  speak(t,rate){ if(!S.opt.audio||!t) return false; if(!TTS.ok){ TTS.init(); if(!TTS.ok) return false; } try{ speechSynthesis.cancel(); const u=new SpeechSynthesisUtterance(t); u.lang='ja-JP'; u.voice=TTS.voice; u.rate=rate||.88; u.pitch=1; speechSynthesis.speak(u); return true; }catch(e){ return false; } }
+};
+const spk=(t,big)=>(S.opt.audio&&TTS.ok)?`<button class="spk${big?' big':''}" data-say="${esc(t)}" aria-label="Écouter">${big?'🔊':'🔈'}</button>`:'';
+document.addEventListener('click',e=>{ const b=e.target.closest('[data-say]'); if(b){ e.stopPropagation(); TTS.speak(b.dataset.say); } });
+const sayable=t=>String(t).replace(/[（(].*?[）)]/g,'').split(/[／/]/)[0].replace(/[〜~*]/g,'').trim();
 
 /* ═══════ DONNÉES ═══════ */
 async function loadData(){
   const m=await (await fetch('data/manifest.json',{cache:'no-store'})).json(); D.manifest=m;
+  const J=(u,f)=>fetch(u).then(r=>{ if(!r.ok) throw 0; return r.json(); }).then(f).catch(()=>{});
   const jobs=[];
-  m.cours.kanji.seances.forEach(s=>jobs.push(fetch('data/kanji/'+s.id+'.json').then(r=>r.json()).then(j=>D.kanji[s.id]=j).catch(()=>{})));
-  m.cours.grammaire.lecons.forEach(l=>jobs.push(fetch('data/grammaire/'+l.id+'.json').then(r=>r.json()).then(j=>D.gram[l.id]=j).catch(()=>{})));
-  jobs.push(fetch('data/strokes.json').then(r=>r.json()).then(j=>D.strokes=j).catch(()=>{}));
-  jobs.push(fetch('data/components.json').then(r=>r.json()).then(j=>D.comp=j).catch(()=>{D.comp={}}));
-  jobs.push(fetch('data/cloze.json').then(r=>r.json()).then(j=>D.cloze=j).catch(()=>{D.cloze=[]}));
-  jobs.push(fetch('data/readings.json').then(r=>r.json()).then(j=>D.read=j).catch(()=>{D.read=[]}));
-  await Promise.all(jobs);
-  index();
+  m.cours.kanji.seances.forEach(s=>jobs.push(J('data/kanji/'+s.id+'.json',j=>D.kanji[s.id]=j)));
+  m.cours.grammaire.lecons.forEach(l=>jobs.push(J('data/grammaire/'+l.id+'.json',j=>D.gram[l.id]=j)));
+  jobs.push(J('data/grammaire/_lexique.json',j=>D.lex=j));
+  jobs.push(J('data/strokes.json',j=>D.strokes=j)); jobs.push(J('data/components.json',j=>D.comp=j));
+  jobs.push(J('data/cloze.json',j=>D.cloze=j)); jobs.push(J('data/readings.json',j=>D.read=j));
+  jobs.push(J('data/cles.json',j=>D.cles=j)); jobs.push(J('data/cours_cles.json',j=>D.coursCles=j));
+  await Promise.all(jobs); index();
 }
-let KANJI=[],VOCAB=[],SENT=[],BYK={};
+let KANJI=[],VOCAB=[],SENT=[],BYK={},CLOZE=[],READS=[],VERBS=[],ADJS=[],CLEBY={};
 function index(){
   KANJI=[];VOCAB=[];SENT=[];BYK={};
-  Object.values(D.kanji).sort((a,b)=>a.range[0]-b.range[0]).forEach(s=>{
-    s.kanji.forEach(k=>{ k.seance=s.id; k.date=s.date; KANJI.push(k); BYK[k.k]=k;
-      k.vocab.forEach(v=>VOCAB.push({...v,kanji:k.k,seance:s.id,id:'v:'+v.w+'/'+v.r,src:'kanji'})); });
-  });
+  Object.values(D.kanji).sort((a,b)=>a.range[0]-b.range[0]).forEach(s=>{ s.kanji.forEach(k=>{ k.seance=s.id; k.date=s.date; KANJI.push(k); BYK[k.k]=k;
+    k.vocab.forEach(v=>VOCAB.push({...v,kanji:k.k,seance:s.id,id:'v:'+v.w+'/'+v.r,src:'kanji'})); }); });
   Object.values(D.gram).forEach(g=>{
-    (g.vocab||[]).forEach(([w,fr])=>VOCAB.push({w,r:'',fr,star:true,seance:g.id,id:'v:'+w+'/'+g.id,src:'gram'}));
+    (g.vocab||[]).forEach(e=>{ const [w,fr,r,pos]=Array.isArray(e)?e:[e.w,e.fr,e.r,e.pos]; VOCAB.push({w,r:r||'',fr,pos:pos||'',star:true,seance:g.id,id:'v:'+w+'/'+g.id,src:'gram'}); });
     g.points.forEach((p,pi)=>p.ex.forEach((e,ei)=>{ if(e.tok&&e.tok.length>1) SENT.push({...e,id:'s:'+g.id+':'+pi+':'+ei,lecon:g.id,point:p.t}); }));
   });
   S.perso.forEach(p=>VOCAB.push({w:p.w,r:p.r,fr:p.fr,star:false,seance:'perso',id:'v:perso:'+p.w,src:'perso'}));
   CLOZE=(D.cloze||[]).filter(c=>D.kanji[c.seance]); READS=(D.read||[]).filter(r=>D.kanji[r.seance]);
+  VERBS=(D.lex.verbs||[]).map(v=>({...v,id:'te:'+v.w,lecon:v.les?'L'+String(v.les).padStart(2,'0'):null}));
+  ADJS=(D.lex.adjs||[]).map(a=>({...a,id:'adj:'+a.w,lecon:'L'+String(a.les).padStart(2,'0')}));
+  CLEBY={}; (D.cles||[]).forEach(c=>CLEBY[c.n]=c);
 }
-let CLOZE=[],READS=[];
-const kanjiSeen=k=>{const x=BYK[k];return x?x.date<=today():true;};
+const unlocked=id=>{ const d=D.kanji[id]||D.gram[id]; if(!d) return true; if(S.unlocked[id]) return true; return !!d.date&&d.date<=today(); };
+const kanjiSeen=k=>{ const x=BYK[k]; return x?unlocked(x.seance):true; };
+const cleOf=k=>{ const c=(D.comp||{})[k]; return c&&c.cle?CLEBY[c.cle]:null; };
 
 /* ═══════ SRS ═══════ */
-function st(id){ return S.srs[id]||null; }
-function isDue(id){ const s=st(id); return s&&s.due<=Date.now(); }
-function grade(id,g){ // 0 raté 1 dur 2 facile
+const st=id=>S.srs[id]||null;
+const isDue=id=>{ const s=st(id); return s&&s.due<=Date.now(); };
+function grade(id,g,w){ // g: 0 raté 1 dur 2 facile ; w: poids (jeux)
   let s=S.srs[id]||{iv:0,ease:2.3,reps:0,lapses:0};
   if(g===0){ s.iv=0; s.lapses++; s.ease=Math.max(1.3,s.ease-.2); s.due=Date.now()+10*60e3; }
   else if(g===1){ s.iv=Math.max(1,Math.round(s.iv*1.2)||1); s.ease=Math.max(1.3,s.ease-.12); s.due=Date.now()+s.iv*DAY; }
-  else { s.iv=s.iv===0?1:s.iv===1?3:Math.round(s.iv*s.ease); s.ease=Math.min(2.8,s.ease+.05); s.due=Date.now()+s.iv*DAY; }
-  s.reps++; s.last=Date.now(); S.srs[id]=s;
-  const t=today(); S.log[t]=(S.log[t]||0)+1; save();
+  else { const nxt=s.iv===0?1:s.iv===1?3:Math.round(s.iv*s.ease); s.iv=w&&w<1?Math.max(s.iv,Math.round(s.iv+(nxt-s.iv)*w)):nxt; s.ease=Math.min(2.8,s.ease+.05); s.due=Date.now()+s.iv*DAY; }
+  s.reps++; s.last=Date.now(); S.srs[id]=s; const t=today(); S.log[t]=(S.log[t]||0)+1; save();
 }
-function lvl(id){ const s=st(id); if(!s) return 0; if(s.iv<3) return 1; if(s.iv<10) return 2; if(s.iv<30) return 3; return 4; }
-function kanjiLevel(k){ return lvl('k:'+k); }
-function flowOf(v){ return v.star===false?'enrich':'exam'; } // null (inconnu) → exam
+const lvl=id=>{ const s=st(id); if(!s) return 0; if(s.iv<3) return 1; if(s.iv<10) return 2; if(s.iv<30) return 3; return 4; };
+const kanjiLevel=k=>lvl('k:'+k);
+const flowOf=v=>v.star===false?'enrich':'exam';
 function poolItems(){
-  const items=[];
-  KANJI.forEach(k=>{ if(kanjiSeen(k.k)) items.push({id:'k:'+k.k,type:'kanji',k,flow:'exam'}); });
-  VOCAB.forEach(v=>{ if(v.seance==='perso'||!D.kanji[v.seance]||D.kanji[v.seance].date<=today()||D.gram[v.seance]) items.push({id:v.id,type:'vocab',v,flow:flowOf(v)}); });
-  SENT.forEach(s=>items.push({id:s.id,type:'sent',s,flow:'exam'}));
-  if(S.opt.modes.trou) CLOZE.forEach(c=>{ if(D.kanji[c.seance].date<=today()) items.push({id:c.id,type:'cloze',c,flow:c.star===false?'enrich':'exam'}); });
-  if(S.opt.modes.lecture) READS.forEach(r=>{ if(D.kanji[r.seance].date<=today()) items.push({id:r.id,type:'read',r,flow:r.star===false?'enrich':'exam'}); });
-  return items;
+  const it=[], M=S.opt.modes;
+  KANJI.forEach(k=>{ if(kanjiSeen(k.k)) it.push({id:'k:'+k.k,type:'kanji',k,flow:'exam'}); });
+  VOCAB.forEach(v=>{ if(v.seance==='perso'||unlocked(v.seance)) it.push({id:v.id,type:'vocab',v,flow:flowOf(v)}); });
+  if(M.phrase) SENT.forEach(s=>{ if(unlocked(s.lecon)) it.push({id:s.id,type:'sent',s,flow:'exam'}); });
+  if(M.trou) CLOZE.forEach(c=>{ if(unlocked(c.seance)) it.push({id:c.id,type:'cloze',c,flow:c.star===false?'enrich':'exam'}); });
+  if(M.lecture) READS.forEach(r=>{ if(unlocked(r.seance)) it.push({id:r.id,type:'read',r,flow:r.star===false?'enrich':'exam'}); });
+  if(M.te) VERBS.forEach(v=>{ if(v.te&&(!v.lecon||unlocked(v.lecon))) it.push({id:v.id,type:'te',v,flow:'exam'}); });
+  if(M.contraire) ADJS.forEach(a=>{ if(a.opp.length&&unlocked(a.lecon)) it.push({id:a.id,type:'opp',a,flow:'exam'}); });
+  if(M.cle) KANJI.forEach(k=>{ const c=cleOf(k.k); if(c&&kanjiSeen(k.k)&&!(D.comp[k.k]||{}).self) it.push({id:'cle:'+k.k,type:'cle',k,c,flow:'enrich'}); });
+  return it;
 }
-function dueLists(){
-  const all=poolItems(); const due=all.filter(i=>isDue(i.id)); const fresh=all.filter(i=>!st(i.id));
-  return {all,due,fresh,dueExam:due.filter(i=>i.flow==='exam'),dueEnrich:due.filter(i=>i.flow==='enrich'),freshExam:fresh.filter(i=>i.flow==='exam'),freshEnrich:fresh.filter(i=>i.flow==='enrich')};
-}
+function dueLists(){ const all=poolItems(), due=all.filter(i=>isDue(i.id)), fresh=all.filter(i=>!st(i.id));
+  return {all,due,fresh,dueExam:due.filter(i=>i.flow==='exam'),dueEnrich:due.filter(i=>i.flow==='enrich'),freshExam:fresh.filter(i=>i.flow==='exam'),freshEnrich:fresh.filter(i=>i.flow==='enrich')}; }
+function pickNew(list,n){ const by=t=>list.filter(i=>i.type===t); const k=by('kanji').sort((a,b)=>a.k.n-b.k.n), v=by('vocab'), s=by('sent'), o=list.filter(i=>!['kanji','vocab','sent'].includes(i.type));
+  const out=[]; let i=0; while(out.length<n&&(k[i]||v[i]||s[i]||o[i])){ if(k[i]) out.push(k[i]); if(v[i]&&out.length<n) out.push(v[i]); if(s[i]&&out.length<n&&i%2===0) out.push(s[i]); if(o[i]&&out.length<n&&i%3===0) out.push(o[i]); i++; } return out; }
 
 /* ═══════ NAVIGATION ═══════ */
 function go(fn,arg){ nav.push([fn,arg]); render(); }
 function back(){ if(nav.length>1) nav.pop(); render(); }
-function render(){ cur.stop&&cur.stop(); cur={}; const [fn,arg]=nav[nav.length-1]; $('view').innerHTML=''; $('back').classList.toggle('hidden',nav.length<=1); setBar(0); info('',''); fn(arg); }
+function home_(){ nav=[[home]]; render(); }
+function render(){ cur.stop&&cur.stop(); cur={id:Math.random()}; const [fn,arg]=nav[nav.length-1]; $('view').innerHTML=''; $('back').classList.toggle('hidden',nav.length<=1); setBar(0); info('',''); try{ speechSynthesis&&speechSynthesis.cancel(); }catch(e){} fn(arg); }
 $('back').onclick=back;
+function later(fn,ms){ const my=cur.id; setTimeout(()=>{ if(cur.id===my) fn(); },ms); }
 function head(t,s){ $('title').innerHTML=t+(s?'<small>'+s+'</small>':''); }
 function info(l,r){ $('subL').innerHTML=l; $('subR').innerHTML=r; }
 function setBar(p){ $('bar').style.width=(Math.max(0,Math.min(1,p))*100)+'%'; }
-function ensoSVG(p,size){ const r=44,c=2*Math.PI*r; return `<svg viewBox="0 0 100 100"><circle class="c" cx="50" cy="50" r="${r}"/><circle class="p" cx="50" cy="50" r="${r}" stroke-dasharray="${c}" stroke-dashoffset="${c*(1-p)}"/></svg>`; }
+function ensoSVG(p){ const r=44,c=2*Math.PI*r; return `<svg viewBox="0 0 100 100"><circle class="c" cx="50" cy="50" r="${r}"/><circle class="p" cx="50" cy="50" r="${r}" stroke-dasharray="${c}" stroke-dashoffset="${c*(1-Math.max(0,Math.min(1,p)))}"/></svg>`; }
+const rubyW=(w,r)=>S.opt.furi&&r&&r!==w?`<ruby>${w}<rt>${r}</rt></ruby>`:w;
+const markUnseen=w=>[...w].map(ch=>(BYK[ch]&&!kanjiSeen(ch))?`<span class="notseen" title="vu en ${BYK[ch].seance}">${ch}</span>`:ch).join('');
+const stamp=(el,good)=>{ if(!el) return; const s=document.createElement('div'); s.className=good?'seal':'ink'; s.textContent=good?'正':''; el.appendChild(s); requestAnimationFrame(()=>s.classList.add('on')); if(!good) el.classList.add('ko'); vib(good?12:[30,30,30]); };
 
-/* ═══════ ACCUEIL ═══════ */
-function home(){
-  head('言葉','Kanji · Grammaire');
-  const L=dueLists(), n=L.due.length, fresh=Math.min(S.opt.newPerDay,L.freshExam.length);
-  const seen=KANJI.filter(k=>kanjiSeen(k.k)), mast=seen.filter(k=>kanjiLevel(k.k)>=3).length;
-  const p=seen.length?mast/seen.length:0;
-  const s=SENT.length?SENT[(new Date().getDate())%SENT.length]:null;
-  const days=[...Array(7)].map((_,i)=>{const d=new Date(Date.now()-(6-i)*DAY);return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');});
-  $('view').innerHTML=`<div class="scroll">
-    <div class="hero"><div class="date">${new Date().toLocaleDateString('fr-FR',{weekday:'long',day:'numeric',month:'long'})}</div>
-      <div class="enso ${p>=1?'full':''}">${ensoSVG(p)}<div class="t"><b>${mast}</b><small>/ ${seen.length} kanji solides</small></div></div>
-      <div class="cal">${days.map(d=>`<i class="${S.log[d]?'on':''}" title="${d}"></i>`).join('')}</div>
-      ${s?`<div class="pd jp">${s.jp}</div><div class="pdf">${s.fr}</div>`:''}
-      ${(()=>{const dd=Math.ceil((new Date(D.manifest.cours.kanji.examen+'T12:00:00')-Date.now())/DAY);return dd>0?`<div class="pdf" style="margin-top:10px;color:var(--seal)">examen de kanji dans ${dd} jour${dd>1?'s':''}</div>`:'';})()}
-    </div>
-    <button class="pri" id="rev"><span class="n">${n}</span><span class="t"><b>Réviser</b><small>${n?'à revoir maintenant':'rien en attente — reviens plus tard'}</small></span><span>›</span></button>
-    <div class="row">
-      <button class="pri alt" id="new"><span class="n">${fresh}</span><span class="t"><b>Nouveaux</b><small>${L.freshExam.length} jamais vus</small></span></button>
-      <button class="pri alt" id="enr"><span class="n">${L.dueEnrich.length+Math.min(5,L.freshEnrich.length)}</span><span class="t"><b>Enrichir</b><small>vocabulaire hors ★</small></span></button>
-    </div>
-    <div class="sec">Cours</div>
-    <button class="card" id="ck"><span class="g jp">字</span><span class="b"><b>Version et kanji</b><small>${D.manifest.cours.kanji.seances.length} séances · examen le ${fdate(D.manifest.cours.kanji.examen)}</small></span><span class="arrow">›</span></button>
-    <button class="card" id="cg"><span class="g jp">文</span><span class="b"><b>Grammaire et thème</b><small>${D.manifest.cours.grammaire.lecons.length} leçons · phrases-modèles</small></span><span class="arrow">›</span></button>
-    <div class="sec">S'évaluer</div>
-    <button class="card" id="ex"><span class="g">⏱</span><span class="b"><b>Examen blanc</b><small>chronométré · correction par type de question</small></span><span class="arrow">›</span></button>
-    <button class="card" id="rs"><span class="g jp">氵</span><span class="b"><b>Réseau de kanji</b><small>clés et composants partagés</small></span><span class="arrow">›</span></button>
-    <div class="sec">Outils</div>
-    <button class="card" id="cp"><span class="g">✎</span><span class="b"><b>Mes ajouts</b><small>${S.perso.length} mot${S.perso.length>1?'s':''} perso</small></span><span class="arrow">›</span></button>
-    <button class="card" id="ca"><span class="g">ⓘ</span><span class="b"><b>À propos</b><small>Moussa M. · crédits · contact</small></span><span class="arrow">›</span></button>
-    <p style="text-align:center;color:var(--ink3);font-size:11.5px;margin-top:16px">données mises à jour le ${fdate(D.manifest.maj)} · v${D.manifest.version}</p>
-  </div>`;
-  $('rev').onclick=()=>{ if(!n){toast('Rien à réviser. Lance des nouveaux.');return;} go(session,{items:sh(L.due),label:'Révision'}); };
-  $('new').onclick=()=>{ if(!L.freshExam.length){toast('Tout a déjà été vu.');return;} go(session,{items:pickNew(L.freshExam,S.opt.newPerDay),label:'Nouveaux'}); };
-  $('enr').onclick=()=>{ const it=L.dueEnrich.concat(pickNew(L.freshEnrich,5)); if(!it.length){toast('Rien dans ce flux pour l\'instant.');return;} go(session,{items:it,label:'Enrichissement'}); };
-  $('ex').onclick=()=>go(examSetup); $('rs').onclick=()=>go(reseau);
-  $('ck').onclick=()=>go(kanjiCourse); $('cg').onclick=()=>go(gramCourse); $('cp').onclick=()=>go(perso); $('ca').onclick=()=>go(about);
-}
-function pickNew(list,n){ // ordre : kanji d'abord (par n), puis vocab ★ des séances les plus anciennes
-  const k=list.filter(i=>i.type==='kanji').sort((a,b)=>a.k.n-b.k.n), v=list.filter(i=>i.type==='vocab'), s=list.filter(i=>i.type==='sent');
-  const out=[]; let i=0; while(out.length<n&&(k[i]||v[i]||s[i])){ if(k[i]) out.push(k[i]); if(v[i]&&out.length<n) out.push(v[i]); if(s[i]&&out.length<n&&i%2===0) out.push(s[i]); i++; } return out;
-}
-
-/* ═══════ COURS KANJI ═══════ */
-function kanjiCourse(){
-  head('Version et kanji',D.manifest.cours.kanji.prof);
-  const v=$('view'); v.innerHTML=`<div class="scroll"><div class="sec" style="margin-top:6px">Séances</div><div id="list"></div><div class="sec">Vue d'ensemble</div><button class="card" id="grid"><span class="g jp">表</span><span class="b"><b>Grille des 166</b><small>progression de chaque kanji</small></span><span class="arrow">›</span></button></div>`;
-  const list=$('list');
-  D.manifest.cours.kanji.seances.forEach(s=>{
-    const d=D.kanji[s.id]; if(!d) return;
-    const fut=d.date>today(), mast=d.kanji.filter(k=>kanjiLevel(k.k)>=3).length, p=mast/d.kanji.length;
-    const b=document.createElement('button'); b.className='card'+(fut?' dim':'');
-    b.innerHTML=`<span class="mini-enso ${p>=1?'full':''}">${ensoSVG(p)}</span><span class="b"><b>${d.titre.replace('Séance ','S')}</b><small>${fdate(d.date)} · ${d.kanji.length} kanji · n°${d.range[0]}–${d.range[1]}${fut?' · à venir':''}${s.src==='liste'?' <span class="tag">traductions provisoires</span>':''}</small></span><span class="arrow">›</span>`;
-    b.onclick=()=>go(seance,s.id); list.appendChild(b);
-  });
-  $('grid').onclick=()=>go(grid);
-}
-function grid(){
-  head('Grille des 166','kanji du semestre');
-  const seen=KANJI.filter(k=>kanjiSeen(k.k)).length, m=KANJI.filter(k=>kanjiLevel(k.k)>=3).length;
-  info(`<b>${m}</b> solides`,`${seen} déjà vus en cours`); setBar(m/KANJI.length);
-  $('view').innerHTML=`<div class="scroll"><div class="legend"><span><i></i>pas encore vu</span><span><i style="border-color:var(--ko)"></i>fragile</span><span><i style="border-color:var(--gold)"></i>en cours</span><span><i style="border-color:var(--ok)"></i>solide</span><span><i style="border-color:var(--seal);background:var(--sel)"></i>maîtrisé</span></div><div class="kgrid" id="g"></div></div>`;
-  const g=$('g');
-  KANJI.forEach(k=>{ const b=document.createElement('button'); b.className='kc jp l'+kanjiLevel(k.k)+(kanjiSeen(k.k)?'':' future'); b.innerHTML=`${k.k}<em>${k.n}</em><small>${k.seance.replace('S','')}</small>`; b.onclick=()=>go(fiche,k.k); g.appendChild(b); });
-}
-function seance(id){
-  const d=D.kanji[id]; head(d.titre.replace(' — ',' · '),fdate(d.date)+' · '+d.kanji.length+' kanji');
-  const m=d.kanji.filter(k=>kanjiLevel(k.k)>=3).length; info(`<b>${m}</b> / ${d.kanji.length} solides`,d.date>today()?'séance à venir':''); setBar(m/d.kanji.length);
-  $('view').innerHTML=`<div class="scroll"><div class="kgrid" id="g" style="margin-top:6px"></div>
-    <div class="sec">Travailler cette séance</div>
-    <button class="card" id="dec"><span class="g">📖</span><span class="b"><b>Découvrir la séance</b><small>parcours guidé par bloc, avec contrôles</small></span><span class="arrow">›</span></button>
-    <button class="card" id="q"><span class="g">⚡︎</span><span class="b"><b>Réviser la séance</b><small>kanji + vocabulaire ★, quel que soit l'échéancier</small></span><span class="arrow">›</span></button>
-    <button class="card" id="w"><span class="g">✍︎</span><span class="b"><b>Tracer la séance</b><small>tous les kanji, dans l'ordre des traits</small></span><span class="arrow">›</span></button>
-    </div>`;
-  const host=$('g').parentNode; $('g').remove();
-  (d.blocs||[{nom:'',from:d.range[0],to:d.range[1]}]).forEach(bl=>{
-    const h=document.createElement('div'); h.className='bloc'; h.innerHTML=`<h4>${bl.nom}</h4><span></span><b>n°${bl.from}–${bl.to}</b>`; host.insertBefore(h,host.firstChild.nextSibling);
-    const g=document.createElement('div'); g.className='kgrid'; host.insertBefore(g,h.nextSibling);
-    d.kanji.filter(k=>k.n>=bl.from&&k.n<=bl.to).forEach(k=>{ const b=document.createElement('button'); b.className='kc jp l'+kanjiLevel(k.k); b.innerHTML=`${k.k}<em>${k.n}</em><small>${k.strokes}t</small>`; b.onclick=()=>go(fiche,k.k); g.appendChild(b); });
-  });
-  $('dec').onclick=()=>go(decouvrir,id);
-  $('q').onclick=()=>{ const items=[]; d.kanji.forEach(k=>{ items.push({id:'k:'+k.k,type:'kanji',k,flow:'exam'}); k.vocab.filter(v=>v.star!==false).forEach(v=>items.push({id:'v:'+v.w+'/'+v.r,type:'vocab',v:{...v,seance:id,kanji:k.k},flow:'exam'})); }); go(session,{items:sh(items),label:d.titre.replace('Séance ','S').split(' — ')[0]}); };
-  $('w').onclick=()=>go(traceRun,d.kanji.map(k=>k.k));
-}
-
-/* ═══════ TRACÉ (moteur) ═══════ */
-function parsePath(d){ // retourne [[x,y]...] points approximatifs (début, fin et points de contrôle) + début/fin exacts
-  const toks=d.match(/[MmCcLlSsHhVvZz]|-?\d*\.?\d+(?:e-?\d+)?/g); let i=0,x=0,y=0,cmd='',pts=[],start=null;
-  const num=()=>parseFloat(toks[i++]);
+/* ═══════ TRACÉ ═══════ */
+function parsePath(d){ const toks=d.match(/[MmCcLlSsHhVvZz]|-?\d*\.?\d+(?:e-?\d+)?/g); let i=0,x=0,y=0,cmd='',pts=[],start=null; const num=()=>parseFloat(toks[i++]);
   while(i<toks.length){ const t=toks[i]; if(/[A-Za-z]/.test(t)){cmd=t;i++;}
     if(cmd==='M'){x=num();y=num();cmd='L';} else if(cmd==='m'){x+=num();y+=num();cmd='l';}
     else if(cmd==='C'){num();num();num();num();x=num();y=num();} else if(cmd==='c'){num();num();num();num();x+=num();y+=num();}
     else if(cmd==='S'){num();num();x=num();y=num();} else if(cmd==='s'){num();num();x+=num();y+=num();}
     else if(cmd==='L'){x=num();y=num();} else if(cmd==='l'){x+=num();y+=num();}
     else if(cmd==='H'){x=num();} else if(cmd==='h'){x+=num();} else if(cmd==='V'){y=num();} else if(cmd==='v'){y+=num();}
-    else if(cmd==='Z'||cmd==='z'){i++;continue;} else {i++;continue;}
+    else {i++;continue;}
     if(!start) start=[x,y]; pts.push([x,y]); }
-  return {start,end:pts[pts.length-1],pts};
-}
-function drawKanji(box,k,opts={}){ // opts: {animate, upto, highlight, numbers, ghost}
-  const paths=D.strokes[k]||[], n=opts.upto==null?paths.length:opts.upto;
+  return {start,end:pts[pts.length-1],pts}; }
+function miniKanji(k,hi){ const p=D.strokes[k]||[]; return `<svg viewBox="0 0 109 109">${p.map((d,i)=>`<path class="${i===hi?'st':'gl'}" d="${d}"/>`).join('')}</svg>`; }
+function drawKanji(box,k,o={}){ const paths=D.strokes[k]||[], n=o.upto==null?paths.length:o.upto;
   let svg=`<svg viewBox="0 0 109 109"><line class="grid-l" x1="54.5" y1="4" x2="54.5" y2="105"/><line class="grid-l" x1="4" y1="54.5" x2="105" y2="54.5"/>`;
-  if(opts.ghost!==false) paths.forEach(d=>svg+=`<path class="gl" d="${d}"/>`);
-  paths.slice(0,n).forEach((d,i)=>svg+=`<path class="st${opts.highlight===i?' hi':''}${opts.done&&opts.done.has(i)?' ok':''}" d="${d}" ${opts.animate?'data-anim="1"':''}/>`);
-  if(opts.numbers) paths.forEach((d,i)=>{ const p=parsePath(d).start; svg+=`<text class="num" x="${Math.min(100,p[0]+2)}" y="${Math.max(9,p[1]-2)}">${i+1}</text>`; });
+  if(o.ghost!==false) paths.forEach(d=>svg+=`<path class="gl" d="${d}"/>`);
+  paths.slice(0,n).forEach((d,i)=>svg+=`<path class="st${o.highlight===i?' hi':''}${o.done&&o.done.has(i)?' ok':''}" d="${d}" ${o.animate?'data-anim="1"':''}/>`);
+  if(o.numbers) paths.forEach((d,i)=>{ const p=parsePath(d).start; svg+=`<text class="num" x="${Math.min(100,p[0]+2)}" y="${Math.max(9,p[1]-2)}">${i+1}</text>`; });
   svg+='</svg>'; box.innerHTML=svg;
-  if(opts.animate){ const els=[...box.querySelectorAll('path.st')]; let t=0;
-    els.forEach((el,i)=>{ const L=el.getTotalLength(); el.style.strokeDasharray=L; el.style.strokeDashoffset=L; el.style.transition='none';
+  if(o.animate){ const els=[...box.querySelectorAll('path.st')]; let t=0;
+    els.forEach(el=>{ let L=100; try{ L=el.getTotalLength(); }catch(e){} el.style.strokeDasharray=L; el.style.strokeDashoffset=L; el.style.transition='none';
       setTimeout(()=>{ el.style.transition=`stroke-dashoffset ${Math.max(.25,L/140)}s ease-out`; el.style.strokeDashoffset=0; },t); t+=Math.max(250,L/140*1000)+120; });
-    return t; }
-  return 0;
-}
+    return t; } return 0; }
 function traceEngine(box,k,onDone,onProgress){
   const paths=D.strokes[k]||[]; let i=0,drawing=false,pts=[],err=0;
-  const cv=document.createElement('canvas'); box.appendChild(cv); const c=cv.getContext('2d');
+  const cv=document.createElement('canvas'); const c=cv.getContext('2d');
   const fit=()=>{ const r=cv.getBoundingClientRect(),dp=devicePixelRatio||1; cv.width=r.width*dp;cv.height=r.height*dp; c.setTransform(dp,0,0,dp,0,0); c.lineWidth=Math.max(6,r.width/26); c.lineCap='round';c.lineJoin='round'; c.strokeStyle=getComputedStyle(document.documentElement).getPropertyValue('--ink').trim()||'#000'; };
-  setTimeout(fit,20);
+  const wrap=()=>box.querySelector('.svgwrap')||box;
   const toUnit=p=>{ const r=cv.getBoundingClientRect(); return [p[0]/r.width*109,p[1]/r.height*109]; };
   const pos=e=>{ const r=cv.getBoundingClientRect(),t=e.touches?e.touches[0]:e; return [t.clientX-r.left,t.clientY-r.top]; };
-  const redraw=()=>drawKanji(box.querySelector('.svgwrap')||box,k,{upto:i,done:new Set([...Array(i).keys()]),ghost:true});
+  const redraw=(hl)=>{ drawKanji(wrap(),k,{upto:hl!=null?hl+1:i,highlight:hl,done:new Set([...Array(i).keys()]),ghost:true}); box.appendChild(cv); setTimeout(fit,10); };
   const start=e=>{ if(i>=paths.length)return; e.preventDefault(); drawing=true; pts=[pos(e)]; c.beginPath(); c.moveTo(...pts[0]); };
   const move=e=>{ if(!drawing)return; e.preventDefault(); const p=pos(e); pts.push(p); c.lineTo(...p); c.stroke(); };
-  const end=()=>{ if(!drawing)return; drawing=false; c.clearRect(0,0,cv.width,cv.height);
-    if(pts.length<2) return;
-    const exp=parsePath(paths[i]); const a=toUnit(pts[0]),b=toUnit(pts[pts.length-1]);
-    const dist=(p,q)=>Math.hypot(p[0]-q[0],p[1]-q[1]);
-    let len=0; for(let j=1;j<pts.length;j++) len+=dist(toUnit(pts[j-1]),toUnit(pts[j]));
-    let elen=0; for(let j=1;j<exp.pts.length;j++) elen+=dist(exp.pts[j-1],exp.pts[j]);
-    const okStart=dist(a,exp.start)<14, okEnd=dist(b,exp.end)<16, okLen=elen<8?len<25:(len>elen*.45&&len<elen*2.2);
-    if(okStart&&okEnd&&okLen){ i++; vib(12); redraw(); onProgress&&onProgress(i,paths.length,err); if(i>=paths.length){ onDone&&onDone(err); } }
+  const end=()=>{ if(!drawing)return; drawing=false; c.clearRect(0,0,cv.width,cv.height); if(pts.length<2) return;
+    const exp=parsePath(paths[i]); const a=toUnit(pts[0]),b=toUnit(pts[pts.length-1]); const dist=(p,q)=>Math.hypot(p[0]-q[0],p[1]-q[1]);
+    let len=0; for(let j=1;j<pts.length;j++) len+=dist(toUnit(pts[j-1]),toUnit(pts[j])); let elen=0; for(let j=1;j<exp.pts.length;j++) elen+=dist(exp.pts[j-1],exp.pts[j]);
+    const okS=dist(a,exp.start)<14, okE=dist(b,exp.end)<16, okL=elen<8?len<25:(len>elen*.45&&len<elen*2.2);
+    if(okS&&okE&&okL){ i++; vib(12); redraw(); onProgress&&onProgress(i,paths.length,err); if(i>=paths.length) onDone&&onDone(err); }
     else { err++; vib([30,30,30]); const wrongDir=dist(a,exp.end)<14&&dist(b,exp.start)<16;
-      onProgress&&onProgress(i,paths.length,err,wrongDir?'Bon trait, mais dans le mauvais sens.':(!okStart?'Le trait ne part pas du bon endroit.':'Le trait ne finit pas au bon endroit.'));
-      // montrer le trait attendu
-      drawKanji(box.querySelector('.svgwrap')||box,k,{upto:i+1,highlight:i,done:new Set([...Array(i).keys()]),ghost:true}); }
-    box.appendChild(cv); setTimeout(fit,10); };
+      onProgress&&onProgress(i,paths.length,err,wrongDir?'Bon trait, mais dans le mauvais sens.':(!okS?'Le trait ne part pas du bon endroit.':'Le trait ne finit pas au bon endroit.')); redraw(i); } };
   cv.addEventListener('touchstart',start,{passive:false});cv.addEventListener('touchmove',move,{passive:false});cv.addEventListener('touchend',end);cv.addEventListener('touchcancel',end);
   cv.addEventListener('mousedown',start);cv.addEventListener('mousemove',move);addEventListener('mouseup',end);
-  redraw(); box.appendChild(cv); setTimeout(fit,20);
-  return {reset(){ i=0;err=0;redraw();box.appendChild(cv);setTimeout(fit,10); },get index(){return i;},get total(){return paths.length;},showStroke(j){ drawKanji(box.querySelector('.svgwrap')||box,k,{upto:j+1,highlight:j,done:new Set([...Array(i).keys()]),ghost:true}); box.appendChild(cv); setTimeout(fit,10); }};
+  redraw();
+  return {reset(){i=0;err=0;redraw();},get index(){return i;},get total(){return paths.length;},showStroke(j){redraw(j);}}; }
+/* quiz "trait n°N" avec réponses visuelles */
+function strokeOptions(k,target){ const n=(D.strokes[k]||[]).length; const others=pick([...Array(n).keys()].filter(i=>i!==target),3); return sh([target,...others]); }
+/* ═══════ CARTES (moteur de questions) ═══════ */
+/* Chaque carte : rendu dans #view, appelle cb(good, g) où g = 0/1/2. opts: {first} */
+const CARDS={};
+function stageQ(kind,body,extra){ $('view').innerHTML=`<div class="rv"><div class="rcard"><div class="kind">${kind}</div>${body}</div>${extra||''}</div>`; return document.querySelector('.rcard'); }
+function optsBox(list,render,cb,cls){ const box=document.createElement('div'); box.className='opts'; let lock=false;
+  list.forEach(o=>{ const b=document.createElement('button'); b.className='opt '+(cls||''); b.innerHTML=render(o.v); b.dataset.i=o.i;
+    b.onclick=()=>{ if(lock)return; lock=true; const good=o.ok; [...box.children].forEach(x=>{ if(list[+x.dataset.i]&&list[+x.dataset.i].ok) x.classList.add('ok'); else x.classList.add('dim'); }); if(!good){ b.classList.remove('dim'); b.classList.add('ko'); } cb(good); };
+    box.appendChild(b); });
+  return box; }
+const mk=(vals,okIdx)=>vals.map((v,i)=>({v,ok:i===okIdx,i}));
+function distinct(arr,key){ const s=new Set(),o=[]; arr.forEach(x=>{ const k=key(x); if(!s.has(k)){s.add(k);o.push(x);} }); return o; }
+
+CARDS.kanji=(it,cb,o)=>{ const k=it.k, first=o&&o.first;
+  const card=stageQ(first?'nouveau kanji':'kanji',`<div class="big jp">${k.k}</div><div class="sub">${k.strokes} traits · n°${k.n}</div><div class="ans hidden" id="ans"><div class="fr">${k.fr}</div><div class="sub jps">${k.on.length?'ON '+k.on.join('・'):''}${k.kun.length?(k.on.length?' · ':'')+'kun '+k.kun.join('・'):''}</div></div>`,
+    `<button class="reveal" id="rv">Lecture et sens</button><div class="grade hidden" id="gr"><button class="g0">Raté</button><button class="g1">Difficile</button><button class="g2">Facile</button></div>`);
+  $('rv').onclick=()=>{ $('ans').classList.remove('hidden'); $('rv').classList.add('hidden'); $('gr').classList.remove('hidden'); };
+  $('gr').querySelectorAll('button').forEach((b,g)=>b.onclick=()=>{ stamp(card,g>0); cb(g>0,g); }); };
+
+CARDS.ksens=(it,cb)=>{ const k=it.k; const others=pick(KANJI.filter(x=>x.k!==k.k&&x.fr!==k.fr),3);
+  const card=stageQ('sens du kanji',`<div class="big jp">${k.k}</div>`); const box=optsBox(mk(sh([k,...others]).map(x=>x),null).map((o,i,arr)=>({v:arr[i].v.fr,ok:arr[i].v.k===k.k,i})),v=>v,good=>{ stamp(card,good); cb(good,good?2:0); }); card.parentNode.appendChild(box); };
+
+CARDS.kcle=(it,cb)=>{ const k=it.k, c=it.c||cleOf(k.k); const others=pick(distinct(KANJI.map(x=>cleOf(x.k)).filter(x=>x&&x.n!==c.n),x=>x.n),3);
+  const card=stageQ('quelle est la clé ?',`<div class="big jp">${k.k}</div><div class="sub">${k.fr}</div>`);
+  const list=sh([c,...others]).map((x,i)=>({v:x,ok:x.n===c.n,i}));
+  const box=optsBox(list,v=>`<span class="jp" style="font-size:26px">${v.c}${v.v&&v.v.length?' <small style="font-size:14px;color:var(--ink2)">'+v.v[0]+'</small>':''}</span>`,good=>{ stamp(card,good); cb(good,good?2:0); }); card.parentNode.appendChild(box); };
+
+CARDS.clesens=(it,cb)=>{ const c=it.c; const others=pick(D.cles.filter(x=>x.n!==c.n&&x.fr!==c.fr&&x.n<=140),3);
+  const card=stageQ('sens de la clé',`<div class="big jp">${c.c}</div><div class="sub jps">${c.nom||c.r}</div>`);
+  const list=sh([c,...others]).map((x,i)=>({v:x.fr,ok:x.n===c.n,i}));
+  const box=optsBox(list,v=>v,good=>{ stamp(card,good); cb(good,good?2:0); }); card.parentNode.appendChild(box); };
+
+CARDS.vocab=(it,cb,o)=>{ const v=it.v, first=o&&o.first, mode=(o&&o.mode)||'reco';
+  const pool=VOCAB.filter(x=>x.id!==v.id&&x.fr&&x.fr!==v.fr&&(x.seance===v.seance||Math.random()<.3)); let others=pick(pool,3);
+  while(others.length<3){ const c=VOCAB[Math.random()*VOCAB.length|0]; if(c.id!==v.id&&c.fr&&c.fr!==v.fr&&!others.includes(c)) others.push(c); }
+  if(mode==='clavier'){ const card=stageQ('écris la lecture',`<div class="mid jp">${v.w}</div><div class="sub">${v.fr}</div>`,`<div class="kbd"><input id="in" class="jps" placeholder="ひらがな" autocomplete="off" autocapitalize="off" spellcheck="false"></div><div class="grade" style="grid-template-columns:1fr"><button id="val">Valider</button></div>`);
+    const inp=$('in'); setTimeout(()=>inp.focus(),50); let done=false; const val=()=>{ if(done)return; done=true; const g=inp.value.trim()===v.r; inp.className='jps '+(g?'ok':'ko'); if(!g) inp.value=v.r; stamp(card,g); cb(g,g?2:0); };
+    $('val').onclick=val; inp.onkeydown=e=>{ if(e.key==='Enter') val(); }; return; }
+  const list=sh([v,...others]);
+  if(mode==='rappel'){ const card=stageQ('français → japonais'+(v.star===true?' ★':''),`<div class="fr">${v.fr}</div>`);
+    const box=optsBox(list.map((x,i)=>({v:x,ok:x.id===v.id,i})),x=>`<span class="jp">${rubyW(x.w,x.r)}</span>`,good=>{ stamp(card,good); if(S.opt.autoSpeak) TTS.speak(sayable(v.r||v.w)); cb(good,good?2:0); },'jp'); card.parentNode.appendChild(box); return; }
+  const card=stageQ((first?'nouveau mot':'japonais → français')+(v.star===true?' ★':''),`<div class="mid jp">${rubyW(v.w,v.r)}</div>${!S.opt.furi&&v.r&&v.r!==v.w?`<div class="sub jps">${v.r}</div>`:''}${first?`<div class="ans"><div class="fr">${v.fr}</div></div>`:''}<div style="margin-top:10px">${spk(sayable(v.r||v.w))}</div>`);
+  if(S.opt.autoSpeak) TTS.speak(sayable(v.r||v.w));
+  const box=optsBox(list.map((x,i)=>({v:x.fr,ok:x.id===v.id,i})),x=>x,good=>{ stamp(card,good); cb(good,good?2:0); }); card.parentNode.appendChild(box); };
+
+CARDS.listen=(it,cb,o)=>{ const v=it.v, toW=o&&o.mode==='ecriture';
+  const pool=VOCAB.filter(x=>x.id!==v.id&&x.fr&&x.fr!==v.fr&&(x.seance===v.seance||Math.random()<.3)); let others=pick(pool,3);
+  while(others.length<3){ const c=VOCAB[Math.random()*VOCAB.length|0]; if(c.id!==v.id&&c.fr!==v.fr&&!others.includes(c)) others.push(c); }
+  const say=sayable(v.r||v.w);
+  const card=stageQ(toW?'écoute → écriture':'écoute → sens',`<div style="padding:10px 0">${spk(say,true)}</div><div class="sub">Écoute, puis choisis</div>`);
+  setTimeout(()=>TTS.speak(say),250);
+  const list=sh([v,...others]);
+  const box=optsBox(list.map((x,i)=>({v:x,ok:x.id===v.id,i})),x=>toW?`<span class="jp">${x.w}</span>`:x.fr,good=>{ stamp(card,good); card.querySelector('.sub').innerHTML=`<span class="jp">${v.w}</span> · ${v.r} · ${v.fr}`; cb(good,good?2:0); },toW?'jp':''); card.parentNode.appendChild(box); };
+
+CARDS.dictee=(it,cb)=>{ const v=it.v, say=sayable(v.r||v.w);
+  const card=stageQ('dictée',`<div style="padding:10px 0">${spk(say,true)}</div><div class="sub">Écoute et écris en hiragana</div>`,`<div class="kbd"><input id="in" class="jps" placeholder="ひらがな" autocomplete="off" autocapitalize="off" spellcheck="false"></div><div class="grade" style="grid-template-columns:1fr"><button id="val">Valider</button></div>`);
+  setTimeout(()=>TTS.speak(say),250); const inp=$('in'); setTimeout(()=>inp.focus(),60); let done=false;
+  const val=()=>{ if(done)return; done=true; const g=inp.value.trim()===say; inp.className='jps '+(g?'ok':'ko'); if(!g) inp.value=say; card.querySelector('.sub').innerHTML=`<span class="jp">${v.w}</span> · ${v.fr}`; stamp(card,g); cb(g,g?2:0); };
+  $('val').onclick=val; inp.onkeydown=e=>{ if(e.key==='Enter') val(); }; };
+
+CARDS.cloze=(it,cb)=>{ const c=it.c; const masked=[...c.w].map((ch,j)=>j===c.i?'<span class="hole">?</span>':ch).join('');
+  const card=stageQ('quel kanji manque ?'+(c.star===true?' ★':''),`<div class="cloze jp">${masked}</div><div class="sub">${c.fr}</div>${S.opt.furi?`<div class="sub jps">${c.r}</div>`:''}`);
+  const list=sh([c.k,...c.d.slice(0,3)]).map((x,i)=>({v:x,ok:x===c.k,i}));
+  const box=optsBox(list,x=>x,good=>{ card.querySelector('.cloze').innerHTML=[...c.w].map((ch,j)=>j===c.i?`<span class="hole">${c.k}</span>`:ch).join(''); stamp(card,good); cb(good,good?2:0); },'jp'); card.parentNode.appendChild(box); };
+
+CARDS.read=(it,cb,o)=>{ const r=it.r; if(o&&o.mode==='clavier'){ CARDS.vocab({v:{...r,id:it.id}},cb,{mode:'clavier'}); return; }
+  const card=stageQ('quelle lecture ?'+(r.star===true?' ★':''),`<div class="mid jp">${r.w}</div><div class="sub">${r.fr}</div>`);
+  const list=sh([r.r,...r.d.slice(0,3)]).map((x,i)=>({v:x,ok:x===r.r,i}));
+  const box=optsBox(list,x=>`<span class="jps" style="font-size:19px">${x}</span>`,good=>{ stamp(card,good); if(S.opt.autoSpeak) TTS.speak(r.r); cb(good,good?2:0); }); card.parentNode.appendChild(box); };
+
+CARDS.lecture2=(it,cb)=>{ /* lecture → mot (あお → 青) */ const r=it.r; const pool=READS.filter(x=>x.w!==r.w&&(x.seance===r.seance||Math.random()<.3)); const others=distinct(pick(pool,6),x=>x.w).slice(0,3);
+  const card=stageQ('quel mot s\'écrit ainsi ?',`<div class="mid jps">${r.r}</div><div class="sub">${r.fr}</div>`);
+  const list=sh([r,...others]).map((x,i)=>({v:x.w,ok:x.w===r.w,i}));
+  const box=optsBox(list,x=>x,good=>{ stamp(card,good); cb(good,good?2:0); },'jp'); card.parentNode.appendChild(box); };
+
+CARDS.sent=(it,cb)=>{ const s=it.s; const toks=sh(s.tok.map((t,j)=>({t,j}))); let placed=[],done=false;
+  const card=stageQ('construire la phrase · '+s.point,`<div class="fr">${s.fr}</div>`,`<div class="builder"><div class="slot" id="slot"></div><div class="tokens" id="tk"></div><div class="tools" style="margin-top:12px"><button class="tb" id="undo">↶</button><button class="tb" id="check">Vérifier</button><button class="tb" id="showb">Réponse</button></div></div>`);
+  card.style.minHeight='110px'; const slot=$('slot'),tk=$('tk');
+  const redraw=()=>{ slot.innerHTML=placed.map(p=>`<span class="tk jp">${p.t}</span>`).join(''); [...tk.children].forEach(b=>b.classList.toggle('used',placed.some(p=>p.j===+b.dataset.j))); };
+  toks.forEach(o=>{ const b=document.createElement('button'); b.className='tk jp'; b.textContent=o.t; b.dataset.j=o.j; b.onclick=()=>{ if(done||b.classList.contains('used'))return; placed.push(o); redraw(); if(placed.length===s.tok.length) check(); }; tk.appendChild(b); });
+  $('undo').onclick=()=>{ if(done)return; placed.pop(); redraw(); slot.className='slot'; };
+  const fin=good=>{ done=true; slot.innerHTML=s.tok.map(t=>`<span class="tk jp">${t}</span>`).join(''); slot.className='slot ok'; card.querySelector('.fr').insertAdjacentHTML('afterend',`<div class="sub jp" style="font-size:17px">${s.jp} ${spk(s.jp)}</div>`); if(S.opt.autoSpeak) TTS.speak(s.jp); cb(good,good?2:0); };
+  const check=()=>{ if(done)return; const good=placed.length===s.tok.length&&placed.every((p,j)=>p.j===j); slot.className='slot '+(good?'ok':'ko'); stamp(card,good); if(good) fin(true); else later(()=>fin(false),600); };
+  $('check').onclick=check; $('showb').onclick=()=>{ if(done)return; stamp(card,false); fin(false); }; };
+
+CARDS.te=(it,cb,o)=>{ const v=it.v; const kb=o&&o.mode==='clavier';
+  if(kb){ const card=stageQ('forme en て',`<div class="mid jp">${v.w}</div><div class="sub">${v.fr}</div>`,`<div class="kbd"><input id="in" class="jp" placeholder="〜て" autocomplete="off" autocapitalize="off" spellcheck="false"></div><div class="grade" style="grid-template-columns:1fr"><button id="val">Valider</button></div>`);
+    const inp=$('in'); setTimeout(()=>inp.focus(),50); let done=false; const norm=s=>s.trim().replace(/\s/g,'');
+    const val=()=>{ if(done)return; done=true; const g=norm(inp.value)===norm(v.te)||norm(inp.value)===norm(v.te).replace(/^.*?(?=[ぁ-ん]+$)/,''); inp.className='jp '+(g?'ok':'ko'); if(!g) inp.value=v.te; stamp(card,g); cb(g,g?2:0); };
+    $('val').onclick=val; inp.onkeydown=e=>{ if(e.key==='Enter') val(); }; return; }
+  const others=distinct(pick(VERBS.filter(x=>x.te&&x.te!==v.te),6),x=>x.te).slice(0,3);
+  const card=stageQ('forme en て',`<div class="mid jp">${v.w}</div><div class="sub">${v.fr}</div>`);
+  const list=sh([v,...others]).map((x,i)=>({v:x.te,ok:x.te===v.te,i}));
+  const box=optsBox(list,x=>x,good=>{ stamp(card,good); cb(good,good?2:0); },'jp'); card.parentNode.appendChild(box); };
+
+CARDS.opp=(it,cb)=>{ const a=it.a, ans=a.opp[0]; const target=ADJS.find(x=>x.w===ans)||{w:ans,r:'',fr:''};
+  const others=pick(ADJS.filter(x=>x.w!==a.w&&!a.opp.includes(x.w)),3);
+  const card=stageQ('le contraire',`<div class="mid jp">${a.w}</div><div class="sub">${a.fr}</div>`);
+  const list=sh([target,...others]).map((x,i)=>({v:x,ok:a.opp.includes(x.w),i}));
+  const box=optsBox(list,x=>`<span class="jp">${x.w}</span>${x.fr?`<br><small style="font-size:11px;color:var(--ink2)">${x.fr}</small>`:''}`,good=>{ stamp(card,good); cb(good,good?2:0); },'jp'); card.parentNode.appendChild(box); };
+
+CARDS.prod=(it,cb)=>{ /* français → japonais, choix parmi 4 (production) */ const v=it.v; CARDS.vocab(it,cb,{mode:'rappel'}); };
+
+CARDS.stroke=(it,cb)=>{ const k=it.k, n=(D.strokes[k.k]||[]).length; const target=it.target!=null?it.target:Math.floor(Math.random()*n);
+  const card=stageQ(`ordre des traits`,`<div class="big jp" style="font-size:64px">${k.k}</div><div class="sub">Quel est le trait n°${target+1} ?</div>`);
+  const list=strokeOptions(k.k,target).map((idx,i)=>({v:idx,ok:idx===target,i}));
+  const box=optsBox(list,idx=>miniKanji(k.k,idx),good=>{ stamp(card,good); cb(good,good?2:0); }); card.parentNode.appendChild(box); };
+
+CARDS.count=(it,cb)=>{ const k=it.k, n=(D.strokes[k.k]||[]).length; const o=pick([n-2,n-1,n+1,n+2,n+3].filter(x=>x>0&&x!==n),3);
+  const card=stageQ('nombre de traits',`<div class="big jp">${k.k}</div><div class="sub">${k.fr}</div>`);
+  const list=sh([n,...o]).map((x,i)=>({v:x,ok:x===n,i}));
+  const box=optsBox(list,x=>x+' traits',good=>{ stamp(card,good); cb(good,good?2:0); }); card.parentNode.appendChild(box); };
+
+/* rendu générique d'un item selon un angle */
+function renderItem(it,angle,cb,o){
+  o=o||{};
+  switch(angle||it.type){
+    case 'kanji': return CARDS.kanji(it,cb,o);
+    case 'ksens': return CARDS.ksens(it,cb);
+    case 'kcle': { const c=cleOf(it.k.k); if(!c) return CARDS.ksens(it,cb); return CARDS.kcle({...it,c},cb); }
+    case 'stroke': return CARDS.stroke(it,cb);
+    case 'count': return CARDS.count(it,cb);
+    case 'vocab': case 'reco': return CARDS.vocab(it,cb,{first:o.first,mode:'reco'});
+    case 'rappel': return CARDS.vocab(it,cb,{mode:'rappel'});
+    case 'clavier': return CARDS.vocab(it,cb,{mode:'clavier'});
+    case 'listen': return TTS.ok?CARDS.listen(it,cb,{mode:'sens'}):CARDS.vocab(it,cb,{mode:'reco'});
+    case 'listenw': return TTS.ok?CARDS.listen(it,cb,{mode:'ecriture'}):CARDS.vocab(it,cb,{mode:'rappel'});
+    case 'dictee': return TTS.ok?CARDS.dictee(it,cb):CARDS.vocab(it,cb,{mode:'clavier'});
+    case 'cloze': return CARDS.cloze(it,cb);
+    case 'read': return CARDS.read(it,cb,o);
+    case 'lecture2': return CARDS.lecture2(it,cb);
+    case 'sent': return CARDS.sent(it,cb);
+    case 'te': return CARDS.te(it,cb,o);
+    case 'opp': return CARDS.opp(it,cb);
+    case 'cle': return CARDS.kcle(it,cb);
+    case 'clesens': return CARDS.clesens(it,cb);
+    default: return CARDS.vocab(it,cb,o);
+  }
 }
-const rubyW=(w,r)=>S.opt.furi&&r&&r!==w?`<ruby>${w}<rt>${r}</rt></ruby>`:w;
-const markUnseen=w=>[...w].map(ch=>(BYK[ch]&&!kanjiSeen(ch))?`<span class="notseen" title="vu en ${BYK[ch].seance}">${ch}</span>`:ch).join('');
+/* angles possibles pour un item (quiz multi-angles) */
+function anglesFor(it){
+  const A=[]; const M=S.opt.modes, hasAudio=TTS.ok&&M.ecoute;
+  if(it.type==='kanji'){ A.push('ksens','stroke','count'); if(cleOf(it.k.k)&&!(D.comp[it.k.k]||{}).self) A.push('kcle'); }
+  else if(it.type==='vocab'){ A.push('reco'); if(!it.v.kana) A.push('rappel'); if(M.clavier&&it.v.r) A.push('clavier'); if(hasAudio&&it.v.r){ A.push('listen'); if(!it.v.kana) A.push('listenw'); } if(hasAudio&&M.clavier&&it.v.r) A.push('dictee'); }
+  else if(it.type==='read'){ A.push('read','lecture2'); if(M.clavier) A.push('clavier'); }
+  else if(it.type==='cloze') A.push('cloze'); else if(it.type==='sent') A.push('sent');
+  else if(it.type==='te'){ A.push('te'); if(M.clavier) A.push('te'); } else if(it.type==='opp') A.push('opp'); else if(it.type==='cle') A.push('cle');
+  return A; }
+/* ═══════ SESSION (révision) ═══════ */
+function session({items,label,onEnd,free,weight}){
+  let q=items.slice(), i=0, total=q.length, ok=0, ko=0; const again=[];
+  head(label||'Révision',free?'ne compte pas dans la progression':'');
+  const next=()=>{ if(!q.length){ if(again.length&&!free) q=sh(again.splice(0)); else { fin(); return; } }
+    const it=q.shift(); info(`<b>${i}</b> / ${total}`,ko?'raté '+ko:''); setBar(i/Math.max(total,1));
+    const first=!st(it.id);
+    let angle=it.angle||null;
+    if(!angle){ if(it.type==='vocab'){ const A=anglesFor(it).filter(a=>a!=='reco'||true); angle=first?'reco':(A.length?A[Math.random()*A.length|0]:'reco'); }
+      else if(it.type==='read'&&S.opt.modes.clavier&&!first&&Math.random()<.4) angle='clavier'; else if(it.type==='te'&&S.opt.modes.clavier&&!first&&Math.random()<.5) return renderItem(it,'te',(g,gr)=>done(it,g,gr),{mode:'clavier'}); }
+    renderItem(it,angle,(g,gr)=>done(it,g,gr),{first}); };
+  const done=(it,good,g)=>{ if(!free) grade(it.id,g,weight); i++; if(!good){ ko++; if(!free) again.push(it); } else ok++; later(next,good?520:950); };
+  const fin=()=>{ setBar(1); info('',''); $('view').innerHTML=`<div class="end"><div class="big jp">${ko===0?'完':'了'}</div><p>${total} carte${total>1?'s':''} · ${ok} réussie${ok>1?'s':''} · ${ko} à revoir<br>${free?'Session libre, rien n\'a été enregistré.':ko===0?'Sans faute.':'Les ratés reviennent dans dix minutes.'}</p><button class="btn" id="bk">Terminer</button></div>`;
+    $('bk').onclick=()=>{ if(onEnd) onEnd(); else home_(); }; };
+  next(); }
+
+/* ═══════ ACCUEIL ═══════ */
+function home(){
+  head('言葉','Kanji · Grammaire · Clés');
+  const L=dueLists(), n=L.due.length, fresh=Math.min(S.opt.newPerDay,L.freshExam.length);
+  const seen=KANJI.filter(k=>kanjiSeen(k.k)), mast=seen.filter(k=>kanjiLevel(k.k)>=3).length, p=seen.length?mast/seen.length:0;
+  const s=SENT.length?SENT[(new Date().getDate()*7)%SENT.length]:null;
+  const days=[...Array(7)].map((_,i)=>{const d=new Date(Date.now()-(6-i)*DAY);return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');});
+  const dd=Math.ceil((new Date(D.manifest.cours.kanji.examen+'T12:00:00')-Date.now())/DAY);
+  $('view').innerHTML=`<div class="scroll">
+    <div class="hero"><div class="date">${new Date().toLocaleDateString('fr-FR',{weekday:'long',day:'numeric',month:'long'})}</div>
+      <div class="enso ${p>=1?'full':''}">${ensoSVG(p)}<div class="t"><b>${mast}</b><small>/ ${seen.length} kanji solides</small></div></div>
+      <div class="cal">${days.map(d=>`<i class="${S.log[d]?'on':''}"></i>`).join('')}</div>
+      ${s?`<div class="pd jp">${s.jp} ${spk(s.jp)}</div><div class="pdf">${s.fr}</div>`:''}
+      ${dd>0?`<div class="pdf" style="margin-top:10px;color:var(--seal)">examen de kanji dans ${dd} jour${dd>1?'s':''}</div>`:''}</div>
+    <button class="pri" id="rev"><span class="n">${n}</span><span class="t"><b>Réviser</b><small>${n?'à revoir maintenant':'rien en attente'}</small></span><span>›</span></button>
+    <div class="row"><button class="pri alt" id="new"><span class="n">${fresh}</span><span class="t"><b>Nouveaux</b><small>${L.freshExam.length} jamais vus</small></span></button>
+      <button class="pri alt" id="enr"><span class="n">${L.dueEnrich.length+Math.min(5,L.freshEnrich.length)}</span><span class="t"><b>Enrichir</b><small>hors ★</small></span></button></div>
+    <div class="sec">Cours</div>
+    <button class="card" id="ck"><span class="g jp">字</span><span class="b"><b>Version et kanji</b><small>${D.manifest.cours.kanji.seances.length} séances · examen le ${fdate(D.manifest.cours.kanji.examen)}</small></span><span class="arrow">›</span></button>
+    <button class="card" id="cg"><span class="g jp">文</span><span class="b"><b>Grammaire et thème</b><small>${D.manifest.cours.grammaire.lecons.length-1} leçons · ${VOCAB.filter(v=>v.src==='gram').length} mots · ${SENT.length} phrases</small></span><span class="arrow">›</span></button>
+    <button class="card" id="cc"><span class="g jp">氵</span><span class="b"><b>Les clés</b><small>cours de la séance 03 · les 214 clés · réseau</small></span><span class="arrow">›</span></button>
+    <div class="sec">S'entraîner</div>
+    <button class="card" id="gm"><span class="g">🎮</span><span class="b"><b>Jeux</b><small>quiz multi-angles · duel de séances · survie</small></span><span class="arrow">›</span></button>
+    <button class="card" id="fr"><span class="g">✦</span><span class="b"><b>Exercices libres</b><small>ce que tu veux, sans toucher à ta progression</small></span><span class="arrow">›</span></button>
+    <button class="card" id="ex"><span class="g">⏱</span><span class="b"><b>Examen blanc</b><small>chronométré · correction par type</small></span><span class="arrow">›</span></button>
+    <div class="sec">Outils</div>
+    <button class="card" id="cp"><span class="g">✎</span><span class="b"><b>Mes ajouts</b><small>${S.perso.length} mot${S.perso.length>1?'s':''} perso</small></span><span class="arrow">›</span></button>
+    <button class="card" id="ca"><span class="g">ⓘ</span><span class="b"><b>À propos</b><small>Moussa M. · crédits · contact</small></span><span class="arrow">›</span></button>
+    <p style="text-align:center;color:var(--ink3);font-size:11.5px;margin-top:16px">données du ${fdate(D.manifest.maj)} · v${D.manifest.version}${TTS.ok?' · audio ✓':''}</p></div>`;
+  $('rev').onclick=()=>{ if(!n){toast('Rien à réviser. Lance des nouveaux.');return;} go(session,{items:sh(L.due),label:'Révision'}); };
+  $('new').onclick=()=>{ if(!L.freshExam.length){toast('Tout a déjà été vu.');return;} go(session,{items:pickNew(L.freshExam,S.opt.newPerDay),label:'Nouveaux'}); };
+  $('enr').onclick=()=>{ const it=L.dueEnrich.concat(pickNew(L.freshEnrich,5)); if(!it.length){toast('Rien dans ce flux.');return;} go(session,{items:it,label:'Enrichissement'}); };
+  $('ck').onclick=()=>go(kanjiCourse); $('cg').onclick=()=>go(gramCourse); $('cc').onclick=()=>go(clesHome);
+  $('gm').onclick=()=>go(games); $('fr').onclick=()=>go(libre); $('ex').onclick=()=>go(examSetup); $('cp').onclick=()=>go(perso); $('ca').onclick=()=>go(about); }
+
+/* ═══════ COURS KANJI ═══════ */
+function kanjiCourse(){
+  head('Version et kanji',D.manifest.cours.kanji.prof);
+  $('view').innerHTML=`<div class="scroll"><div class="sec" style="margin-top:6px">Séances</div><div id="list"></div><div class="sec">Vue d'ensemble</div><button class="card" id="grid"><span class="g jp">表</span><span class="b"><b>Grille des 166</b><small>progression de chaque kanji</small></span><span class="arrow">›</span></button></div>`;
+  D.manifest.cours.kanji.seances.forEach(s=>{ const d=D.kanji[s.id]; if(!d) return; const fut=!unlocked(s.id), mast=d.kanji.filter(k=>kanjiLevel(k.k)>=3).length, p=mast/d.kanji.length;
+    const b=document.createElement('button'); b.className='card'+(fut?' dim':'');
+    b.innerHTML=`<span class="mini-enso ${p>=1?'full':''}">${ensoSVG(p)}</span><span class="b"><b>${d.titre.replace('Séance ','S')}</b><small>${fdate(d.date)} · ${d.kanji.length} kanji · n°${d.range[0]}–${d.range[1]}${fut?' · à venir':''}${s.src==='liste'?' <span class="tag">provisoire</span>':''}</small></span><span class="arrow">›</span>`;
+    b.onclick=()=>go(seance,s.id); $('list').appendChild(b); });
+  $('grid').onclick=()=>go(grid); }
+function grid(){ head('Grille des 166','kanji du semestre'); const seen=KANJI.filter(k=>kanjiSeen(k.k)).length, m=KANJI.filter(k=>kanjiLevel(k.k)>=3).length;
+  info(`<b>${m}</b> solides`,`${seen} débloqués`); setBar(m/KANJI.length);
+  $('view').innerHTML=`<div class="scroll"><div class="legend"><span><i></i>pas encore vu</span><span><i style="border-color:var(--ko)"></i>fragile</span><span><i style="border-color:var(--gold)"></i>en cours</span><span><i style="border-color:var(--ok)"></i>solide</span><span><i style="border-color:var(--seal);background:var(--sel)"></i>maîtrisé</span></div><div class="kgrid" id="g"></div></div>`;
+  KANJI.forEach(k=>{ const b=document.createElement('button'); b.className='kc jp l'+kanjiLevel(k.k)+(kanjiSeen(k.k)?'':' future'); b.innerHTML=`${k.k}<em>${k.n}</em><small>${k.seance.replace('S','')}</small>`; b.onclick=()=>go(fiche,k.k); $('g').appendChild(b); }); }
+function seance(id){ const d=D.kanji[id]; head(d.titre.replace(' — ',' · '),fdate(d.date)+' · '+d.kanji.length+' kanji');
+  const m=d.kanji.filter(k=>kanjiLevel(k.k)>=3).length, fut=!unlocked(id); info(`<b>${m}</b> / ${d.kanji.length} solides`,fut?'séance à venir':''); setBar(m/d.kanji.length);
+  $('view').innerHTML=`<div class="scroll"><div id="blocs"></div>
+    ${fut?`<button class="tog ${S.unlocked[id]?'on':''}" id="unl" style="margin-top:14px"><div>Marquer comme vue en cours<small>débloque ces kanji pour la révision et les jeux</small></div><div class="sw"></div></button>`:''}
+    <div class="sec">Travailler cette séance</div>
+    <button class="card" id="dec"><span class="g">📖</span><span class="b"><b>Découvrir la séance</b><small>parcours guidé par bloc, avec contrôles</small></span><span class="arrow">›</span></button>
+    <button class="card" id="q"><span class="g">⚡︎</span><span class="b"><b>Réviser la séance</b><small>kanji + vocabulaire ★</small></span><span class="arrow">›</span></button>
+    <button class="card" id="w"><span class="g">✍︎</span><span class="b"><b>Tracer la séance</b><small>tous les kanji, dans l'ordre des traits</small></span><span class="arrow">›</span></button>
+    <button class="card" id="sv"><span class="g">♥</span><span class="b"><b>Survie sur cette séance</b><small>trois vies, difficulté croissante</small></span><span class="arrow">›</span></button></div>`;
+  const host=$('blocs');
+  (d.blocs||[{nom:'',from:d.range[0],to:d.range[1]}]).forEach(bl=>{ const h=document.createElement('div'); h.className='bloc'; h.innerHTML=`<h4>${bl.nom}</h4><span></span><b>n°${bl.from}–${bl.to}</b>`; host.appendChild(h);
+    const g=document.createElement('div'); g.className='kgrid'; host.appendChild(g);
+    d.kanji.filter(k=>k.n>=bl.from&&k.n<=bl.to).forEach(k=>{ const b=document.createElement('button'); b.className='kc jp l'+kanjiLevel(k.k); b.innerHTML=`${k.k}<em>${k.n}</em><small>${k.strokes}t</small>`; b.onclick=()=>go(fiche,k.k); g.appendChild(b); }); });
+  if($('unl')) $('unl').onclick=()=>{ S.unlocked[id]=!S.unlocked[id]; save(); go(seance,id); nav.splice(nav.length-2,1); };
+  $('dec').onclick=()=>go(decouvrir,id);
+  $('q').onclick=()=>go(session,{items:sh(seanceItems(id)),label:d.titre.split(' — ')[0].replace('Séance ','S')});
+  $('w').onclick=()=>go(traceRun,d.kanji.map(k=>k.k)); $('sv').onclick=()=>go(survival,id); }
+function seanceItems(id,all){ const d=D.kanji[id], it=[]; d.kanji.forEach(k=>{ it.push({id:'k:'+k.k,type:'kanji',k,flow:'exam'}); k.vocab.filter(v=>all||v.star!==false).forEach(v=>it.push({id:'v:'+v.w+'/'+v.r,type:'vocab',v:{...v,seance:id,kanji:k.k},flow:'exam'})); });
+  CLOZE.filter(c=>c.seance===id&&(all||c.star!==false)).forEach(c=>it.push({id:c.id,type:'cloze',c,flow:'exam'})); READS.filter(r=>r.seance===id&&(all||r.star!==false)).forEach(r=>it.push({id:r.id,type:'read',r,flow:'exam'})); return it; }
 
 /* ═══════ FICHE KANJI ═══════ */
-function fiche(k){
-  const x=BYK[k]; head(`<span class="jp">${k}</span> · ${x.fr}`,`n°${x.n} · ${x.seance} · ${x.strokes} trait${x.strokes>1?'s':''}`);
-  const L=kanjiLevel(k), s=st('k:'+k);
+function fiche(k){ const x=BYK[k]; head(`<span class="jp">${k}</span> · ${x.fr}`,`n°${x.n} · ${x.seance} · ${x.strokes} trait${x.strokes>1?'s':''}`);
+  const L=kanjiLevel(k), s=st('k:'+k), c=(D.comp||{})[k]||{}, cl=cleOf(k);
   info(['jamais révisé','fragile','en cours','solide','maîtrisé'][L], s?`prochaine révision ${s.due<=Date.now()?'maintenant':fdate(new Date(s.due).toISOString().slice(0,10))}`:''); setBar(L/4);
-  const words=x.vocab, related=VOCAB.filter(v=>v.src==='kanji'&&v.kanji!==k&&v.w.includes(k));
+  const related=VOCAB.filter(v=>v.src==='kanji'&&v.kanji!==k&&v.w.includes(k));
   $('view').innerHTML=`<div class="scroll"><div class="fiche">
     <div class="kbox jp" id="kb"><div class="svgwrap" id="sw"></div></div>
     <div class="tools"><button class="tb" id="anim">▶︎ Tracé</button><button class="tb" id="nums">1 2 3</button><button class="tb" id="trace">✍︎ Écrire</button><button class="tb" id="quizt">Trait n°?</button></div>
     <div class="hint" id="hint"></div>
-    <div class="readings">${x.on.length?`<div class="rd"><b>ON</b><span class="jps">${x.on.join('・')}</span></div>`:''}${x.kun.length?`<div class="rd"><b>kun</b><span class="jps">${x.kun.join('・')}</span></div>`:''}</div>
+    <div class="readings">${x.on.length?`<div class="rd"><b>ON</b><span class="jps">${x.on.join('・')}</span> ${spk(x.on[0])}</div>`:''}${x.kun.length?`<div class="rd"><b>kun</b><span class="jps">${x.kun.join('・')}</span> ${spk(x.kun[0].replace(/-/g,''))}</div>`:''}</div>
+    ${(c.parts&&c.parts.length)||cl?`<div class="comp">${(c.parts||[]).map(p=>`<span class="cp jp ${p===c.rad?'rad':''}">${p}${p===c.rad&&cl?`<small>${cl.nom||cl.r} · ${cl.fr.toLowerCase()}</small>`:''}</span>`).join('')}${(!c.parts||!c.parts.length)&&cl?`<span class="cp jp rad">${cl.c}<small>${cl.nom||cl.r} · ${cl.fr.toLowerCase()}</small></span>`:''}</div>${cl?`<p class="hint">Clé n°${cl.n} ${c.self?'— ce kanji est lui-même une clé':''}</p>`:''}`:''}
     <div class="tools"><button class="tb" id="furi">${S.opt.furi?'Masquer':'Afficher'} les lectures</button></div>
     <div class="vlist" id="vl"></div>
     ${related.length?`<div class="sec" style="align-self:flex-start">Ce kanji ailleurs</div><div class="vlist" id="rl"></div>`:''}
-    <div class="sec" style="align-self:flex-start">Composants</div>
-    ${(()=>{const c=(D.comp||{})[k]||{};return (c.parts&&c.parts.length)?`<div class="comp">${c.parts.map(p=>`<span class="cp jp ${p===c.rad?'rad':''}">${p}${p===c.rad&&c.radfr?`<small>${c.radfr}</small>`:''}</span>`).join('')}</div><p class="hint">${c.rad?`Clé : ${c.rad}${c.radfr?' — '+c.radfr:''}. `:''}${x.strokes} traits.</p>`:`<p class="hint">${x.strokes} traits.</p>`;})()}
   </div></div>`;
   const sw=$('sw'), kb=$('kb'); let mode='view', eng=null, nums=false;
-  const show=()=>{ kb.querySelectorAll('canvas').forEach(c=>c.remove()); drawKanji(sw,k,{numbers:nums}); };
-  show();
+  const show=()=>{ kb.querySelectorAll('canvas').forEach(c=>c.remove()); drawKanji(sw,k,{numbers:nums}); }; show();
   $('anim').onclick=()=>{ mode='view'; kb.querySelectorAll('canvas').forEach(c=>c.remove()); const t=drawKanji(sw,k,{animate:true,numbers:nums}); $('hint').textContent='Ordre et sens des traits'; setTimeout(()=>{ if(mode==='view') $('hint').textContent=''; },t); };
   $('nums').onclick=()=>{ nums=!nums; $('nums').classList.toggle('on',nums); if(mode==='view') show(); };
-  $('trace').onclick=()=>{ mode='trace'; $('trace').classList.add('on'); $('quizt').classList.remove('on'); kb.querySelectorAll('canvas').forEach(c=>c.remove()); $('hint').textContent='Trace le trait 1 sur le modèle';
-    eng=traceEngine(kb,k,err=>{ $('hint').innerHTML=err?`Terminé avec ${err} erreur${err>1?'s':''}. <button class="tb" id="again">Refaire</button>`:`Sans faute. <button class="tb" id="again">Refaire</button>`; $('again').onclick=()=>{eng.reset();$('hint').textContent='Trace le trait 1';}; if(!err) grade('k:'+k,2); },
-      (i,n,err,msg)=>{ $('hint').textContent=msg?msg+' Trait '+(i+1)+' sur '+n+'.':`Trait ${i+1} sur ${n}`; }); };
+  $('trace').onclick=()=>{ mode='trace'; $('trace').classList.add('on'); $('quizt').classList.remove('on'); kb.querySelectorAll('canvas').forEach(c=>c.remove()); $('hint').textContent='Trace le trait 1';
+    eng=traceEngine(kb,k,err=>{ $('hint').innerHTML=(err?`Terminé avec ${err} erreur${err>1?'s':''}.`:'Sans faute.')+` <button class="tb" id="again">Refaire</button>`; $('again').onclick=()=>{eng.reset();$('hint').textContent='Trace le trait 1';}; if(!err) grade('k:'+k,2); },(i,n,err,msg)=>{ $('hint').textContent=msg?msg+' Trait '+(i+1)+' sur '+n+'.':`Trait ${i+1} sur ${n}`; }); };
   $('quizt').onclick=()=>{ mode='quiz'; $('quizt').classList.add('on'); $('trace').classList.remove('on'); kb.querySelectorAll('canvas').forEach(c=>c.remove());
-    const n=D.strokes[k].length, target=Math.floor(Math.random()*n); let done=false;
-    drawKanji(sw,k,{upto:0,ghost:true}); $('hint').textContent=`Trace uniquement le trait n°${target+1} (sur ${n})`;
-    // moteur ad hoc : un seul trait attendu
-    const cv=document.createElement('canvas'); kb.appendChild(cv); const c=cv.getContext('2d'); let drawing=false,pts=[];
-    const fit=()=>{ const r=cv.getBoundingClientRect(),dp=devicePixelRatio||1; cv.width=r.width*dp;cv.height=r.height*dp;c.setTransform(dp,0,0,dp,0,0);c.lineWidth=Math.max(6,r.width/26);c.lineCap='round';c.lineJoin='round';c.strokeStyle=getComputedStyle(document.documentElement).getPropertyValue('--ink').trim(); }; setTimeout(fit,20);
-    const pos=e=>{ const r=cv.getBoundingClientRect(),t=e.touches?e.touches[0]:e; return [(t.clientX-r.left)/r.width*109,(t.clientY-r.top)/r.height*109]; };
-    const sc=p=>{ const r=cv.getBoundingClientRect(); return [p[0]/109*r.width,p[1]/109*r.height]; };
-    cv.addEventListener('touchstart',e=>{ if(done)return;e.preventDefault();drawing=true;pts=[pos(e)];c.beginPath();c.moveTo(...sc(pts[0])); },{passive:false});
-    cv.addEventListener('touchmove',e=>{ if(!drawing)return;e.preventDefault();const p=pos(e);pts.push(p);c.lineTo(...sc(p));c.stroke(); },{passive:false});
-    cv.addEventListener('mousedown',e=>{ if(done)return;drawing=true;pts=[pos(e)];c.beginPath();c.moveTo(...sc(pts[0])); });
-    cv.addEventListener('mousemove',e=>{ if(!drawing)return;const p=pos(e);pts.push(p);c.lineTo(...sc(p));c.stroke(); });
-    const end=()=>{ if(!drawing)return; drawing=false; c.clearRect(0,0,cv.width,cv.height); if(pts.length<2)return;
-      const dist=(p,q)=>Math.hypot(p[0]-q[0],p[1]-q[1]); const a=pts[0],b=pts[pts.length-1];
-      let best=-1,bd=1e9; D.strokes[k].forEach((d,j)=>{ const e=parsePath(d); const dd=dist(a,e.start)+dist(b,e.end); if(dd<bd){bd=dd;best=j;} });
-      done=true; kb.querySelectorAll('canvas').forEach(x=>x.remove());
-      if(best===target&&bd<34){ drawKanji(sw,k,{upto:target+1,highlight:target,ghost:true}); $('hint').innerHTML=`Exact, c'était bien le trait ${target+1}. <button class="tb" id="again">Un autre</button>`; grade('k:'+k,2); vib(12); }
-      else { drawKanji(sw,k,{upto:target+1,highlight:target,ghost:true}); $('hint').innerHTML=`${best>=0&&bd<34?'Tu as tracé le trait '+(best+1)+'. ':''}Le trait ${target+1} est celui en rouge. <button class="tb" id="again">Un autre</button>`; grade('k:'+k,0); vib([30,30,30]); }
-      $('again').onclick=()=>$('quizt').onclick(); };
-    cv.addEventListener('touchend',end);cv.addEventListener('touchcancel',end);cv.addEventListener('mouseup',end); };
+    const n=(D.strokes[k]||[]).length, target=Math.floor(Math.random()*n); drawKanji(sw,k,{upto:0,ghost:true});
+    $('hint').innerHTML=`Quel est le trait n°${target+1} ?<div class="opts" id="so" style="margin:10px auto 0"></div>`;
+    const list=strokeOptions(k,target).map((idx,i)=>({v:idx,ok:idx===target,i}));
+    const box=optsBox(list,idx=>miniKanji(k,idx),good=>{ drawKanji(sw,k,{upto:target+1,highlight:target,ghost:true}); grade('k:'+k,good?2:0); vib(good?12:[30,30,30]); later(()=>{ if(!$('hint')) return; $('hint').innerHTML=(good?'Exact.':`Le trait n°${target+1} est en rouge.`)+` <button class="tb" id="again">Un autre</button>`; $('again').onclick=()=>$('quizt').onclick(); },700); }); $('so').replaceWith(box); };
   $('furi').onclick=()=>{ S.opt.furi=!S.opt.furi; save(); go(fiche,k); nav.splice(nav.length-2,1); };
-  const vl=$('vl'); words.forEach(v=>{ const d=document.createElement('div'); d.className='vi';
-    d.innerHTML=`<span class="w jp">${rubyW(markUnseen(v.w),v.r)}</span>${!S.opt.furi&&v.r?`<span class="r jps">${v.r}</span>`:''}<span class="f${v.fr?'':' empty'}">${v.fr||'traduction à venir'}</span>${v.star===true?'<span class="st">★</span>':v.star===null?'<span class="unk">?</span>':''}`; vl.appendChild(d); });
-  if(related.length){ const rl=$('rl'); related.slice(0,12).forEach(v=>{ const d=document.createElement('div'); d.className='vi'; d.innerHTML=`<span class="w jp">${rubyW(v.w,v.r)}</span>${!S.opt.furi?`<span class="r jps">${v.r}</span>`:''}<span class="f">${v.fr||''}</span><span class="unk">${v.seance}</span>`; rl.appendChild(d); }); }
-}
-function traceRun(list){
-  let i=0,total=list.length,errs=0;
-  head('Tracer','dans l\'ordre des traits');
+  const row=v=>{ const d=document.createElement('div'); d.className='vi'; d.innerHTML=`<span class="w jp">${rubyW(markUnseen(v.w),v.r)}</span>${!S.opt.furi&&v.r?`<span class="r jps">${v.r}</span>`:''}<span class="f${v.fr?'':' empty'}">${v.fr||'traduction à venir'}</span>${v.kana?'<span class="tag">kana</span>':''}${v.star===true?'<span class="st">★</span>':v.star===null?'<span class="unk">?</span>':''}${spk(sayable(v.r||v.w))}`; return d; };
+  x.vocab.forEach(v=>$('vl').appendChild(row(v)));
+  if(related.length) related.slice(0,12).forEach(v=>{ const d=row(v); d.insertAdjacentHTML('beforeend',`<span class="unk">${v.seance}</span>`); $('rl').appendChild(d); }); }
+function traceRun(list){ let i=0,total=list.length,errs=0; head('Tracer','dans l\'ordre des traits');
   const step=()=>{ if(i>=total){ $('view').innerHTML=`<div class="end"><div class="big jp">完</div><p>${total} kanji tracés · ${errs} erreur${errs>1?'s':''}</p><button class="btn" id="bk">Retour</button></div>`; $('bk').onclick=back; setBar(1); return; }
     const k=list[i]; info(`<b>${i+1}</b> / ${total}`,`erreurs ${errs}`); setBar(i/total);
     $('view').innerHTML=`<div class="rv"><div class="kbox jp" id="kb" style="width:min(74vw,300px)"><div class="svgwrap" id="sw"></div></div><div class="kmeta"><div class="fr">${BYK[k].fr}</div><div class="n jps">${BYK[k].on.concat(BYK[k].kun).join('・')}</div></div><div class="hint" id="hint">Trace le trait 1 sur ${D.strokes[k].length}</div><div class="tools"><button class="tb" id="skip">Passer</button><button class="tb" id="show">Montrer</button></div></div>`;
-    const eng=traceEngine($('kb'),k,err=>{ errs+=err; if(!err) grade('k:'+k,2); else if(err>=3) grade('k:'+k,0); $('hint').textContent=err?`${err} erreur${err>1?'s':''}`:'Sans faute'; setTimeout(()=>{i++;step();},650); },
-      (j,n,err,msg)=>{ $('hint').textContent=msg?msg:`Trait ${j+1} sur ${n}`; });
-    $('skip').onclick=()=>{ i++; step(); }; $('show').onclick=()=>{ eng.showStroke(eng.index); $('hint').textContent='Le trait attendu est en rouge'; };
-  };
-  step();
-}
+    const eng=traceEngine($('kb'),k,err=>{ errs+=err; if(!err) grade('k:'+k,2); else if(err>=3) grade('k:'+k,0); $('hint').textContent=err?`${err} erreur${err>1?'s':''}`:'Sans faute'; later(()=>{i++;step();},650); },(j,n,err,msg)=>{ $('hint').textContent=msg?msg:`Trait ${j+1} sur ${n}`; });
+    $('skip').onclick=()=>{ i++; step(); }; $('show').onclick=()=>{ eng.showStroke(eng.index); $('hint').textContent='Le trait attendu est en rouge'; }; }; step(); }
 
-/* ═══════ DÉCOUVRIR LA SÉANCE ═══════ */
-function decouvrir(id){
-  const d=D.kanji[id]; const blocs=d.blocs||[{nom:d.titre.split('— ')[1]||'',from:d.range[0],to:d.range[1]}];
-  let bi=0, ki=0, phase='intro';
+/* ═══════ DÉCOUVRIR ═══════ */
+function decouvrir(id){ const d=D.kanji[id]; const blocs=d.blocs||[{nom:d.titre.split('— ')[1]||'',from:d.range[0],to:d.range[1]}]; let bi=0,ki=0;
   head('Découvrir',d.titre.replace('Séance ','S').split(' — ')[0]);
-  const kanjiOf=b=>d.kanji.filter(k=>k.n>=b.from&&k.n<=b.to);
-  const steps=()=>`<div class="step">${blocs.map((b,i)=>`<i class="${i<bi?'done':i===bi?'on':''}"></i>`).join('')}</div>`;
-  function intro(){ const b=blocs[bi], ks=kanjiOf(b);
-    info(`bloc <b>${bi+1}</b> / ${blocs.length}`,''); setBar(bi/blocs.length);
-    $('view').innerHTML=`<div class="scroll">${steps()}<div class="blob"><div class="lab">${d.titre.split('— ')[0]}</div><h2>${b.nom}</h2>
-      <p>${ks.length} kanji · n°${b.from} à ${b.to}</p><div class="ks jp">${ks.map(k=>k.k).join('')}</div>
-      <p>${ks.reduce((a,k)=>a+k.vocab.length,0)} mots, dont ${ks.reduce((a,k)=>a+k.vocab.filter(v=>v.star===true).length,0)} ★</p></div>
-      <button class="btn" id="go">Commencer</button><button class="btn o" id="skip">Passer ce bloc</button></div>`;
-    $('go').onclick=()=>{ ki=0; phase='kanji'; kanjiStep(); };
-    $('skip').onclick=()=>{ bi++; bi<blocs.length?intro():fin(); };
-  }
-  function kanjiStep(){
-    const b=blocs[bi], ks=kanjiOf(b), k=ks[ki]; if(!k){ check(); return; }
-    const c=(D.comp||{})[k.k]||{}; const stars=k.vocab.filter(v=>v.star===true), others=k.vocab.filter(v=>v.star!==true);
+  const kanjiOf=b=>d.kanji.filter(k=>k.n>=b.from&&k.n<=b.to); const steps=()=>`<div class="step">${blocs.map((b,i)=>`<i class="${i<bi?'done':i===bi?'on':''}"></i>`).join('')}</div>`;
+  function intro(){ const b=blocs[bi], ks=kanjiOf(b); info(`bloc <b>${bi+1}</b> / ${blocs.length}`,''); setBar(bi/blocs.length);
+    $('view').innerHTML=`<div class="scroll">${steps()}<div class="blob"><div class="lab">${d.titre.split('— ')[0]}</div><h2>${b.nom}</h2><p>${ks.length} kanji · n°${b.from} à ${b.to}</p><div class="ks jp">${ks.map(k=>k.k).join('')}</div><p>${ks.reduce((a,k)=>a+k.vocab.length,0)} mots, dont ${ks.reduce((a,k)=>a+k.vocab.filter(v=>v.star===true).length,0)} ★</p></div><button class="btn" id="go">Commencer</button><button class="btn o" id="skip">Passer ce bloc</button></div>`;
+    $('go').onclick=()=>{ ki=0; kanjiStep(); }; $('skip').onclick=()=>{ bi++; bi<blocs.length?intro():fin(); }; }
+  function kanjiStep(){ const b=blocs[bi], ks=kanjiOf(b), k=ks[ki]; if(!k){ check(); return; }
+    const c=(D.comp||{})[k.k]||{}, cl=cleOf(k.k); const stars=k.vocab.filter(v=>v.star===true), others=k.vocab.filter(v=>v.star!==true);
     info(`${b.nom} · <b>${ki+1}</b> / ${ks.length}`,`n°${k.n} · ${k.strokes} traits`); setBar((bi+ki/ks.length)/blocs.length);
-    $('view').innerHTML=`<div class="scroll"><div class="fiche">
-      <div class="kbox jp" id="kb"><div class="svgwrap" id="sw"></div></div>
-      <div class="kmeta"><div class="fr">${k.fr}</div></div>
+    $('view').innerHTML=`<div class="scroll"><div class="fiche"><div class="kbox jp" id="kb"><div class="svgwrap" id="sw"></div></div><div class="kmeta"><div class="fr">${k.fr}</div></div>
       <div class="readings">${k.on.length?`<div class="rd"><b>ON</b><span class="jps">${k.on.join('・')}</span></div>`:''}${k.kun.length?`<div class="rd"><b>kun</b><span class="jps">${k.kun.join('・')}</span></div>`:''}</div>
-      ${c.parts&&c.parts.length?`<div class="comp">${c.parts.map(p=>`<span class="cp jp ${p===c.rad?'rad':''}">${p}${p===c.rad&&c.radfr?`<small>${c.radfr}</small>`:''}</span>`).join('')}</div>`:''}
-      <div class="vlist">${stars.concat(others).slice(0,14).map(v=>`<div class="vi"><span class="w jp">${rubyW(markUnseen(v.w),v.r)}</span>${!S.opt.furi&&v.r?`<span class="r jps">${v.r}</span>`:''}<span class="f">${v.fr||''}</span>${v.star===true?'<span class="st">★</span>':''}</div>`).join('')}</div>
-      </div></div>
-      <div class="nav" style="padding:8px 18px 14px"><button class="btn o" id="pv" style="flex:0 0 68px">‹</button><button class="btn" id="nx">${ki+1<ks.length?'Suivant':'Vérifier ce bloc'}</button></div>`;
+      ${cl?`<div class="comp"><span class="cp jp rad">${c.rad||cl.c}<small>${cl.nom||cl.r} · ${cl.fr.toLowerCase()}</small></span>${(c.parts||[]).filter(p=>p!==c.rad).map(p=>`<span class="cp jp">${p}</span>`).join('')}</div>`:''}
+      <div class="vlist">${stars.concat(others).slice(0,14).map(v=>`<div class="vi"><span class="w jp">${rubyW(markUnseen(v.w),v.r)}</span>${!S.opt.furi&&v.r?`<span class="r jps">${v.r}</span>`:''}<span class="f">${v.fr||''}</span>${v.star===true?'<span class="st">★</span>':''}${spk(sayable(v.r||v.w))}</div>`).join('')}</div></div></div>
+      <div class="nav" style="display:flex;gap:9px;padding:8px 18px 14px"><button class="btn o" id="pv" style="flex:0 0 68px;margin:0">‹</button><button class="btn" id="nx" style="margin:0">${ki+1<ks.length?'Suivant':'Vérifier ce bloc'}</button></div>`;
     drawKanji($('sw'),k.k,{animate:true});
-    $('nx').onclick=()=>{ grade('k:'+k.k,1); ki++; ki<ks.length?kanjiStep():check(); };
-    $('pv').onclick=()=>{ if(ki>0){ki--;kanjiStep();} else intro(); };
-  }
-  function check(){
-    const b=blocs[bi], ks=kanjiOf(b); const items=[];
-    ks.forEach(k=>{ items.push({id:'k:'+k.k,type:'kanji',k,flow:'exam'});
-      k.vocab.filter(v=>v.star===true).slice(0,2).forEach(v=>items.push({id:'v:'+v.w+'/'+v.r,type:'vocab',v:{...v,seance:id,kanji:k.k},flow:'exam'})); });
-    const pick=sh(items).slice(0,Math.min(6,items.length));
-    go(session,{items:pick,label:'Contrôle · '+b.nom,onEnd:()=>{ nav.pop(); bi++; if(bi<blocs.length){ intro(); } else { fin(); } }});
-  }
-  function fin(){ setBar(1); info('','');
-    const ks=d.kanji, m=ks.filter(k=>kanjiLevel(k.k)>=2).length;
-    $('view').innerHTML=`<div class="end"><div class="big jp">了</div><p>${d.titre.split('— ')[1]} parcourue.<br>${ks.length} kanji découverts · ${m} déjà en cours d'acquisition<br>Ils entrent maintenant dans ton échéancier de révision.</p>
-      <button class="btn" id="rev">Réviser cette séance</button><button class="btn o" id="bk">Terminer</button></div>`;
-    $('rev').onclick=()=>{ const items=[]; d.kanji.forEach(k=>{ items.push({id:'k:'+k.k,type:'kanji',k,flow:'exam'}); k.vocab.filter(v=>v.star===true).forEach(v=>items.push({id:'v:'+v.w+'/'+v.r,type:'vocab',v:{...v,seance:id,kanji:k.k},flow:'exam'})); }); go(session,{items:sh(items),label:d.titre.split(' — ')[0]}); };
-    $('bk').onclick=()=>{ nav=[[home]]; render(); };
-  }
-  intro();
-}
-
+    $('nx').onclick=()=>{ grade('k:'+k.k,1); ki++; ki<ks.length?kanjiStep():check(); }; $('pv').onclick=()=>{ if(ki>0){ki--;kanjiStep();} else intro(); }; }
+  function check(){ const b=blocs[bi], ks=kanjiOf(b); const items=[]; ks.forEach(k=>{ items.push({id:'k:'+k.k,type:'kanji',k,flow:'exam'}); k.vocab.filter(v=>v.star===true).slice(0,2).forEach(v=>items.push({id:'v:'+v.w+'/'+v.r,type:'vocab',v:{...v,seance:id,kanji:k.k},flow:'exam'})); });
+    go(session,{items:pick(items,6),label:'Contrôle · '+b.nom,onEnd:()=>{ nav.pop(); bi++; bi<blocs.length?intro():fin(); }}); }
+  function fin(){ setBar(1); info(''); const m=d.kanji.filter(k=>kanjiLevel(k.k)>=2).length;
+    $('view').innerHTML=`<div class="end"><div class="big jp">了</div><p>${d.titre.split('— ')[1]} parcourue.<br>${d.kanji.length} kanji découverts · ${m} en cours d'acquisition</p><button class="btn" id="rev">Réviser cette séance</button><button class="btn o" id="bk">Terminer</button></div>`;
+    $('rev').onclick=()=>go(session,{items:sh(seanceItems(id)),label:d.titre.split(' — ')[0]}); $('bk').onclick=home_; }
+  intro(); }
 /* ═══════ GRAMMAIRE ═══════ */
-function gramCourse(){
-  head('Grammaire et thème',D.manifest.cours.grammaire.prof);
-  const v=$('view'); v.innerHTML=`<div class="scroll"><div class="sec" style="margin-top:6px">Leçons</div><div id="list"></div></div>`;
-  D.manifest.cours.grammaire.lecons.forEach(l=>{ const g=D.gram[l.id]; if(!g)return; const b=document.createElement('button'); b.className='card';
-    const sents=SENT.filter(s=>s.lecon===l.id), m=sents.filter(s=>lvl(s.id)>=3).length;
-    b.innerHTML=`<span class="mini-enso ${sents.length&&m===sents.length?'full':''}">${ensoSVG(sents.length?m/sents.length:0)}</span><span class="b"><b>${g.titre}</b><small>${fdate(g.date)} · ${g.points.length} points · ${sents.length} phrases</small></span><span class="arrow">›</span>`;
+function gramCourse(){ head('Grammaire et thème',D.manifest.cours.grammaire.prof);
+  $('view').innerHTML=`<div class="scroll"><div class="sec" style="margin-top:6px">Leçons</div><div id="list"></div><div class="sec">Lexique</div>
+    <button class="card" id="vb"><span class="g jp">動</span><span class="b"><b>Verbes et forme en て</b><small>${VERBS.length} verbes · ${VERBS.filter(v=>v.te).length} avec forme en て</small></span><span class="arrow">›</span></button>
+    <button class="card" id="ad"><span class="g jp">形</span><span class="b"><b>Adjectifs et contraires</b><small>${ADJS.length} adjectifs · ${ADJS.filter(a=>a.opp.length).length} par paires</small></span><span class="arrow">›</span></button></div>`;
+  D.manifest.cours.grammaire.lecons.forEach(l=>{ const g=D.gram[l.id]; if(!g)return; const fut=!unlocked(l.id); const sents=SENT.filter(s=>s.lecon===l.id), m=sents.filter(s=>lvl(s.id)>=3).length; const nv=(g.vocab||[]).length;
+    const b=document.createElement('button'); b.className='card'+(fut?' dim':'');
+    b.innerHTML=`<span class="mini-enso ${sents.length&&m===sents.length?'full':''}">${ensoSVG(sents.length?m/sents.length:0)}</span><span class="b"><b>${g.titre.replace('Leçon ','L')}</b><small>${g.date?fdate(g.date)+' · ':''}${g.points.length} points · ${sents.length} phrases${nv?' · '+nv+' mots':''}${fut?' · à venir':''}</small></span><span class="arrow">›</span>`;
     b.onclick=()=>go(lecon,l.id); $('list').appendChild(b); });
-}
-function lecon(id){
-  const g=D.gram[id]; head(g.titre.split(' — ')[0],g.titre.split(' — ')[1]||'');
-  const sents=SENT.filter(s=>s.lecon===id);
-  $('view').innerHTML=`<div class="scroll" style="padding-top:8px">${g.points.map(p=>`<div class="pt"><h3>${p.t}</h3><div class="why">${p.fr||''}</div>${p.ex.map(e=>`<div class="ex"><div class="j jp">${e.jp}</div><div class="f">${e.fr}</div></div>`).join('')}</div>`).join('')}
-    ${g.vocab&&g.vocab.length?`<div class="sec">Vocabulaire de la leçon</div><div class="vlist">${g.vocab.map(([w,fr])=>`<div class="vi"><span class="w jp">${w}</span><span class="f">${fr}</span></div>`).join('')}</div>`:''}
+  $('vb').onclick=()=>go(lexVerbes); $('ad').onclick=()=>go(lexAdj); }
+function lecon(id){ const g=D.gram[id]; head(g.titre.split(' — ')[0],g.titre.split(' — ')[1]||''); const fut=!unlocked(id);
+  const sents=SENT.filter(s=>s.lecon===id), vocab=VOCAB.filter(v=>v.seance===id), verbs=g.verbes||[], adjs=g.adjectifs||[];
+  info(fut?'leçon à venir':`${sents.length} phrases`,`${vocab.length} mots`);
+  $('view').innerHTML=`<div class="scroll" style="padding-top:8px">
+    ${fut?`<button class="tog ${S.unlocked[id]?'on':''}" id="unl"><div>Marquer comme vue en cours<small>débloque cette leçon pour la révision</small></div><div class="sw"></div></button>`:''}
+    ${g.points.map(p=>`<div class="pt"><h3>${p.t}</h3>${p.fr?`<div class="why">${p.fr}</div>`:''}${p.ex.map(e=>`<div class="ex"><div><div class="j jp">${e.jp}</div><div class="f">${e.fr}</div></div>${spk(e.jp)}</div>`).join('')}</div>`).join('')}
+    ${verbs.length?`<div class="sec">Verbes de la leçon</div><div class="vlist">${verbs.map(v=>`<div class="vi"><span class="w jp">${v.w}</span><span class="r jps">${v.r}</span><span class="f">${v.fr}</span>${v.te?`<span class="te"><b>て </b>${v.te}</span>`:''}${spk(v.r)}</div>`).join('')}</div>`:''}
+    ${adjs.length?`<div class="sec">Adjectifs</div><div class="vlist">${adjs.map(a=>`<div class="vi"><span class="w jp">${a.w}</span><span class="r jps">${a.r}</span><span class="f">${a.fr}${a.opp.length?' <span class="tag">↔ '+a.opp.join(' · ')+'</span>':''}</span>${spk(a.r)}</div>`).join('')}</div>`:''}
+    ${vocab.length?`<div class="sec">Vocabulaire (${vocab.length})</div><div class="vlist">${vocab.map(v=>`<div class="vi"><span class="w jp">${v.w}</span>${v.r&&v.r!==v.w?`<span class="r jps">${v.r}</span>`:''}<span class="f">${v.fr}${v.pos?' <span class="tag">'+v.pos+'</span>':''}</span>${spk(sayable(v.r||v.w))}</div>`).join('')}</div>`:''}
     <div class="sec">Travailler</div>
-    <button class="card" id="ph"><span class="g">⇄</span><span class="b"><b>Construire les phrases</b><small>${sents.length} phrases de la leçon</small></span><span class="arrow">›</span></button>
-    ${g.vocab&&g.vocab.length?`<button class="card" id="vq"><span class="g">⚡︎</span><span class="b"><b>Quiz vocabulaire</b><small>${g.vocab.length} mots</small></span><span class="arrow">›</span></button>`:''}
+    ${sents.length?`<button class="card" id="ph"><span class="g">⇄</span><span class="b"><b>Construire les phrases</b><small>${sents.length} phrases</small></span><span class="arrow">›</span></button>`:''}
+    ${vocab.length?`<button class="card" id="vq"><span class="g">⚡︎</span><span class="b"><b>Quiz vocabulaire</b><small>${vocab.length} mots · sens et production</small></span><span class="arrow">›</span></button>`:''}
+    ${verbs.filter(v=>v.te).length?`<button class="card" id="tq"><span class="g jp">て</span><span class="b"><b>Forme en て</b><small>${verbs.filter(v=>v.te).length} verbes</small></span><span class="arrow">›</span></button>`:''}
+    ${TTS.ok&&vocab.length?`<button class="card" id="lq"><span class="g">🔊</span><span class="b"><b>Compréhension orale</b><small>écouter puis choisir</small></span><span class="arrow">›</span></button>`:''}
   </div>`;
-  $('ph').onclick=()=>go(session,{items:sh(sents.map(s=>({id:s.id,type:'sent',s,flow:'exam'}))),label:g.titre.split(' — ')[0],force:'phrase'});
-  if($('vq')) $('vq').onclick=()=>go(session,{items:sh(VOCAB.filter(v=>v.seance===id).map(v=>({id:v.id,type:'vocab',v,flow:'exam'}))),label:g.titre.split(' — ')[0]});
-}
+  if($('unl')) $('unl').onclick=()=>{ S.unlocked[id]=!S.unlocked[id]; save(); go(lecon,id); nav.splice(nav.length-2,1); };
+  if($('ph')) $('ph').onclick=()=>go(session,{items:sh(sents.map(s=>({id:s.id,type:'sent',s,flow:'exam'}))),label:g.titre.split(' — ')[0]});
+  if($('vq')) $('vq').onclick=()=>go(session,{items:sh(vocab.map(v=>({id:v.id,type:'vocab',v,flow:'exam'}))),label:g.titre.split(' — ')[0]});
+  if($('tq')) $('tq').onclick=()=>go(session,{items:sh(VERBS.filter(v=>v.te&&verbs.some(x=>x.w===v.w)).map(v=>({id:v.id,type:'te',v,flow:'exam'}))),label:'Forme en て'});
+  if($('lq')) $('lq').onclick=()=>go(session,{items:sh(vocab.filter(v=>v.r).map(v=>({id:v.id,type:'vocab',v,angle:'listen',flow:'exam'}))),label:'Écoute'}); }
+function lexVerbes(){ head('Verbes','forme neutre · forme en て'); const groups={};
+  VERBS.forEach(v=>{ const k=v.les?'Leçon '+v.les:'Hors leçon'; (groups[k]=groups[k]||[]).push(v); });
+  $('view').innerHTML=`<div class="scroll" style="padding-top:8px"><button class="card" id="q"><span class="g jp">て</span><span class="b"><b>Quiz forme en て</b><small>tous les verbes débloqués</small></span><span class="arrow">›</span></button>
+    ${Object.entries(groups).sort((a,b)=>(a[0]>b[0]?1:-1)).map(([k,vs])=>`<div class="bloc"><h4>${k}</h4><span></span><b>${vs.length}</b></div><div class="vlist">${vs.map(v=>`<div class="vi"><span class="w jp">${v.w}</span><span class="r jps">${v.r}</span><span class="f">${v.fr}</span>${v.te?`<span class="te"><b>て </b>${v.te}</span>`:''}${spk(v.r)}</div>`).join('')}</div>`).join('')}</div>`;
+  $('q').onclick=()=>go(session,{items:sh(VERBS.filter(v=>v.te&&(!v.lecon||unlocked(v.lecon))).map(v=>({id:v.id,type:'te',v,flow:'exam'}))),label:'Forme en て'}); }
+function lexAdj(){ head('Adjectifs','い · な · contraires');
+  $('view').innerHTML=`<div class="scroll" style="padding-top:8px"><button class="card" id="q"><span class="g">↔</span><span class="b"><b>Quiz des contraires</b><small>${ADJS.filter(a=>a.opp.length).length} adjectifs</small></span><span class="arrow">›</span></button>
+    <div class="vlist">${ADJS.map(a=>`<div class="vi"><span class="w jp">${a.w}</span><span class="r jps">${a.r}</span><span class="f">${a.fr} <span class="tag">${a.type==='na'?'な':'い'}</span>${a.opp.length?' <span class="tag">↔ '+a.opp.join(' · ')+'</span>':''}<small style="color:var(--ink3)"> · L${a.les}</small></span>${spk(a.r)}</div>`).join('')}</div></div>`;
+  $('q').onclick=()=>go(session,{items:sh(ADJS.filter(a=>a.opp.length).map(a=>({id:a.id,type:'opp',a,flow:'exam'}))),label:'Contraires'}); }
 
-/* ═══════ SESSION DE RÉVISION ═══════ */
-function session({items,label,force,onEnd}){
-  let q=items.slice(), i=0, total=q.length, ok=0, ko=0; const again=[];
-  head(label||'Révision','');
-  const next=()=>{
-    if(!q.length){ if(again.length){ q=sh(again.splice(0)); } else { fin(); return; } }
-    const it=q.shift(); info(`<b>${i}</b> / ${total}`,`${ko?'raté '+ko:''}`); setBar(i/Math.max(total,1));
-    if(it.type==='kanji') cardKanji(it); else if(it.type==='vocab') cardVocab(it);
-    else if(it.type==='cloze') cardCloze(it); else if(it.type==='read') cardRead(it); else cardSent(it);
-  };
-  const done=(it,g)=>{ grade(it.id,g); i++; if(g===0){ ko++; again.push(it); } else ok++; setTimeout(next,g===0?900:520); };
-  const stamp=(el,good)=>{ const s=document.createElement('div'); s.className=good?'seal':'ink'; s.textContent=good?'正':''; el.appendChild(s); requestAnimationFrame(()=>s.classList.add('on')); if(!good) el.classList.add('ko'); vib(good?12:[30,30,30]); };
-  function cardKanji(it){ const k=it.k, first=!st(it.id);
-    $('view').innerHTML=`<div class="rv"><div class="rcard"><div class="kind">${first?'nouveau kanji':'kanji'}</div><div class="big jp">${k.k}</div><div class="sub">${k.strokes} traits · n°${k.n}</div><div class="ans hidden" id="ans"><div class="fr">${k.fr}</div><div class="sub jps">${k.on.length?'ON '+k.on.join('・'):''}${k.kun.length?(k.on.length?' · ':'')+'kun '+k.kun.join('・'):''}</div></div></div>
-      <button class="reveal" id="rv">Lecture et sens</button><div class="grade hidden" id="gr"><button class="g0">Raté</button><button class="g1">Difficile</button><button class="g2">Facile</button></div></div>`;
-    $('rv').onclick=()=>{ $('ans').classList.remove('hidden'); $('rv').classList.add('hidden'); $('gr').classList.remove('hidden'); };
-    $('gr').querySelectorAll('button').forEach((b,g)=>b.onclick=()=>{ stamp(document.querySelector('.rcard'),g>0); done(it,g); }); }
-  function cardVocab(it){ const v=it.v, first=!st(it.id);
-    const pool=VOCAB.filter(x=>x.id!==v.id&&x.fr&&(x.seance===v.seance||Math.random()<.3)); const others=sh(pool).slice(0,3); while(others.length<3){ const c=VOCAB[Math.random()*VOCAB.length|0]; if(c.id!==v.id&&c.fr&&!others.includes(c)) others.push(c); }
-    const modes=[]; if(S.opt.modes.reco) modes.push('reco'); if(S.opt.modes.rappel&&!first) modes.push('rappel'); const mode=modes.length?modes[Math.random()*modes.length|0]:'reco';
-    const opts=sh([v,...others]); const showW=x=>`<span class="jp">${rubyW(x.w,x.r)}</span>`;
-    $('view').innerHTML=`<div class="rv"><div class="rcard"><div class="kind">${first?'nouveau mot':mode==='reco'?'japonais → français':'français → japonais'}${v.star===true?' ★':''}</div>
-      ${mode==='reco'?`<div class="mid jp">${rubyW(v.w,v.r)}</div>${!S.opt.furi&&v.r?`<div class="sub jps">${v.r}</div>`:''}`:`<div class="fr">${v.fr}</div>`}
-      ${first?`<div class="ans"><div class="fr">${v.fr}</div>${v.r?`<div class="sub jps">${v.r}</div>`:''}</div>`:''}</div>
-      <div class="opts" id="opts"></div></div>`;
-    const box=$('opts'); opts.forEach(o=>{ const b=document.createElement('button'); b.className='opt'+(mode==='reco'?'':' jp'); b.innerHTML=mode==='reco'?o.fr:showW(o); b.onclick=()=>{
-      const good=o.id===v.id; [...box.children].forEach(x=>{ if(x.dataset.id===v.id) x.classList.add('ok'); else x.classList.add('dim'); }); if(!good){ b.classList.remove('dim'); b.classList.add('ko'); }
-      stamp(document.querySelector('.rcard'),good); done(it,good?(first?2:2):0); }; b.dataset.id=o.id; box.appendChild(b); }); }
-  function cardSent(it){ const s=it.s; const toks=sh(s.tok.map((t,j)=>({t,j}))); let placed=[];
-    $('view').innerHTML=`<div class="rv"><div class="rcard" style="min-height:120px"><div class="kind">construire la phrase · ${s.point}</div><div class="fr">${s.fr}</div></div>
-      <div class="builder"><div class="slot" id="slot"></div><div class="tokens" id="tk"></div><div class="tools" style="margin-top:12px"><button class="tb" id="undo">↶</button><button class="tb" id="check">Vérifier</button><button class="tb" id="showb">Réponse</button></div></div></div>`;
-    const slot=$('slot'),tk=$('tk');
-    const redraw=()=>{ slot.innerHTML=placed.map(p=>`<span class="tk jp">${p.t}</span>`).join(''); [...tk.children].forEach(b=>b.classList.toggle('used',placed.some(p=>p.j===+b.dataset.j))); };
-    toks.forEach(o=>{ const b=document.createElement('button'); b.className='tk jp'; b.textContent=o.t; b.dataset.j=o.j; b.onclick=()=>{ if(b.classList.contains('used'))return; placed.push(o); redraw(); if(placed.length===s.tok.length) check(); }; tk.appendChild(b); });
-    $('undo').onclick=()=>{ placed.pop(); redraw(); slot.className='slot'; };
-    const check=()=>{ const good=placed.length===s.tok.length&&placed.every((p,j)=>p.j===j); slot.className='slot '+(good?'ok':'ko'); stamp(document.querySelector('.rcard'),good);
-      if(!good){ setTimeout(()=>{ slot.innerHTML=s.tok.map(t=>`<span class="tk jp">${t}</span>`).join(''); slot.className='slot ok'; },600); }
-      done(it,good?2:0); };
-    $('check').onclick=check; $('showb').onclick=()=>{ slot.innerHTML=s.tok.map(t=>`<span class="tk jp">${t}</span>`).join(''); slot.className='slot ok'; stamp(document.querySelector('.rcard'),false); done(it,0); }; }
-  function cardCloze(it){ const c=it.c; const masked=[...c.w].map((ch,j)=>j===c.i?'<span class="hole">?</span>':ch).join('');
-    const opts=sh([c.k,...c.d.slice(0,3)]);
-    $('view').innerHTML=`<div class="rv"><div class="rcard"><div class="kind">quel kanji manque ?${c.star===true?' ★':''}</div>
-      <div class="cloze jp">${masked}</div><div class="sub">${c.fr}</div>${S.opt.furi?`<div class="sub jps">${c.r}</div>`:''}</div>
-      <div class="opts" id="opts"></div></div>`;
-    const box=$('opts'); opts.forEach(o=>{ const b=document.createElement('button'); b.className='opt jp'; b.textContent=o; b.dataset.k=o;
-      b.onclick=()=>{ const good=o===c.k; [...box.children].forEach(x=>{ if(x.dataset.k===c.k) x.classList.add('ok'); else x.classList.add('dim'); }); if(!good) b.classList.add('ko');
-        document.querySelector('.cloze').innerHTML=[...c.w].map((ch,j)=>j===c.i?`<span class="hole">${c.k}</span>`:ch).join('');
-        stamp(document.querySelector('.rcard'),good); done(it,good?2:0); }; box.appendChild(b); }); }
-
-  function cardRead(it){ const r=it.r, kb=S.opt.modes.clavier&&st(it.id)&&Math.random()<.45;
-    if(kb){ $('view').innerHTML=`<div class="rv"><div class="rcard"><div class="kind">écris la lecture${r.star===true?' ★':''}</div><div class="mid jp">${r.w}</div><div class="sub">${r.fr}</div></div>
-      <div class="kbd"><input id="in" class="jps" placeholder="ひらがな" autocomplete="off" autocapitalize="off" spellcheck="false"></div><div class="grade" style="grid-template-columns:1fr"><button id="val">Valider</button></div></div>`;
-      const inp=$('in'); inp.focus();
-      const val=()=>{ const v=inp.value.trim(); const good=v===r.r; inp.className='jps '+(good?'ok':'ko');
-        if(!good) inp.value=r.r; stamp(document.querySelector('.rcard'),good); done(it,good?2:0); };
-      $('val').onclick=val; inp.onkeydown=e=>{ if(e.key==='Enter') val(); }; return; }
-    const opts=sh([r.r,...r.d.slice(0,3)]);
-    $('view').innerHTML=`<div class="rv"><div class="rcard"><div class="kind">quelle lecture ?${r.star===true?' ★':''}</div><div class="mid jp">${r.w}</div><div class="sub">${r.fr}</div></div><div class="opts" id="opts"></div></div>`;
-    const box=$('opts'); opts.forEach(o=>{ const b=document.createElement('button'); b.className='opt jps'; b.style.fontSize='19px'; b.textContent=o; b.dataset.r=o;
-      b.onclick=()=>{ const good=o===r.r; [...box.children].forEach(x=>{ if(x.dataset.r===r.r) x.classList.add('ok'); else x.classList.add('dim'); }); if(!good) b.classList.add('ko');
-        stamp(document.querySelector('.rcard'),good); done(it,good?2:0); }; box.appendChild(b); }); }
-
-  const fin=()=>{ setBar(1); info('',''); $('view').innerHTML=`<div class="end"><div class="big jp">${ko===0?'完':'了'}</div><p>${total} carte${total>1?'s':''} · ${ok} réussie${ok>1?'s':''} · ${ko} à revoir<br>${ko===0?'Sans faute.':'Les ratés reviennent dans dix minutes.'}</p><button class="btn" id="bk">Terminer</button></div>`; $('bk').onclick=()=>{ if(onEnd) onEnd(); else { nav=[[home]]; render(); } }; };
-  next();
-}
+/* ═══════ LES CLÉS ═══════ */
+function clesHome(){ head('Les clés','部首 · bushu');
+  const mine=distinct(KANJI.map(k=>cleOf(k.k)).filter(Boolean),c=>c.n);
+  $('view').innerHTML=`<div class="scroll" style="padding-top:8px">
+    <button class="card" id="c1"><span class="g">📖</span><span class="b"><b>Cours : la composition des kanji</b><small>séance 03 · notions, familles, positions</small></span><span class="arrow">›</span></button>
+    <button class="card" id="c2"><span class="g jp">氵</span><span class="b"><b>Réseau de mes kanji</b><small>${mine.length} clés présentes dans les 166</small></span><span class="arrow">›</span></button>
+    <button class="card" id="c3"><span class="g">214</span><span class="b"><b>Les 214 clés</b><small>table complète · numéro, lecture, sens</small></span><span class="arrow">›</span></button>
+    <div class="sec">S'entraîner</div>
+    <button class="card" id="q1"><span class="g">?</span><span class="b"><b>Quelle est la clé de ce kanji ?</b><small>sur tes kanji débloqués</small></span><span class="arrow">›</span></button>
+    <button class="card" id="q2"><span class="g">✦</span><span class="b"><b>Sens d'une clé</b><small>sur les clés de ton programme</small></span><span class="arrow">›</span></button></div>`;
+  $('c1').onclick=()=>go(coursCles); $('c2').onclick=()=>go(reseau); $('c3').onclick=()=>go(cles214);
+  $('q1').onclick=()=>go(session,{items:sh(KANJI.filter(k=>kanjiSeen(k.k)&&cleOf(k.k)&&!(D.comp[k.k]||{}).self).map(k=>({id:'cle:'+k.k,type:'cle',k,c:cleOf(k.k),flow:'enrich'}))),label:'Clés'});
+  $('q2').onclick=()=>go(session,{items:sh(mine.map(c=>({id:'clesens:'+c.n,type:'clesens',c,angle:'clesens',flow:'enrich'}))),label:'Sens des clés'}); }
+function coursCles(){ const C=D.coursCles; if(!C){ toast('Cours indisponible'); return back(); } head(C.titre,'séance 03 · 17 sept.');
+  const posSVG=nom=>{ const m={hen:'<rect class="k" x="4" y="4" width="28" height="92"/><rect x="36" y="4" width="60" height="92"/>',tsukuri:'<rect x="4" y="4" width="60" height="92"/><rect class="k" x="68" y="4" width="28" height="92"/>',kanmuri:'<rect class="k" x="4" y="4" width="92" height="28"/><rect x="4" y="36" width="92" height="60"/>',ashi:'<rect x="4" y="4" width="92" height="60"/><rect class="k" x="4" y="68" width="92" height="28"/>',tare:'<rect class="k" x="4" y="4" width="92" height="24"/><rect class="k" x="4" y="28" width="24" height="68"/><rect x="32" y="32" width="64" height="64"/>',nyō:'<rect class="k" x="4" y="4" width="24" height="92"/><rect class="k" x="28" y="72" width="68" height="24"/><rect x="32" y="4" width="64" height="64"/>',kamae:'<rect class="k" x="4" y="4" width="92" height="92"/><rect x="24" y="24" width="52" height="52" style="fill:var(--paper2)"/>'}; return `<svg viewBox="0 0 100 100">${m[nom]||''}</svg>`; };
+  $('view').innerHTML=`<div class="scroll" style="padding-top:8px">
+    ${C.notions.map(n=>`<div class="pt"><h3>${n.t}</h3><div class="why">${n.fr}</div>${n.ex?`<div class="comp" style="justify-content:flex-start">${n.ex.map(([a,b,fr])=>`<span class="cp jp">${a} → ${b}<small>${fr}</small></span>`).join('')}</div>`:''}</div>`).join('')}
+    <div class="sec">Les familles de clés</div>
+    ${C.familles.map(f=>`<div class="pt"><h3><span class="jp" style="font-size:24px">${f.cle}</span> — ${f.sens}</h3>${f.ex.map(([a,b,k,fr])=>`<div class="ex"><div class="j jp">${a} + ${b} → <b>${k}</b> <span class="f" style="display:inline">${fr}</span></div>${BYK[k]?`<button class="tb" data-k="${k}">fiche</button>`:''}</div>`).join('')}</div>`).join('')}
+    <div class="sec">Les sept positions</div>
+    <div class="pos7">${C.positions.map(p=>`<div>${posSVG(p.nom)}<b class="jp">${p.jp}</b><br>${p.kana}<br><small>${p.fr}</small></div>`).join('')}</div>
+    ${C.positions.map(p=>`<div class="pt"><h3>${p.jp} · ${p.kana} · <span style="font-weight:400;color:var(--ink2)">${p.fr}</span></h3>${p.ex.map(([r,nom,ks])=>`<div class="ex"><div class="j jp">${r} <span class="jps" style="font-size:13px;color:var(--ink2)">${nom}</span><br><span style="letter-spacing:.15em">${ks.map(k=>BYK[k]?`<b>${k}</b>`:k).join(' ')}</span></div></div>`).join('')}</div>`).join('')}
+    <p class="hint" style="text-align:left;padding:0 2px">Les kanji en gras sont dans ton programme.</p></div>`;
+  document.querySelectorAll('[data-k]').forEach(b=>b.onclick=()=>go(fiche,b.dataset.k)); }
+function reseau(){ head('Réseau de kanji','clés partagées'); const groups={};
+  KANJI.forEach(k=>{ const c=cleOf(k.k); if(!c) return; (groups[c.n]=groups[c.n]||{c,ks:[]}).ks.push(k); });
+  const list=Object.values(groups).sort((a,b)=>b.ks.length-a.ks.length||a.c.n-b.c.n);
+  info(`<b>${list.length}</b> clés`,`${KANJI.length} kanji`);
+  $('view').innerHTML=`<div class="scroll" style="padding-top:8px"><p class="hint" style="text-align:left;padding:0 2px 10px">Les kanji qui partagent une clé partagent souvent un domaine de sens. Repérer la clé, c'est deviner la moitié du sens.</p><div id="l"></div></div>`;
+  list.forEach(g=>{ const d=document.createElement('div'); d.style.marginBottom='16px';
+    d.innerHTML=`<div class="bloc"><h4><span class="jp" style="font-size:20px">${g.c.c}${g.c.v&&g.c.v.length?' <span style="color:var(--ink3)">'+g.c.v.join(' ')+'</span>':''}</span> ${g.c.nom?'<span class="jps" style="text-transform:none;letter-spacing:0">'+g.c.nom+'</span> · ':''}${g.c.fr.toLowerCase()}</h4><span></span><b>n°${g.c.n} · ${g.ks.length}</b></div><div class="kgrid">${g.ks.map(k=>`<button class="kc jp l${kanjiLevel(k.k)}" data-k="${k.k}">${k.k}<em>${k.n}</em><small>${k.fr.slice(0,7)}</small></button>`).join('')}</div>`; $('l').appendChild(d); });
+  document.querySelectorAll('[data-k]').forEach(b=>b.onclick=()=>go(fiche,b.dataset.k)); }
+function cles214(){ head('Les 214 clés','康熙字典 · 1716'); const mine=new Set(KANJI.map(k=>{const c=cleOf(k.k);return c?c.n:0;}));
+  $('view').innerHTML=`<div class="scroll" style="padding-top:8px"><input class="srch" id="q" placeholder="Chercher : clé, lecture, sens…"><div id="l"></div></div>`;
+  const draw=f=>{ const t=(f||'').toLowerCase(); $('l').innerHTML=D.cles.filter(c=>!t||c.c.includes(t)||c.v.some(v=>v.includes(t))||c.r.includes(t)||c.fr.toLowerCase().includes(t)||(c.nom||'').includes(t)||String(c.n)===t).map(c=>`<div class="rt"><small>${c.n}</small><span class="c jp">${c.c}</span><span><span class="jps">${c.r}</span>${c.v.length?`<br><small class="jp">${c.v.join(' ')}</small>`:''}</span><span>${c.fr}${c.nom?`<br><small class="jps">${c.nom}</small>`:''}${mine.has(c.n)?'<span class="tag ok">programme</span>':''}</span></div>`).join(''); };
+  $('q').oninput=e=>draw(e.target.value); draw(''); }
+/* ═══════ JEUX ═══════ */
+function games(){ head('Jeux',S.opt.games?'comptent dans la progression':'ne comptent pas');
+  const se=D.manifest.cours.kanji.seances.filter(x=>unlocked(x.id));
+  $('view').innerHTML=`<div class="scroll" style="padding-top:8px">
+    <button class="tog ${S.opt.games?'on':''}" id="tg"><div>Les jeux comptent dans ma progression<small>avec un poids réduit : une bonne réponse en jeu vaut moins qu'en révision</small></div><div class="sw"></div></button>
+    <div class="sec">Modes</div>
+    <button class="card" id="q"><span class="g">⚡︎</span><span class="b"><b>Quiz multi-angles</b><small>chaque élément sous un angle différent à chaque passage</small></span><span class="arrow">›</span></button>
+    <button class="card" id="d"><span class="g">⚔︎</span><span class="b"><b>Duel de séances</b><small>deux séances face à face, laquelle tu maîtrises le mieux ?</small></span><span class="arrow">›</span></button>
+    <button class="card" id="s"><span class="g">♥</span><span class="b"><b>Survie</b><small>trois vies, difficulté croissante, aussi loin que tu peux</small></span><span class="arrow">›</span></button>
+    ${Object.keys(S.best).filter(k=>k.startsWith('sv:')).length?`<div class="sec">Records de survie</div>${Object.entries(S.best).filter(([k])=>k.startsWith('sv:')).map(([k,v])=>`<div class="res"><span class="lb">${k.slice(3)}</span><span class="pc"><b>${v}</b> questions</span></div>`).join('')}`:''}
+  </div>`;
+  $('tg').onclick=()=>{ S.opt.games=!S.opt.games; save(); $('tg').classList.toggle('on'); head('Jeux',S.opt.games?'comptent dans la progression':'ne comptent pas'); };
+  $('q').onclick=()=>go(scopePick,{title:'Quiz multi-angles',then:sc=>go(quizMulti,sc)});
+  $('d').onclick=()=>{ if(se.length<2){toast('Il faut au moins deux séances débloquées');return;} go(duelSetup); };
+  $('s').onclick=()=>go(scopePick,{title:'Survie',single:true,then:sc=>go(survival,sc.ids[0])}); }
+/* sélecteur de portée (séances / leçons) */
+function scopePick({title,then,single}){ head(title,'sur quoi ?'); const ks=D.manifest.cours.kanji.seances.filter(x=>unlocked(x.id)), gs=D.manifest.cours.grammaire.lecons.filter(x=>x.id!=='L00'&&unlocked(x.id)); let sel=new Set(single?[ks[0]&&ks[0].id].filter(Boolean):ks.map(x=>x.id));
+  const draw=()=>{ $('view').innerHTML=`<div class="scroll" style="padding-top:8px"><div class="sec" style="margin-top:0">Séances de kanji</div><div class="chips" id="ck">${ks.map(x=>`<button class="chip ${sel.has(x.id)?'on':''}" data-id="${x.id}">${x.id}</button>`).join('')}${single?'':`<button class="chip" id="allk">toutes</button>`}</div>
+    ${single?'':`<div class="sec">Leçons de grammaire</div><div class="chips" id="cg">${gs.map(x=>`<button class="chip ${sel.has(x.id)?'on':''}" data-id="${x.id}">${x.id}</button>`).join('')}<button class="chip" id="allg">toutes</button></div>`}
+    <button class="btn" id="go" style="margin-top:18px">Commencer</button></div>`;
+    document.querySelectorAll('[data-id]').forEach(b=>b.onclick=()=>{ const id=b.dataset.id; if(single){ sel=new Set([id]); } else { sel.has(id)?sel.delete(id):sel.add(id); } draw(); });
+    if($('allk')) $('allk').onclick=()=>{ ks.forEach(x=>sel.add(x.id)); draw(); }; if($('allg')) $('allg').onclick=()=>{ gs.forEach(x=>sel.add(x.id)); draw(); };
+    $('go').onclick=()=>{ if(!sel.size){toast('Choisis au moins une séance');return;} then({ids:[...sel]}); }; }; draw(); }
+function scopeItems(ids){ const S_=new Set(ids), it=[];
+  KANJI.forEach(k=>{ if(S_.has(k.seance)) it.push({id:'k:'+k.k,type:'kanji',k}); });
+  VOCAB.forEach(v=>{ if(S_.has(v.seance)&&v.fr) it.push({id:v.id,type:'vocab',v}); });
+  READS.forEach(r=>{ if(S_.has(r.seance)) it.push({id:r.id,type:'read',r}); }); CLOZE.forEach(c=>{ if(S_.has(c.seance)) it.push({id:c.id,type:'cloze',c}); });
+  SENT.forEach(s=>{ if(S_.has(s.lecon)) it.push({id:s.id,type:'sent',s}); }); VERBS.forEach(v=>{ if(v.te&&S_.has(v.lecon)) it.push({id:v.id,type:'te',v}); }); ADJS.forEach(a=>{ if(a.opp.length&&S_.has(a.lecon)) it.push({id:a.id,type:'opp',a}); });
+  return it; }
+/* Quiz multi-angles : tirage item + angle, angles non répétés par item */
+function quizMulti({ids}){ const items=scopeItems(ids); if(!items.length){ toast('Rien dans cette sélection'); return back(); }
+  const used={}; let n=0,ok=0,streak=0,best=0,lock=false; const W=S.opt.games?.5:0; head('Quiz multi-angles',ids.join(' · '));
+  const nextQ=()=>{ // pondération : faibles d'abord, angle le moins utilisé pour cet item
+    const w=items.map(it=>{ const L=lvl(it.id); return {it,w:(L===0?3:L===1?4:L===2?2:1)*(used[it.id]&&used[it.id].last===n-1?.05:1)}; });
+    let tot=w.reduce((a,b)=>a+b.w,0), r=Math.random()*tot, it=items[0]; for(const x of w){ r-=x.w; if(r<=0){it=x.it;break;} }
+    const A=anglesFor(it); const u=used[it.id]=used[it.id]||{c:{},last:-1}; u.last=n;
+    const angle=A.sort((a,b)=>(u.c[a]||0)-(u.c[b]||0)||Math.random()-.5)[0]; u.c[angle]=(u.c[angle]||0)+1;
+    info(`<b>${ok}</b> / ${n} · série <b class="timer">${streak}</b>`,`record ${S.best['qm:'+ids.join(',')]||0}`); setBar(Math.min(1,n/30));
+    renderItem(it,angle,(good,g)=>{ n++; if(good){ok++;streak++;} else streak=0; if(streak>best) best=streak; if(W) grade(it.id,g,W);
+      if(streak>(S.best['qm:'+ids.join(',')]||0)){ S.best['qm:'+ids.join(',')]=streak; save(); } later(nextQ,good?520:950); }); };
+  nextQ(); }
+/* Duel de séances */
+function duelSetup(){ head('Duel de séances','choisis deux séances'); const se=D.manifest.cours.kanji.seances.filter(x=>unlocked(x.id)); let a=se[0].id,b=se[1].id;
+  const draw=()=>{ $('view').innerHTML=`<div class="scroll" style="padding-top:8px"><div class="sec" style="margin-top:0">Séance A</div><div class="chips">${se.map(x=>`<button class="chip ${x.id===a?'on':''}" data-a="${x.id}">${x.id}</button>`).join('')}</div><div class="sec">Séance B</div><div class="chips">${se.map(x=>`<button class="chip ${x.id===b?'on':''}" data-b="${x.id}">${x.id}</button>`).join('')}</div><button class="btn s" id="go" style="margin-top:18px">Lancer le duel · 10 questions chacune</button></div>`;
+    document.querySelectorAll('[data-a]').forEach(x=>x.onclick=()=>{a=x.dataset.a;draw();}); document.querySelectorAll('[data-b]').forEach(x=>x.onclick=()=>{b=x.dataset.b;draw();});
+    $('go').onclick=()=>{ if(a===b){toast('Deux séances différentes');return;} go(duel,{a,b}); }; }; draw(); }
+function duel({a,b}){ const IA=sh(scopeItems([a])), IB=sh(scopeItems([b])); let i=0,sa=0,sb=0; const total=20, W=S.opt.games?.5:0; head('Duel',a+' contre '+b);
+  const next=()=>{ if(i>=total||!IA.length||!IB.length){ fin(); return; } const side=i%2===0?'A':'B'; const it=side==='A'?IA[Math.floor(i/2)%IA.length]:IB[Math.floor(i/2)%IB.length];
+    info(`<b>${a}</b> ${sa} — ${sb} <b>${b}</b>`,`question ${i+1} / ${total} · ${side==='A'?a:b}`); setBar(i/total);
+    const A=anglesFor(it); const angle=A[Math.random()*A.length|0];
+    renderItem(it,angle,(good,g)=>{ if(good){ side==='A'?sa++:sb++; } if(W) grade(it.id,g,W); i++; later(next,good?520:950); }); };
+  const fin=()=>{ setBar(1); info(''); const win=sa===sb?null:sa>sb?a:b;
+    $('view').innerHTML=`<div class="end"><div class="duel"><div class="side"><b>${sa}</b><small>${a}</small></div><div class="vs">contre</div><div class="side"><b>${sb}</b><small>${b}</small></div></div>
+      <p>${win?`Tu maîtrises mieux <b>${win}</b>. ${win===a?b:a} mérite une révision.`:'Égalité parfaite.'}</p>
+      <button class="btn" id="rev">Réviser ${win?(win===a?b:a):a}</button><button class="btn o" id="ag">Rejouer</button><button class="btn o" id="bk">Terminer</button></div>`;
+    $('rev').onclick=()=>go(session,{items:sh(seanceItems(win?(win===a?b:a):a)),label:'Révision'}); $('ag').onclick=()=>{ nav.pop(); go(duel,{a,b}); }; $('bk').onclick=home_; };
+  next(); }
+/* Survie */
+function survival(id){ const d=D.kanji[id]; if(!d){ toast('Séance introuvable'); return back(); } const items=scopeItems([id]); let lives=3,n=0,lock=false; const W=S.opt.games?.5:0; head('Survie',d.titre.replace('Séance ','S').split(' — ')[0]);
+  const tier=()=>n<8?0:n<18?1:n<30?2:3;
+  const anglesTier=it=>{ const t=tier(), M=S.opt.modes; if(it.type==='kanji') return t===0?['ksens']:t===1?['ksens','count']:t===2?['stroke','kcle']:['stroke','kcle','count'];
+    if(it.type==='vocab') return t===0?['reco']:t===1?['reco','rappel']:t===2?(TTS.ok?['rappel','listen']:['rappel']):(M.clavier||true)?(TTS.ok?['clavier','dictee','listenw']:['clavier']):['rappel'];
+    if(it.type==='read') return t<2?['read']:t===2?['lecture2']:['clavier']; if(it.type==='cloze') return ['cloze']; return [it.type]; };
+  const next=()=>{ if(lives<=0){ fin(); return; } const pool=items.filter(it=>it.type!=='sent'); const it=pool[Math.random()*pool.length|0]; const A=anglesTier(it); const angle=A[Math.random()*A.length|0];
+    info(`<b>${n}</b> questions · palier ${tier()+1}`,`<span class="lives">${[0,1,2].map(i=>`<i class="${i<lives?'':'off'}"></i>`).join('')}</span>`); setBar(Math.min(1,n/40));
+    renderItem(it,angle,(good,g)=>{ if(good) n++; else lives--; if(W) grade(it.id,g,W); later(next,good?450:950); },{mode:angle==='clavier'?'clavier':undefined}); };
+  const fin=()=>{ const k='sv:'+id; const rec=n>(S.best[k]||0); if(rec){ S.best[k]=n; save(); } setBar(1); info('');
+    $('view').innerHTML=`<div class="end"><div class="big">${n}</div><p>questions tenues avant la troisième erreur<br>${rec?'<b style="color:var(--seal)">Nouveau record.</b>':'Record : '+(S.best[k]||0)}</p><button class="btn" id="ag">Rejouer</button><button class="btn o" id="bk">Terminer</button></div>`;
+    $('ag').onclick=()=>{ nav.pop(); go(survival,id); }; $('bk').onclick=home_; };
+  next(); }
+/* Exercices libres */
+function libre(){ head('Exercices libres','rien n\'est enregistré');
+  const T=[['reco','Japonais → français'],['rappel','Français → japonais'],['read','Quelle lecture'],['lecture2','Lecture → mot'],['cloze','Kanji manquant'],['clavier','Écrire la lecture'],['stroke','Ordre des traits'],['count','Nombre de traits'],['kcle','Clé d\'un kanji'],['sent','Construire la phrase'],['te','Forme en て'],['opp','Contraires']].concat(TTS.ok?[['listen','Écoute → sens'],['listenw','Écoute → écriture'],['dictee','Dictée']]:[]);
+  let type='reco';
+  const draw=()=>{ $('view').innerHTML=`<div class="scroll" style="padding-top:8px"><div class="sec" style="margin-top:0">Type d'exercice</div><div class="chips">${T.map(([k,l])=>`<button class="chip ${k===type?'on':''}" data-t="${k}">${l}</button>`).join('')}</div><button class="btn" id="go" style="margin-top:18px">Choisir la portée</button></div>`;
+    document.querySelectorAll('[data-t]').forEach(b=>b.onclick=()=>{type=b.dataset.t;draw();});
+    $('go').onclick=()=>go(scopePick,{title:T.find(x=>x[0]===type)[1],then:sc=>{ const all=scopeItems(sc.ids);
+      const map={reco:'vocab',rappel:'vocab',clavier:'vocab',listen:'vocab',listenw:'vocab',dictee:'vocab',read:'read',lecture2:'read',cloze:'cloze',stroke:'kanji',count:'kanji',kcle:'kanji',sent:'sent',te:'te',opp:'opp'};
+      let its=all.filter(it=>it.type===map[type]); if(type==='kcle') its=its.filter(it=>cleOf(it.k.k)&&!(D.comp[it.k.k]||{}).self); if(type==='clavier'||type==='dictee') its=its.filter(it=>it.v&&it.v.r);
+      if(!its.length){toast('Rien pour ce type dans cette sélection');return;} go(session,{items:sh(its).slice(0,40).map(it=>({...it,angle:type})),label:T.find(x=>x[0]===type)[1],free:true}); }}); }; draw(); }
 
 /* ═══════ EXAMEN BLANC ═══════ */
-function examSetup(){
-  head('Examen blanc','épreuve chronométrée');
-  const se=D.manifest.cours.kanji.seances.filter(x=>D.kanji[x.id]&&D.kanji[x.id].date<=today());
-  let sel=new Set(se.map(x=>x.id)), nq=30, dur=15;
-  const draw=()=>{ $('view').innerHTML=`<div class="scroll" style="padding-top:8px">
-    <p class="hint" style="text-align:left;padding:0 2px 8px">Épreuve mélangeant lectures, sens, kanji manquants, ordre des traits et thème. Correction détaillée par type de question à la fin.</p>
-    <div class="sec">Séances</div><div class="chips" id="ch"></div>
-    <div class="sec">Nombre de questions</div><div class="chips" id="nq">${[15,30,50,80].map(n=>`<button class="chip ${n===nq?'on':''}" data-v="${n}">${n}</button>`).join('')}</div>
+function examSetup(){ head('Examen blanc','épreuve chronométrée'); const se=D.manifest.cours.kanji.seances.filter(x=>unlocked(x.id)), gs=D.manifest.cours.grammaire.lecons.filter(x=>x.id!=='L00'&&unlocked(x.id)); let sel=new Set(se.map(x=>x.id)), selg=new Set(gs.map(x=>x.id)), nq=30, dur=15;
+  const draw=()=>{ $('view').innerHTML=`<div class="scroll" style="padding-top:8px"><p class="hint" style="text-align:left;padding:0 2px 8px">Lectures, sens, kanji manquants, ordre des traits, clés, forme en て, contraires, thème. Correction par type à la fin.</p>
+    <div class="sec">Séances de kanji</div><div class="chips" id="ch"></div><div class="sec">Leçons de grammaire</div><div class="chips" id="cg"></div>
+    <div class="sec">Questions</div><div class="chips" id="nq">${[15,30,50,80].map(n=>`<button class="chip ${n===nq?'on':''}" data-v="${n}">${n}</button>`).join('')}</div>
     <div class="sec">Durée</div><div class="chips" id="du">${[10,15,25,40].map(n=>`<button class="chip ${n===dur?'on':''}" data-v="${n}">${n} min</button>`).join('')}</div>
-    <div class="sec">Prêt</div><p class="hint" style="text-align:left;padding:0 2px 10px">${countPool(sel)} éléments disponibles dans ta sélection.</p>
-    <button class="btn s" id="go">Lancer l'épreuve</button></div>`;
-    const ch=$('ch'); se.forEach(x=>{ const b=document.createElement('button'); b.className='chip'+(sel.has(x.id)?' on':''); b.textContent=x.id;
-      b.onclick=()=>{ sel.has(x.id)?sel.delete(x.id):sel.add(x.id); draw(); }; ch.appendChild(b); });
-    const all=document.createElement('button'); all.className='chip'+(sel.size===se.length?' on':''); all.textContent='Tout'; all.onclick=()=>{ sel=new Set(se.map(x=>x.id)); draw(); }; ch.appendChild(all);
-    $('nq').querySelectorAll('.chip').forEach(b=>b.onclick=()=>{nq=+b.dataset.v;draw();});
-    $('du').querySelectorAll('.chip').forEach(b=>b.onclick=()=>{dur=+b.dataset.v;draw();});
-    $('go').onclick=()=>{ if(!sel.size){toast('Choisis au moins une séance');return;} go(exam,{sel:[...sel],nq,dur}); };
-  }; draw();
-}
-function countPool(sel){ let n=0; sel.forEach(id=>{ const d=D.kanji[id]; if(d){ n+=d.kanji.length; d.kanji.forEach(k=>n+=k.vocab.length); } }); return n; }
-function buildExam(sel,nq){
-  const S_=new Set(sel), Q=[];
-  const ks=KANJI.filter(k=>S_.has(k.seance));
-  const vs=VOCAB.filter(v=>S_.has(v.seance)&&v.fr);
-  const cl=CLOZE.filter(c=>S_.has(c.seance)), rd=READS.filter(r=>S_.has(r.seance));
-  const star=x=>x.star===true?2:x.star===false?.6:1;
-  // 1. lecture d'un mot (30%)
-  sh(rd).slice(0,Math.ceil(nq*.3)).forEach(r=>Q.push({t:'lecture',lab:'Lecture',id:r.id,q:r.w,sub:r.fr,a:r.r,opts:sh([r.r,...r.d.slice(0,3)]),jp:true,k:r.w}));
-  // 2. sens d'un mot (20%)
-  sh(vs).slice(0,Math.ceil(nq*.2)).forEach(v=>{ const o=sh(vs.filter(x=>x.fr!==v.fr)).slice(0,3).map(x=>x.fr); if(o.length<3)return;
-    Q.push({t:'sens',lab:'Sens',id:v.id,q:v.w,sub:S.opt.furi?v.r:'',a:v.fr,opts:sh([v.fr,...o]),k:v.w}); });
-  // 3. kanji manquant (20%)
-  sh(cl).slice(0,Math.ceil(nq*.2)).forEach(c=>Q.push({t:'trou',lab:'Kanji manquant',id:c.id,cloze:c,a:c.k,opts:sh([c.k,...c.d.slice(0,3)]),jp:true}));
-  // 4. ordre des traits (15%)
-  sh(ks).slice(0,Math.ceil(nq*.15)).forEach(k=>{ const n=(D.strokes[k.k]||[]).length; if(n<3)return;
-    const t=1+Math.floor(Math.random()*n);
-    Q.push({t:'trait',lab:'Ordre des traits',id:'k:'+k.k,stroke:{k:k.k,n:t},a:String(t),opts:sh([String(t),...sh([...Array(n).keys()].map(i=>String(i+1)).filter(x=>x!==String(t))).slice(0,3)]),ask:'stroke'}); });
-  // 5. nombre de traits (5%)
-  sh(ks).slice(0,Math.ceil(nq*.05)).forEach(k=>{ const n=(D.strokes[k.k]||[]).length; const o=sh([n-2,n-1,n+1,n+2,n+3].filter(x=>x>0&&x!==n)).slice(0,3).map(String);
-    Q.push({t:'compte',lab:'Nombre de traits',id:'k:'+k.k,q:k.k,sub:k.fr,a:String(n),opts:sh([String(n),...o]),jp:true}); });
-  // 6. thème : phrase à construire (10%)
-  sh(SENT).slice(0,Math.ceil(nq*.1)).forEach(s=>Q.push({t:'theme',lab:'Thème',id:s.id,sent:s}));
-  return sh(Q).slice(0,nq);
-}
-function exam({sel,nq,dur}){
-  const Q=buildExam(sel,nq); let i=0,ans=[],t0=Date.now(),end=t0+dur*60000,locked=false;
-  head('Épreuve','ne ferme pas l\'appli');
+    <button class="btn s" id="go" style="margin-top:18px">Lancer l'épreuve</button></div>`;
+    se.forEach(x=>{ const b=document.createElement('button'); b.className='chip'+(sel.has(x.id)?' on':''); b.textContent=x.id; b.onclick=()=>{ sel.has(x.id)?sel.delete(x.id):sel.add(x.id); draw(); }; $('ch').appendChild(b); });
+    gs.forEach(x=>{ const b=document.createElement('button'); b.className='chip'+(selg.has(x.id)?' on':''); b.textContent=x.id; b.onclick=()=>{ selg.has(x.id)?selg.delete(x.id):selg.add(x.id); draw(); }; $('cg').appendChild(b); });
+    $('nq').querySelectorAll('.chip').forEach(b=>b.onclick=()=>{nq=+b.dataset.v;draw();}); $('du').querySelectorAll('.chip').forEach(b=>b.onclick=()=>{dur=+b.dataset.v;draw();});
+    $('go').onclick=()=>{ if(!sel.size&&!selg.size){toast('Choisis au moins une séance ou une leçon');return;} go(exam,{ids:[...sel,...selg],nq,dur}); }; }; draw(); }
+function buildExam(ids,nq){ const all=scopeItems(ids); const by=t=>sh(all.filter(i=>i.type===t)); const Q=[];
+  const add=(list,angle,frac,lab)=>list.slice(0,Math.ceil(nq*frac)).forEach(it=>Q.push({it,angle,lab}));
+  add(by('read'),'read',.22,'Lecture'); add(by('vocab'),'reco',.15,'Sens'); add(by('cloze'),'cloze',.15,'Kanji manquant'); add(by('kanji'),'stroke',.12,'Ordre des traits');
+  add(by('kanji').filter(i=>cleOf(i.k.k)&&!(D.comp[i.k.k]||{}).self),'kcle',.08,'Clé'); add(by('kanji'),'count',.04,'Nombre de traits');
+  add(by('te'),'te',.08,'Forme en て'); add(by('opp'),'opp',.06,'Contraires'); add(by('sent'),'sent',.1,'Thème');
+  return sh(Q).slice(0,nq); }
+function exam({ids,nq,dur}){ const Q=buildExam(ids,nq); if(!Q.length){ toast('Pas assez de contenu'); return back(); } let i=0,ans=[],t0=Date.now(),end=t0+dur*60000,lock=false; head('Épreuve','ne ferme pas l\'appli');
   cur.stop=()=>clearInterval(cur.tick);
-  cur.tick=setInterval(()=>{ const left=Math.max(0,end-Date.now());
-    $('subR').innerHTML=`<span class="timer${left<60000?' warn':''}">${String(Math.floor(left/60000)).padStart(2,'0')}:${String(Math.floor(left/1000)%60).padStart(2,'0')}</span>`;
-    if(left<=0){ clearInterval(cur.tick); results(); } },250);
-  function show(){
-    if(i>=Q.length){ clearInterval(cur.tick); results(); return; }
-    const q=Q[i]; locked=false; info(`<b>${i+1}</b> / ${Q.length}`,''); setBar(i/Q.length);
-    if(q.t==='theme'){ const toks=sh(q.sent.tok.map((t,j)=>({t,j}))); let placed=[];
-      $('view').innerHTML=`<div class="rv"><div class="exam" style="width:100%"><div class="q">${q.lab}</div></div>
-        <div class="rcard" style="min-height:110px"><div class="fr">${q.sent.fr}</div></div>
-        <div class="builder"><div class="slot" id="slot"></div><div class="tokens" id="tk"></div>
-        <div class="tools" style="margin-top:12px"><button class="tb" id="undo">↶</button><button class="tb" id="ok">Valider</button></div></div></div>`;
-      const slot=$('slot'),tk=$('tk');
-      const rd=()=>{ slot.innerHTML=placed.map(p=>`<span class="tk jp">${p.t}</span>`).join(''); [...tk.children].forEach(b=>b.classList.toggle('used',placed.some(p=>p.j===+b.dataset.j))); };
-      toks.forEach(o=>{ const b=document.createElement('button'); b.className='tk jp'; b.textContent=o.t; b.dataset.j=o.j; b.onclick=()=>{ if(b.classList.contains('used'))return; placed.push(o); rd(); }; tk.appendChild(b); });
-      $('undo').onclick=()=>{placed.pop();rd();};
-      $('ok').onclick=()=>{ if(locked)return; locked=true; const good=placed.length===q.sent.tok.length&&placed.every((p,j)=>p.j===j);
-        ans.push({q,good}); grade(q.id,good?2:0); i++; setTimeout(show,180); };
-      return; }
-    let body='';
-    if(q.t==='trou'){ const c=q.cloze; body=`<div class="cloze jp">${[...c.w].map((ch,j)=>j===c.i?'<span class="hole">?</span>':ch).join('')}</div><div class="sub">${c.fr}</div>`; }
-    else if(q.t==='trait'){ body=`<div id="sw" style="width:min(56vw,200px)"></div><div class="sub">Quel est le trait n°${q.stroke.n} ?</div>`; }
-    else body=`<div class="${q.jp?'mid jp':'fr'}">${q.q}</div>${q.sub?`<div class="sub">${q.sub}</div>`:''}`;
-    $('view').innerHTML=`<div class="rv"><div class="exam" style="width:100%"><div class="q">${q.lab}</div></div>
-      <div class="rcard">${body}</div><div class="opts" id="opts"></div></div>`;
-    if(q.t==='trait'){ const box=document.createElement('div'); box.className='kbox jp'; box.style.width='min(56vw,200px)'; box.innerHTML='<div class="svgwrap" id="sw2"></div>';
-      $('sw').replaceWith(box); drawKanji($('sw2'),q.stroke.k,{numbers:false,ghost:true,upto:0}); }
-    const box=$('opts');
-    q.opts.forEach(o=>{ const b=document.createElement('button'); b.className='opt'+(q.jp&&q.t!=='trou'?' jp':'')+(q.t==='lecture'?' jps':'');
-      if(q.t==='lecture') b.style.fontSize='19px';
-      b.textContent=q.t==='trait'?'trait n°'+o:o; b.dataset.v=o;
-      b.onclick=()=>{ if(locked)return; locked=true; const good=o===q.a; ans.push({q,good,given:o}); grade(q.id,good?2:0);
-        b.classList.add(good?'ok':'ko'); i++; setTimeout(show,180); };
-      box.appendChild(b); });
-  }
-  function results(){
-    const sec=Math.round((Date.now()-t0)/1000), ok=ans.filter(a=>a.good).length, n=ans.length||1;
-    const byType={}; ans.forEach(a=>{ const t=byType[a.q.lab]=byType[a.q.lab]||{ok:0,n:0}; t.n++; if(a.good) t.ok++; });
-    const wrong=ans.filter(a=>!a.good);
-    const note=Math.round(ok/n*20*10)/10;
-    info('',''); setBar(1);
-    $('view').innerHTML=`<div class="scroll"><div class="end" style="padding-bottom:10px"><div class="big">${note}<span style="font-size:24px;color:var(--ink2)">/20</span></div>
-      <p>${ok} / ${n} · ${Math.floor(sec/60)} min ${sec%60}s${ans.length<Q.length?'<br>temps écoulé avant la fin':''}</p></div>
-      <div class="sec">Par type de question</div><div id="rt"></div>
-      ${wrong.length?`<div class="sec">À revoir (${wrong.length})</div><div id="rw"></div>`:'<p class="hint">Sans faute.</p>'}
-      <button class="btn" id="again" style="margin-top:16px">Nouvelle épreuve</button>
-      <button class="btn o" id="rev">Réviser mes erreurs</button>
-      <button class="btn o" id="bk">Terminer</button></div>`;
-    const rt=$('rt'); Object.entries(byType).forEach(([lab,v])=>{ const p=v.ok/v.n; const d=document.createElement('div'); d.className='res';
-      d.innerHTML=`<span class="lb">${lab}</span><span class="bar"><i style="width:${p*100}%;background:${p>=.8?'var(--ok)':p>=.5?'var(--gold)':'var(--ko)'}"></i></span><span class="pc">${v.ok}/${v.n}</span>`; rt.appendChild(d); });
-    if(wrong.length){ const rw=$('rw'); wrong.slice(0,30).forEach(a=>{ const d=document.createElement('div'); d.className='wk';
-      const q=a.q; const label=q.t==='trou'?q.cloze.w:q.t==='trait'?q.stroke.k:q.t==='theme'?'':q.q;
-      d.innerHTML=`<span class="k jp">${label||'文'}</span><span class="m">${q.lab}<small>réponse : ${q.t==='theme'?q.sent.jp:q.a}${a.given?' · tu as mis '+a.given:''}</small></span>`; rw.appendChild(d); }); }
-    $('again').onclick=()=>{ nav.pop(); go(exam,{sel,nq,dur}); };
-    $('rev').onclick=()=>{ const items=[]; wrong.forEach(a=>{ const id=a.q.id;
-      if(id.startsWith('k:')){ const k=BYK[id.slice(2)]; if(k) items.push({id,type:'kanji',k,flow:'exam'}); }
-      else if(id.startsWith('c:')){ const c=CLOZE.find(x=>x.id===id); if(c) items.push({id,type:'cloze',c,flow:'exam'}); }
-      else if(id.startsWith('r:')){ const r=READS.find(x=>x.id===id); if(r) items.push({id,type:'read',r,flow:'exam'}); }
-      else if(id.startsWith('s:')){ const s=SENT.find(x=>x.id===id); if(s) items.push({id,type:'sent',s,flow:'exam'}); }
-      else { const v=VOCAB.find(x=>x.id===id); if(v) items.push({id,type:'vocab',v,flow:'exam'}); } });
-      if(!items.length){toast('Rien à réviser');return;} go(session,{items:sh(items),label:'Mes erreurs'}); };
-    $('bk').onclick=()=>{ nav=[[home]]; render(); };
-  }
-  show();
-}
-
-/* ═══════ RÉSEAU DE KANJI ═══════ */
-function reseau(){
-  head('Réseau de kanji','clés et composants partagés');
-  const groups={};
-  KANJI.forEach(k=>{ const c=(D.comp||{})[k.k]; if(!c||!c.rad) return; (groups[c.rad]=groups[c.rad]||{fr:c.radfr,ks:[]}).ks.push(k); });
-  const list=Object.entries(groups).filter(([r,g])=>g.ks.length>1&&(g.fr||[...r].length>1||g.ks.length>=4))
-    .sort((a,b)=>(b[1].fr?1:0)-(a[1].fr?1:0)||b[1].ks.length-a[1].ks.length);
-  info(`<b>${list.length}</b> clés partagées`,`${KANJI.length} kanji`);
-  $('view').innerHTML=`<div class="scroll" style="padding-top:8px"><p class="hint" style="text-align:left;padding:0 2px 10px">Les kanji qui partagent une clé partagent souvent un domaine de sens. Repérer la clé, c'est deviner la moitié du sens.</p><div id="l"></div></div>`;
-  const L=$('l');
-  list.forEach(([rad,g])=>{ const d=document.createElement('div'); d.style.marginBottom='16px';
-    d.innerHTML=`<div class="bloc"><h4><span class="jp" style="font-size:20px">${rad}</span> ${g.fr||''}</h4><span></span><b>${g.ks.length}</b></div>
-      <div class="kgrid">${g.ks.map(k=>`<button class="kc jp l${kanjiLevel(k.k)}" data-k="${k.k}">${k.k}<em>${k.n}</em><small>${k.fr.slice(0,6)}</small></button>`).join('')}</div>`;
-    L.appendChild(d); });
-  L.querySelectorAll('[data-k]').forEach(b=>b.onclick=()=>go(fiche,b.dataset.k));
-}
-
+  cur.tick=setInterval(()=>{ const left=Math.max(0,end-Date.now()); $('subR').innerHTML=`<span class="timer${left<60000?' warn':''}">${String(Math.floor(left/60000)).padStart(2,'0')}:${String(Math.floor(left/1000)%60).padStart(2,'0')}</span>`; if(left<=0){ clearInterval(cur.tick); results(); } },250);
+  const show=()=>{ if(i>=Q.length){ clearInterval(cur.tick); results(); return; } const q=Q[i]; lock=false; info(`<b>${i+1}</b> / ${Q.length} · ${q.lab}`,''); setBar(i/Q.length);
+    renderItem(q.it,q.angle,(good,g)=>{ if(lock)return; lock=true; ans.push({q,good}); grade(q.it.id,g); i++; later(show,220); }); };
+  const results=()=>{ const sec=Math.round((Date.now()-t0)/1000), ok=ans.filter(a=>a.good).length, n=ans.length||1; const byType={}; ans.forEach(a=>{ const t=byType[a.q.lab]=byType[a.q.lab]||{ok:0,n:0}; t.n++; if(a.good) t.ok++; }); const wrong=ans.filter(a=>!a.good); const note=Math.round(ok/n*200)/10;
+    info(''); setBar(1); $('view').innerHTML=`<div class="scroll"><div class="end" style="padding-bottom:10px"><div class="big">${note}<span style="font-size:24px;color:var(--ink2)">/20</span></div><p>${ok} / ${n} · ${Math.floor(sec/60)} min ${sec%60}s${ans.length<Q.length?'<br>temps écoulé avant la fin':''}</p></div>
+      <div class="sec">Par type de question</div><div id="rt"></div>${wrong.length?`<div class="sec">À revoir (${wrong.length})</div><div id="rw"></div>`:'<p class="hint">Sans faute.</p>'}
+      <button class="btn" id="again" style="margin-top:16px">Nouvelle épreuve</button>${wrong.length?'<button class="btn o" id="rev">Réviser mes erreurs</button>':''}<button class="btn o" id="bk">Terminer</button></div>`;
+    Object.entries(byType).forEach(([lab,v])=>{ const p=v.ok/v.n; const d=document.createElement('div'); d.className='res'; d.innerHTML=`<span class="lb">${lab}</span><span class="bar"><i style="width:${p*100}%;background:${p>=.8?'var(--ok)':p>=.5?'var(--gold)':'var(--ko)'}"></i></span><span class="pc">${v.ok}/${v.n}</span>`; $('rt').appendChild(d); });
+    if(wrong.length) wrong.slice(0,40).forEach(a=>{ const it=a.q.it; const d=document.createElement('div'); d.className='wk'; const lab=it.k?it.k.k:it.v?it.v.w:it.r?it.r.w:it.c?it.c.w:it.a?it.a.w:'文'; const ans_=it.k?it.k.fr:it.v?it.v.fr+(it.v.r?' · '+it.v.r:''):it.r?it.r.r:it.c?it.c.k:it.a?it.a.opp.join(' / '):it.s?it.s.jp:'';
+      d.innerHTML=`<span class="k jp">${lab}</span><span class="m">${a.q.lab}<small>${ans_}</small></span>`; $('rw').appendChild(d); });
+    $('again').onclick=()=>{ nav.pop(); go(exam,{ids,nq,dur}); }; if($('rev')) $('rev').onclick=()=>go(session,{items:sh(wrong.map(a=>a.q.it)),label:'Mes erreurs'}); $('bk').onclick=home_; };
+  show(); }
 /* ═══════ MES AJOUTS ═══════ */
-function perso(){
-  head('Mes ajouts','stockés sur ce téléphone');
-  $('view').innerHTML=`<div class="scroll" style="padding-top:8px">
-    <div class="field"><label>Mot (kanji ou kana)</label><input id="pw" class="jp" placeholder="図書館"></div>
-    <div class="field"><label>Lecture</label><input id="pr" class="jps" placeholder="としょかん"></div>
-    <div class="field"><label>Sens</label><input id="pf" placeholder="la bibliothèque"></div>
-    <button class="btn" id="add">Ajouter</button>
-    <div class="sec">Liste</div><div class="vlist" id="pl"></div></div>`;
+function perso(){ head('Mes ajouts','stockés sur ce téléphone');
+  $('view').innerHTML=`<div class="scroll" style="padding-top:8px"><div class="field"><label>Mot (kanji ou kana)</label><input id="pw" class="jp" placeholder="図書館"></div><div class="field"><label>Lecture</label><input id="pr" class="jps" placeholder="としょかん"></div><div class="field"><label>Sens</label><input id="pf" placeholder="la bibliothèque"></div><button class="btn" id="add">Ajouter</button><div class="sec">Liste</div><div class="vlist" id="pl"></div></div>`;
   const draw=()=>{ const pl=$('pl'); pl.innerHTML=S.perso.length?'':'<p class="hint" style="text-align:left">Rien pour l\'instant. Ce que tu ajoutes ici entre dans le flux Enrichir.</p>';
-    S.perso.forEach((p,i)=>{ const d=document.createElement('div'); d.className='vi'; d.innerHTML=`<span class="w jp">${p.w}</span><span class="r jps">${p.r}</span><span class="f">${p.fr}</span><button class="tb" data-i="${i}">✕</button>`; d.querySelector('button').onclick=()=>{ S.perso.splice(i,1); save(); index(); draw(); }; pl.appendChild(d); }); };
-  $('add').onclick=()=>{ const w=$('pw').value.trim(),r=$('pr').value.trim(),fr=$('pf').value.trim(); if(!w||!fr){toast('Mot et sens obligatoires');return;} S.perso.push({w,r,fr}); save(); index(); $('pw').value=$('pr').value=$('pf').value=''; draw(); toast('Ajouté'); };
-  draw();
-}
+    S.perso.forEach((p,i)=>{ const d=document.createElement('div'); d.className='vi'; d.innerHTML=`<span class="w jp">${esc(p.w)}</span><span class="r jps">${esc(p.r)}</span><span class="f">${esc(p.fr)}</span>${spk(p.r||p.w)}<button class="tb">✕</button>`; d.querySelector('.tb').onclick=()=>{ S.perso.splice(i,1); save(); index(); draw(); }; pl.appendChild(d); }); };
+  $('add').onclick=()=>{ const w=$('pw').value.trim(),r=$('pr').value.trim(),fr=$('pf').value.trim(); if(!w||!fr){toast('Mot et sens obligatoires');return;} S.perso.push({w,r,fr}); save(); index(); $('pw').value=$('pr').value=$('pf').value=''; draw(); toast('Ajouté'); }; draw(); }
 
 /* ═══════ À PROPOS ═══════ */
-function about(){
-  head('À propos','');
+function about(){ head('À propos','');
   $('view').innerHTML=`<div class="scroll about" style="padding-top:8px">
   <p>Cette appli est faite par <b>Moussa M.</b> pour réviser les cours de kanji et de grammaire de L1 LEA japonais, à Lyon 3.</p>
   <p>Je l'ai d'abord construite pour moi. Comme elle m'aide, je la partage à qui veut s'en servir — gratuitement, sans rien en attendre.</p>
   <h3>Ce que c'est</h3><p>Un outil de révision basé sur les documents de nos cours. Le vocabulaire, les lectures et les listes viennent des séances de M. Couteau (kanji) et de Mme Noda (grammaire).</p>
-  <h3>Ce que ce n'est pas</h3><p>Une source officielle. En cas de doute, <b>le cours fait foi</b>, pas l'appli. Je saisis les données à la main, donc des fautes de frappe sont possibles. Si tu en repères une, écris-moi et je corrige.</p>
-  <h3>Mises à jour</h3><p>J'ajoute le contenu au fil des séances, en général dans la semaine. Je fais au mieux, mais je suis étudiant comme toi : il peut y avoir du retard. Les séances marquées « traductions provisoires » seront complétées quand le cours sera publié.</p>
+  <h3>Ce que ce n'est pas</h3><p>Une source officielle. En cas de doute, <b>le cours fait foi</b>, pas l'appli. Des fautes de saisie sont possibles : si tu en repères une, écris-moi et je corrige.</p>
+  <h3>Mises à jour</h3><p>J'ajoute le contenu au fil des séances. Les séances et leçons non encore vues en cours sont grisées, mais tu peux les débloquer toi-même pour prendre de l'avance.</p>
+  <h3>Audio</h3><p>La prononciation utilise la voix japonaise de ton téléphone. C'est une synthèse, pas un locuteur natif : correcte sur les mots, plus mécanique sur les phrases, et elle ne rend pas l'accent de hauteur. Sur Android, installe le pack vocal japonais si le bouton n'apparaît pas.</p>
   <h3>Me contacter</h3><p>Discord <a>Mouss_</a> · Instagram <a href="https://instagram.com/Froshhhh" target="_blank">@Froshhhh</a></p>
-  <h3>Crédits</h3><p>Ordre des traits : <a href="http://kanjivg.tagaini.net" target="_blank">KanjiVG</a>, par Ulrich Apel, licence CC BY-SA 3.0.<br>Contenu pédagogique : cours de L1 LEA japonais, Université Jean Moulin Lyon 3.</p>
-  <h3>Ce qu'il y a dans cette version</h3><p>Découverte guidée des séances par bloc thématique · révision espacée · lectures, sens, kanji manquants, construction de phrases, écriture au clavier · tracé vérifié trait par trait · quiz sur l'ordre des traits · réseau des clés et composants · examen blanc chronométré avec correction détaillée.</p>
-  </div>`;
-}
+  <h3>Crédits</h3><p>Ordre des traits et composants : <a href="http://kanjivg.tagaini.net" target="_blank">KanjiVG</a>, par Ulrich Apel, licence CC BY-SA 3.0.<br>Contenu pédagogique : cours de L1 LEA japonais, Université Jean Moulin Lyon 3.</p></div>`; }
 
 /* ═══════ RÉGLAGES ═══════ */
-function settings(){
-  head('Réglages','');
+function settings(){ head('Réglages',''); const M=S.opt.modes;
   const T=(id,lab,sub,on)=>`<button class="tog ${on?'on':''}" id="${id}"><div>${lab}<small>${sub}</small></div><div class="sw"></div></button>`;
   $('view').innerHTML=`<div class="scroll" style="padding-top:8px">
-    ${T('tf','Lectures affichées','Furigana au-dessus des kanji dans les listes',S.opt.furi)}
+    ${T('ta','Audio','prononciation par la voix japonaise du téléphone'+(TTS.ok?'':' · aucune voix japonaise détectée'),S.opt.audio)}${T('tas','Prononcer automatiquement','chaque mot est lu quand il apparaît',S.opt.autoSpeak)}
+    ${T('tf','Lectures affichées','furigana au-dessus des kanji dans les listes',S.opt.furi)}
     <div class="sec">Modes de révision</div>
-    ${T('m1','Japonais → français','reconnaissance, 4 choix',S.opt.modes.reco)}${T('m2','Français → japonais','rappel, 4 choix',S.opt.modes.rappel)}${T('m3','Lectures','quelle lecture pour ce mot',S.opt.modes.lecture)}${T('m5','Kanji manquant','texte à trous',S.opt.modes.trou)}${T('m4','Construction de phrase','grammaire',S.opt.modes.phrase)}${T('m6','Écrire au clavier','taper la lecture au lieu de choisir · plus dur',S.opt.modes.clavier)}
-    <div class="sec">Nouveaux par jour</div>
-    <div class="tools" style="justify-content:flex-start">${[4,8,12,20].map(n=>`<button class="tb ${S.opt.newPerDay===n?'on':''}" data-n="${n}">${n}</button>`).join('')}</div>
-    <div class="sec">Données</div>
-    <button class="btn o" id="exp">Exporter ma progression</button><button class="btn o" id="imp">Importer</button>
-    <button class="btn o" id="rst" style="color:var(--ko)">Tout effacer</button>
-  </div>`;
-  const tg=(id,fn)=>$(id).onclick=()=>{ fn(); save(); $(id).classList.toggle('on'); };
-  tg('tf',()=>S.opt.furi=!S.opt.furi); tg('m1',()=>S.opt.modes.reco=!S.opt.modes.reco); tg('m2',()=>S.opt.modes.rappel=!S.opt.modes.rappel); tg('m3',()=>S.opt.modes.lecture=!S.opt.modes.lecture); tg('m4',()=>S.opt.modes.phrase=!S.opt.modes.phrase);
-  tg('m5',()=>S.opt.modes.trou=!S.opt.modes.trou); tg('m6',()=>S.opt.modes.clavier=!S.opt.modes.clavier);
+    ${T('m1','Japonais → français','reconnaissance',M.reco)}${T('m2','Français → japonais','rappel',M.rappel)}${T('m3','Lectures','quelle lecture, lecture → mot',M.lecture)}${T('m5','Kanji manquant','texte à trous',M.trou)}${T('m4','Construction de phrase','grammaire',M.phrase)}${T('m7','Forme en て','verbes',M.te)}${T('m8','Contraires','adjectifs',M.contraire)}${T('m9','Clés','quelle est la clé de ce kanji',M.cle)}${T('m10','Écoute','compréhension orale, si audio disponible',M.ecoute)}${T('m6','Clavier','taper au lieu de choisir · plus dur',M.clavier)}
+    <div class="sec">Nouveaux par jour</div><div class="tools" style="justify-content:flex-start">${[4,8,12,20].map(n=>`<button class="tb ${S.opt.newPerDay===n?'on':''}" data-n="${n}">${n}</button>`).join('')}</div>
+    <div class="sec">Données</div><button class="btn o" id="exp">Exporter ma progression</button><button class="btn o" id="imp">Importer</button><button class="btn o" id="rst" style="color:var(--ko)">Tout effacer</button></div>`;
+  const tg=(id,fn)=>{ if($(id)) $(id).onclick=()=>{ fn(); save(); $(id).classList.toggle('on'); }; };
+  tg('ta',()=>{S.opt.audio=!S.opt.audio; if(S.opt.audio) TTS.init();}); tg('tas',()=>S.opt.autoSpeak=!S.opt.autoSpeak); tg('tf',()=>S.opt.furi=!S.opt.furi);
+  tg('m1',()=>M.reco=!M.reco); tg('m2',()=>M.rappel=!M.rappel); tg('m3',()=>M.lecture=!M.lecture); tg('m4',()=>M.phrase=!M.phrase); tg('m5',()=>M.trou=!M.trou); tg('m6',()=>M.clavier=!M.clavier); tg('m7',()=>M.te=!M.te); tg('m8',()=>M.contraire=!M.contraire); tg('m9',()=>M.cle=!M.cle); tg('m10',()=>M.ecoute=!M.ecoute);
   document.querySelectorAll('[data-n]').forEach(b=>b.onclick=()=>{ S.opt.newPerDay=+b.dataset.n; save(); document.querySelectorAll('[data-n]').forEach(x=>x.classList.toggle('on',x===b)); });
-  $('exp').onclick=()=>{ const t=JSON.stringify({srs:S.srs,opt:S.opt,perso:S.perso,log:S.log}); (navigator.clipboard?navigator.clipboard.writeText(t).then(()=>toast('Copié dans le presse-papiers'),()=>prompt('Copie :',t)):prompt('Copie :',t)); };
-  $('imp').onclick=()=>{ const t=prompt('Colle ta sauvegarde :'); if(!t)return; try{ const d=JSON.parse(t); S.srs=d.srs||{};S.opt=Object.assign(S.opt,d.opt||{});S.perso=d.perso||[];S.log=d.log||{}; save(); index(); toast('Restauré'); }catch(e){ toast('Texte invalide'); } };
-  $('rst').onclick=()=>{ if(confirm('Effacer toute la progression ?')){ S.srs={};S.perso=[];S.log={}; save(); index(); toast('Effacé'); } };
-}
+  $('exp').onclick=()=>{ const t=JSON.stringify({srs:S.srs,opt:S.opt,perso:S.perso,log:S.log,unlocked:S.unlocked,best:S.best}); (navigator.clipboard&&navigator.clipboard.writeText?navigator.clipboard.writeText(t).then(()=>toast('Copié'),()=>prompt('Copie :',t)):prompt('Copie :',t)); };
+  $('imp').onclick=()=>{ const t=prompt('Colle ta sauvegarde :'); if(!t)return; try{ const d=JSON.parse(t); S.srs=d.srs||{};S.opt=Object.assign(S.opt,d.opt||{});S.perso=d.perso||[];S.log=d.log||{};S.unlocked=d.unlocked||{};S.best=d.best||{}; save(); index(); toast('Restauré'); }catch(e){ toast('Texte invalide'); } };
+  $('rst').onclick=()=>{ if(confirm('Effacer toute la progression ?')){ S.srs={};S.perso=[];S.log={};S.unlocked={};S.best={}; save(); index(); toast('Effacé'); } }; }
 $('setBtn').onclick=()=>go(settings);
 function applyTheme(){ document.documentElement.dataset.theme=S.opt.theme; document.querySelector('meta[name=theme-color]').content=S.opt.theme==='nuit'?'#171410':'#F6F1E7'; }
 $('themeBtn').onclick=()=>{ S.opt.theme=S.opt.theme==='jour'?'nuit':'jour'; save(); applyTheme(); };
 
 /* ═══════ BOOT ═══════ */
-load(); applyTheme();
-loadData().then(()=>{ nav=[[home]]; render(); }).catch(e=>{ $('view').innerHTML=`<div class="loading">Impossible de charger les données.<br><small>${e.message}</small><br><small>L'appli doit être ouverte depuis un serveur (GitHub Pages), pas en fichier local.</small></div>`; });
+load(); applyTheme(); TTS.init();
+loadData().then(()=>{ nav=[[home]]; render(); }).catch(e=>{ $('view').innerHTML=`<div class="loading">Impossible de charger les données.<br><small>${esc(e&&e.message||e)}</small><br><small>L'appli doit être ouverte depuis un serveur (GitHub Pages), pas en fichier local.</small></div>`; });
 </script>
 </body>
 </html>

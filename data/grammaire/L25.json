@@ -1,0 +1,206 @@
+{
+ "id": "L25",
+ "titre": "Leçon 25 — Le conditionnel たら / ても",
+ "date": null,
+ "points": [
+  {
+   "t": "V-たら / adj-かったら / N だったら",
+   "ex": []
+  },
+  {
+   "t": "V-たら — après que",
+   "ex": []
+  },
+  {
+   "t": "V-ても / adj-くても / N でも",
+   "ex": [
+    {
+     "jp": "雨が降ったら、行きません。",
+     "fr": "S'il pleut, je n'irai pas.",
+     "tok": [
+      "雨が降ったら",
+      "行き",
+      "ません"
+     ]
+    },
+    {
+     "jp": "時間がなかったら、映画を見ません。",
+     "fr": "Si je n'ai pas le temps, je ne verrai pas de film.",
+     "tok": [
+      "時間がなかったら",
+      "映画を見",
+      "ません"
+     ]
+    },
+    {
+     "jp": "安かったら、あの店で買います。",
+     "fr": "Si c'est bon marché, j'achèterai dans ce magasin.",
+     "tok": [
+      "安かったら",
+      "あの店で買い",
+      "ます"
+     ]
+    },
+    {
+     "jp": "暇だったら、遊びに行きます。",
+     "fr": "Si je suis libre, j'irai m'amuser.",
+     "tok": [
+      "暇だったら",
+      "遊びに行き",
+      "ます"
+     ]
+    },
+    {
+     "jp": "いい天気だったら、散歩します。",
+     "fr": "S'il fait beau, je me promènerai.",
+     "tok": [
+      "いい天気だったら",
+      "散歩し",
+      "ます"
+     ]
+    },
+    {
+     "jp": "ミラーさんが来たら、出かけましょう。",
+     "fr": "Quand M. Miller sera arrivé, sortons.",
+     "tok": [
+      "ミラーさんが来たら",
+      "出かけ",
+      "ましょう"
+     ]
+    },
+    {
+     "jp": "うちへ帰ったら、すぐシャワーを浴びます。",
+     "fr": "Une fois rentré, je prends tout de suite une douche.",
+     "tok": [
+      "うちへ帰ったら",
+      "すぐシャワーを浴び",
+      "ます"
+     ]
+    },
+    {
+     "jp": "夏休みになったら、田舎へ帰りたいです。",
+     "fr": "Quand ce sera les vacances d'été, je veux rentrer à la campagne.",
+     "tok": [
+      "夏休みになったら",
+      "田舎へ帰りたい",
+      "です"
+     ]
+    },
+    {
+     "jp": "考えても、わかりません。",
+     "fr": "Même en réfléchissant, je ne comprends pas.",
+     "tok": [
+      "考えても",
+      "わかり",
+      "ません"
+     ]
+    },
+    {
+     "jp": "お金がなくても、毎日、楽しいです。",
+     "fr": "Même sans argent, chaque jour est agréable.",
+     "tok": [
+      "お金がなくても",
+      "毎日",
+      "楽しい",
+      "です"
+     ]
+    },
+    {
+     "jp": "高くても、このうちを買いたいです。",
+     "fr": "Même si c'est cher, je veux acheter cette maison.",
+     "tok": [
+      "高くても",
+      "このうちを買いたい",
+      "です"
+     ]
+    },
+    {
+     "jp": "便利でも、車は使いません。",
+     "fr": "Même si c'est pratique, je n'utilise pas la voiture.",
+     "tok": [
+      "便利でも",
+      "車は使い",
+      "ません"
+     ]
+    },
+    {
+     "jp": "休みの日でも、早く起きます。",
+     "fr": "Même les jours de congé, je me lève tôt.",
+     "tok": [
+      "休みの日でも",
+      "早く起き",
+      "ます"
+     ]
+    }
+   ]
+  }
+ ],
+ "vocab": [
+  [
+   "田舎",
+   "campagne, pays natal",
+   "いなか",
+   ""
+  ],
+  [
+   "チャンス",
+   "chance, occasion",
+   "チャンス",
+   ""
+  ],
+  [
+   "転勤",
+   "mutation",
+   "てんきん",
+   ""
+  ],
+  [
+   "年を取る",
+   "prendre de l'âge",
+   "としをとる",
+   ""
+  ],
+  [
+   "考える",
+   "réfléchir, penser",
+   "かんがえる",
+   ""
+  ],
+  [
+   "意味",
+   "sens, signification",
+   "いみ",
+   ""
+  ],
+  [
+   "足りる",
+   "suffire",
+   "たりる",
+   ""
+  ]
+ ],
+ "verbes": [
+  {
+   "w": "年を取る",
+   "te": "取って",
+   "r": "としをとる",
+   "fr": "prendre de l'âge",
+   "les": 25
+  },
+  {
+   "w": "足りる",
+   "te": "たりる",
+   "r": "足りる",
+   "fr": "suffire",
+   "les": 25
+  },
+  {
+   "w": "考える",
+   "te": "かんがえる",
+   "r": "考える",
+   "fr": "réfléchir, penser",
+   "les": 25
+  }
+ ],
+ "adjectifs": []
+}

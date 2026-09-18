@@ -1,6 +1,6 @@
 {
- "version": "1.0",
- "maj": "2026-09-14",
+ "version": "3.0",
+ "maj": "2026-09-18",
  "cours": {
   "kanji": {
    "nom": "Version et kanji",
@@ -25,7 +25,7 @@
      "titre": "Séance 03 — L'heure, le tourisme",
      "date": "2026-09-17",
      "n": 17,
-     "src": "liste"
+     "src": "cours"
     },
     {
      "id": "S04",
@@ -91,14 +91,188 @@
     {
      "id": "L01",
      "titre": "Leçon 1 — Se présenter",
-     "date": "2026-09-10"
+     "date": "2026-09-10",
+     "n": 35,
+     "phrases": 18
     },
     {
      "id": "L02",
-     "titre": "Leçon 2 — Les objets (これ・それ・あれ)",
-     "date": "2026-09-17"
+     "titre": "Leçon 2 — Les objets : これ・それ・あれ",
+     "date": "2026-09-17",
+     "n": 26,
+     "phrases": 21
+    },
+    {
+     "id": "L03",
+     "titre": "Leçon 3 — Les lieux : ここ・そこ・あそこ",
+     "date": null,
+     "n": 25,
+     "phrases": 22
+    },
+    {
+     "id": "L04",
+     "titre": "Leçon 4 — L'heure et les horaires",
+     "date": null,
+     "n": 43,
+     "phrases": 19
+    },
+    {
+     "id": "L05",
+     "titre": "Leçon 5 — Se déplacer",
+     "date": null,
+     "n": 31,
+     "phrases": 18
+    },
+    {
+     "id": "L06",
+     "titre": "Leçon 6 — Les actions : N を V",
+     "date": null,
+     "n": 43,
+     "phrases": 24
+    },
+    {
+     "id": "L07",
+     "titre": "Leçon 7 — Donner et recevoir",
+     "date": null,
+     "n": 25,
+     "phrases": 18
+    },
+    {
+     "id": "L08",
+     "titre": "Leçon 8 — Les adjectifs",
+     "date": null,
+     "n": 45,
+     "phrases": 14
+    },
+    {
+     "id": "L09",
+     "titre": "Leçon 9 — Goûts et capacités",
+     "date": null,
+     "n": 33,
+     "phrases": 15
+    },
+    {
+     "id": "L10",
+     "titre": "Leçon 10 — Exister : あります・います",
+     "date": null,
+     "n": 40,
+     "phrases": 15
+    },
+    {
+     "id": "L11",
+     "titre": "Leçon 11 — Compter",
+     "date": null,
+     "n": 24,
+     "phrases": 16
+    },
+    {
+     "id": "L12",
+     "titre": "Leçon 12 — Le passé et la comparaison",
+     "date": null,
+     "n": 38,
+     "phrases": 18
+    },
+    {
+     "id": "L13",
+     "titre": "Leçon 13 — Vouloir",
+     "date": null,
+     "n": 23,
+     "phrases": 9
+    },
+    {
+     "id": "L14",
+     "titre": "Leçon 14 — La forme en て",
+     "date": null,
+     "n": 33,
+     "phrases": 11
+    },
+    {
+     "id": "L15",
+     "titre": "Leçon 15 — Permission et interdiction",
+     "date": null,
+     "n": 18,
+     "phrases": 18
+    },
+    {
+     "id": "L16",
+     "titre": "Leçon 16 — Enchaîner les actions",
+     "date": null,
+     "n": 40,
+     "phrases": 12
+    },
+    {
+     "id": "L17",
+     "titre": "Leçon 17 — La forme en ない",
+     "date": null,
+     "n": 26,
+     "phrases": 8
+    },
+    {
+     "id": "L18",
+     "titre": "Leçon 18 — Pouvoir",
+     "date": null,
+     "n": 20,
+     "phrases": 10
+    },
+    {
+     "id": "L19",
+     "titre": "Leçon 19 — Expériences et changements",
+     "date": null,
+     "n": 14,
+     "phrases": 8
+    },
+    {
+     "id": "L20",
+     "titre": "Leçon 20 — Le style neutre",
+     "date": null,
+     "n": 8,
+     "phrases": 15
+    },
+    {
+     "id": "L21",
+     "titre": "Leçon 21 — Penser et dire",
+     "date": null,
+     "n": 29,
+     "phrases": 19
+    },
+    {
+     "id": "L22",
+     "titre": "Leçon 22 — La proposition relative",
+     "date": null,
+     "n": 16,
+     "phrases": 12
+    },
+    {
+     "id": "L23",
+     "titre": "Leçon 23 — Quand… / Si…",
+     "date": null,
+     "n": 10,
+     "phrases": 12
+    },
+    {
+     "id": "L24",
+     "titre": "Leçon 24 — くれる・あげる・もらう",
+     "date": null,
+     "n": 23,
+     "phrases": 9
+    },
+    {
+     "id": "L25",
+     "titre": "Leçon 25 — Le conditionnel たら / ても",
+     "date": null,
+     "n": 7,
+     "phrases": 13
     }
-   ]
+   ],
+   "lexique": "_lexique.json"
   }
- }
+ },
+ "fichiers": [
+  "strokes.json",
+  "components.json",
+  "cloze.json",
+  "readings.json",
+  "cles.json",
+  "cours_cles.json"
+ ]
 }

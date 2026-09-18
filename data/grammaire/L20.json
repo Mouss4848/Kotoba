@@ -1,0 +1,215 @@
+{
+ "id": "L20",
+ "titre": "Leçon 20 — Le style neutre",
+ "date": null,
+ "points": [
+  {
+   "t": "N だ / adj-い / adj-な だ",
+   "ex": [
+    {
+     "jp": "来週、東京へ行く。",
+     "fr": "La semaine prochaine, je vais à Tokyo.",
+     "tok": [
+      "来週",
+      "東京へ行く"
+     ]
+    },
+    {
+     "jp": "毎日、忙しい。",
+     "fr": "Je suis occupé tous les jours.",
+     "tok": [
+      "毎日",
+      "忙しい"
+     ]
+    },
+    {
+     "jp": "明日、暇だ。",
+     "fr": "Demain, je suis libre.",
+     "tok": [
+      "明日",
+      "暇",
+      "だ"
+     ]
+    },
+    {
+     "jp": "IMC の社員だ。",
+     "fr": "Je suis employé d'IMC.",
+     "tok": [
+      "IMC",
+      "の社員",
+      "だ"
+     ]
+    }
+   ]
+  },
+  {
+   "t": "formes neutres des expressions",
+   "ex": [
+    {
+     "jp": "富士山に登りたい。",
+     "fr": "Je veux gravir le mont Fuji.",
+     "tok": [
+      "富士山に登りたい"
+     ]
+    },
+    {
+     "jp": "大阪に住んでいる。",
+     "fr": "J'habite à Osaka.",
+     "tok": [
+      "大阪に住んでいる"
+     ]
+    },
+    {
+     "jp": "市役所へ行かなければならない。",
+     "fr": "Je dois aller à la mairie.",
+     "tok": [
+      "市役所へ行かなければならない"
+     ]
+    },
+    {
+     "jp": "今日、残業しなくてもいい。",
+     "fr": "Aujourd'hui, pas besoin de faire d'heures sup.",
+     "tok": [
+      "今日",
+      "残業しなくてもいい"
+     ]
+    }
+   ]
+  },
+  {
+   "t": "style neutre à l'oral",
+   "ex": [
+    {
+     "jp": "ドイツ語を話すことができる。",
+     "fr": "Je sais parler allemand.",
+     "tok": [
+      "ドイツ語を話すことができる"
+     ]
+    },
+    {
+     "jp": "イギリスへ行ったことがある。",
+     "fr": "Je suis déjà allé en Angleterre.",
+     "tok": [
+      "イギリスへ行ったことがある"
+     ]
+    },
+    {
+     "jp": "アイスクリーム、食べる?うん、食べる。",
+     "fr": "Tu manges une glace ? Ouais, je mange.",
+     "tok": [
+      "アイスクリーム",
+      "食べるうん",
+      "食べる"
+     ]
+    },
+    {
+     "jp": "そこに、はさみ、ある?ううん、ない。",
+     "fr": "Il y a des ciseaux là ? Non, y'en a pas.",
+     "tok": [
+      "そこに",
+      "はさみ",
+      "あるううん",
+      "ない"
+     ]
+    },
+    {
+     "jp": "昨日、木村さんに会った?ううん、会わなかった。",
+     "fr": "T'as vu Kimura hier ? Non, je l'ai pas vu.",
+     "tok": [
+      "昨日",
+      "木村さんに会ったううん",
+      "会わなかった"
+     ]
+    },
+    {
+     "jp": "今、暇?",
+     "fr": "T'es libre là ?",
+     "tok": [
+      "今",
+      "暇"
+     ]
+    },
+    {
+     "jp": "辞書、持ってる?ううん、持ってない。",
+     "fr": "T'as un dictionnaire ? Non, j'en ai pas.",
+     "tok": [
+      "辞書",
+      "持ってるううん",
+      "持ってない"
+     ]
+    }
+   ]
+  },
+  {
+   "t": "questions au style neutre",
+   "ex": []
+  }
+ ],
+ "vocab": [
+  [
+   "（～が）要る／要って          いる／いって",
+   "besoin : avoir besoin (de quelque chose)",
+   "（～が）要る／要って          いる／いって",
+   ""
+  ],
+  [
+   "調べる",
+   "consulter, chercher, examiner",
+   "しらべる",
+   ""
+  ],
+  [
+   "初め",
+   "début",
+   "はじめ",
+   ""
+  ],
+  [
+   "終わり",
+   "fin",
+   "おわり",
+   ""
+  ],
+  [
+   "着物",
+   "kimono",
+   "きもの",
+   ""
+  ],
+  [
+   "ことば",
+   "mot, langue, parole",
+   "ことば",
+   ""
+  ],
+  [
+   "修理する",
+   "réparer",
+   "しゅうりする",
+   ""
+  ],
+  [
+   "ビザ",
+   "visa",
+   "ビザ",
+   ""
+  ]
+ ],
+ "verbes": [
+  {
+   "w": "要る／*要って",
+   "te": "いる／いって",
+   "r": "要る／*要って",
+   "fr": "avoir besoin (de quelque chose)",
+   "les": 20
+  },
+  {
+   "w": "調べる",
+   "te": "しらべる",
+   "r": "調べる",
+   "fr": "consulter, chercher, examiner",
+   "les": 20
+  }
+ ],
+ "adjectifs": []
+}

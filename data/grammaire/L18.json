@@ -1,0 +1,279 @@
+{
+ "id": "L18",
+ "titre": "Leçon 18 — Pouvoir",
+ "date": null,
+ "points": [
+  {
+   "t": "N ができます",
+   "ex": []
+  },
+  {
+   "t": "V-る ことができます",
+   "ex": []
+  },
+  {
+   "t": "趣味は V-る ことです",
+   "ex": []
+  },
+  {
+   "t": "V-る 前に / N の前に / 期間 前に",
+   "ex": [
+    {
+     "jp": "ミラーさんは、サッカーができます。",
+     "fr": "M. Miller sait jouer au football.",
+     "tok": [
+      "ミラーさんは",
+      "サッカーができ",
+      "ます"
+     ]
+    },
+    {
+     "jp": "ミラーさんは、ピアノを弾くことができます。",
+     "fr": "M. Miller sait jouer du piano.",
+     "tok": [
+      "ミラーさんは",
+      "ピアノを弾くことができ",
+      "ます"
+     ]
+    },
+    {
+     "jp": "ここで、コピーができます。",
+     "fr": "On peut faire des photocopies ici.",
+     "tok": [
+      "ここで",
+      "コピーができ",
+      "ます"
+     ]
+    },
+    {
+     "jp": "ここで、切符を買うことができます。",
+     "fr": "On peut acheter des billets ici.",
+     "tok": [
+      "ここで",
+      "切符を買うことができ",
+      "ます"
+     ]
+    },
+    {
+     "jp": "趣味は、スポーツです。",
+     "fr": "Mon passe-temps, c'est le sport.",
+     "tok": [
+      "趣味は",
+      "スポーツ",
+      "です"
+     ]
+    },
+    {
+     "jp": "趣味は、写真を撮ることです。",
+     "fr": "Mon passe-temps, c'est prendre des photos.",
+     "tok": [
+      "趣味は",
+      "写真を撮ること",
+      "です"
+     ]
+    },
+    {
+     "jp": "寝る前に、本を読みます。",
+     "fr": "Avant de dormir, je lis.",
+     "tok": [
+      "寝る前に",
+      "本を読み",
+      "ます"
+     ]
+    },
+    {
+     "jp": "日本へ来る前に、日本語を勉強しました。",
+     "fr": "Avant de venir au Japon, j'ai étudié le japonais.",
+     "tok": [
+      "日本へ来る前に",
+      "日本語を勉強し",
+      "ました"
+     ]
+    },
+    {
+     "jp": "食事の前に手を洗います。",
+     "fr": "Avant le repas, je me lave les mains.",
+     "tok": [
+      "食事の前に手を洗い",
+      "ます"
+     ]
+    },
+    {
+     "jp": "（５年／３時間）前に日本へ来ました。",
+     "fr": "Je suis venu au Japon il y a (5 ans / 3 heures).",
+     "tok": [
+      "５年／３時間前に日本へ来",
+      "ました"
+     ]
+    }
+   ]
+  }
+ ],
+ "vocab": [
+  [
+   "動物",
+   "animal",
+   "どうぶつ",
+   ""
+  ],
+  [
+   "換える",
+   "changer, échanger",
+   "かえる",
+   ""
+  ],
+  [
+   "歌う",
+   "chanter",
+   "うたう",
+   ""
+  ],
+  [
+   "部長",
+   "chef de département",
+   "ぶちょう",
+   ""
+  ],
+  [
+   "課長",
+   "chef de service",
+   "かちょう",
+   ""
+  ],
+  [
+   "馬",
+   "cheval",
+   "うま",
+   ""
+  ],
+  [
+   "集める",
+   "collectionner, rassembler, ramasser",
+   "あつめる",
+   ""
+  ],
+  [
+   "運転する",
+   "conduire",
+   "うんてんする",
+   ""
+  ],
+  [
+   "現金",
+   "espèce, argent liquide",
+   "げんきん",
+   ""
+  ],
+  [
+   "趣味",
+   "hobby",
+   "しゅみ",
+   ""
+  ],
+  [
+   "インターネット",
+   "internet",
+   "インターネット",
+   ""
+  ],
+  [
+   "捨てる",
+   "jeter",
+   "すてる",
+   ""
+  ],
+  [
+   "弾く",
+   "jouer d'un instrument à cordes (piano, guitare…)",
+   "ひく",
+   ""
+  ],
+  [
+   "日記",
+   "journal intime",
+   "にっき",
+   ""
+  ],
+  [
+   "洗う",
+   "laver",
+   "あらう",
+   ""
+  ],
+  [
+   "ピアノ",
+   "piano",
+   "ピアノ",
+   ""
+  ],
+  [
+   "できる",
+   "pouvoir, savoir faire",
+   "できる",
+   ""
+  ],
+  [
+   "社長",
+   "président-directeur général",
+   "しゃちょう",
+   ""
+  ],
+  [
+   "お祈り",
+   "prière",
+   "おいのり",
+   ""
+  ],
+  [
+   "予約（する）",
+   "réservation",
+   "よやくする",
+   ""
+  ]
+ ],
+ "verbes": [
+  {
+   "w": "換える",
+   "te": "換えて",
+   "r": "かえる",
+   "fr": "changer, échanger",
+   "les": 18
+  },
+  {
+   "w": "集める",
+   "te": "あつめる",
+   "r": "集める",
+   "fr": "collectionner, rassembler, ramasser",
+   "les": 18
+  },
+  {
+   "w": "捨てる",
+   "te": "すてる",
+   "r": "捨てる",
+   "fr": "jeter",
+   "les": 18
+  },
+  {
+   "w": "弾く",
+   "te": "ひく",
+   "r": "弾く",
+   "fr": "jouer d'un instrument à cordes (piano, guitare…)",
+   "les": 18
+  },
+  {
+   "w": "歌う",
+   "te": "うたう",
+   "r": "歌う",
+   "fr": "chanter",
+   "les": 18
+  },
+  {
+   "w": "洗う",
+   "te": "あらう",
+   "r": "洗う",
+   "fr": "laver",
+   "les": 18
+  }
+ ],
+ "adjectifs": []
+}

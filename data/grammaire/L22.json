@@ -1,0 +1,262 @@
+{
+ "id": "L22",
+ "titre": "Leçon 22 — La proposition relative",
+ "date": null,
+ "points": [
+  {
+   "t": "V-る N / V-ている N",
+   "ex": []
+  },
+  {
+   "t": "N1 が V-る N2",
+   "ex": []
+  },
+  {
+   "t": "V-る + N — compléments",
+   "ex": [
+    {
+     "jp": "これは、子どもが読む本です。",
+     "fr": "C'est un livre que lisent les enfants.",
+     "tok": [
+      "これは",
+      "子どもが読む本",
+      "です"
+     ]
+    },
+    {
+     "jp": "ミラーさんは、傘を持っている人です。",
+     "fr": "M. Miller est la personne qui tient un parapluie.",
+     "tok": [
+      "ミラーさんは",
+      "傘を持っている人",
+      "です"
+     ]
+    },
+    {
+     "jp": "ここは、自転車を置く所です。",
+     "fr": "Ici, c'est l'endroit où l'on met les vélos.",
+     "tok": [
+      "ここは",
+      "自転車を置く所",
+      "です"
+     ]
+    },
+    {
+     "jp": "母がよく作る料理は、カレーです。",
+     "fr": "Le plat que ma mère fait souvent, c'est le curry.",
+     "tok": [
+      "母がよく作る料理は",
+      "カレー",
+      "です"
+     ]
+    },
+    {
+     "jp": "兄が持っているパソコンは、新しいです。",
+     "fr": "L'ordinateur qu'a mon frère est neuf.",
+     "tok": [
+      "兄が持っているパソコンは",
+      "新しい",
+      "です"
+     ]
+    },
+    {
+     "jp": "来週泊まるホテルは、海の近くにあります。",
+     "fr": "L'hôtel où je vais dormir la semaine prochaine est près de la mer.",
+     "tok": [
+      "来週泊まるホテルは",
+      "海の近くにあり",
+      "ます"
+     ]
+    },
+    {
+     "jp": "パソコンを入れるかばんを買いました。",
+     "fr": "J'ai acheté un sac pour mettre l'ordinateur.",
+     "tok": [
+      "パソコンを入れるかばんを買い",
+      "ました"
+     ]
+    },
+    {
+     "jp": "あの眼鏡をかけている人を知っています。",
+     "fr": "Je connais la personne qui porte des lunettes là-bas.",
+     "tok": [
+      "あの眼鏡をかけている人を知ってい",
+      "ます"
+     ]
+    },
+    {
+     "jp": "本を読む人が好きです。",
+     "fr": "J'aime les gens qui lisent.",
+     "tok": [
+      "本を読む人が好き",
+      "です"
+     ]
+    },
+    {
+     "jp": "プールがあるうちが欲しいです。",
+     "fr": "Je veux une maison avec une piscine.",
+     "tok": [
+      "プールがあるうちが欲しい",
+      "です"
+     ]
+    },
+    {
+     "jp": "テレビを見る時間がありません。",
+     "fr": "Je n'ai pas le temps de regarder la télé.",
+     "tok": [
+      "テレビを見る時間があり",
+      "ません"
+     ]
+    },
+    {
+     "jp": "買い物に行く約束があります。",
+     "fr": "J'ai rendez-vous pour aller faire des courses.",
+     "tok": [
+      "買い物に行く約束があり",
+      "ます"
+     ]
+    }
+   ]
+  },
+  {
+   "t": "V-る 時間 / 約束",
+   "ex": []
+  }
+ ],
+ "vocab": [
+  [
+   "（お）弁当",
+   "casse-croûte",
+   "（お）べんとう",
+   ""
+  ],
+  [
+   "帽子",
+   "chapeau, bonnet, casquette",
+   "ぼうし",
+   ""
+  ],
+  [
+   "都合",
+   "convenance, commodité",
+   "つごう",
+   ""
+  ],
+  [
+   "ケーキ",
+   "gâteau, cake",
+   "ケーキ",
+   ""
+  ],
+  [
+   "ユーモア",
+   "humour",
+   "ユーモア",
+   ""
+  ],
+  [
+   "家賃",
+   "loyer",
+   "やちん",
+   ""
+  ],
+  [
+   "眼鏡",
+   "lunettes",
+   "めがね",
+   ""
+  ],
+  [
+   "コート",
+   "manteau",
+   "コート",
+   ""
+  ],
+  [
+   "着る",
+   "mettre (chemise, etc.)",
+   "きる",
+   ""
+  ],
+  [
+   "かぶる",
+   "mettre (chapeau, bonnet, etc.)",
+   "かぶる",
+   ""
+  ],
+  [
+   "はく",
+   "mettre (chaussures, pantalon, jupe, etc.)",
+   "はく",
+   ""
+  ],
+  [
+   "かける",
+   "mettre (des lunettes)",
+   "かける",
+   ""
+  ],
+  [
+   "生まれる",
+   "naître",
+   "うまれる",
+   ""
+  ],
+  [
+   "セーター",
+   "pull-over",
+   "セーター",
+   ""
+  ],
+  [
+   "ロボット",
+   "robot",
+   "ロボット",
+   ""
+  ],
+  [
+   "スーツ",
+   "tailleur, costume",
+   "スーツ",
+   ""
+  ]
+ ],
+ "verbes": [
+  {
+   "w": "着る",
+   "te": "着て",
+   "r": "きる",
+   "fr": "mettre (une chemise, etc.)",
+   "les": 22
+  },
+  {
+   "w": "はく",
+   "te": "はいて",
+   "r": "はく",
+   "fr": "mettre (des chaussures, un pantalon, etc.)",
+   "les": 22
+  },
+  {
+   "w": "かぶる",
+   "te": "かぶって",
+   "r": "かぶる",
+   "fr": "mettre (un chapeau, un bonnet, etc.)",
+   "les": 22
+  },
+  {
+   "w": "かける",
+   "te": "かけて",
+   "r": "かける",
+   "fr": "mettre (des lunettes)",
+   "les": 22
+  },
+  {
+   "w": "生まれる",
+   "te": "生まれて",
+   "r": "うまれる",
+   "fr": "naître",
+   "les": 22
+  }
+ ],
+ "adjectifs": []
+}

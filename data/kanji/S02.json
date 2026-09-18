@@ -212,7 +212,7 @@
      "star": true
     },
     {
-     "w": "日本",
+     "w": "日本人",
      "r": "にほんじん",
      "fr": "le Japonais",
      "star": true
@@ -815,6 +815,18 @@
     }
    ],
    "src": "cours"
+  }
+ ],
+ "blocs": [
+  {
+   "nom": "Les personnes",
+   "from": 15,
+   "to": 18
+  },
+  {
+   "nom": "Le calendrier",
+   "from": 19,
+   "to": 34
   }
  ]
 }

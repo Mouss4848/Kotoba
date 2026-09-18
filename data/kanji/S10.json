@@ -731,5 +731,22 @@
    ],
    "src": "liste"
   }
+ ],
+ "blocs": [
+  {
+   "nom": "Force et lieux",
+   "from": 151,
+   "to": 156
+  },
+  {
+   "nom": "La famille",
+   "from": 157,
+   "to": 162
+  },
+  {
+   "nom": "Soi et les arts",
+   "from": 163,
+   "to": 166
+  }
  ]
 }

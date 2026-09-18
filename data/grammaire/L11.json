@@ -1,0 +1,326 @@
+{
+ "id": "L11",
+ "titre": "Leçon 11 — Compter",
+ "date": null,
+ "points": [
+  {
+   "t": "いくつ — compteur générique",
+   "ex": []
+  },
+  {
+   "t": "〜枚 / 何枚",
+   "ex": []
+  },
+  {
+   "t": "〜人 / 何人",
+   "ex": []
+  },
+  {
+   "t": "durée — 時間, 週間, か月, 年",
+   "ex": []
+  },
+  {
+   "t": "どのくらい / かかります",
+   "ex": []
+  },
+  {
+   "t": "期間 に 〜回 — fréquence",
+   "ex": [
+    {
+     "jp": "みかんが５つあります。",
+     "fr": "Il y a cinq mandarines.",
+     "tok": [
+      "みかんが５つあり",
+      "ます"
+     ]
+    },
+    {
+     "jp": "みかんがいくつありますか?",
+     "fr": "Combien y a-t-il de mandarines ?",
+     "tok": [
+      "みかんがいくつあり",
+      "ますか"
+     ]
+    },
+    {
+     "jp": "80 円の切手を 5 枚買いました。",
+     "fr": "J'ai acheté cinq timbres à 80 yens.",
+     "tok": [
+      "80",
+      "円の切手を",
+      "5",
+      "枚買い",
+      "ました"
+     ]
+    },
+    {
+     "jp": "80 円の切手を何枚買いましたか?",
+     "fr": "Combien de timbres à 80 yens as-tu achetés ?",
+     "tok": [
+      "80",
+      "円の切手を何枚買いましたか"
+     ]
+    },
+    {
+     "jp": "このクラスに留学生が 3 人います。",
+     "fr": "Il y a trois étudiants étrangers dans cette classe.",
+     "tok": [
+      "このクラスに留学生が",
+      "3",
+      "人い",
+      "ます"
+     ]
+    },
+    {
+     "jp": "このクラスに留学生が何人いますか?",
+     "fr": "Combien d'étudiants étrangers y a-t-il dans cette classe ?",
+     "tok": [
+      "このクラスに留学生が何人い",
+      "ますか"
+     ]
+    },
+    {
+     "jp": "国で 8 時間、日本語を勉強しました。",
+     "fr": "J'ai étudié le japonais 8 heures dans mon pays.",
+     "tok": [
+      "国で",
+      "8",
+      "時間",
+      "日本語を勉強し",
+      "ました"
+     ]
+    },
+    {
+     "jp": "国で 5 週間、日本語を勉強しました。",
+     "fr": "J'ai étudié le japonais 5 semaines dans mon pays.",
+     "tok": [
+      "国で",
+      "5",
+      "週間",
+      "日本語を勉強し",
+      "ました"
+     ]
+    },
+    {
+     "jp": "国で６か月、日本語を勉強しました。",
+     "fr": "J'ai étudié le japonais 6 mois dans mon pays.",
+     "tok": [
+      "国で６か月",
+      "日本語を勉強し",
+      "ました"
+     ]
+    },
+    {
+     "jp": "国で２年ぐらい日本語を勉強しました。",
+     "fr": "J'ai étudié le japonais environ 2 ans dans mon pays.",
+     "tok": [
+      "国で２年ぐらい日本語を勉強し",
+      "ました"
+     ]
+    },
+    {
+     "jp": "国でどのくらい日本語を勉強しましたか?",
+     "fr": "Combien de temps as-tu étudié le japonais dans ton pays ?",
+     "tok": [
+      "国でどのくらい日本語を勉強しましたか"
+     ]
+    },
+    {
+     "jp": "わたしの国から日本まで飛行機で４時間半かかります。",
+     "fr": "De mon pays au Japon, il faut 4 heures et demie d'avion.",
+     "tok": [
+      "わたしの国から日本まで飛行機で４時間半かかり",
+      "ます"
+     ]
+    },
+    {
+     "jp": "お国から日本まで飛行機でどのくらいかかりますか?",
+     "fr": "Combien de temps faut-il en avion de votre pays au Japon ?",
+     "tok": [
+      "お国から日本まで飛行機でどのくらいかかり",
+      "ますか"
+     ]
+    },
+    {
+     "jp": "１週間に １回、映画を見ます。",
+     "fr": "Je vois un film une fois par semaine.",
+     "tok": [
+      "１週間に",
+      "１回",
+      "映画を見",
+      "ます"
+     ]
+    },
+    {
+     "jp": "１か月に ２回ぐらい、映画を見ます。",
+     "fr": "Je vois un film environ deux fois par mois.",
+     "tok": [
+      "１か月に",
+      "２回ぐらい",
+      "映画を見",
+      "ます"
+     ]
+    },
+    {
+     "jp": "１年 に 何回、映画を見ますか?",
+     "fr": "Combien de fois par an vois-tu un film ?",
+     "tok": [
+      "１年",
+      "に",
+      "何回",
+      "映画を見",
+      "ますか"
+     ]
+    }
+   ]
+  }
+ ],
+ "vocab": [
+  [
+   "年",
+   "an, année",
+   "ねん",
+   ""
+  ],
+  [
+   "はがき",
+   "carte postale",
+   "はがき",
+   ""
+  ],
+  [
+   "クラス",
+   "classe",
+   "クラス",
+   ""
+  ],
+  [
+   "封筒",
+   "enveloppe",
+   "ふうとう",
+   ""
+  ],
+  [
+   "留学生",
+   "étudiant étranger",
+   "りゅうがくせい",
+   ""
+  ],
+  [
+   "かかる",
+   "falloir : il faut [temps, argent]",
+   "かかる",
+   ""
+  ],
+  [
+   "兄",
+   "frère : mon grand frère",
+   "あに",
+   ""
+  ],
+  [
+   "お兄さん",
+   "frère : grand frère (de quelqu'un d'autre)",
+   "おにいさん",
+   ""
+  ],
+  [
+   "弟",
+   "frère : mon petit frère",
+   "おとうと",
+   ""
+  ],
+  [
+   "弟さん",
+   "frère : petit frère (de quelqu'un d'autre)",
+   "おとうとさん",
+   ""
+  ],
+  [
+   "兄弟",
+   "frères (et sœurs)",
+   "きょうだい",
+   ""
+  ],
+  [
+   "アイスクリーム",
+   "glace",
+   "アイスクリーム",
+   ""
+  ],
+  [
+   "みかん",
+   "mandarine",
+   "みかん",
+   ""
+  ],
+  [
+   "両親",
+   "parents",
+   "りょうしん",
+   ""
+  ],
+  [
+   "ご両親",
+   "parents (de quelqu'un d'autre)",
+   "ごりょうしん",
+   ""
+  ],
+  [
+   "外国",
+   "pays étranger",
+   "がいこく",
+   ""
+  ],
+  [
+   "りんご",
+   "pomme",
+   "りんご",
+   ""
+  ],
+  [
+   "カレー（ライス）",
+   "riz au curry",
+   "カレー（ライス）",
+   ""
+  ],
+  [
+   "サンドイッチ",
+   "sandwich",
+   "サンドイッチ",
+   ""
+  ],
+  [
+   "姉",
+   "sœur: ma grande sœur",
+   "あね",
+   ""
+  ],
+  [
+   "お姉さん",
+   "sœur : grande sœur (de quelqu'un d'autre)",
+   "おねえさん",
+   ""
+  ],
+  [
+   "妹",
+   "sœur : ma petite sœur",
+   "いもうと",
+   ""
+  ],
+  [
+   "妹さん",
+   "sœur : petite sœur (de quelqu'un d'autre)",
+   "いもうとさん",
+   ""
+  ],
+  [
+   "切手",
+   "timbre",
+   "きって",
+   ""
+  ]
+ ],
+ "verbes": [],
+ "adjectifs": []
+}

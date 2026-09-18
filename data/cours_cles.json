@@ -1,0 +1,647 @@
+{
+ "id": "cles",
+ "titre": "La composition des kanji : les clés",
+ "seance": "S03",
+ "date": "2026-09-17",
+ "notions": [
+  {
+   "t": "Le bushu (部首)",
+   "fr": "La clé, ou radical, d'un kanji. C'est l'élément qui sert à classer les kanji dans les dictionnaires. Tous les éléments d'un kanji ne sont pas sa clé — un seul l'est."
+  },
+  {
+   "t": "Des kanji simples réduits",
+   "fr": "Souvent la clé est à l'origine un kanji « simple ». Avec le temps elle est restée inchangée, ou a été réduite pour tenir dans un coin du caractère.",
+   "ex": [
+    [
+     "人",
+     "亻",
+     "personne"
+    ],
+    [
+     "水",
+     "氵",
+     "eau"
+    ],
+    [
+     "手",
+     "扌",
+     "main"
+    ],
+    [
+     "心",
+     "忄",
+     "cœur"
+    ],
+    [
+     "火",
+     "灬",
+     "feu"
+    ]
+   ]
+  },
+  {
+   "t": "La clé oriente le sens et la lecture",
+   "fr": "Reconnaître la clé, c'est deviner une partie du sens — et souvent de la lecture ON — d'un kanji jamais vu."
+  },
+  {
+   "t": "Attention",
+   "fr": "Ces décompositions sont sémantiques et mnémotechniques, pas étymologiques. Certains kanji cités sont inusités dans le japonais moderne."
+  },
+  {
+   "t": "Les 214 clés",
+   "fr": "Sélectionnées dans le Kāngxī zìdiǎn (康熙字典, 1716), le dictionnaire de l'empereur Kāngxī compilé par Zhāng Yùshū et Chén Tíngjìng, auquel se réfèrent la plupart des dictionnaires de kanji japonais. 79 d'entre elles sont des clés de base."
+  }
+ ],
+ "familles": [
+  {
+   "cle": "日",
+   "sens": "le soleil",
+   "ex": [
+    [
+     "日",
+     "月",
+     "明",
+     "éclatant"
+    ],
+    [
+     "日",
+     "青",
+     "晴",
+     "beau temps"
+    ],
+    [
+     "日",
+     "音",
+     "暗",
+     "sombre"
+    ],
+    [
+     "日",
+     "者",
+     "暑",
+     "chaud"
+    ],
+    [
+     "日",
+     "英",
+     "映",
+     "se refléter"
+    ],
+    [
+     "日",
+     "生",
+     "星",
+     "étoile"
+    ],
+    [
+     "日",
+     "免",
+     "晩",
+     "soir"
+    ],
+    [
+     "日",
+     "寺",
+     "時",
+     "temps, heure"
+    ]
+   ]
+  },
+  {
+   "cle": "氵",
+   "sens": "l'eau",
+   "ex": [
+    [
+     "氵",
+     "毎",
+     "海",
+     "mer"
+    ],
+    [
+     "氵",
+     "羊",
+     "洋",
+     "océan"
+    ],
+    [
+     "氵",
+     "可",
+     "河",
+     "rivière"
+    ],
+    [
+     "氵",
+     "胡",
+     "湖",
+     "lac"
+    ],
+    [
+     "氵",
+     "也",
+     "池",
+     "étang"
+    ],
+    [
+     "氵",
+     "青",
+     "清",
+     "pur"
+    ],
+    [
+     "氵",
+     "先",
+     "洗",
+     "laver"
+    ],
+    [
+     "氵",
+     "主",
+     "注",
+     "verser"
+    ]
+   ]
+  },
+  {
+   "cle": "木",
+   "sens": "l'arbre, le bois",
+   "ex": [
+    [
+     "木",
+     "木",
+     "林",
+     "bosquet"
+    ],
+    [
+     "木",
+     "木木",
+     "森",
+     "forêt"
+    ],
+    [
+     "木",
+     "交",
+     "校",
+     "école"
+    ],
+    [
+     "木",
+     "几",
+     "机",
+     "bureau"
+    ],
+    [
+     "木",
+     "公",
+     "松",
+     "pin"
+    ],
+    [
+     "木",
+     "反",
+     "板",
+     "planche"
+    ]
+   ]
+  },
+  {
+   "cle": "扌",
+   "sens": "la main, les actions",
+   "ex": [
+    [
+     "扌",
+     "寺",
+     "持",
+     "tenir"
+    ],
+    [
+     "扌",
+     "丁",
+     "打",
+     "frapper"
+    ],
+    [
+     "扌",
+     "合",
+     "拾",
+     "ramasser"
+    ],
+    [
+     "扌",
+     "包",
+     "抱",
+     "étreindre"
+    ]
+   ]
+  },
+  {
+   "cle": "艹",
+   "sens": "les plantes",
+   "ex": [
+    [
+     "艹",
+     "化",
+     "花",
+     "fleur"
+    ],
+    [
+     "艹",
+     "早",
+     "草",
+     "herbe"
+    ],
+    [
+     "艹",
+     "人木",
+     "茶",
+     "thé"
+    ],
+    [
+     "艹",
+     "明",
+     "萌",
+     "germer"
+    ],
+    [
+     "艹",
+     "古",
+     "苦",
+     "amer, difficile"
+    ],
+    [
+     "艹",
+     "田",
+     "苗",
+     "semis"
+    ]
+   ]
+  },
+  {
+   "cle": "亻",
+   "sens": "l'humain",
+   "ex": [
+    [
+     "亻",
+     "木",
+     "休",
+     "repos"
+    ],
+    [
+     "亻",
+     "主",
+     "住",
+     "habiter"
+    ],
+    [
+     "亻",
+     "寺",
+     "侍",
+     "samouraï"
+    ],
+    [
+     "亻",
+     "言",
+     "信",
+     "croire"
+    ],
+    [
+     "亻",
+     "以",
+     "似",
+     "ressembler"
+    ]
+   ]
+  },
+  {
+   "cle": "言",
+   "sens": "la parole",
+   "ex": [
+    [
+     "言",
+     "吾",
+     "語",
+     "langage"
+    ],
+    [
+     "言",
+     "舌",
+     "話",
+     "parler"
+    ],
+    [
+     "言",
+     "寺",
+     "詩",
+     "poème"
+    ],
+    [
+     "言",
+     "正",
+     "証",
+     "preuve"
+    ],
+    [
+     "言",
+     "忍",
+     "認",
+     "reconnaître"
+    ]
+   ]
+  },
+  {
+   "cle": "忄",
+   "sens": "les émotions",
+   "ex": [
+    [
+     "忄",
+     "青",
+     "情",
+     "sentiment"
+    ],
+    [
+     "忄",
+     "亡",
+     "忙",
+     "occupé"
+    ],
+    [
+     "忄",
+     "央",
+     "怏",
+     "mécontent"
+    ],
+    [
+     "忄",
+     "布",
+     "怖",
+     "avoir peur"
+    ],
+    [
+     "忄",
+     "童",
+     "憧",
+     "aspirer à"
+    ]
+   ]
+  },
+  {
+   "cle": "金",
+   "sens": "le métal",
+   "ex": [
+    [
+     "金",
+     "艮",
+     "銀",
+     "argent"
+    ],
+    [
+     "金",
+     "同",
+     "銅",
+     "cuivre"
+    ],
+    [
+     "金",
+     "岡",
+     "鋼",
+     "acier"
+    ],
+    [
+     "金",
+     "失",
+     "鉄",
+     "fer"
+    ],
+    [
+     "金",
+     "令",
+     "鈴",
+     "clochette"
+    ],
+    [
+     "金",
+     "監",
+     "鑑",
+     "miroir, modèle"
+    ]
+   ]
+  },
+  {
+   "cle": "犭",
+   "sens": "l'animal",
+   "ex": [
+    [
+     "犭",
+     "苗",
+     "猫",
+     "chat"
+    ],
+    [
+     "犭",
+     "瓜",
+     "狐",
+     "renard"
+    ],
+    [
+     "犭",
+     "良",
+     "狼",
+     "loup"
+    ],
+    [
+     "犭",
+     "侯",
+     "猴",
+     "singe"
+    ],
+    [
+     "犭",
+     "里",
+     "狸",
+     "tanuki"
+    ]
+   ]
+  }
+ ],
+ "positions": [
+  {
+   "jp": "偏",
+   "kana": "へん",
+   "nom": "hen",
+   "fr": "partie gauche",
+   "ex": [
+    [
+     "亻",
+     "にんべん",
+     [
+      "休",
+      "体",
+      "住",
+      "作",
+      "何",
+      "使",
+      "働",
+      "借"
+     ]
+    ],
+    [
+     "日",
+     "ひへん",
+     [
+      "明",
+      "時",
+      "晴",
+      "暗",
+      "暖",
+      "昭",
+      "映",
+      "昨",
+      "晩"
+     ]
+    ]
+   ]
+  },
+  {
+   "jp": "旁",
+   "kana": "つくり",
+   "nom": "tsukuri",
+   "fr": "partie droite",
+   "ex": [
+    [
+     "斤",
+     "おのづくり",
+     [
+      "新",
+      "断",
+      "所",
+      "斬",
+      "析",
+      "折"
+     ]
+    ],
+    [
+     "阝",
+     "おおざと",
+     [
+      "都",
+      "部",
+      "郡",
+      "郷",
+      "郵",
+      "郎",
+      "邦"
+     ]
+    ]
+   ]
+  },
+  {
+   "jp": "冠",
+   "kana": "かんむり",
+   "nom": "kanmuri",
+   "fr": "la couronne, en haut",
+   "ex": [
+    [
+     "宀",
+     "うかんむり",
+     [
+      "字",
+      "家",
+      "安",
+      "室",
+      "宿",
+      "客"
+     ]
+    ]
+   ]
+  },
+  {
+   "jp": "脚",
+   "kana": "あし",
+   "nom": "ashi",
+   "fr": "les jambes, en bas",
+   "ex": [
+    [
+     "儿",
+     "ひとあし",
+     [
+      "元",
+      "先",
+      "光",
+      "兄",
+      "見",
+      "児",
+      "売"
+     ]
+    ]
+   ]
+  },
+  {
+   "jp": "垂",
+   "kana": "たれ",
+   "nom": "tare",
+   "fr": "suspendu, haut et gauche",
+   "ex": [
+    [
+     "广",
+     "まだれ",
+     [
+      "店",
+      "広",
+      "府",
+      "度",
+      "庭",
+      "庫",
+      "座"
+     ]
+    ]
+   ]
+  },
+  {
+   "jp": "繞",
+   "kana": "にょう",
+   "nom": "nyō",
+   "fr": "enveloppant, gauche et bas",
+   "ex": [
+    [
+     "⻌",
+     "しんにょう",
+     [
+      "近",
+      "遠",
+      "道",
+      "通",
+      "進",
+      "退",
+      "送",
+      "返",
+      "速",
+      "週",
+      "運",
+      "過"
+     ]
+    ]
+   ]
+  },
+  {
+   "jp": "構",
+   "kana": "かまえ",
+   "nom": "kamae",
+   "fr": "la structure, tout autour",
+   "ex": [
+    [
+     "囗",
+     "くにがまえ",
+     [
+      "国",
+      "園",
+      "図",
+      "回",
+      "困",
+      "固",
+      "囲",
+      "団"
+     ]
+    ]
+   ]
+  }
+ ]
+}

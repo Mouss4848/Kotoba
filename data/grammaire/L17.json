@@ -1,0 +1,346 @@
+{
+ "id": "L17",
+ "titre": "Leçon 17 — La forme en ない",
+ "date": null,
+ "points": [
+  {
+   "t": "V-ないでください",
+   "ex": []
+  },
+  {
+   "t": "V-なければなりません",
+   "ex": [
+    {
+     "jp": "車を止めないでください。",
+     "fr": "Ne garez pas votre voiture, s'il vous plaît.",
+     "tok": [
+      "車を止めないでください"
+     ]
+    },
+    {
+     "jp": "ここに入らないでください。",
+     "fr": "N'entrez pas ici, s'il vous plaît.",
+     "tok": [
+      "ここに入らないでください"
+     ]
+    },
+    {
+     "jp": "たばこを吸わないでください。",
+     "fr": "Ne fumez pas, s'il vous plaît.",
+     "tok": [
+      "たばこを吸わないでください"
+     ]
+    }
+   ]
+  },
+  {
+   "t": "V-なくてもいいです",
+   "ex": []
+  },
+  {
+   "t": "N は — thème mis en avant",
+   "ex": [
+    {
+     "jp": "本を返さなければなりません。",
+     "fr": "Je dois rendre le livre.",
+     "tok": [
+      "本を返さなければなり",
+      "ません"
+     ]
+    },
+    {
+     "jp": "薬を飲まなくてもいいです。",
+     "fr": "Ce n'est pas la peine de prendre le médicament.",
+     "tok": [
+      "薬を飲まなくてもいい",
+      "です"
+     ]
+    },
+    {
+     "jp": "レポートは、明日、書きます。",
+     "fr": "Le rapport, je l'écrirai demain.",
+     "tok": [
+      "レポートは",
+      "明日",
+      "書き",
+      "ます"
+     ]
+    },
+    {
+     "jp": "明日、レポートを書きます。",
+     "fr": "Demain, j'écrirai le rapport.",
+     "tok": [
+      "明日",
+      "レポートを書き",
+      "ます"
+     ]
+    },
+    {
+     "jp": "レポートは、メールで送ってください。",
+     "fr": "Envoyez le rapport par mail, s'il vous plaît.",
+     "tok": [
+      "レポートは",
+      "メールで送ってください"
+     ]
+    }
+   ]
+  }
+ ],
+ "vocab": [
+  [
+   "持って来る",
+   "apporter",
+   "もってくる",
+   ""
+  ],
+  [
+   "大丈夫                 だい じょう ぶ adj.-NA",
+   "« ça va », « pas de problème »",
+   "大丈夫                 だい じょう ぶ adj.-NA",
+   ""
+  ],
+  [
+   "（健康）保険証",
+   "carte d'assurance (maladie)",
+   "（けんこう）ほけんしょう",
+   ""
+  ],
+  [
+   "危ない",
+   "dangereux",
+   "あぶない",
+   ""
+  ],
+  [
+   "禁煙",
+   "défense de fumer",
+   "きんえん",
+   ""
+  ],
+  [
+   "持って行く",
+   "emporter",
+   "もっていく",
+   ""
+  ],
+  [
+   "脱ぐ",
+   "enlever (ses chaussures, son vêtement)",
+   "ぬぐ",
+   ""
+  ],
+  [
+   "熱",
+   "fièvre",
+   "ねつ",
+   ""
+  ],
+  [
+   "のど",
+   "gorge",
+   "のど",
+   ""
+  ],
+  [
+   "残業（する）",
+   "heures supplémentaires",
+   "ざんぎょうする",
+   ""
+  ],
+  [
+   "大切",
+   "important, précieux",
+   "たいせつ",
+   ""
+  ],
+  [
+   "痛い",
+   "mal : avoir mal",
+   "いたい",
+   "adj-i"
+  ],
+  [
+   "病気",
+   "maladie",
+   "びょうき",
+   ""
+  ],
+  [
+   "薬",
+   "médicament",
+   "くすり",
+   ""
+  ],
+  [
+   "忘れる",
+   "oublier",
+   "わすれる",
+   ""
+  ],
+  [
+   "お金を払う",
+   "payer",
+   "おかねをはらう",
+   ""
+  ],
+  [
+   "なくす",
+   "perdre [ne plus avoir]",
+   "なくす",
+   ""
+  ],
+  [
+   "おふろに入る",
+   "prendre un bain",
+   "おふろにはいる",
+   ""
+  ],
+  [
+   "返す",
+   "rendre [donner en retour (ce qui est dû)]",
+   "かえす",
+   ""
+  ],
+  [
+   "覚える",
+   "retenir, apprendre par cœur",
+   "おぼえる",
+   ""
+  ],
+  [
+   "かぜ",
+   "rhume",
+   "かぜ",
+   ""
+  ],
+  [
+   "心配する",
+   "s'inquiéter",
+   "しんぱいする",
+   ""
+  ],
+  [
+   "出かける",
+   "sortir",
+   "でかける",
+   ""
+  ],
+  [
+   "下着",
+   "sous-vêtement",
+   "したぎ",
+   ""
+  ],
+  [
+   "上着",
+   "veste",
+   "うわぎ",
+   ""
+  ],
+  [
+   "出張（する）",
+   "voyage d'affaire",
+   "しゅっちょうする",
+   ""
+  ]
+ ],
+ "verbes": [
+  {
+   "w": "出かける",
+   "te": "出かけて",
+   "r": "でかける",
+   "fr": "sortir",
+   "les": 17
+  },
+  {
+   "w": "覚える",
+   "te": "覚えて",
+   "r": "おぼえる",
+   "fr": "retenir, apprendre par cœur",
+   "les": 17
+  },
+  {
+   "w": "忘れる",
+   "te": "忘れて",
+   "r": "わすれる",
+   "fr": "oublier",
+   "les": 17
+  },
+  {
+   "w": "持って行く",
+   "te": "持って行って",
+   "r": "もっていく",
+   "fr": "emporter",
+   "les": 17
+  },
+  {
+   "w": "持って来る",
+   "te": "持って来て",
+   "r": "もってくる",
+   "fr": "apporter",
+   "les": 17
+  },
+  {
+   "w": "脱ぐ",
+   "te": "脱いで",
+   "r": "ぬぐ",
+   "fr": "enlever (ses chaussures, son vêtement)",
+   "les": 17
+  },
+  {
+   "w": "おふろに入る",
+   "te": "入って",
+   "r": "はいる",
+   "fr": "prendre un bain",
+   "les": 17
+  },
+  {
+   "w": "お金を払う",
+   "te": "払って",
+   "r": "おかねをはらう",
+   "fr": "payer",
+   "les": 17
+  },
+  {
+   "w": "返す",
+   "te": "かえす",
+   "r": "返す",
+   "fr": "rendre",
+   "les": 17
+  }
+ ],
+ "adjectifs": [
+  {
+   "w": "危ない",
+   "r": "あぶない",
+   "fr": "dangereux",
+   "les": 17,
+   "type": "i",
+   "opp": []
+  },
+  {
+   "w": "痛い",
+   "r": "いたい",
+   "fr": "douloureux",
+   "les": 17,
+   "type": "i",
+   "opp": []
+  },
+  {
+   "w": "大丈夫",
+   "r": "だいじょうぶ",
+   "fr": "ça va, pas de problème",
+   "les": 17,
+   "type": "na",
+   "opp": []
+  },
+  {
+   "w": "大切",
+   "r": "たいせつ",
+   "fr": "important, précieux",
+   "les": 17,
+   "type": "na",
+   "opp": []
+  }
+ ]
+}

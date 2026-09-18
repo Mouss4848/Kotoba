@@ -765,5 +765,22 @@
    ],
    "src": "liste"
   }
+ ],
+ "blocs": [
+  {
+   "nom": "Directions",
+   "from": 102,
+   "to": 105
+  },
+  {
+   "nom": "Le corps",
+   "from": 106,
+   "to": 109
+  },
+  {
+   "nom": "Adjectifs opposés",
+   "from": 110,
+   "to": 117
+  }
  ]
 }

@@ -1,0 +1,373 @@
+{
+ "id": "L05",
+ "titre": "Leçon 5 — Se déplacer",
+ "date": null,
+ "points": [
+  {
+   "t": "N へ行きます",
+   "ex": []
+  },
+  {
+   "t": "N で — moyen de transport",
+   "ex": [
+    {
+     "jp": "（わたしは、）スーパーへ行きます。",
+     "fr": "Je vais au supermarché.",
+     "tok": [
+      "わたしは",
+      "スーパーへ行き",
+      "ます"
+     ]
+    },
+    {
+     "jp": "どこへ行きますか?大学へ行きます。",
+     "fr": "Où vas-tu ? Je vais à l'université.",
+     "tok": [
+      "どこへ行きますか大学へ行き",
+      "ます"
+     ]
+    },
+    {
+     "jp": "どこ（へ）も行きません。",
+     "fr": "Je ne vais nulle part.",
+     "tok": [
+      "どこへも行き",
+      "ません"
+     ]
+    },
+    {
+     "jp": "バスで会社へ行きます。",
+     "fr": "Je vais au bureau en bus.",
+     "tok": [
+      "バスで会社へ行き",
+      "ます"
+     ]
+    },
+    {
+     "jp": "何で会社へ行きますか?",
+     "fr": "Comment vas-tu au bureau ?",
+     "tok": [
+      "何で会社へ行き",
+      "ますか"
+     ]
+    },
+    {
+     "jp": "どうやって会社へ行きますか?",
+     "fr": "Comment fais-tu pour aller au bureau ?",
+     "tok": [
+      "どうやって会社へ行き",
+      "ますか"
+     ]
+    },
+    {
+     "jp": "地下鉄で行きます。",
+     "fr": "J'y vais en métro.",
+     "tok": [
+      "地下鉄で行き",
+      "ます"
+     ]
+    },
+    {
+     "jp": "歩いて行きます。",
+     "fr": "J'y vais à pied.",
+     "tok": [
+      "歩いて行き",
+      "ます"
+     ]
+    }
+   ]
+  },
+  {
+   "t": "N と — avec qui",
+   "ex": [
+    {
+     "jp": "家族と日本へ来ました。",
+     "fr": "Je suis venu au Japon avec ma famille.",
+     "tok": [
+      "家族と日本へ来",
+      "ました"
+     ]
+    },
+    {
+     "jp": "だれと日本へ来ましたか?",
+     "fr": "Avec qui es-tu venu au Japon ?",
+     "tok": [
+      "だれと日本へ来ましたか"
+     ]
+    },
+    {
+     "jp": "友達と来ました。",
+     "fr": "Je suis venu avec un ami.",
+     "tok": [
+      "友達と来",
+      "ました"
+     ]
+    },
+    {
+     "jp": "一人で来ました。",
+     "fr": "Je suis venu seul.",
+     "tok": [
+      "一人で来",
+      "ました"
+     ]
+    }
+   ]
+  },
+  {
+   "t": "N から — provenance",
+   "ex": [
+    {
+     "jp": "アメリカから来ました。",
+     "fr": "Je viens des États-Unis.",
+     "tok": [
+      "アメリカから来",
+      "ました"
+     ]
+    }
+   ]
+  },
+  {
+   "t": "date に / いつ — quand",
+   "ex": [
+    {
+     "jp": "7 月 15 日に、国へ帰ります。",
+     "fr": "Je rentre dans mon pays le 15 juillet.",
+     "tok": [
+      "7",
+      "月",
+      "15",
+      "日に",
+      "国へ帰り",
+      "ます"
+     ]
+    },
+    {
+     "jp": "日曜日（に）、国へ帰ります。",
+     "fr": "Je rentre dans mon pays dimanche.",
+     "tok": [
+      "日曜日に",
+      "国へ帰り",
+      "ます"
+     ]
+    },
+    {
+     "jp": "来週、国へ帰ります。",
+     "fr": "Je rentre dans mon pays la semaine prochaine.",
+     "tok": [
+      "来週",
+      "国へ帰り",
+      "ます"
+     ]
+    },
+    {
+     "jp": "いつ、国へ帰りますか?",
+     "fr": "Quand rentres-tu dans ton pays ?",
+     "tok": [
+      "いつ",
+      "国へ帰り",
+      "ますか"
+     ]
+    },
+    {
+     "jp": "来年、帰ります。",
+     "fr": "Je rentre l'année prochaine.",
+     "tok": [
+      "来年",
+      "帰り",
+      "ます"
+     ]
+    }
+   ]
+  }
+ ],
+ "vocab": [
+  [
+   "行く",
+   "aller",
+   "いく",
+   ""
+  ],
+  [
+   "友達",
+   "ami(e)",
+   "ともだち",
+   ""
+  ],
+  [
+   "去年",
+   "année : l'année dernière",
+   "きょねん",
+   ""
+  ],
+  [
+   "今年",
+   "année : cette année",
+   "ことし",
+   ""
+  ],
+  [
+   "来年",
+   "année : l'année prochaine",
+   "らいねん",
+   ""
+  ],
+  [
+   "誕生日",
+   "anniversaire (de naissance)",
+   "たんじょうび",
+   ""
+  ],
+  [
+   "飛行機",
+   "avion",
+   "ひこうき",
+   ""
+  ],
+  [
+   "船",
+   "bateau",
+   "ふね",
+   ""
+  ],
+  [
+   "自転車",
+   "bicyclette",
+   "じてんしゃ",
+   ""
+  ],
+  [
+   "バス",
+   "bus",
+   "バス",
+   ""
+  ],
+  [
+   "学校",
+   "école",
+   "がっこう",
+   ""
+  ],
+  [
+   "彼女",
+   "elle, petite amie",
+   "かのじょ",
+   ""
+  ],
+  [
+   "家族",
+   "famille",
+   "かぞく",
+   ""
+  ],
+  [
+   "駅",
+   "gare, station",
+   "えき",
+   ""
+  ],
+  [
+   "彼",
+   "il, lui, petit ami",
+   "かれ",
+   ""
+  ],
+  [
+   "地下鉄",
+   "métro",
+   "ちかてつ",
+   ""
+  ],
+  [
+   "先月",
+   "mois : le mois dernier",
+   "せんげつ",
+   ""
+  ],
+  [
+   "今月",
+   "mois : ce mois",
+   "こんげつ",
+   ""
+  ],
+  [
+   "来月",
+   "mois : le mois prochain",
+   "らいげつ",
+   ""
+  ],
+  [
+   "人",
+   "personne, gens",
+   "ひと",
+   ""
+  ],
+  [
+   "歩いて",
+   "pied : à pied",
+   "あるいて",
+   ""
+  ],
+  [
+   "帰る",
+   "rentrer",
+   "かえる",
+   ""
+  ],
+  [
+   "先週",
+   "semaine : la semaine dernière",
+   "せんしゅう",
+   ""
+  ],
+  [
+   "今週",
+   "semaine : cette semaine",
+   "こんしゅう",
+   ""
+  ],
+  [
+   "来週",
+   "semaine : la semaine prochaine",
+   "らいしゅう",
+   ""
+  ],
+  [
+   "一人で",
+   "seul(e), par soi-même",
+   "ひとりで",
+   ""
+  ],
+  [
+   "新幹線",
+   "Shinkansen (TGV)",
+   "しんかんせん",
+   ""
+  ],
+  [
+   "スーパー",
+   "supermarché",
+   "スーパー",
+   ""
+  ],
+  [
+   "タクシー",
+   "taxi",
+   "タクシー",
+   ""
+  ],
+  [
+   "電車",
+   "train",
+   "でんしゃ",
+   ""
+  ],
+  [
+   "来る",
+   "venir",
+   "くる",
+   ""
+  ]
+ ],
+ "verbes": [],
+ "adjectifs": []
+}

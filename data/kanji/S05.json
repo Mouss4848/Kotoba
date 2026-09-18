@@ -798,5 +798,17 @@
    ],
    "src": "liste"
   }
+ ],
+ "blocs": [
+  {
+   "nom": "Position",
+   "from": 69,
+   "to": 74
+  },
+  {
+   "nom": "Verbes du quotidien",
+   "from": 75,
+   "to": 84
+  }
  ]
 }

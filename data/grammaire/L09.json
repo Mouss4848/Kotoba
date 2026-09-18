@@ -1,0 +1,400 @@
+{
+ "id": "L09",
+ "titre": "Leçon 9 — Goûts et capacités",
+ "date": null,
+ "points": [
+  {
+   "t": "N が好きです / 嫌いです",
+   "ex": []
+  },
+  {
+   "t": "N が上手です / 下手です",
+   "ex": []
+  },
+  {
+   "t": "N がわかります",
+   "ex": [
+    {
+     "jp": "（わたしは、）スポーツが好きです。",
+     "fr": "J'aime le sport.",
+     "tok": [
+      "わたしは",
+      "スポーツが好き",
+      "です"
+     ]
+    },
+    {
+     "jp": "（わたしは、）スポーツが嫌いです。",
+     "fr": "Je n'aime pas le sport.",
+     "tok": [
+      "わたしは",
+      "スポーツが嫌い",
+      "です"
+     ]
+    },
+    {
+     "jp": "サントスさんは、サッカーが上手です。",
+     "fr": "M. Santos est bon au football.",
+     "tok": [
+      "サントスさんは",
+      "サッカーが上手",
+      "です"
+     ]
+    },
+    {
+     "jp": "サントスさんは、サッカーが下手です。",
+     "fr": "M. Santos est mauvais au football.",
+     "tok": [
+      "サントスさんは",
+      "サッカーが下手",
+      "です"
+     ]
+    },
+    {
+     "jp": "ミラーさんは、ひらがながわかります。",
+     "fr": "M. Miller comprend les hiragana.",
+     "tok": [
+      "ミラーさんは",
+      "ひらがながわかり",
+      "ます"
+     ]
+    },
+    {
+     "jp": "わかります。",
+     "fr": "Je comprends.",
+     "tok": [
+      "わかり",
+      "ます"
+     ]
+    },
+    {
+     "jp": "だいたい わかります。",
+     "fr": "Je comprends à peu près.",
+     "tok": [
+      "だいたい",
+      "わかり",
+      "ます"
+     ]
+    }
+   ]
+  },
+  {
+   "t": "N があります — posséder",
+   "ex": []
+  },
+  {
+   "t": "〜から — parce que / どうして",
+   "ex": [
+    {
+     "jp": "わかります。",
+     "fr": "Je comprends.",
+     "tok": [
+      "わかり",
+      "ます"
+     ]
+    },
+    {
+     "jp": "わかりません。",
+     "fr": "Je ne comprends pas.",
+     "tok": [
+      "わかり",
+      "ません"
+     ]
+    },
+    {
+     "jp": "わかりません。",
+     "fr": "Je ne comprends pas.",
+     "tok": [
+      "わかり",
+      "ません"
+     ]
+    },
+    {
+     "jp": "（わたしは、）お金があります。",
+     "fr": "J'ai de l'argent.",
+     "tok": [
+      "わたしは",
+      "お金があり",
+      "ます"
+     ]
+    },
+    {
+     "jp": "（わたしは、）車があります。",
+     "fr": "J'ai une voiture.",
+     "tok": [
+      "わたしは",
+      "車があり",
+      "ます"
+     ]
+    },
+    {
+     "jp": "忙しいですから、テレビを見ません。",
+     "fr": "Comme je suis occupé, je ne regarde pas la télé.",
+     "tok": [
+      "忙しいですから",
+      "テレビを見",
+      "ません"
+     ]
+    },
+    {
+     "jp": "どうしてテレビを見ませんか?",
+     "fr": "Pourquoi ne regardes-tu pas la télé ?",
+     "tok": [
+      "どうしてテレビを見",
+      "ませんか"
+     ]
+    },
+    {
+     "jp": "忙しいですから。",
+     "fr": "Parce que je suis occupé.",
+     "tok": [
+      "忙しいですから"
+     ]
+    }
+   ]
+  }
+ ],
+ "vocab": [
+  [
+   "好き",
+   "aimé, favori",
+   "すき",
+   "adj-na"
+  ],
+  [
+   "いる",
+   "avoir : il y a, exister, se trouver [être humain/animal]",
+   "いる",
+   ""
+  ],
+  [
+   "ある",
+   "avoir : il y a, exister, se trouver [objet]",
+   "ある",
+   ""
+  ],
+  [
+   "野球",
+   "baseball",
+   "やきゅう",
+   ""
+  ],
+  [
+   "飲み物",
+   "boisson",
+   "のみもの",
+   ""
+  ],
+  [
+   "歌",
+   "chanson",
+   "うた",
+   ""
+  ],
+  [
+   "クラシック",
+   "classique",
+   "クラシック",
+   ""
+  ],
+  [
+   "（～が）わかる",
+   "comprendre (qqch)",
+   "（～が）わかる",
+   ""
+  ],
+  [
+   "コンサート",
+   "concert",
+   "コンサート",
+   ""
+  ],
+  [
+   "料理",
+   "cuisine",
+   "りょうり",
+   ""
+  ],
+  [
+   "ダンス",
+   "danse",
+   "ダンス",
+   ""
+  ],
+  [
+   "嫌い",
+   "détesté",
+   "きらい",
+   "adj-na"
+  ],
+  [
+   "子ども",
+   "enfant",
+   "こども",
+   ""
+  ],
+  [
+   "お子さん",
+   "enfant (de quelqu'un d'autre)",
+   "おこさん",
+   ""
+  ],
+  [
+   "妻・家内                つま・かない",
+   "femme : ma femme",
+   "妻・家内                つま・かない",
+   ""
+  ],
+  [
+   "奥さん",
+   "femme (de quelqu'un d'autre)",
+   "おくさん",
+   ""
+  ],
+  [
+   "上手",
+   "habile",
+   "じょうず",
+   ""
+  ],
+  [
+   "時間",
+   "heure",
+   "じかん",
+   ""
+  ],
+  [
+   "ジャズ",
+   "jazz",
+   "ジャズ",
+   ""
+  ],
+  [
+   "カラオケ",
+   "karaoké",
+   "カラオケ",
+   ""
+  ],
+  [
+   "字",
+   "lettre, caractère",
+   "じ",
+   ""
+  ],
+  [
+   "下手",
+   "maladroit",
+   "へた",
+   ""
+  ],
+  [
+   "夫・主人               おっと・しゅじん",
+   "mari : mon mari",
+   "夫・主人               おっと・しゅじん",
+   ""
+  ],
+  [
+   "ご主人",
+   "mari (de quelqu'un d'autre)",
+   "ごしゅじん",
+   ""
+  ],
+  [
+   "細かいお金",
+   "monnaie : petite monnaie",
+   "こまかいおかね",
+   ""
+  ],
+  [
+   "音楽",
+   "musique",
+   "おんがく",
+   ""
+  ],
+  [
+   "絵",
+   "peinture, dessin",
+   "え",
+   ""
+  ],
+  [
+   "用事",
+   "quelque chose à faire",
+   "ようじ",
+   ""
+  ],
+  [
+   "約束",
+   "rendez-vous, promesse",
+   "やくそく",
+   ""
+  ],
+  [
+   "スポーツ",
+   "sport",
+   "スポーツ",
+   ""
+  ],
+  [
+   "チケット",
+   "ticket, billet (concert, exposition)",
+   "チケット",
+   ""
+  ],
+  [
+   "アルバイト",
+   "travail temporaire, job",
+   "アルバイト",
+   ""
+  ],
+  [
+   "旅行",
+   "voyage",
+   "りょこう",
+   ""
+  ]
+ ],
+ "verbes": [],
+ "adjectifs": [
+  {
+   "w": "好き",
+   "r": "すき",
+   "fr": "aimé, favori",
+   "les": 9,
+   "type": "na",
+   "opp": [
+    "嫌い"
+   ]
+  },
+  {
+   "w": "嫌い",
+   "r": "きらい",
+   "fr": "détesté",
+   "les": 9,
+   "type": "na",
+   "opp": [
+    "好き"
+   ]
+  },
+  {
+   "w": "上手",
+   "r": "じょうず",
+   "fr": "habile, doué",
+   "les": 9,
+   "type": "na",
+   "opp": [
+    "下手"
+   ]
+  },
+  {
+   "w": "下手",
+   "r": "へた",
+   "fr": "maladroit",
+   "les": 9,
+   "type": "na",
+   "opp": [
+    "上手"
+   ]
+  }
+ ]
+}

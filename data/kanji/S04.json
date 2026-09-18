@@ -462,25 +462,25 @@
     {
      "w": "空",
      "r": "そら",
-     "fr": "le ciel (そら) / vide (から)",
+     "fr": "le ciel",
      "star": true
     },
     {
      "w": "空",
      "r": "から",
-     "fr": "le ciel (そら) / vide (から)",
+     "fr": "vide",
      "star": true
     },
     {
      "w": "空く",
      "r": "あく",
-     "fr": "se vider, se libérer (あく) ; être peu rempli (すく)",
+     "fr": "se vider, se libérer",
      "star": false
     },
     {
      "w": "空く",
      "r": "すく",
-     "fr": "se vider, se libérer (あく) ; être peu rempli (すく)",
+     "fr": "être peu rempli, avoir faim",
      "star": true
     },
     {
@@ -793,6 +793,23 @@
     }
    ],
    "src": "liste"
+  }
+ ],
+ "blocs": [
+  {
+   "nom": "Moments de la journée",
+   "from": 52,
+   "to": 55
+  },
+  {
+   "nom": "Nature et météo",
+   "from": 56,
+   "to": 63
+  },
+  {
+   "nom": "Ville et école",
+   "from": 64,
+   "to": 68
   }
  ]
 }

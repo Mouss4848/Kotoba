@@ -1,14 +1,13 @@
 {
  "id": "L02",
- "titre": "Leçon 2 — Les objets (これ・それ・あれ)",
+ "titre": "Leçon 2 — Les objets : これ・それ・あれ",
  "date": "2026-09-17",
  "points": [
   {
    "t": "これ / それ / あれ",
-   "fr": "Démonstratifs : près de moi / près de toi / loin de nous deux.",
    "ex": [
     {
-     "jp": "これは かぎです。",
+     "jp": "これは、かぎです。",
      "fr": "C'est une clé.",
      "tok": [
       "これは",
@@ -17,7 +16,7 @@
      ]
     },
     {
-     "jp": "それは かばんです。",
+     "jp": "それは、かばんです。",
      "fr": "C'est un sac.",
      "tok": [
       "それは",
@@ -26,7 +25,7 @@
      ]
     },
     {
-     "jp": "あれは テレビです。",
+     "jp": "あれは、テレビです。",
      "fr": "C'est une télévision (là-bas).",
      "tok": [
       "あれは",
@@ -38,15 +37,18 @@
   },
   {
    "t": "そうです / 違います",
-   "fr": "Répondre à une question fermée sur un objet.",
    "ex": [
     {
-     "jp": "これは 本ですか。",
-     "fr": "Est-ce un livre ?",
+     "jp": "これは、本ですか? a) はい、本です。",
+     "fr": "Est-ce un livre ? Oui, c'est un livre.",
      "tok": [
       "これは",
       "本",
-      "ですか"
+      "ですか",
+      "a)",
+      "はい",
+      "本",
+      "です"
      ]
     },
     {
@@ -59,14 +61,6 @@
      ]
     },
     {
-     "jp": "いいえ、違います。",
-     "fr": "Non, ce n'est pas ça.",
-     "tok": [
-      "いいえ",
-      "違います"
-     ]
-    },
-    {
      "jp": "いいえ、手帳です。",
      "fr": "Non, c'est un agenda.",
      "tok": [
@@ -74,26 +68,28 @@
       "手帳",
       "です"
      ]
+    },
+    {
+     "jp": "いいえ、違います。",
+     "fr": "Non, ce n'est pas ça.",
+     "tok": [
+      "いいえ",
+      "違い",
+      "ます"
+     ]
     }
    ]
   },
   {
    "t": "何ですか",
-   "fr": "« Qu'est-ce que c'est ? »",
    "ex": [
     {
-     "jp": "これは 何ですか。",
-     "fr": "Qu'est-ce que c'est ?",
+     "jp": "これは、何ですか? （それは、）いすです。",
+     "fr": "Qu'est-ce que c'est ? C'est une chaise.",
      "tok": [
       "これは",
       "何",
-      "ですか"
-     ]
-    },
-    {
-     "jp": "それは いすです。",
-     "fr": "C'est une chaise.",
-     "tok": [
+      "ですか",
       "それは",
       "いす",
       "です"
@@ -102,57 +98,72 @@
    ]
   },
   {
-   "t": "N1 の N2 (contenu / possession)",
-   "fr": "の relie deux noms : 車のかぎ (la clé de la voiture), カリナさんのノート (le cahier de Karina).",
+   "t": "N1 の N2",
    "ex": [
     {
-     "jp": "これは 車の かぎです。",
+     "jp": "これは、車のかぎです。",
      "fr": "C'est la clé de la voiture.",
      "tok": [
       "これは",
-      "車の",
-      "かぎ",
+      "車のかぎ",
       "です"
      ]
     },
     {
-     "jp": "これは 何の かぎですか。",
+     "jp": "これは、何のかぎですか?",
      "fr": "De quoi est-ce la clé ?",
      "tok": [
       "これは",
-      "何の",
-      "かぎ",
+      "何のかぎ",
       "ですか"
      ]
     },
     {
-     "jp": "これは カリナさんの ノートです。",
-     "fr": "C'est le cahier de Karina.",
+     "jp": "車のかぎです。",
+     "fr": "C'est la clé de la voiture.",
      "tok": [
-      "これは",
-      "カリナさんの",
-      "ノート",
+      "車のかぎ",
       "です"
-     ]
-    },
-    {
-     "jp": "これは だれの ノートですか。",
-     "fr": "À qui est ce cahier ?",
-     "tok": [
-      "これは",
-      "だれの",
-      "ノート",
-      "ですか"
      ]
     }
    ]
   },
   {
-   "t": "〜の (pronom)",
-   "fr": "の seul remplace le nom : ワンさんの = celui de Wang.",
+   "t": "〜の — pronom possessif",
    "ex": [
     {
-     "jp": "これは ワンさんのですか。",
+     "jp": "これは、カリナさんのノートです。",
+     "fr": "C'est le cahier de Karina.",
+     "tok": [
+      "これは",
+      "カリナさんのノート",
+      "です"
+     ]
+    },
+    {
+     "jp": "これは、だれのノートですか?",
+     "fr": "À qui est ce cahier ?",
+     "tok": [
+      "これは",
+      "だれのノート",
+      "ですか"
+     ]
+    },
+    {
+     "jp": "カリナさんのノートです。",
+     "fr": "C'est le cahier de Karina.",
+     "tok": [
+      "カリナさんのノート",
+      "です"
+     ]
+    }
+   ]
+  },
+  {
+   "t": "この / その / あの + N",
+   "ex": [
+    {
+     "jp": "これは、ワンさんのですか?",
      "fr": "Est-ce celui de Wang ?",
      "tok": [
       "これは",
@@ -161,35 +172,61 @@
      ]
     },
     {
-     "jp": "いいえ、わたしのでは ありません。",
-     "fr": "Non, ce n'est pas le mien.",
+     "jp": "はい、ワンさんのです。",
+     "fr": "Oui, c'est celui de Wang.",
+     "tok": [
+      "はい",
+      "ワンさんの",
+      "です"
+     ]
+    },
+    {
+     "jp": "いいえ、ワンさんのではありません。ワットさんのです。",
+     "fr": "Non, ce n'est pas celui de Wang. C'est celui de Watt.",
      "tok": [
       "いいえ",
-      "わたしの",
-      "では",
-      "ありません"
+      "ワンさんのではありませんワットさんの",
+      "です"
+     ]
+    },
+    {
+     "jp": "いいえ、わたしのではありません。ワットさんのです。",
+     "fr": "Non, ce n'est pas le mien. C'est celui de Watt.",
+     "tok": [
+      "いいえ",
+      "わたしのではありませんワットさんの",
+      "です"
      ]
     }
    ]
   },
   {
-   "t": "この / その / あの + N",
-   "fr": "Forme adjective des démonstratifs, suivie d'un nom.",
+   "t": "Point 7",
    "ex": [
     {
-     "jp": "このカメラは だれのですか。",
-     "fr": "À qui est cet appareil photo ?",
+     "jp": "このカメラは、だれのですか?わたしのです。",
+     "fr": "À qui est cet appareil photo ? C'est le mien.",
      "tok": [
       "このカメラは",
-      "だれの",
-      "ですか"
+      "だれのですかわたしの",
+      "です"
      ]
     },
     {
-     "jp": "わたしのです。",
-     "fr": "C'est le mien.",
+     "jp": "そのカメラは、だれのですか?わたしのです。",
+     "fr": "À qui est cet appareil photo (près de toi) ? C'est le mien.",
      "tok": [
-      "わたしの",
+      "そのカメラは",
+      "だれのですかわたしの",
+      "です"
+     ]
+    },
+    {
+     "jp": "あのカメラは、だれのですか?わたしのです。",
+     "fr": "À qui est cet appareil photo (là-bas) ? C'est le mien.",
+     "tok": [
+      "あのカメラは",
+      "だれのですかわたしの",
       "です"
      ]
     }
@@ -198,148 +235,247 @@
  ],
  "vocab": [
   [
-   "これ",
-   "ceci"
-  ],
-  [
-   "それ",
-   "cela"
-  ],
-  [
-   "あれ",
-   "cela (là-bas)"
-  ],
-  [
-   "この〜",
-   "ce … (près de moi)"
-  ],
-  [
-   "その〜",
-   "ce … (près de toi)"
-  ],
-  [
-   "あの〜",
-   "ce … (là-bas)"
-  ],
-  [
-   "本",
-   "livre"
-  ],
-  [
-   "辞書",
-   "dictionnaire"
-  ],
-  [
-   "雑誌",
-   "magazine"
-  ],
-  [
-   "新聞",
-   "journal"
-  ],
-  [
-   "ノート",
-   "cahier"
-  ],
-  [
    "手帳",
-   "agenda"
-  ],
-  [
-   "名刺",
-   "carte de visite"
-  ],
-  [
-   "カード",
-   "carte"
-  ],
-  [
-   "鉛筆",
-   "crayon"
-  ],
-  [
-   "ボールペン",
-   "stylo-bille"
-  ],
-  [
-   "シャープペンシル",
-   "portemine"
-  ],
-  [
-   "かぎ",
-   "clé"
-  ],
-  [
-   "時計",
-   "montre, horloge"
-  ],
-  [
-   "傘",
-   "parapluie"
-  ],
-  [
-   "かばん",
-   "sac"
-  ],
-  [
-   "テレビ",
-   "télévision"
-  ],
-  [
-   "ラジオ",
-   "radio"
+   "agenda, carnet",
+   "てちょう",
+   ""
   ],
   [
    "カメラ",
-   "appareil photo"
-  ],
-  [
-   "コンピューター",
-   "ordinateur"
-  ],
-  [
-   "車",
-   "voiture"
+   "appareil-photo",
+   "カメラ",
+   ""
   ],
   [
    "机",
-   "bureau (meuble)"
-  ],
-  [
-   "いす",
-   "chaise"
-  ],
-  [
-   "チョコレート",
-   "chocolat"
+   "bureau [meuble]",
+   "つくえ",
+   ""
   ],
   [
    "コーヒー",
-   "café"
+   "café",
+   "コーヒー",
+   ""
   ],
   [
-   "お土産",
-   "souvenir (cadeau)"
+   "ノート",
+   "cahier",
+   "ノート",
+   ""
   ],
   [
-   "何",
-   "quoi"
+   "カード",
+   "carte",
+   "カード",
+   ""
   ],
   [
-   "そう",
-   "ainsi, c'est ça"
+   "名刺",
+   "carte de visite",
+   "めいし",
+   ""
   ],
   [
-   "違います",
-   "ce n'est pas ça"
+   "いす",
+   "chaise",
+   "いす",
+   ""
   ],
   [
-   "どうぞ",
-   "je vous en prie"
+   "チョコレート",
+   "chocolat",
+   "チョコレート",
+   ""
   ],
   [
-   "ありがとう",
-   "merci"
+   "かぎ",
+   "clé",
+   "かぎ",
+   ""
+  ],
+  [
+   "鉛筆",
+   "crayon papier",
+   "えんぴつ",
+   ""
+  ],
+  [
+   "辞書",
+   "dictionnaire",
+   "じしょ",
+   ""
+  ],
+  [
+   "違う                ちがう                v.",
+   "différent",
+   "違う                ちがう                v.",
+   ""
+  ],
+  [
+   "新聞",
+   "journal",
+   "しんぶん",
+   ""
+  ],
+  [
+   "英語",
+   "langue anglaise",
+   "えいご",
+   ""
+  ],
+  [
+   "日本語",
+   "langue japonaise",
+   "にほんご",
+   ""
+  ],
+  [
+   "本",
+   "livre",
+   "ほん",
+   ""
+  ],
+  [
+   "雑誌",
+   "magazine, revue",
+   "ざっし",
+   ""
+  ],
+  [
+   "時計",
+   "montre, horloge",
+   "とけい",
+   ""
+  ],
+  [
+   "傘",
+   "parapluie",
+   "かさ",
+   ""
+  ],
+  [
+   "シャープペンシル",
+   "porte-mine",
+   "シャープペンシル",
+   ""
+  ],
+  [
+   "ラジオ",
+   "radio",
+   "ラジオ",
+   ""
+  ],
+  [
+   "かばん",
+   "sac",
+   "かばん",
+   ""
+  ],
+  [
+   "ボールペン",
+   "stylo à bille",
+   "ボールペン",
+   ""
+  ],
+  [
+   "テレビ",
+   "télévision, téléviseur",
+   "テレビ",
+   ""
+  ],
+  [
+   "車",
+   "",
+   "くるま",
+   ""
   ]
- ]
+ ],
+ "verbes": [
+  {
+   "w": "\"être",
+   "te": "",
+   "r": "\"être",
+   "fr": "différent",
+   "les": 2
+  },
+  {
+   "w": "se",
+   "te": "",
+   "r": "se",
+   "fr": "lever, se réveiller",
+   "les": 2
+  },
+  {
+   "w": "dormir,",
+   "te": "",
+   "r": "dormir,",
+   "fr": "se coucher",
+   "les": 2
+  },
+  {
+   "w": "regarder,",
+   "te": "",
+   "r": "regarder,",
+   "fr": "voir",
+   "les": 2
+  },
+  {
+   "w": "fumer",
+   "te": "",
+   "r": "fumer",
+   "fr": "une cigarette",
+   "les": 2
+  },
+  {
+   "w": "prendre",
+   "te": "",
+   "r": "prendre",
+   "fr": "une photo",
+   "les": 2
+  },
+  {
+   "w": "rencontrer,",
+   "te": "",
+   "r": "rencontrer,",
+   "fr": "voir (quelqu'un)",
+   "les": 2
+  },
+  {
+   "w": "couper,",
+   "te": "",
+   "r": "couper,",
+   "fr": "découper",
+   "les": 2
+  },
+  {
+   "w": "donner,",
+   "te": "",
+   "r": "donner,",
+   "fr": "offrir",
+   "les": 2
+  },
+  {
+   "w": "il",
+   "te": "",
+   "r": "il",
+   "fr": "y a, exister, se trouver (animé)",
+   "les": 2
+  },
+  {
+   "w": "s'amuser,",
+   "te": "",
+   "r": "s'amuser,",
+   "fr": "jouer",
+   "les": 2
+  },
+  {
+   "w": "faire",
+   "te": "",
+   "r": "faire",
+   "fr": "des courses",
+   "les": 2
+  }
+ ],
+ "adjectifs": []
 }

@@ -1,0 +1,323 @@
+{
+ "id": "L15",
+ "titre": "Leçon 15 — Permission et interdiction",
+ "date": null,
+ "points": [
+  {
+   "t": "V-てもいいですか",
+   "ex": [
+    {
+     "jp": "このホッチキスを使ってもいいですか?",
+     "fr": "Puis-je utiliser cette agrafeuse ?",
+     "tok": [
+      "このホッチキスを使ってもいい",
+      "ですか"
+     ]
+    },
+    {
+     "jp": "はい、いいですよ。どうぞ。",
+     "fr": "Oui, bien sûr. Allez-y.",
+     "tok": [
+      "はい",
+      "いいですよどうぞ"
+     ]
+    },
+    {
+     "jp": "すみません。ちょっと……。",
+     "fr": "Désolé, c'est un peu…",
+     "tok": [
+      "すみませんちょっと……"
+     ]
+    }
+   ]
+  },
+  {
+   "t": "V-てはいけません",
+   "ex": [
+    {
+     "jp": "ここで写真を撮ってはいけません。",
+     "fr": "Il est interdit de prendre des photos ici.",
+     "tok": [
+      "ここで写真を撮ってはいけ",
+      "ません"
+     ]
+    },
+    {
+     "jp": "ここに座ってはいけません。",
+     "fr": "Il est interdit de s'asseoir ici.",
+     "tok": [
+      "ここに座ってはいけ",
+      "ません"
+     ]
+    },
+    {
+     "jp": "ここに車を止めてはいけません。",
+     "fr": "Il est interdit de garer sa voiture ici.",
+     "tok": [
+      "ここに車を止めてはいけ",
+      "ません"
+     ]
+    },
+    {
+     "jp": "ここに自転車を置いてはいけません。",
+     "fr": "Il est interdit de laisser son vélo ici.",
+     "tok": [
+      "ここに自転車を置いてはいけ",
+      "ません"
+     ]
+    },
+    {
+     "jp": "ここに入ってはいけません。",
+     "fr": "Il est interdit d'entrer ici.",
+     "tok": [
+      "ここに入ってはいけ",
+      "ません"
+     ]
+    }
+   ]
+  },
+  {
+   "t": "V-ています — état résultant",
+   "ex": []
+  },
+  {
+   "t": "V-ています — habitude, profession",
+   "ex": [
+    {
+     "jp": "結婚しています。",
+     "fr": "Je suis marié.",
+     "tok": [
+      "結婚してい",
+      "ます"
+     ]
+    },
+    {
+     "jp": "リヨンに住んでいます。",
+     "fr": "J'habite à Lyon.",
+     "tok": [
+      "リヨンに住んでい",
+      "ます"
+     ]
+    },
+    {
+     "jp": "車を持っています。",
+     "fr": "J'ai une voiture.",
+     "tok": [
+      "車を持ってい",
+      "ます"
+     ]
+    },
+    {
+     "jp": "ミラーさんを知っています／知りません。",
+     "fr": "Je connais M. Miller. / Je ne le connais pas.",
+     "tok": [
+      "ミラーさんを知っています／知り",
+      "ません"
+     ]
+    },
+    {
+     "jp": "どこで安い電気製品を売っていますか?",
+     "fr": "Où vend-on des appareils électriques pas chers ?",
+     "tok": [
+      "どこで安い電気製品を売ってい",
+      "ますか"
+     ]
+    },
+    {
+     "jp": "IMC は、コンピューターソフトを作っています。",
+     "fr": "IMC fabrique des logiciels.",
+     "tok": [
+      "IMC",
+      "は",
+      "コンピューターソフトを作ってい",
+      "ます"
+     ]
+    },
+    {
+     "jp": "さくら大学は、パワー電気のパソコンを使っています。",
+     "fr": "L'université Sakura utilise des ordinateurs Power Denki.",
+     "tok": [
+      "さくら大学は",
+      "パワー電気のパソコンを使ってい",
+      "ます"
+     ]
+    },
+    {
+     "jp": "シュミットさんは、パワー電気で働いています。",
+     "fr": "M. Schmidt travaille chez Power Denki.",
+     "tok": [
+      "シュミットさんは",
+      "パワー電気で働いてい",
+      "ます"
+     ]
+    },
+    {
+     "jp": "カリナさんは、美術を勉強しています。",
+     "fr": "Karina étudie les beaux-arts.",
+     "tok": [
+      "カリナさんは",
+      "美術を勉強してい",
+      "ます"
+     ]
+    },
+    {
+     "jp": "ワット先生は、桜大学で教えています。",
+     "fr": "Le professeur Watt enseigne à l'université Sakura.",
+     "tok": [
+      "ワット先生は",
+      "桜大学で教えてい",
+      "ます"
+     ]
+    }
+   ]
+  }
+ ],
+ "vocab": [
+  [
+   "カタログ",
+   "catalogue",
+   "カタログ",
+   ""
+  ],
+  [
+   "独身          どく しん      n.",
+   "célibataire",
+   "独身          どく しん      n.",
+   ""
+  ],
+  [
+   "知る／知って            しる／しって",
+   "connaître, savoir",
+   "知る／知って            しる／しって",
+   ""
+  ],
+  [
+   "歯医者",
+   "dentiste",
+   "はいしゃ",
+   ""
+  ],
+  [
+   "電子辞書",
+   "dictionnaire électronique",
+   "でんしじしょ",
+   ""
+  ],
+  [
+   "資料",
+   "documents",
+   "しりょう",
+   ""
+  ],
+  [
+   "経済",
+   "économie",
+   "けいざい",
+   ""
+  ],
+  [
+   "作る",
+   "fabriquer, construire",
+   "つくる",
+   ""
+  ],
+  [
+   "住む",
+   "habiter",
+   "すむ",
+   ""
+  ],
+  [
+   "時刻表",
+   "horaire [tableau indiquant un horaire]",
+   "じこくひょう",
+   ""
+  ],
+  [
+   "ソフト",
+   "logiciel",
+   "ソフト",
+   ""
+  ],
+  [
+   "高校",
+   "lycée",
+   "こうこう",
+   ""
+  ],
+  [
+   "市役所",
+   "mairie",
+   "しやくしょ",
+   ""
+  ],
+  [
+   "置く",
+   "poser",
+   "おく",
+   ""
+  ],
+  [
+   "製品",
+   "produit",
+   "せいひん",
+   ""
+  ],
+  [
+   "研究（する）",
+   "recherches",
+   "けんきゅうする",
+   ""
+  ],
+  [
+   "売る",
+   "vendre",
+   "うる",
+   ""
+  ],
+  [
+   "服",
+   "vêtement",
+   "ふく",
+   ""
+  ]
+ ],
+ "verbes": [
+  {
+   "w": "売る",
+   "te": "売って",
+   "r": "うる",
+   "fr": "vendre",
+   "les": 15
+  },
+  {
+   "w": "知る／*知って",
+   "te": "しる／しって",
+   "r": "知る／*知って",
+   "fr": "connaître, savoir",
+   "les": 15
+  },
+  {
+   "w": "置く",
+   "te": "おく",
+   "r": "置く",
+   "fr": "poser",
+   "les": 15
+  },
+  {
+   "w": "住む",
+   "te": "すむ",
+   "r": "住む",
+   "fr": "habiter",
+   "les": 15
+  },
+  {
+   "w": "作る",
+   "te": "つくる",
+   "r": "作る",
+   "fr": "fabriquer, construire",
+   "les": 15
+  }
+ ],
+ "adjectifs": []
+}

@@ -1,0 +1,255 @@
+{
+ "id": "L23",
+ "titre": "Leçon 23 — Quand… / Si…",
+ "date": null,
+ "points": [
+  {
+   "t": "V-る とき / V-た とき",
+   "ex": []
+  },
+  {
+   "t": "adj / N の とき",
+   "ex": []
+  },
+  {
+   "t": "V-る と — condition automatique",
+   "ex": []
+  },
+  {
+   "t": "Point 4",
+   "ex": [
+    {
+     "jp": "道を渡るとき、車に気をつけます。",
+     "fr": "Quand je traverse la rue, je fais attention aux voitures.",
+     "tok": [
+      "道を渡るとき",
+      "車に気をつけ",
+      "ます"
+     ]
+    },
+    {
+     "jp": "使い方がわからないとき、わたしに聞いてください。",
+     "fr": "Quand vous ne savez pas comment faire, demandez-moi.",
+     "tok": [
+      "使い方がわからないとき",
+      "わたしに聞いてください"
+     ]
+    },
+    {
+     "jp": "うちへ帰るとき、ケーキを買います。",
+     "fr": "En rentrant chez moi, j'achète un gâteau.",
+     "tok": [
+      "うちへ帰るとき",
+      "ケーキを買い",
+      "ます"
+     ]
+    },
+    {
+     "jp": "うちへ帰ったとき、「ただいま」と言います。",
+     "fr": "Quand je rentre chez moi, je dis « tadaima ».",
+     "tok": [
+      "うちへ帰ったとき",
+      "「ただいま」と言い",
+      "ます"
+     ]
+    },
+    {
+     "jp": "パリへ行くとき、かばんを買いました。",
+     "fr": "En allant à Paris, j'ai acheté un sac.",
+     "tok": [
+      "パリへ行くとき",
+      "かばんを買い",
+      "ました"
+     ]
+    },
+    {
+     "jp": "パリへ行ったとき、かばんを買いました。",
+     "fr": "Quand je suis allé à Paris, j'ai acheté un sac.",
+     "tok": [
+      "パリへ行ったとき",
+      "かばんを買い",
+      "ました"
+     ]
+    },
+    {
+     "jp": "眠いとき、コーヒーを飲みます。",
+     "fr": "Quand j'ai sommeil, je bois du café.",
+     "tok": [
+      "眠いとき",
+      "コーヒーを飲み",
+      "ます"
+     ]
+    },
+    {
+     "jp": "暇なとき、本を読みます。",
+     "fr": "Quand je suis libre, je lis.",
+     "tok": [
+      "暇なとき",
+      "本を読み",
+      "ます"
+     ]
+    },
+    {
+     "jp": "26 歳のとき、結婚しました。",
+     "fr": "À 26 ans, je me suis marié.",
+     "tok": [
+      "26",
+      "歳のとき",
+      "結婚し",
+      "ました"
+     ]
+    },
+    {
+     "jp": "これを回すと、音が大きくなります。",
+     "fr": "Si on tourne ça, le son augmente.",
+     "tok": [
+      "これを回すと",
+      "音が大きくなり",
+      "ます"
+     ]
+    },
+    {
+     "jp": "このボタンを押すと、お釣りが出ます。",
+     "fr": "Si on appuie sur ce bouton, la monnaie sort.",
+     "tok": [
+      "このボタンを押すと",
+      "お釣りが出",
+      "ます"
+     ]
+    },
+    {
+     "jp": "あの交差点を曲がると、郵便局があります。",
+     "fr": "Si on tourne à ce carrefour, il y a une poste.",
+     "tok": [
+      "あの交差点を曲がると",
+      "郵便局があり",
+      "ます"
+     ]
+    }
+   ]
+  }
+ ],
+ "vocab": [
+  [
+   "変える",
+   "changer, modifier",
+   "かえる",
+   ""
+  ],
+  [
+   "（お）湯",
+   "eau chaude",
+   "（お）ゆ",
+   ""
+  ],
+  [
+   "歩く",
+   "marcher",
+   "あるく",
+   ""
+  ],
+  [
+   "サイズ",
+   "taille, format",
+   "サイズ",
+   ""
+  ],
+  [
+   "引く",
+   "tirer",
+   "ひく",
+   ""
+  ],
+  [
+   "触る",
+   "toucher",
+   "さわる",
+   ""
+  ],
+  [
+   "回す",
+   "tourner (quelque chose), faire tourner",
+   "まわす",
+   ""
+  ],
+  [
+   "曲がる",
+   "tourner [changer de direction]",
+   "まがる",
+   ""
+  ],
+  [
+   "渡る",
+   "traverser",
+   "わたる",
+   ""
+  ],
+  [
+   "寂しい",
+   "triste",
+   "さびしい",
+   ""
+  ]
+ ],
+ "verbes": [
+  {
+   "w": "変える",
+   "te": "変えて",
+   "r": "かえる",
+   "fr": "changer, modifier",
+   "les": 23
+  },
+  {
+   "w": "引く",
+   "te": "引いて",
+   "r": "ひく",
+   "fr": "tirer",
+   "les": 23
+  },
+  {
+   "w": "回す",
+   "te": "まわす",
+   "r": "回す",
+   "fr": "(faire) tourner",
+   "les": 23
+  },
+  {
+   "w": "歩く",
+   "te": "あるく",
+   "r": "歩く",
+   "fr": "marcher",
+   "les": 23
+  },
+  {
+   "w": "触る",
+   "te": "さわる",
+   "r": "触る",
+   "fr": "toucher",
+   "les": 23
+  },
+  {
+   "w": "渡る",
+   "te": "わたる",
+   "r": "渡る",
+   "fr": "traverser",
+   "les": 23
+  },
+  {
+   "w": "曲がる",
+   "te": "まがる",
+   "r": "曲がる",
+   "fr": "tourner",
+   "les": 23
+  }
+ ],
+ "adjectifs": [
+  {
+   "w": "寂しい",
+   "r": "さびしい",
+   "fr": "triste, seul",
+   "les": 23,
+   "type": "i",
+   "opp": []
+  }
+ ]
+}

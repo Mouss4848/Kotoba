@@ -1,0 +1,434 @@
+{
+ "id": "L21",
+ "titre": "Leçon 21 — Penser et dire",
+ "date": null,
+ "points": [
+  {
+   "t": "〜と思います — je pense que",
+   "ex": [
+    {
+     "jp": "明日、雨が降ると思います。",
+     "fr": "Je pense qu'il pleuvra demain.",
+     "tok": [
+      "明日",
+      "雨が降ると思い",
+      "ます"
+     ]
+    },
+    {
+     "jp": "ミラーさんはゴルフをしないと思います。",
+     "fr": "Je pense que M. Miller ne joue pas au golf.",
+     "tok": [
+      "ミラーさんはゴルフをしないと思い",
+      "ます"
+     ]
+    },
+    {
+     "jp": "ミラーさんはもう帰ったと思います。",
+     "fr": "Je pense que M. Miller est déjà rentré.",
+     "tok": [
+      "ミラーさんはもう帰ったと思い",
+      "ます"
+     ]
+    },
+    {
+     "jp": "明日、寒いと思います。",
+     "fr": "Je pense qu'il fera froid demain.",
+     "tok": [
+      "明日",
+      "寒いと思い",
+      "ます"
+     ]
+    }
+   ]
+  },
+  {
+   "t": "〜と思います — opinions",
+   "ex": [
+    {
+     "jp": "明日もいい天気だと思います。",
+     "fr": "Je pense qu'il fera beau demain aussi.",
+     "tok": [
+      "明日もいい天気だと思い",
+      "ます"
+     ]
+    },
+    {
+     "jp": "馬は役に立つと思います。",
+     "fr": "Je pense que les chevaux sont utiles.",
+     "tok": [
+      "馬は役に立つと思い",
+      "ます"
+     ]
+    },
+    {
+     "jp": "子どもは外で遊ばなければならないと思います。",
+     "fr": "Je pense que les enfants doivent jouer dehors.",
+     "tok": [
+      "子どもは外で遊ばなければならないと思い",
+      "ます"
+     ]
+    },
+    {
+     "jp": "マンガはおもしろいと思います。",
+     "fr": "Je pense que les mangas sont intéressants.",
+     "tok": [
+      "マンガはおもしろいと思い",
+      "ます"
+     ]
+    },
+    {
+     "jp": "日本で奈良が一番きれいだと思います。",
+     "fr": "Je pense que Nara est la plus belle ville du Japon.",
+     "tok": [
+      "日本で奈良が一番きれいだと思い",
+      "ます"
+     ]
+    }
+   ]
+  },
+  {
+   "t": "〜と言いました — discours rapporté",
+   "ex": [
+    {
+     "jp": "彼の話は本当だと思います。",
+     "fr": "Je pense que son histoire est vraie.",
+     "tok": [
+      "彼の話は本当だと思い",
+      "ます"
+     ]
+    },
+    {
+     "jp": "ミラーさんは、課長に会社をやめると言いました。",
+     "fr": "M. Miller a dit au chef de section qu'il quittait l'entreprise.",
+     "tok": [
+      "ミラーさんは",
+      "課長に会社をやめると言い",
+      "ました"
+     ]
+    },
+    {
+     "jp": "ミラーさんは、課長に車を持っていないと言いました。",
+     "fr": "M. Miller a dit au chef qu'il n'avait pas de voiture.",
+     "tok": [
+      "ミラーさんは",
+      "課長に車を持っていないと言い",
+      "ました"
+     ]
+    },
+    {
+     "jp": "ミラーさんは、課長にもう資料を作ったと言いました。",
+     "fr": "M. Miller a dit au chef qu'il avait déjà préparé les documents.",
+     "tok": [
+      "ミラーさんは",
+      "課長にもう資料を作ったと言い",
+      "ました"
+     ]
+    },
+    {
+     "jp": "ミラーさんは、課長に休みが欲しいと言いました。",
+     "fr": "M. Miller a dit au chef qu'il voulait un congé.",
+     "tok": [
+      "ミラーさんは",
+      "課長に休みが欲しいと言い",
+      "ました"
+     ]
+    }
+   ]
+  },
+  {
+   "t": "〜でしょう ? — n'est-ce pas",
+   "ex": [
+    {
+     "jp": "ミラーさんは、課長にチーズが好きだと言いました。",
+     "fr": "M. Miller a dit au chef qu'il aimait le fromage.",
+     "tok": [
+      "ミラーさんは",
+      "課長にチーズが好きだと言い",
+      "ました"
+     ]
+    },
+    {
+     "jp": "明日、パーティに来るでしょう?",
+     "fr": "Tu viens à la fête demain, n'est-ce pas ?",
+     "tok": [
+      "明日",
+      "パーティに来るでしょう"
+     ]
+    },
+    {
+     "jp": "パリで、コンサートがあったでしょう?",
+     "fr": "Il y a eu un concert à Paris, n'est-ce pas ?",
+     "tok": [
+      "パリで",
+      "コンサートがあったでしょう"
+     ]
+    },
+    {
+     "jp": "大阪は、食べ物がおいしいでしょう?",
+     "fr": "À Osaka, on mange bien, n'est-ce pas ?",
+     "tok": [
+      "大阪は",
+      "食べ物がおいしいでしょう"
+     ]
+    },
+    {
+     "jp": "明日は、休みでしょう?",
+     "fr": "Demain c'est congé, n'est-ce pas ?",
+     "tok": [
+      "明日は",
+      "休みでしょう"
+     ]
+    }
+   ]
+  }
+ ],
+ "vocab": [
+  [
+   "アニメ",
+   "anime",
+   "アニメ",
+   ""
+  ],
+  [
+   "気をつける",
+   "attention : faire attention",
+   "気をつける",
+   ""
+  ],
+  [
+   "動く",
+   "bouger, fonctionner",
+   "うごく",
+   ""
+  ],
+  [
+   "交通",
+   "circulation, trafic, transport",
+   "こうつう",
+   ""
+  ],
+  [
+   "話",
+   "conversation, discours, histoire",
+   "はなし",
+   ""
+  ],
+  [
+   "デザイン",
+   "dessin, design",
+   "デザイン",
+   ""
+  ],
+  [
+   "言う",
+   "dire",
+   "いう",
+   ""
+  ],
+  [
+   "放送",
+   "émission",
+   "ほうそう",
+   ""
+  ],
+  [
+   "留学する",
+   "étudier à l'étranger",
+   "りゅうがくする",
+   ""
+  ],
+  [
+   "勝つ",
+   "gagner",
+   "かつ",
+   ""
+  ],
+  [
+   "天才",
+   "génie",
+   "てんさい",
+   ""
+  ],
+  [
+   "不便",
+   "inconvénient, peu pratique",
+   "ふべん",
+   ""
+  ],
+  [
+   "むだ",
+   "inutile",
+   "むだ",
+   ""
+  ],
+  [
+   "月",
+   "la Lune",
+   "つき",
+   ""
+  ],
+  [
+   "地球",
+   "la Terre",
+   "ちきゅう",
+   ""
+  ],
+  [
+   "マンガ",
+   "manga",
+   "マンガ",
+   ""
+  ],
+  [
+   "試合",
+   "match",
+   "しあい",
+   ""
+  ],
+  [
+   "うそ",
+   "mensonge, faux",
+   "うそ",
+   ""
+  ],
+  [
+   "ニュース",
+   "nouvelle, information",
+   "ニュース",
+   ""
+  ],
+  [
+   "意見",
+   "opinion, avis",
+   "いけん",
+   ""
+  ],
+  [
+   "思う",
+   "penser, croire",
+   "おもう",
+   ""
+  ],
+  [
+   "負ける",
+   "perdre [ne pas gagner]",
+   "まける",
+   ""
+  ],
+  [
+   "物価",
+   "prix [m. pl.]",
+   "ぶっか",
+   ""
+  ],
+  [
+   "（～を）やめる",
+   "quitter, démissionner (de…)",
+   "（～を）やめる",
+   ""
+  ],
+  [
+   "夢",
+   "rêve",
+   "ゆめ",
+   ""
+  ],
+  [
+   "すごい",
+   "super, génial, affreux, incroyable",
+   "すごい",
+   ""
+  ],
+  [
+   "役に立つ",
+   "utile, servir à",
+   "やくにたつ",
+   ""
+  ],
+  [
+   "自動車",
+   "",
+   "じどうしゃ",
+   ""
+  ],
+  [
+   "ほんとう                （本当）                n.",
+   "vrai",
+   "ほんとう                （本当）                n.",
+   ""
+  ]
+ ],
+ "verbes": [
+  {
+   "w": "勝つ",
+   "te": "勝って",
+   "r": "かつ",
+   "fr": "gagner",
+   "les": 21
+  },
+  {
+   "w": "負ける",
+   "te": "負けて",
+   "r": "まける",
+   "fr": "perdre",
+   "les": 21
+  },
+  {
+   "w": "動く",
+   "te": "うごく",
+   "r": "動く",
+   "fr": "bouger, fonctionner",
+   "les": 21
+  },
+  {
+   "w": "思う",
+   "te": "おもう",
+   "r": "思う",
+   "fr": "penser, croire",
+   "les": 21
+  },
+  {
+   "w": "言う",
+   "te": "いう",
+   "r": "言う",
+   "fr": "dire",
+   "les": 21
+  },
+  {
+   "w": "役に立つ",
+   "te": "やくにたつ",
+   "r": "役に立つ",
+   "fr": "être utile, servir à",
+   "les": 21
+  }
+ ],
+ "adjectifs": [
+  {
+   "w": "すごい",
+   "r": "すごい",
+   "fr": "super, incroyable",
+   "les": 21,
+   "type": "i",
+   "opp": []
+  },
+  {
+   "w": "不便",
+   "r": "ふべん",
+   "fr": "peu pratique",
+   "les": 21,
+   "type": "na",
+   "opp": [
+    "便利"
+   ]
+  },
+  {
+   "w": "むだ",
+   "r": "むだ",
+   "fr": "inutile",
+   "les": 21,
+   "type": "na",
+   "opp": []
+  }
+ ]
+}
