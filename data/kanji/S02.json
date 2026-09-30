@@ -92,7 +92,7 @@
   {
    "n": 17,
    "k": "男",
-   "fr": "lʼhomme",
+   "fr": "l’homme",
    "on": [
     "ダン",
     "ナン"
@@ -105,13 +105,13 @@
     {
      "w": "男",
      "r": "おとこ",
-     "fr": "lʼhomme",
+     "fr": "l’homme",
      "star": true
     },
     {
      "w": "男の人",
      "r": "おとこのひと",
-     "fr": "lʼhomme, la personne de sexe masculin",
+     "fr": "l’homme, la personne de sexe masculin",
      "star": true
     }
    ],
@@ -120,7 +120,7 @@
   {
    "n": 18,
    "k": "子",
-   "fr": "lʼenfant, le petit",
+   "fr": "l’enfant, le petit",
    "on": [
     "シ",
     "ス"
@@ -133,13 +133,13 @@
     {
      "w": "子",
      "r": "こ",
-     "fr": "lʼenfant, le petit",
+     "fr": "l’enfant, le petit",
      "star": true
     },
     {
      "w": "子ども",
      "r": "こども",
-     "fr": "lʼenfant",
+     "fr": "l’enfant",
      "star": true
     },
     {
@@ -407,7 +407,7 @@
   {
    "n": 22,
    "k": "年",
-   "fr": "lʼannée",
+   "fr": "l’année",
    "on": [
     "ネン"
    ],
@@ -419,7 +419,7 @@
     {
      "w": "年",
      "r": "とし",
-     "fr": "lʼannée",
+     "fr": "l’année",
      "star": true
     }
    ],
@@ -497,7 +497,7 @@
   {
    "n": 26,
    "k": "水",
-   "fr": "lʼeau",
+   "fr": "l’eau",
    "on": [
     "スイ"
    ],
@@ -509,7 +509,7 @@
     {
      "w": "お水",
      "r": "おみず",
-     "fr": "lʼeau",
+     "fr": "l’eau",
      "star": true
     }
    ],
@@ -518,7 +518,7 @@
   {
    "n": 27,
    "k": "木",
-   "fr": "lʼarbre, le bois",
+   "fr": "l’arbre, le bois",
    "on": [
     "モク",
     "ボク"
@@ -531,7 +531,7 @@
     {
      "w": "木",
      "r": "き",
-     "fr": "lʼarbre",
+     "fr": "l’arbre",
      "star": true
     }
    ],
@@ -540,7 +540,7 @@
   {
    "n": 28,
    "k": "金",
-   "fr": "lʼor",
+   "fr": "l’or",
    "on": [
     "キン",
     "コン"
@@ -553,7 +553,7 @@
     {
      "w": "お金",
      "r": "おかね",
-     "fr": "lʼargent, la monnaie",
+     "fr": "l’argent, la monnaie",
      "star": true
     }
    ],
@@ -663,7 +663,7 @@
     {
      "w": "中",
      "r": "なか",
-     "fr": "dedans, à lʼintérieur",
+     "fr": "dedans, à l’intérieur",
      "star": true
     },
     {
@@ -702,7 +702,7 @@
   {
    "n": 32,
    "k": "間",
-   "fr": "lʼintervalle",
+   "fr": "l’intervalle",
    "on": [
     "カン",
     "ケン"
@@ -716,13 +716,13 @@
     {
      "w": "間",
      "r": "あいだ",
-     "fr": "lʼespace, lʼintervalle",
+     "fr": "l’espace, l’intervalle",
      "star": false
     },
     {
      "w": "年間",
      "r": "ねんかん",
-     "fr": "lʼannée (durée)",
+     "fr": "l’année (durée)",
      "star": true
     },
     {
@@ -734,7 +734,7 @@
     {
      "w": "人間",
      "r": "にんげん",
-     "fr": "le mortel, lʼhumain ▲",
+     "fr": "le mortel, l’humain ▲",
      "star": false
     }
    ],
@@ -751,10 +751,11 @@
    "strokes": 11,
    "vocab": [
     {
-     "w": "一周間",
+     "w": "一週間",
      "r": "いっしゅうかん",
      "fr": "une semaine (durée)",
-     "star": true
+     "star": true,
+     "prev": "v:一周間/いっしゅうかん"
     },
     {
      "w": "二周間",
@@ -768,7 +769,7 @@
   {
    "n": 34,
    "k": "星",
-   "fr": "lʼastre",
+   "fr": "l’astre",
    "on": [
     "セイ"
    ],
@@ -780,7 +781,7 @@
     {
      "w": "星",
      "r": "ほし",
-     "fr": "lʼétoile, lʼastre",
+     "fr": "l’étoile, l’astre",
      "star": true
     },
     {

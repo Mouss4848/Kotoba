@@ -1,0 +1,19 @@
+{
+ "_note": "Corrections appliquées automatiquement après chaque import de PDF (coquilles du polycopié, décisions actées). Ajouter ici plutôt que de corriger à la main un fichier de séance : sinon, un nouvel import écraserait la correction.",
+ "kanji": {
+  "64": {"pale": ["ケイ"]},
+  "67": {"pale": ["キョウ"]},
+  "68": {"on": ["セイ", "ショウ"]}
+ },
+ "vocab": [
+  {"w": "一周間", "set": {"w": "一週間"}},
+  {"w": "空気", "set": {"r": "くうき"}},
+  {"w": "土石", "set": {"r": "どせき"}},
+  {"w": "晩年", "set": {"r": "ばんねん"}},
+  {"w": "日本人", "set": {"r": "にほんじん"}},
+  {"w": "三千六百九十五", "set": {"r": "さんぜんろっぴゃくきゅうじゅうご"}},
+  {"w": "天ぷら", "set": {"r": "てんぷら"}},
+  {"w": "空中", "set": {"fr": "dans le ciel, en l’air"}},
+  {"w": "風土", "set": {"fr": "les caractéristiques topographiques (bois, monts, rivières, etc.)"}}
+ ]
+}

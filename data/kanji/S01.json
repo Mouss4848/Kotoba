@@ -323,9 +323,10 @@
    "vocab": [
     {
      "w": "三千六百九十五",
-     "r": "さんぜんろっぴゃくき ゅうじゅうご",
+     "r": "さんぜんろっぴゃくきゅうじゅうご",
      "fr": "trois mille six cent quatre-vingt-quinze",
-     "star": false
+     "star": false,
+     "prev": "v:三千六百九十五/さんぜんろっぴゃくき ゅうじゅうご"
     }
    ],
    "src": "cours"
@@ -333,7 +334,7 @@
   {
    "n": 13,
    "k": "歳",
-   "fr": "fin dʼannée (âge)",
+   "fr": "fin d’année (âge)",
    "on": [
     "サイ"
    ],
@@ -435,7 +436,7 @@
     {
      "w": "万歳",
      "r": "ばんざい",
-     "fr": "Que vive lʼempereur !",
+     "fr": "Que vive l’empereur !",
      "star": true
     }
    ],

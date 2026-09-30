@@ -11,7 +11,7 @@
   {
    "n": 35,
    "k": "時",
-   "fr": "le temps, lʼheure",
+   "fr": "le temps, l’heure",
    "on": [
     "ジ"
    ],
@@ -29,7 +29,7 @@
     {
      "w": "時",
      "r": "じ",
-     "fr": "lʼheure",
+     "fr": "l’heure",
      "star": true
     },
     {
@@ -158,7 +158,7 @@
     {
      "w": "半年",
      "r": "はんとし",
-     "fr": "la moitié dʼannée",
+     "fr": "la moitié d’année",
      "star": true
     },
     {
@@ -216,7 +216,7 @@
     {
      "w": "時分",
      "r": "じぶん",
-     "fr": "le moment, lʼépoque",
+     "fr": "le moment, l’époque",
      "star": false
     },
     {
@@ -310,7 +310,7 @@
     {
      "w": "今日",
      "r": "きょう",
-     "fr": "aujourdʼhui",
+     "fr": "aujourd’hui",
      "star": true
     },
     {
@@ -355,13 +355,13 @@
     {
      "w": "前日",
      "r": "ぜんじつ",
-     "fr": "le jour dʼavant, la veille",
+     "fr": "le jour d’avant, la veille",
      "star": true
     },
     {
      "w": "前年",
      "r": "ぜんねん",
-     "fr": "lʼannée dʼavant",
+     "fr": "l’année d’avant",
      "star": true
     },
     {
@@ -454,7 +454,7 @@
     {
      "w": "先ず",
      "r": "まず",
-     "fr": "dʼabord, avant tout",
+     "fr": "d’abord, avant tout",
      "star": false
     },
     {
@@ -567,7 +567,7 @@
     {
      "w": "名人",
      "r": "めいじん",
-     "fr": "le maitre, lʼexpert",
+     "fr": "le maitre, l’expert",
      "star": false
     }
    ],
@@ -576,7 +576,7 @@
   {
    "n": 44,
    "k": "電",
-   "fr": "lʼélectricité",
+   "fr": "l’électricité",
    "on": [
     "デン"
    ],
@@ -586,7 +586,7 @@
     {
      "w": "電子",
      "r": "でんし",
-     "fr": "lʼélectronique",
+     "fr": "l’électronique",
      "star": true
     },
     {
@@ -625,7 +625,7 @@
     {
      "w": "車中",
      "r": "しゃちゅう",
-     "fr": "à bord (dʼun train, voiture, etc.)",
+     "fr": "à bord (d’un train, voiture, etc.)",
      "star": true
     }
    ],
@@ -743,7 +743,7 @@
   {
    "n": 49,
    "k": "外",
-   "fr": "lʼextérieur",
+   "fr": "l’extérieur",
    "on": [
     "ガイ"
    ],
@@ -755,7 +755,7 @@
     {
      "w": "外",
      "r": "そと",
-     "fr": "lʼextérieur, dehors",
+     "fr": "l’extérieur, dehors",
      "star": true
     },
     {
@@ -773,7 +773,7 @@
     {
      "w": "外国人",
      "r": "がいこくじん",
-     "fr": "lʼÉtranger (personne)",
+     "fr": "l’Étranger (personne)",
      "star": true
     }
    ],
@@ -795,13 +795,13 @@
     {
      "w": "元",
      "r": "もと",
-     "fr": "lʼorigine",
+     "fr": "l’origine",
      "star": true
     },
     {
      "w": "元々",
      "r": "もともと",
-     "fr": "à lʼorigine, originellement",
+     "fr": "à l’origine, originellement",
      "star": false
     },
     {
@@ -828,7 +828,7 @@
   {
    "n": 51,
    "k": "気",
-   "fr": "lʼénergie, lʼesprit",
+   "fr": "l’énergie, l’esprit",
    "on": [
     "キ",
     "ケ"
@@ -839,13 +839,13 @@
     {
      "w": "電気",
      "r": "でんき",
-     "fr": "lʼélectricité",
+     "fr": "l’électricité",
      "star": true
     },
     {
      "w": "お元気",
      "r": "おげんき",
-     "fr": "lʼénergie, la (bonne) forme",
+     "fr": "l’énergie, la (bonne) forme",
      "star": true
     },
     {
@@ -857,7 +857,7 @@
     {
      "w": "気分",
      "r": "きぶん",
-     "fr": "lʼémotion personnelle, la sensation",
+     "fr": "l’émotion personnelle, la sensation",
      "star": true
     },
     {

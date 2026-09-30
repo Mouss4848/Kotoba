@@ -35,13 +35,13 @@
     {
      "w": "朝一",
      "r": "あさいち",
-     "fr": "dès le matin, tôt le matin",
+     "fr": "la première chose du matin",
      "star": false
     },
     {
      "w": "毎朝",
      "r": "まいあさ",
-     "fr": "chaque matin",
+     "fr": "tous les matins",
      "star": true
     },
     {
@@ -51,12 +51,12 @@
      "star": true
     }
    ],
-   "src": "liste"
+   "src": "cours"
   },
   {
    "n": 53,
    "k": "午",
-   "fr": "midi",
+   "fr": "le midi",
    "on": [
     "ゴ"
    ],
@@ -66,29 +66,29 @@
     {
      "w": "午後",
      "r": "ごご",
-     "fr": "l'après-midi",
+     "fr": "l’après-midi",
      "star": true
     },
     {
      "w": "午後中",
      "r": "ごごじゅう",
-     "fr": "tout l'après-midi",
+     "fr": "durant l’après-midi",
      "star": true
     },
     {
      "w": "午前",
      "r": "ごぜん",
-     "fr": "le matin (avant midi)",
+     "fr": "la matinée",
      "star": true
     },
     {
      "w": "午前中",
      "r": "ごぜんちゅう",
-     "fr": "toute la matinée",
+     "fr": "durant la matinée",
      "star": true
     }
    ],
-   "src": "liste"
+   "src": "cours"
   },
   {
    "n": 54,
@@ -103,13 +103,13 @@
     {
      "w": "朝晩",
      "r": "あさばん",
-     "fr": "matin et soir",
+     "fr": "matin et soir, tout le temps",
      "star": true
     },
     {
      "w": "晩年",
      "r": "ばんねん",
-     "fr": "les dernières années de la vie",
+     "fr": "la dernière année d’une vie, au soir de sa vie",
      "star": false
     },
     {
@@ -121,11 +121,11 @@
     {
      "w": "毎晩",
      "r": "まいばん",
-     "fr": "chaque soir",
+     "fr": "tous les soirs",
      "star": true
     }
    ],
-   "src": "liste"
+   "src": "cours"
   },
   {
    "n": 55,
@@ -143,47 +143,47 @@
     {
      "w": "夜",
      "r": "よる",
-     "fr": "la nuit, le soir",
+     "fr": "la nuit",
      "star": true
     },
     {
      "w": "夜中",
      "r": "よなか",
-     "fr": "au milieu de la nuit",
+     "fr": "minuit",
      "star": true
     },
     {
      "w": "夜間",
      "r": "やかん",
-     "fr": "la nuit (période nocturne)",
+     "fr": "la nuit (durée), la nuitée",
      "star": false
     },
     {
      "w": "夜半",
      "r": "やはん",
-     "fr": "minuit",
+     "fr": "le milieu de la nuit",
      "star": false
     },
     {
      "w": "月夜",
      "r": "つきよ",
-     "fr": "la nuit de lune",
+     "fr": "la nuit de pleine lune",
      "star": false
     },
     {
      "w": "今夜",
      "r": "こんや",
-     "fr": "cette nuit, ce soir",
+     "fr": "cette nuit",
      "star": true
     },
     {
      "w": "毎夜",
      "r": "まいよ",
-     "fr": "chaque nuit",
+     "fr": "toutes les nuits",
      "star": true
     }
    ],
-   "src": "liste"
+   "src": "cours"
   },
   {
    "n": 56,
@@ -193,8 +193,7 @@
     "ウ"
    ],
    "kun": [
-    "あめ",
-    "あま-"
+    "あめ"
    ],
    "strokes": 8,
    "vocab": [
@@ -207,7 +206,7 @@
     {
      "w": "雨水",
      "r": "あまみず",
-     "fr": "l'eau de pluie",
+     "fr": "l’eau de pluie",
      "star": false
     },
     {
@@ -219,23 +218,21 @@
     {
      "w": "時雨",
      "r": "じう",
-     "fr": "l'averse d'automne",
+     "fr": "la pluie fine, le crachin (automne)",
      "star": false
     }
    ],
-   "src": "liste"
+   "src": "cours"
   },
   {
    "n": 57,
    "k": "風",
    "fr": "le vent",
    "on": [
-    "フウ",
-    "フ"
+    "フウ"
    ],
    "kun": [
-    "かぜ",
-    "かざ-"
+    "かぜ"
    ],
    "strokes": 9,
    "vocab": [
@@ -248,44 +245,42 @@
     {
      "w": "朝風",
      "r": "あさかぜ",
-     "fr": "la brise du matin",
+     "fr": "la brise matinale",
      "star": true
     },
     {
      "w": "朝風",
      "r": "ちょうふう",
-     "fr": "la brise du matin",
+     "fr": "le style propre à une période donnée",
      "star": false
     },
     {
      "w": "雨風",
      "r": "あめかぜ",
-     "fr": "la pluie et le vent",
+     "fr": "la pluie et le vent, les éléments",
      "star": false
     },
     {
      "w": "風土",
      "r": "ふうど",
-     "fr": "le climat, le terroir",
+     "fr": "les caractéristiques topographiques (bois, monts, rivières, etc.)",
      "star": false
     },
     {
      "w": "風気",
      "r": "ふうき",
-     "fr": "le rhume (ancien) / l'ambiance",
+     "fr": "le caractère, le comportement",
      "star": true
     }
    ],
-   "src": "liste"
+   "src": "cours"
   },
   {
    "n": 58,
    "k": "石",
    "fr": "la pierre",
    "on": [
-    "セキ",
-    "シャク",
-    "コク"
+    "セキ"
    ],
    "kun": [
     "いし"
@@ -301,28 +296,28 @@
     {
      "w": "石山",
      "r": "いしやま",
-     "fr": "la montagne rocheuse",
+     "fr": "une montagne de roches",
      "star": false
     },
     {
      "w": "土石",
      "r": "どせき",
-     "fr": "terre et pierres",
+     "fr": "la terre et la pierre, les gravats",
      "star": true
     },
     {
      "w": "金石",
      "r": "きんせき",
-     "fr": "les métaux et les pierres",
+     "fr": "le métal et la pierre, solide, l’indéfectible",
      "star": false
     }
    ],
-   "src": "liste"
+   "src": "cours"
   },
   {
    "n": 59,
    "k": "地",
-   "fr": "la terre, le sol",
+   "fr": "la terre, le terrain",
    "on": [
     "チ",
     "ジ"
@@ -333,29 +328,29 @@
     {
      "w": "地名",
      "r": "ちめい",
-     "fr": "le nom de lieu",
+     "fr": "le toponyme",
      "star": true
     },
     {
      "w": "地元",
      "r": "じもと",
-     "fr": "la région natale, le coin",
+     "fr": "la terre d’origine",
      "star": true
     },
     {
      "w": "地金",
      "r": "じがね",
-     "fr": "le métal brut",
+     "fr": "le minerai métallique brut",
      "star": false
     },
     {
      "w": "地中",
      "r": "ちちゅう",
-     "fr": "sous terre",
+     "fr": "sous terre, dans le sol",
      "star": false
     }
    ],
-   "src": "liste"
+   "src": "cours"
   },
   {
    "n": 60,
@@ -376,27 +371,27 @@
      "star": true
     }
    ],
-   "src": "liste"
+   "src": "cours"
   },
   {
    "n": 61,
    "k": "明",
-   "fr": "clair, lumineux",
+   "fr": "la clarté",
    "on": [
     "メイ",
     "ミョウ"
    ],
    "kun": [
-    "あか-るい",
-    "あ-ける",
-    "あき-らか"
+    "あか-",
+    "あき-",
+    "あ-"
    ],
    "strokes": 8,
    "vocab": [
     {
      "w": "明く",
      "r": "あく",
-     "fr": "s'ouvrir, s'éclaircir",
+     "fr": "s’ouvrir, s’éclaircir (figuré)",
      "star": false
     },
     {
@@ -408,7 +403,7 @@
     {
      "w": "明らか",
      "r": "あきらか",
-     "fr": "évident, clair",
+     "fr": "clair, évident",
      "star": true
     },
     {
@@ -432,17 +427,17 @@
     {
      "w": "夜明け",
      "r": "よあけ",
-     "fr": "l'aube",
+     "fr": "l’aurore",
      "star": false
     },
     {
      "w": "明後日",
      "r": "あさって",
-     "fr": "après-demain",
+     "fr": "après demain",
      "star": true
     }
    ],
-   "src": "liste"
+   "src": "cours"
   },
   {
    "n": 62,
@@ -454,8 +449,8 @@
    "kun": [
     "そら",
     "から",
-    "あ-く",
-    "す-く"
+    "あ-",
+    "す-"
    ],
    "strokes": 8,
    "vocab": [
@@ -468,25 +463,25 @@
     {
      "w": "空",
      "r": "から",
-     "fr": "vide",
+     "fr": "le vide",
      "star": true
     },
     {
      "w": "空く",
      "r": "あく",
-     "fr": "se vider, se libérer",
+     "fr": "s’ouvrir (sens propre)",
      "star": false
     },
     {
      "w": "空く",
      "r": "すく",
-     "fr": "être peu rempli, avoir faim",
+     "fr": "se vider",
      "star": true
     },
     {
      "w": "朝空",
      "r": "あさぞら",
-     "fr": "le ciel du matin",
+     "fr": "le ciel matinal",
      "star": false
     },
     {
@@ -498,19 +493,19 @@
     {
      "w": "空気",
      "r": "くうき",
-     "fr": "l'air",
+     "fr": "l’air, l’atmosphère",
      "star": true
     },
     {
      "w": "空中",
      "r": "くうちゅう",
-     "fr": "dans les airs",
+     "fr": "dans le ciel, en l’air",
      "star": false
     },
     {
      "w": "空間",
      "r": "くうかん",
-     "fr": "l'espace",
+     "fr": "l’espace (intervalle)",
      "star": true
     },
     {
@@ -522,16 +517,16 @@
     {
      "w": "空車",
      "r": "くうしゃ",
-     "fr": "le taxi libre, le véhicule vide",
+     "fr": "le taxi libre",
      "star": false
     }
    ],
-   "src": "liste"
+   "src": "cours"
   },
   {
    "n": 63,
    "k": "天",
-   "fr": "le ciel, céleste",
+   "fr": "les cieux",
    "on": [
     "テン"
    ],
@@ -549,7 +544,7 @@
     {
      "w": "天気",
      "r": "てんき",
-     "fr": "le temps (météo)",
+     "fr": "le temps, la météo",
      "star": true
     },
     {
@@ -561,17 +556,18 @@
     {
      "w": "天日",
      "r": "てんぴ",
-     "fr": "le soleil, au soleil",
+     "fr": "le chaud rayon de soleil, la lumière du jour",
      "star": false
     },
     {
      "w": "天ぷら",
-     "r": "てんぶら",
-     "fr": "le tempura",
-     "star": true
+     "r": "てんぷら",
+     "fr": "le beignet de crevette frit",
+     "star": true,
+     "prev": "v:天ぷら/てんぶら"
     }
    ],
-   "src": "liste"
+   "src": "cours"
   },
   {
    "n": 64,
@@ -595,34 +591,37 @@
     {
      "w": "京女",
      "r": "きょうおんな",
-     "fr": "la femme de Kyoto",
+     "fr": "la femme de Kyōto",
      "star": false
     },
     {
      "w": "京男",
      "r": "きょうおとこ",
-     "fr": "l'homme de Kyoto",
+     "fr": "l’homme de Kyōto",
      "star": false
     },
     {
      "w": "京人",
      "r": "けいじん",
-     "fr": "l'habitant de Kyoto",
+     "fr": "l’habitant de Kyōto",
      "star": false
     },
     {
      "w": "京風",
      "r": "きょうふう",
-     "fr": "à la mode de Kyoto",
+     "fr": "le style de Kyōto",
      "star": false
     }
    ],
-   "src": "liste"
+   "src": "cours",
+   "pale": [
+    "ケイ"
+   ]
   },
   {
    "n": 65,
    "k": "友",
-   "fr": "l'ami",
+   "fr": "l’ami",
    "on": [
     "ユウ"
    ],
@@ -634,40 +633,40 @@
     {
      "w": "友だち",
      "r": "ともだち",
-     "fr": "l'ami",
+     "fr": "l’ami, la relation",
      "star": true
     },
     {
      "w": "友人",
      "r": "ゆうじん",
-     "fr": "l'ami (formel)",
+     "fr": "l’ami (formel)",
      "star": false
     },
     {
      "w": "友人間",
      "r": "ゆうじんかん",
-     "fr": "entre amis",
+     "fr": "le réseau d’amis",
      "star": false
     }
    ],
-   "src": "liste"
+   "src": "cours"
   },
   {
    "n": 66,
    "k": "学",
-   "fr": "l'étude",
+   "fr": "l’étude",
    "on": [
     "ガク"
    ],
    "kun": [
-    "まな-ぶ"
+    "まな-"
    ],
    "strokes": 8,
    "vocab": [
     {
      "w": "学ぶ",
      "r": "まなぶ",
-     "fr": "apprendre, étudier",
+     "fr": "étudier",
      "star": true
     },
     {
@@ -679,30 +678,31 @@
     {
      "w": "学友",
      "r": "がくゆう",
-     "fr": "le camarade d'études",
+     "fr": "le camarade de classe (université)",
      "star": true
     },
     {
      "w": "学年",
      "r": "がくねん",
-     "fr": "l'année scolaire",
+     "fr": "l’année universitaire",
      "star": true
     },
     {
      "w": "学外",
      "r": "がくがい",
-     "fr": "hors de l'école",
+     "fr": "hors des murs du campus universitaire",
      "star": false
     }
    ],
-   "src": "liste"
+   "src": "cours"
   },
   {
    "n": 67,
    "k": "校",
-   "fr": "l'école",
+   "fr": "l’école",
    "on": [
-    "コウ"
+    "コウ",
+    "キョウ"
    ],
    "kun": [],
    "strokes": 10,
@@ -710,19 +710,19 @@
     {
      "w": "学校",
      "r": "がっこう",
-     "fr": "l'école",
+     "fr": "l’école",
      "star": true
     },
     {
      "w": "校友",
      "r": "こうゆう",
-     "fr": "le camarade d'école, l'ancien élève",
+     "fr": "le camarade de classe (école)",
      "star": true
     },
     {
      "w": "校外",
      "r": "こうがい",
-     "fr": "hors de l'école",
+     "fr": "hors des murs de l’école",
      "star": false
     },
     {
@@ -732,39 +732,36 @@
      "star": true
     }
    ],
-   "src": "liste"
+   "src": "cours",
+   "pale": [
+    "キョウ"
+   ]
   },
   {
    "n": 68,
    "k": "生",
-   "fr": "la vie, naître, l'étudiant",
+   "fr": "la vie",
    "on": [
     "セイ",
     "ショウ"
    ],
    "kun": [
-    "い-きる",
-    "う-まれる",
+    "い-",
+    "う-",
     "なま"
    ],
    "strokes": 5,
    "vocab": [
     {
-     "w": "生",
-     "r": "なま",
-     "fr": "cru, frais",
-     "star": false
-    },
-    {
      "w": "生きる",
      "r": "いきる",
-     "fr": "vivre",
+     "fr": "vivre, être vivant",
      "star": true
     },
     {
      "w": "生む",
      "r": "うむ",
-     "fr": "donner naissance, produire",
+     "fr": "donner naissance, créer",
      "star": false
     },
     {
@@ -774,9 +771,15 @@
      "star": true
     },
     {
+     "w": "生",
+     "r": "なま",
+     "fr": "frais, cru",
+     "star": false
+    },
+    {
      "w": "学生",
      "r": "がくせい",
-     "fr": "l'étudiant",
+     "fr": "l’étudiant",
      "star": true
     },
     {
@@ -788,11 +791,11 @@
     {
      "w": "人生",
      "r": "じんせい",
-     "fr": "la vie (humaine)",
+     "fr": "la vie humaine",
      "star": true
     }
    ],
-   "src": "liste"
+   "src": "cours"
   }
  ],
  "blocs": [

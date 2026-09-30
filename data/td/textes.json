@@ -1,0 +1,275 @@
+{
+ "_note": "Petits textes originaux, écrits uniquement avec le vocabulaire et la grammaire des leçons 1 à 4, pour l'exercice « comprendre un petit texte » (contrôle de TD de Mme Rydzek). À relire par Moussa. Champs : jp (texte), kana (même texte en kana), fr (traduction affichée après), q (questions : o = options, a = index de la bonne).",
+ "textes": [
+  {
+   "id": "t1",
+   "lecon": "L01",
+   "titre": "Se présenter",
+   "jp": "はじめまして。わたしはカリナです。インドネシア人です。富士大学の学生です。19歳です。どうぞよろしくお願いします。",
+   "kana": "はじめまして。わたしは カリナです。インドネシアじんです。ふじだいがくの がくせいです。19さいです。どうぞ よろしく おねがいします。",
+   "fr": "Enchantée. Je suis Karina. Je suis indonésienne. Je suis étudiante à l'université Fuji. J'ai 19 ans. Ravie de faire votre connaissance.",
+   "q": [
+    {
+     "q": "De quel pays vient Karina ?",
+     "o": [
+      "D'Indonésie",
+      "De Chine",
+      "Du Brésil",
+      "Du Japon"
+     ],
+     "a": 0
+    },
+    {
+     "q": "Que fait-elle ?",
+     "o": [
+      "Elle est étudiante",
+      "Elle est professeure",
+      "Elle est employée de banque",
+      "Elle est médecin"
+     ],
+     "a": 0
+    },
+    {
+     "q": "Quel âge a-t-elle ?",
+     "o": [
+      "19 ans",
+      "9 ans",
+      "29 ans",
+      "90 ans"
+     ],
+     "a": 0
+    }
+   ]
+  },
+  {
+   "id": "t2",
+   "lecon": "L02",
+   "titre": "À qui est-ce ?",
+   "jp": "これはわたしのかばんです。この本もわたしのです。それはミラーさんの傘です。あれはだれの傘ですか。あれはサントスさんの傘です。",
+   "kana": "これは わたしの かばんです。この ほんも わたしのです。それは ミラーさんの かさです。あれは だれの かさですか。あれは サントスさんの かさです。",
+   "fr": "C'est mon sac. Ce livre aussi est à moi. Ça, c'est le parapluie de M. Miller. À qui est ce parapluie, là-bas ? C'est le parapluie de M. Santos.",
+   "q": [
+    {
+     "q": "À qui est le sac ?",
+     "o": [
+      "À la personne qui parle",
+      "À M. Miller",
+      "À M. Santos",
+      "On ne sait pas"
+     ],
+     "a": 0
+    },
+    {
+     "q": "Et le livre ?",
+     "o": [
+      "À la personne qui parle, lui aussi",
+      "À M. Miller",
+      "À M. Santos",
+      "C'est un dictionnaire"
+     ],
+     "a": 0
+    },
+    {
+     "q": "À qui est le parapluie qui est là-bas ?",
+     "o": [
+      "À M. Santos",
+      "À M. Miller",
+      "À la personne qui parle",
+      "À Karina"
+     ],
+     "a": 0
+    }
+   ]
+  },
+  {
+   "id": "t3",
+   "lecon": "L03",
+   "titre": "Au grand magasin",
+   "jp": "ここはデパートです。靴売り場は3階です。エレベーターはあそこです。トイレは1階です。この靴はイタリアの靴です。2万円です。",
+   "kana": "ここは デパートです。くつうりばは 3がいです。エレベーターは あそこです。トイレは 1かいです。この くつは イタリアの くつです。2まんえんです。",
+   "fr": "Ici, c'est un grand magasin. Le rayon chaussures est au 3e étage. L'ascenseur est là-bas. Les toilettes sont au 1er étage. Ces chaussures sont des chaussures italiennes. Elles coûtent 20 000 yens.",
+   "q": [
+    {
+     "q": "À quel étage est le rayon chaussures ?",
+     "o": [
+      "Au 3e étage",
+      "Au 1er étage",
+      "Au 2e étage",
+      "Au sous-sol"
+     ],
+     "a": 0
+    },
+    {
+     "q": "Où sont les toilettes ?",
+     "o": [
+      "Au 1er étage",
+      "Au 3e étage",
+      "Là-bas",
+      "Au sous-sol"
+     ],
+     "a": 0
+    },
+    {
+     "q": "D'où viennent les chaussures ?",
+     "o": [
+      "D'Italie",
+      "Du Japon",
+      "De France",
+      "D'Amérique"
+     ],
+     "a": 0
+    },
+    {
+     "q": "Combien coûtent-elles ?",
+     "o": [
+      "20 000 yens",
+      "2 000 yens",
+      "200 yens",
+      "12 000 yens"
+     ],
+     "a": 0
+    }
+   ]
+  },
+  {
+   "id": "t4",
+   "lecon": "L04",
+   "titre": "Une journée de travail",
+   "jp": "わたしは銀行員です。毎朝6時に起きます。7時から8時まで勉強します。銀行は9時から3時までです。わたしは9時から5時まで働きます。土曜日と日曜日は休みです。毎晩11時に寝ます。",
+   "kana": "わたしは ぎんこういんです。まいあさ 6じに おきます。7じから 8じまで べんきょうします。ぎんこうは 9じから 3じまでです。わたしは 9じから 5じまで はたらきます。どようびと にちようびは やすみです。まいばん 11じに ねます。",
+   "fr": "Je suis employé de banque. Je me lève à 6 h tous les matins. J'étudie de 7 h à 8 h. La banque est ouverte de 9 h à 15 h. Je travaille de 9 h à 17 h. Le samedi et le dimanche sont mes jours de repos. Je me couche à 23 h tous les soirs.",
+   "q": [
+    {
+     "q": "Quel est son métier ?",
+     "o": [
+      "Employé de banque",
+      "Étudiant",
+      "Médecin",
+      "Chercheur"
+     ],
+     "a": 0
+    },
+    {
+     "q": "À quelle heure se lève-t-il ?",
+     "o": [
+      "À 6 h",
+      "À 7 h",
+      "À 9 h",
+      "À 11 h"
+     ],
+     "a": 0
+    },
+    {
+     "q": "Que fait-il de 7 h à 8 h ?",
+     "o": [
+      "Il étudie",
+      "Il travaille",
+      "Il dort",
+      "Il se repose"
+     ],
+     "a": 0
+    },
+    {
+     "q": "Quels jours ne travaille-t-il pas ?",
+     "o": [
+      "Le samedi et le dimanche",
+      "Le lundi et le mardi",
+      "Seulement le dimanche",
+      "Il travaille tous les jours"
+     ],
+     "a": 0
+    }
+   ]
+  },
+  {
+   "id": "t5",
+   "lecon": "L04",
+   "titre": "Hier",
+   "jp": "昨日、わたしは10時に起きました。午前は働きませんでした。午後2時から5時まで勉強しました。毎晩11時に寝ます。昨日は1時に寝ました。",
+   "kana": "きのう、わたしは 10じに おきました。ごぜんは はたらきませんでした。ごご 2じから 5じまで べんきょうしました。まいばん 11じに ねます。きのうは 1じに ねました。",
+   "fr": "Hier, je me suis levé à 10 h. Le matin, je n'ai pas travaillé. J'ai étudié de 14 h à 17 h. D'habitude, je me couche à 23 h tous les soirs. Hier, je me suis couché à 1 h.",
+   "q": [
+    {
+     "q": "À quelle heure s'est-il levé hier ?",
+     "o": [
+      "À 10 h",
+      "À 11 h",
+      "À 1 h",
+      "À 2 h"
+     ],
+     "a": 0
+    },
+    {
+     "q": "Qu'a-t-il fait l'après-midi ?",
+     "o": [
+      "Il a étudié de 14 h à 17 h",
+      "Il a travaillé de 14 h à 17 h",
+      "Il a dormi",
+      "Il ne l'a pas dit"
+     ],
+     "a": 0
+    },
+    {
+     "q": "D'habitude, il se couche à…",
+     "o": [
+      "23 h",
+      "1 h",
+      "22 h",
+      "10 h"
+     ],
+     "a": 0
+    },
+    {
+     "q": "Et hier, il s'est couché à…",
+     "o": [
+      "1 h du matin",
+      "23 h",
+      "22 h",
+      "17 h"
+     ],
+     "a": 0
+    }
+   ]
+  },
+  {
+   "id": "t6",
+   "lecon": "L04",
+   "titre": "La bibliothèque",
+   "jp": "すみません。図書館はどこですか。あそこです。図書館は何時から何時までですか。9時から6時までです。休みは何曜日ですか。月曜日です。ありがとうございました。",
+   "kana": "すみません。としょかんは どこですか。あそこです。としょかんは なんじから なんじまでですか。9じから 6じまでです。やすみは なんようびですか。げつようびです。ありがとうございました。",
+   "fr": "Excusez-moi. Où est la bibliothèque ? Elle est là-bas. De quelle heure à quelle heure est-elle ouverte ? De 9 h à 18 h. Quel est le jour de fermeture ? Le lundi. Merci beaucoup.",
+   "q": [
+    {
+     "q": "Où est la bibliothèque ?",
+     "o": [
+      "Là-bas",
+      "Ici",
+      "Au 2e étage",
+      "La personne ne sait pas"
+     ],
+     "a": 0
+    },
+    {
+     "q": "Quels sont ses horaires ?",
+     "o": [
+      "De 9 h à 18 h",
+      "De 9 h à 16 h",
+      "De 6 h à 9 h",
+      "De 8 h à 17 h"
+     ],
+     "a": 0
+    },
+    {
+     "q": "Quel jour est-elle fermée ?",
+     "o": [
+      "Le lundi",
+      "Le dimanche",
+      "Le samedi",
+      "Le mercredi"
+     ],
+     "a": 0
+    }
+   ]
+  }
+ ]
+}

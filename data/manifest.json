@@ -1,6 +1,6 @@
 {
- "version": "3.0",
- "maj": "2026-09-18",
+ "version": "4.0",
+ "maj": "2026-10-01",
  "cours": {
   "kanji": {
    "nom": "Version et kanji",
@@ -32,7 +32,7 @@
      "titre": "Séance 04 — Moments, nature, école",
      "date": "2026-09-24",
      "n": 17,
-     "src": "liste"
+     "src": "cours"
     },
     {
      "id": "S05",
@@ -265,6 +265,20 @@
     }
    ],
    "lexique": "_lexique.json"
+  },
+  "td": {
+   "nom": "Contrôle de TD",
+   "prof": "Mme Rydzek",
+   "lecons": [
+    "L01",
+    "L02",
+    "L03",
+    "L04"
+   ],
+   "date": null,
+   "elements": "td/elements.json",
+   "textes": "td/textes.json",
+   "format": "lire et transcrire en kana les kanji du cours, donner lecture et sens, identifier les éléments d'une phrase, traduire des phrases, comprendre un petit texte"
   }
  },
  "fichiers": [
